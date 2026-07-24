@@ -1,0 +1,44 @@
+[
+  {
+    "id": "welcome",
+    "trigger": "account_created",
+    "title": "Welcome to CodeQuest",
+    "body": "Choose your goal and academy to get a focused first pathway."
+  },
+  {
+    "id": "first-exercise",
+    "trigger": "first_exercise_passed",
+    "title": "You are activated",
+    "body": "You passed your first exercise. Your next step is to complete the module."
+  },
+  {
+    "id": "unfinished-lesson",
+    "trigger": "lesson_incomplete_3_days",
+    "title": "Continue where you left off",
+    "body": "Your current lesson is ready to resume."
+  },
+  {
+    "id": "starter-7",
+    "trigger": "starter_pack_7_days_left",
+    "title": "7 days left in your Starter Pack",
+    "body": "Continue your projects and export any evidence you want to keep."
+  },
+  {
+    "id": "starter-3",
+    "trigger": "starter_pack_3_days_left",
+    "title": "3 days left in your Starter Pack",
+    "body": "Your work will remain visible after expiry."
+  },
+  {
+    "id": "starter-1",
+    "trigger": "starter_pack_1_day_left",
+    "title": "Starter Pack ends tomorrow",
+    "body": "There is no automatic renewal."
+  },
+  {
+    "id": "credential",
+    "trigger": "credential_earned",
+    "title": "Credential earned",
+    "body": "Your new credential is available in your Skills Passport."
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "off-by-one",
+    "title": "Off-by-one reasoning",
+    "patterns": [
+      "range(",
+      "index",
+      "length"
+    ],
+    "feedback": "Check whether the final boundary is included and whether counting starts at zero."
+  },
+  {
+    "id": "return-vs-print",
+    "title": "Print versus return",
+    "patterns": [
+      "print(",
+      "return"
+    ],
+    "feedback": "Printing displays a value; returning sends it back to the caller."
+  },
+  {
+    "id": "scope-reset",
+    "title": "Accumulator reset inside loop",
+    "patterns": [
+      "total = 0",
+      "for ",
+      "while "
+    ],
+    "feedback": "Check whether the accumulator is created before the loop or reset during each iteration."
+  },
+  {
+    "id": "type-confusion",
+    "title": "Data-type confusion",
+    "patterns": [
+      "int(",
+      "str(",
+      "float(",
+      "+"
+    ],
+    "feedback": "Inspect the types involved before combining or comparing values."
+  },
+  {
+    "id": "mutation-copy",
+    "title": "Mutation versus copying",
+    "patterns": [
+      "append(",
+      "copy(",
+      "="
+    ],
+    "feedback": "Check whether two names refer to the same object or to independent copies."
+  },
+  {
+    "id": "boolean-logic",
+    "title": "Boolean condition confusion",
+    "patterns": [
+      " and ",
+      " or ",
+      " not ",
+      "if "
+    ],
+    "feedback": "Evaluate each condition separately before combining them."
+  },
+  {
+    "id": "dataframe-filter",
+    "title": "DataFrame filtering confusion",
+    "patterns": [
+      "DataFrame",
+      "loc[",
+      "query(",
+      "["
+    ],
+    "feedback": "Separate the row condition from the column selection."
+  }
+]

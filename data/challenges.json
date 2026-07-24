@@ -1,0 +1,67 @@
+[
+  {
+    "id": "deduplicate-orders",
+    "title": "Deduplicate Orders",
+    "difficulty": "Easy",
+    "minutes": 10,
+    "skills": [
+      "lists",
+      "dictionaries"
+    ],
+    "prompt": "Write a function deduplicate_orders(orders) that keeps the first dictionary for each unique order_id.",
+    "starter": "def deduplicate_orders(orders):\n    # Return a list with duplicate order_id values removed\n    pass\n\nsample = [\n    {'order_id': 1, 'amount': 100},\n    {'order_id': 2, 'amount': 200},\n    {'order_id': 1, 'amount': 100}\n]\nprint(deduplicate_orders(sample))\n",
+    "tests": [
+      "deduplicate_orders([{'order_id':1},{'order_id':1}]) == [{'order_id':1}]",
+      "len(deduplicate_orders([{'order_id':1},{'order_id':2}])) == 2"
+    ]
+  },
+  {
+    "id": "rolling-average",
+    "title": "Rolling Average",
+    "difficulty": "Medium",
+    "minutes": 15,
+    "skills": [
+      "functions",
+      "slicing"
+    ],
+    "prompt": "Write rolling_average(values, window) returning the average for each complete window.",
+    "starter": "def rolling_average(values, window):\n    # Return rolling averages\n    pass\n\nprint(rolling_average([1,2,3,4,5], 3))\n",
+    "tests": [
+      "rolling_average([1,2,3,4,5],3) == [2.0,3.0,4.0]",
+      "rolling_average([10,20],3) == []"
+    ]
+  },
+  {
+    "id": "flatten-api-results",
+    "title": "Flatten API Results",
+    "difficulty": "Medium",
+    "minutes": 18,
+    "skills": [
+      "JSON",
+      "nested data"
+    ],
+    "prompt": "Write flatten_results(payload) returning dictionaries with company, city and employee count.",
+    "starter": "def flatten_results(payload):\n    # Return a flat list of dictionaries\n    pass\n\npayload = {'results':[{'company':'A','office':{'city':'London'},'employees':10}]}\nprint(flatten_results(payload))\n",
+    "tests": [
+      "flatten_results({'results':[]}) == []",
+      "flatten_results({'results':[{'company':'A','office':{'city':'London'},'employees':10}]}) == [{'company':'A','city':'London','employees':10}]"
+    ]
+  },
+  {
+    "id": "validate-records",
+    "title": "Validate Records",
+    "difficulty": "Hard",
+    "minutes": 25,
+    "skills": [
+      "exceptions",
+      "testing"
+    ],
+    "prompt": "Write validate_records(records) that raises ValueError when id is missing or amount is negative, otherwise returns True.",
+    "starter": "def validate_records(records):\n    # Validate every record\n    pass\n",
+    "tests": [
+      "validate_records([{'id':1,'amount':10}]) is True",
+      "raises_value_error(lambda: validate_records([{'amount':10}]))",
+      "raises_value_error(lambda: validate_records([{'id':1,'amount':-1}]))"
+    ]
+  }
+]

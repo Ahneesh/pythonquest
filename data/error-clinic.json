@@ -1,0 +1,92 @@
+[
+  {
+    "id": "name-error",
+    "title": "NameError",
+    "category": "Variables",
+    "symptom": "Python says a name is not defined.",
+    "example": "total = price * quantity\nprint(totl)",
+    "cause": "A variable was misspelled or used before assignment.",
+    "debugSteps": [
+      "Read the final traceback line",
+      "Compare the failing name with earlier assignments",
+      "Check spelling and capitalisation",
+      "Run the smallest failing line again"
+    ],
+    "fixed": "total = price * quantity\nprint(total)"
+  },
+  {
+    "id": "key-error",
+    "title": "KeyError",
+    "category": "Dictionaries",
+    "symptom": "Dictionary access fails for a missing key.",
+    "example": "record = {'name': 'Asha'}\nprint(record['salary'])",
+    "cause": "Square-bracket access requires the key to exist.",
+    "debugSteps": [
+      "Inspect record.keys()",
+      "Confirm whether the field is required or optional",
+      "Use validation for required fields",
+      "Use dict.get() for optional fields"
+    ],
+    "fixed": "record = {'name': 'Asha'}\nprint(record.get('salary', 0))"
+  },
+  {
+    "id": "type-error",
+    "title": "TypeError",
+    "category": "Types",
+    "symptom": "An operation receives an incompatible type.",
+    "example": "amount = '100'\nprint(amount + 50)",
+    "cause": "Text and numbers cannot be added directly.",
+    "debugSteps": [
+      "Print type(value) for the relevant variables",
+      "Decide the intended type",
+      "Convert at the system boundary",
+      "Validate conversion failures"
+    ],
+    "fixed": "amount = '100'\nprint(int(amount) + 50)"
+  },
+  {
+    "id": "index-error",
+    "title": "IndexError",
+    "category": "Lists",
+    "symptom": "A sequence index is outside the available range.",
+    "example": "items = ['A', 'B']\nprint(items[2])",
+    "cause": "Python indexes start at zero, so a two-item list has indexes 0 and 1.",
+    "debugSteps": [
+      "Print len(items)",
+      "Inspect the requested index",
+      "Check loop boundaries",
+      "Prefer direct iteration when the index is unnecessary"
+    ],
+    "fixed": "items = ['A', 'B']\nprint(items[1])"
+  },
+  {
+    "id": "attribute-error",
+    "title": "AttributeError",
+    "category": "Objects",
+    "symptom": "An object does not provide the requested method or attribute.",
+    "example": "numbers = [1, 2, 3]\nprint(numbers.upper())",
+    "cause": "upper() belongs to strings, not lists.",
+    "debugSteps": [
+      "Inspect type(object)",
+      "Review available methods",
+      "Confirm the intended object",
+      "Move the method call to the correct value"
+    ],
+    "fixed": "words = ['one', 'two']\nprint([word.upper() for word in words])"
+  },
+  {
+    "id": "indentation-error",
+    "title": "IndentationError",
+    "category": "Syntax",
+    "symptom": "Python cannot understand the block structure.",
+    "example": "if True:\nprint('Hello')",
+    "cause": "The body of the if statement is not indented.",
+    "debugSteps": [
+      "Find the line named in the traceback",
+      "Check the preceding colon",
+      "Use consistent spaces",
+      "Align sibling statements"
+    ],
+    "fixed": "if True:\n    print('Hello')"
+  }
+]

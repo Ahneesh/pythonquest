@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "fields": [
+    "status",
+    "compile",
+    "publicTests",
+    "hiddenTests",
+    "quality",
+    "explanation",
+    "limits",
+    "evidenceId"
+  ]
+}

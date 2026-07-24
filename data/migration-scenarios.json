@@ -1,0 +1,49 @@
+[
+  {
+    "id": "customer-email",
+    "title": "Add customer email",
+    "initialSchema": {
+      "customers": {
+        "id": "INTEGER PRIMARY KEY",
+        "name": "TEXT NOT NULL"
+      }
+    },
+    "steps": [
+      {
+        "operation": "add_column",
+        "table": "customers",
+        "column": "email",
+        "type": "TEXT"
+      },
+      {
+        "operation": "create_index",
+        "table": "customers",
+        "column": "email"
+      }
+    ]
+  },
+  {
+    "id": "orders-status",
+    "title": "Add order status",
+    "initialSchema": {
+      "orders": {
+        "id": "INTEGER PRIMARY KEY",
+        "customer_id": "INTEGER NOT NULL",
+        "amount": "REAL NOT NULL"
+      }
+    },
+    "steps": [
+      {
+        "operation": "add_column",
+        "table": "orders",
+        "column": "status",
+        "type": "TEXT NOT NULL DEFAULT 'pending'"
+      },
+      {
+        "operation": "create_index",
+        "table": "orders",
+        "column": "status"
+      }
+    ]
+  }
+]

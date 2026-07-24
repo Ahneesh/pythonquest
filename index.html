@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeQuest Academy — Professional Coding Education</title>
+  <meta name="theme-color" content="#6d5dfc" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css?v=64.19" />
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
+</head>
+<body class="public-boot" data-codequest-version="64.19">
+
+  <div id="codeQuestBootSplash" class="codequest-boot-splash" aria-live="polite">
+  <div class="boot-splash-card">
+    <div class="boot-splash-logo">CQ</div>
+    <div class="boot-splash-copy">
+      <strong>CodeQuest Academy</strong>
+      <span>Learn · Build · Prove</span>
+    </div>
+    <div class="boot-splash-progress" aria-hidden="true"><i></i></div>
+    <small>Preparing your learning experience…</small>
+  </div>
+</div>
+<section id="publicLanding" class="public-landing">
+<header class="public-header">
+<a class="public-brand" href="#"><span class="public-logo">CQ</span><div><strong>CodeQuest Academy</strong><small>Learn · Build · Prove · v64.19</small></div></a>
+<nav><button data-public-scroll="academies">Academies</button><button data-public-scroll="how">How it works</button><button class="public-pricing-nav" data-public-scroll="pricing">Pricing</button><button data-public-view="faq">FAQ</button></nav>
+<div class="public-account-actions">
+  <div id="publicGuestActions">
+    <button id="publicSignInBtn" class="secondary-btn">Sign in</button>
+    <button id="publicCreateBtn" class="primary-btn">Create account</button>
+  </div>
+  <div id="publicMemberActions" class="hidden">
+    <span id="publicMemberName" class="public-member-name">Signed in</span>
+    <button id="publicDashboardBtn" class="primary-btn">Go to dashboard</button>
+  </div>
+</div>
+</header>
+<main id="publicContent"></main>
+<footer class="public-footer"><div><strong>CodeQuest Academy</strong><p>Practical, evidence-driven developer education.</p></div><div><button data-public-view="privacy">Privacy Policy</button><button data-public-view="terms">Terms and Conditions</button><button data-public-view="faq">FAQ</button></div><small>© 2026 CodeQuest Academy</small></footer>
+</section>
+<section id="authScreen" class="auth-screen hidden">
+    <div class="auth-brand-panel">
+      <div class="auth-brand-inner">
+        <div class="auth-logo">CQ</div>
+        <div class="eyebrow">LEARN · BUILD · PROVE</div>
+        <h1>Build real developer skills across Python, SQL, Web and Java.</h1>
+        <p>Interactive lessons, browser coding, projects, databases, APIs, missions, AI mentoring and portfolio evidence — all in one account.</p>
+        <div class="auth-benefits">
+          <div><span>✓</span><strong>One profile across four academies</strong></div>
+          <div><span>✓</span><strong>Personalised learning and career paths</strong></div>
+          <div><span>✓</span><strong>Evidence-backed portfolios and credentials</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="auth-form-panel">
+      <div class="auth-shell-card">
+        <div class="auth-mobile-brand"><div class="logo">CQ</div><strong>CodeQuest Academy</strong></div>
+        <div id="authConfigurationNotice" class="auth-config-notice hidden"></div>
+        <div id="authPrimaryPanel">
+          <div class="auth-tabs">
+            <button id="signInTab" class="auth-tab active" type="button">Sign in</button>
+            <button id="signUpTab" class="auth-tab" type="button">Create account</button>
+          </div>
+          <div id="authMessage" class="feedback hidden" role="status"></div>
+          <div id="signupNameRow" class="form-row hidden">
+            <label for="authFullName">Full name</label>
+            <input id="authFullName" type="text" autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="authEmail">Email address</label>
+            <input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="authPassword">Password</label>
+            <div class="password-field">
+              <input id="authPassword" type="password" autocomplete="current-password" placeholder="Enter your password">
+              <button id="toggleAuthPassword" class="password-toggle" type="button" aria-label="Show password">Show</button>
+            </div>
+            <div id="passwordStrength" class="password-strength hidden">
+              <div class="strength-track"><div id="strengthBar"></div></div>
+              <span id="strengthLabel">Password strength</span>
+            </div>
+          </div>
+          <div id="confirmPasswordRow" class="form-row hidden">
+            <label for="authConfirmPassword">Confirm password</label>
+            <div class="password-field">
+              <input id="authConfirmPassword" type="password" autocomplete="new-password" placeholder="Repeat your password">
+              <button id="toggleConfirmPassword" class="password-toggle" type="button">Show</button>
+            </div>
+          </div>
+          <label id="termsRow" class="auth-checkbox hidden">
+            <input id="authTerms" type="checkbox">
+            <span>I agree to the Terms of Use and Privacy Notice.</span>
+          </label>
+          <div id="signinOptions" class="auth-options">
+            <label class="auth-checkbox"><input id="rememberSession" type="checkbox" checked><span>Keep me signed in</span></label>
+            <button id="forgotPasswordBtn" class="text-btn" type="button">Forgot password?</button>
+          </div>
+          <button id="authSubmitBtn" class="primary-btn full auth-submit" type="button">Sign in</button>
+          <div class="auth-divider"><span>or</span></div>
+          <button id="googleAuthBtn" class="secondary-btn full google-auth-btn" type="button">
+            <span class="google-mark">G</span> Continue with Google
+          </button>
+          <p id="emailConfirmationNote" class="muted auth-note hidden">After creating an account, open the confirmation link sent to your email.</p>
+        </div>
+
+        <div id="forgotPasswordPanel" class="hidden">
+          <button id="backToSignInBtn" class="text-btn" type="button">← Back to sign in</button>
+          <div class="eyebrow">PASSWORD RECOVERY</div>
+          <h2>Reset your password</h2>
+          <p class="muted">Enter your account email. We will send you a secure reset link.</p>
+          <div id="resetMessage" class="feedback hidden"></div>
+          <div class="form-row"><label>Email address</label><input id="resetEmail" type="email" autocomplete="email"></div>
+          <button id="sendResetBtn" class="primary-btn full" type="button">Send reset link</button>
+        </div>
+
+        <div id="newPasswordPanel" class="hidden">
+          <div class="eyebrow">CREATE NEW PASSWORD</div>
+          <h2>Choose a new password</h2>
+          <div id="newPasswordMessage" class="feedback hidden"></div>
+          <div class="form-row"><label>New password</label><input id="newPassword" type="password" autocomplete="new-password"></div>
+          <div class="form-row"><label>Confirm password</label><input id="newPasswordConfirm" type="password" autocomplete="new-password"></div>
+          <button id="updatePasswordBtn" class="primary-btn full" type="button">Update password</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="logo">CQ</div>
+      <div><div class="brand">CodeQuest Academy</div><div class="tagline">Learn across academies. Build evidence. Prove your skills.</div></div>
+    </div>
+    <div class="top-actions">
+      <button id="homePageBtn" class="secondary-btn compact" type="button" title="Open CodeQuest home page">Home</button>
+      <button id="dashboardPageBtn" class="secondary-btn compact hidden" type="button" title="Return to dashboard">Dashboard</button>
+      <button id="authBtn" class="secondary-btn compact">Sign in</button><button id="quickSignOutBtn" class="text-btn compact hidden" type="button">Sign out</button><span id="syncStatus" class="sync-status">Checking session…</span>
+      <button id="commandBtn" class="icon-btn" title="Command palette">⌘</button>
+      <button id="focusBtn" class="icon-btn" title="Focus mode">◎</button>
+      <button id="timerBtn" class="icon-btn" title="Learning timer">◷</button>
+      <button id="searchBtn" class="icon-btn" title="Search">⌕</button>
+      <button id="installBtn" class="secondary-btn compact hidden">Install app</button>
+      <button id="themeBtn" class="icon-btn">◐</button>
+      <div class="stat-chip">⚡ <strong id="topXp">0</strong> XP</div>
+    </div>
+  
+      <button id="academySwitcherBtn" class="academy-switcher-btn" type="button">
+        <span id="activeAcademyIcon">PY</span>
+        <span><small>ACTIVE ACADEMY</small><strong id="activeAcademyName">Python Academy</strong></span>
+        <b>⌄</b>
+      </button>
+</header>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-mode">
+        <div><div class="eyebrow">NAVIGATION</div><strong id="navModeLabel">Learning mode</strong><small class="nav-mode-help">Core learning journey</small></div>
+        <button id="navModeBtn" class="icon-btn" type="button" title="Switch between Learning mode and All tools">⇄</button>
+      </div>
+      <nav class="sidebar-nav">
+        <section class="nav-group essential-group">
+          <div class="nav-group-title">Start here</div>
+          <div class="learning-nav-label">Today</div>
+          <button class="nav-item active" data-view="dashboard">⌂ <span>Dashboard</span></button>
+          <button class="nav-item" data-view="questboard">✦ <span>Quest Board</span></button>
+          <button class="nav-item all-tools-only" data-view="pathway">◆ <span>Professional pathway</span></button>
+          <button class="nav-item" data-view="academyhome">◈ <span>Academy home</span></button>
+          <button class="nav-item" data-view="developerprofile">◎ <span>Developer profile</span></button>
+          <button class="nav-item all-tools-only" data-view="rolepathways">◆ <span>Role pathways</span></button>
+          <button class="nav-item all-tools-only" data-view="crosscapstones">▣ <span>Cross-academy capstones</span></button>
+          <button class="nav-item all-tools-only" data-view="codinglab">⌘ <span>Secure coding lab</span></button>
+          <button class="nav-item all-tools-only" data-view="submissions">✓ <span>Autograding evidence</span></button>
+          <button class="nav-item all-tools-only" data-view="classroomhome">▦ <span>Classroom</span></button>
+          <button class="nav-item all-tools-only" data-view="instructordashboard">◉ <span>Instructor dashboard</span></button>
+          <button class="nav-item all-tools-only" data-view="curriculumcoverage">▦ <span>Curriculum coverage</span></button>
+          <button class="nav-item all-tools-only" data-view="curriculumstudio">✎ <span>Curriculum studio</span></button>
+          <button class="nav-item all-tools-only" data-view="organisationhome">🏢 <span>Organisation</span></button>
+          <button class="nav-item all-tools-only" data-view="cloudcontrol">☁ <span>Cloud control</span></button>
+          <button class="nav-item all-tools-only" data-view="credentialverify">✓ <span>Credential verification</span></button>
+          <button class="nav-item" data-view="aimentor">✦ <span>AI mentor</span></button>
+          <button class="nav-item all-tools-only" data-view="pairprogrammer">⌘ <span>Pair programmer</span></button>
+          <button class="nav-item all-tools-only" data-view="technicalviva">◉ <span>Technical viva</span></button>
+          <button class="nav-item all-tools-only" data-view="mentorhistory">▤ <span>Mentor history</span></button>
+          <button class="nav-item all-tools-only" data-view="missioncontrol">🚀 <span>Mission control</span></button>
+          <button class="nav-item all-tools-only" data-view="missionworkspace">◎ <span>Active mission</span></button>
+          <button class="nav-item all-tools-only" data-view="missionportfolio">🏆 <span>Mission portfolio</span></button>
+          <button class="nav-item all-tools-only" data-view="teamhub">👥 <span>Team hub</span></button>
+          <button class="nav-item all-tools-only" data-view="teamworkspace">▦ <span>Team workspace</span></button>
+          <button class="nav-item all-tools-only" data-view="peerreviews">⇄ <span>Peer reviews</span></button>
+          <button class="nav-item all-tools-only" data-view="hackathons">⚡ <span>Hackathons</span></button>
+          <button class="nav-item all-tools-only" data-view="contributionprofile">✦ <span>Contribution profile</span></button>
+          <div class="learning-nav-label">Career and proof</div>
+          <button class="nav-item" data-view="careerlaunch">🚀 <span>Career launch</span></button>
+          <button class="nav-item all-tools-only" data-view="jobmatcher">◎ <span>Job matcher</span></button>
+          <button class="nav-item all-tools-only" data-view="applicationpack">▤ <span>Application pack</span></button>
+          <button class="nav-item all-tools-only" data-view="talentprofile">★ <span>Talent profile</span></button>
+          <button class="nav-item" data-view="capstonestudio">🏗 <span>Capstone App Studio</span></button>
+          <button class="nav-item all-tools-only" data-view="capstoneworkspace">⌘ <span>Active capstone</span></button>
+          <button class="nav-item" data-view="capstoneportfolio">◆ <span>Capstone portfolio</span></button>
+          <button class="nav-item all-tools-only" data-view="deploymentstudio">🚢 <span>Deployment studio</span></button>
+          <button class="nav-item all-tools-only" data-view="releasepipeline">⇢ <span>Release pipeline</span></button>
+          <button class="nav-item all-tools-only" data-view="releaseregister">▣ <span>Release register</span></button>
+          <button class="nav-item" data-view="adaptivepath">🧭 <span>My adaptive path</span></button>
+          <button class="nav-item all-tools-only" data-view="learninggraph">◌ <span>Learning graph</span></button>
+          <button class="nav-item" data-view="focusmode">◷ <span>Focus mode</span></button>
+          <button class="nav-item" data-view="certificationhub">🎓 <span>Certification hub</span></button>
+          <button class="nav-item all-tools-only" data-view="examsession">⌛ <span>Exam session</span></button>
+          <button class="nav-item" data-view="skillspassport">▦ <span>Skills passport</span></button>
+          <button class="nav-item all-tools-only" data-view="transcript">≡ <span>Digital transcript</span></button>
+          <button class="nav-item all-tools-only" data-view="applypilotbridge">↗ <span>ApplyPilotPro bridge</span></button>
+          <button class="nav-item all-tools-only" data-view="careersimulations">▣ <span>Career simulations</span></button>
+          <button class="nav-item all-tools-only" data-view="commandcenter">◉ <span>Command center</span></button>
+          <button class="nav-item all-tools-only" data-view="adaptivetutor">✦ <span>Adaptive tutor</span></button>
+          <button class="nav-item all-tools-only" data-view="visualtracer">◎ <span>Visual tracer</span></button>
+          <div class="learning-nav-label">Learn</div>
+          <button class="nav-item" data-view="course">▦ <span>Course map</span></button>
+          <button class="nav-item" data-view="revision">↻ <span>Revision</span><b id="reviewCount" class="count-badge">0</b></button>
+          <button class="nav-item all-tools-only" data-view="adaptivecoach">◎ <span>Adaptive coach</span></button>
+        </section>
+        <section class="nav-group essential-group">
+          <div class="nav-group-title">Practise</div>
+          <div class="learning-nav-label">Practise and build</div>
+          <button class="nav-item" data-view="practice">⌨ <span>Practice arena</span></button>
+          <button class="nav-item" data-view="projects">◈ <span>Projects</span></button>
+          <button class="nav-item all-tools-only" data-view="challenges">⚑ <span>Challenges</span></button>
+          <button class="nav-item all-tools-only" data-view="notebook">▤ <span>Code notebook</span></button>
+        </section>
+        <details class="nav-group explorer-group" open><summary>Data & AI <span>›</span></summary><div class="nav-group-items">
+          <button class="nav-item all-tools-only" data-view="datasets">▦ <span>Dataset library</span></button><button class="nav-item all-tools-only" data-view="datalab">⌘ <span>Data lab</span></button><button class="nav-item all-tools-only" data-view="sqlplayground">SQL <span>SQL playground</span></button><button class="nav-item all-tools-only" data-view="dataprofiler">◫ <span>Data profiler</span></button><button class="nav-item all-tools-only" data-view="chartbuilder">◒ <span>Chart builder</span></button><button class="nav-item all-tools-only" data-view="dashboardbuilder">▦ <span>Dashboard builder</span></button><button class="nav-item all-tools-only" data-view="modellab">◇ <span>Model lab</span></button><button class="nav-item all-tools-only" data-view="experiments">≋ <span>Experiments</span></button><button class="nav-item all-tools-only" data-view="responsibleai">⚖ <span>Responsible AI</span></button>
+        </div></details>
+        <details class="nav-group explorer-group"><summary>Build real things <span>›</span></summary><div class="nav-group-items">
+          <button class="nav-item all-tools-only" data-view="projectstudio">⌘ <span>Project Studio</span></button><button class="nav-item all-tools-only" data-view="qualitygate">✓ <span>Quality gate</span></button><button class="nav-item all-tools-only" data-view="releasecentre">⬆ <span>Release centre</span></button><button class="nav-item all-tools-only" data-view="clisimulator">&gt;_ <span>CLI simulator</span></button><button class="nav-item all-tools-only" data-view="gitsimulator">⑂ <span>Git simulator</span></button><button class="nav-item all-tools-only" data-view="packagebuilder">⬡ <span>Package builder</span></button><button class="nav-item all-tools-only" data-view="apisimulator">↔ <span>API simulator</span></button><button class="nav-item all-tools-only" data-view="endpointdesigner">◈ <span>Endpoint designer</span></button><button class="nav-item all-tools-only" data-view="fastapibuilder">⚡ <span>FastAPI builder</span></button><button class="nav-item all-tools-only" data-view="schemadesigner">▦ <span>Schema designer</span></button><button class="nav-item all-tools-only" data-view="migrationsimulator">⇄ <span>Migration simulator</span></button><button class="nav-item all-tools-only" data-view="persistencebuilder">◉ <span>Persistence builder</span></button><button class="nav-item all-tools-only" data-view="pipelinesimulator">▶ <span>CI/CD simulator</span></button><button class="nav-item all-tools-only" data-view="deploymentbuilder">⬢ <span>Deployment builder</span></button><button class="nav-item all-tools-only" data-view="observabilitylab">◉ <span>Observability lab</span></button>
+        </div></details>
+        <details class="nav-group explorer-group"><summary>Progress & career <span>›</span></summary><div class="nav-group-items">
+          <button class="nav-item all-tools-only" data-view="analytics">▥ <span>Learning analytics</span></button>
+          <button class="nav-item all-tools-only" data-view="competencies">▦ <span>Competency matrix</span></button>
+          <button class="nav-item all-tools-only" data-view="stageexams">✓ <span>Stage assessments</span></button>
+          <button class="nav-item all-tools-only" data-view="portfoliohub">⬡ <span>Portfolio showcase</span></button>
+          <button class="nav-item all-tools-only" data-view="employability">◎ <span>Employability score</span></button>
+          <button class="nav-item all-tools-only" data-view="recruiterpack">⬇ <span>Recruiter evidence pack</span></button>
+          <button class="nav-item all-tools-only" data-view="weeklyreview">↗ <span>Weekly review</span></button>
+          <button class="nav-item all-tools-only" data-view="developmentplan">▤ <span>30/60/90 plan</span></button>
+          <button class="nav-item all-tools-only" data-view="mentorinbox">✦ <span>Mentor inbox</span></button>
+          <button class="nav-item all-tools-only" data-view="conceptmastery">▦ <span>Concept mastery</span></button><button class="nav-item all-tools-only" data-view="mastery">◎ <span>Mastery map</span></button><button class="nav-item all-tools-only" data-view="assessments">✓ <span>Assessment centre</span></button><button class="nav-item all-tools-only" data-view="careertracks">↗ <span>Career tracks</span></button><button class="nav-item all-tools-only" data-view="skilldiagnostic">◉ <span>Skill diagnostic</span></button><button class="nav-item all-tools-only" data-view="evidencebank">▣ <span>Evidence bank</span></button><button class="nav-item all-tools-only" data-view="mockinterviews">◌ <span>Mock interviews</span></button><button class="nav-item all-tools-only" data-view="sprintplanner">▥ <span>Learning sprint</span></button><button class="nav-item all-tools-only" data-view="journal">✦ <span>Learning journal</span></button><button class="nav-item all-tools-only" data-view="progressreport">▤ <span>Progress report</span></button><button class="nav-item all-tools-only" data-view="capstoneplanner">▦ <span>Capstone planner</span></button>
+        </div></details>
+        <details class="nav-group explorer-group"><summary>More tools <span>›</span></summary><div class="nav-group-items">
+          <button class="nav-item all-tools-only" data-view="studio">✎ <span>Lesson studio</span></button><button class="nav-item all-tools-only" data-view="bookmarks">◆ <span>Bookmarks</span><b id="bookmarkCount" class="count-badge">0</b></button><button class="nav-item all-tools-only" data-view="reviewlab">⌁ <span>Code review lab</span></button><button class="nav-item all-tools-only" data-view="errorclinic">⚠ <span>Error clinic</span></button><button class="nav-item all-tools-only" data-view="weakdrills">⌁ <span>Weak-topic drills</span></button><button class="nav-item all-tools-only" data-view="misconceptions">! <span>Misconceptions</span></button><button class="nav-item all-tools-only" data-view="storybuilder">▰ <span>Story builder</span></button><button class="nav-item all-tools-only" data-view="customdata">＋ <span>Import data</span></button><button class="nav-item all-tools-only" data-view="assignments">▧ <span>Assignments</span></button><button class="nav-item all-tools-only" data-view="instructor">◎ <span>Instructor review</span></button><button class="nav-item all-tools-only" data-view="rewards">★ <span>Rewards</span></button>
+        </div></details>
+        <details class="nav-group explorer-group"><summary>Settings <span>›</span></summary><div class="nav-group-items">
+          <button class="nav-item all-tools-only" data-view="accessibility">Aa <span>Accessibility</span></button><button class="nav-item all-tools-only" data-view="datamanagement">↕ <span>Backup & restore</span></button><button class="nav-item all-tools-only" data-view="profile">⚙ <span>Learning profile</span></button><button class="nav-item all-tools-only" data-view="account">◉ <span>Account & security</span></button>
+        </div></details>
+      </nav>
+    </aside>
+    <main id="main"></main>
+  </div>
+
+
+
+
+  <div id="commandModal" class="modal hidden">
+    <div class="modal-card command-card">
+      <div class="search-head">
+        <div><div class="eyebrow">COMMAND PALETTE</div><h2>Go anywhere quickly</h2></div>
+        <button id="commandCloseBtn" class="icon-btn">✕</button>
+      </div>
+      <input id="commandInput" class="search-input" placeholder="Type a command or page name..." autocomplete="off">
+      <div id="commandResults" class="command-results"></div>
+      <div class="shortcut-hint">↑ ↓ navigate · Enter open · Esc close</div>
+    </div>
+  </div>
+
+  <div id="timerPanel" class="floating-panel hidden">
+    <div class="floating-head"><strong>Learning timer</strong><button id="closeTimerBtn" class="icon-btn">✕</button></div>
+    <div id="timerDisplay" class="timer-display">25:00</div>
+    <div class="timer-presets">
+      <button class="secondary-btn compact" data-timer-minutes="5">5 min</button>
+      <button class="secondary-btn compact" data-timer-minutes="15">15 min</button>
+      <button class="secondary-btn compact" data-timer-minutes="25">25 min</button>
+      <button class="secondary-btn compact" data-timer-minutes="45">45 min</button>
+    </div>
+    <div class="notebook-toolbar">
+      <button id="startTimerBtn" class="primary-btn">Start</button>
+      <button id="resetTimerBtn" class="secondary-btn">Reset</button>
+    </div>
+    <label class="toggle-row compact-toggle"><span>Auto-start break</span><input id="autoBreakToggle" type="checkbox"></label>
+    <div id="timerMessage" class="muted">Choose a session length and begin.</div>
+  </div>
+
+  <div id="searchModal" class="modal hidden">
+    <div class="modal-card search-modal-card">
+      <div class="search-head">
+        <div><div class="eyebrow">GLOBAL SEARCH</div><h2>Find lessons, projects and challenges</h2></div>
+        <button id="searchCloseBtn" class="icon-btn">✕</button>
+      </div>
+      <input id="globalSearchInput" class="search-input" placeholder="Search CodeQuest Academy..." autocomplete="off">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+  <div id="authModal" class="hidden" aria-hidden="true"></div>
+<div id="onboardingModal" class="modal hidden">
+    <div class="modal-card wide">
+      <div id="onboardingContent"></div>
+    </div>
+  </div>
+
+  <div id="diagnosticModal" class="modal hidden">
+    <div class="modal-card wide">
+      <div id="diagnosticContent"></div>
+    </div>
+  </div>
+
+  <div id="lessonOverlay" class="overlay hidden">
+    <section class="lesson-shell">
+      <header class="lesson-top">
+        <div><div id="lessonBreadcrumb" class="eyebrow"></div><h1 id="lessonTitle"></h1></div>
+        <div class="lesson-top-actions">
+          <span id="lessonTime" class="pill"></span>
+          <button id="tutorToggleBtn" class="secondary-btn">Ask tutor</button>
+          <button id="closeLessonBtn" class="icon-btn">✕</button>
+        </div>
+      </header>
+      <div class="lesson-progress"><div id="lessonProgressBar"></div></div>
+      <div class="lesson-grid">
+        <aside id="stepList" class="step-list"></aside>
+        <section class="lesson-main">
+          <div class="step-meta"><span id="stepType" class="eyebrow"></span><span id="stepCounter" class="muted"></span></div>
+          <h2 id="stepTitle"></h2>
+          <div id="stepContent" class="lesson-copy"></div>
+          <div id="workspace" class="workspace">
+            <div class="workspace-bar"><span>Python workspace</span><span id="runtimeStatus">Loading Python…</span></div>
+            <textarea id="codeEditor" spellcheck="false"></textarea>
+            <div class="workspace-actions">
+              <button id="runBtn" class="primary-btn" disabled>▶ Run code</button>
+              <button id="hintBtn" class="secondary-btn">💡 Hint</button>
+              <button id="solutionBtn" class="text-btn">Guided solution</button>
+              <button id="saveNotebookStepBtn" class="text-btn">Save to notebook</button>
+            </div>
+            <pre id="output">Your output will appear here.</pre>
+            <div id="feedback" class="feedback hidden"></div>
+          </div>
+          <div id="quizArea" class="quiz-area hidden"></div>
+          <footer class="lesson-footer">
+            <button id="prevStepBtn" class="secondary-btn">← Previous</button>
+            <button id="nextStepBtn" class="primary-btn" disabled>Complete step →</button>
+          </footer>
+        </section>
+        <aside id="tutorPanel" class="tutor-panel hidden">
+          <div class="tutor-head"><div><div class="eyebrow">CODEQUEST ACADEMY TUTOR</div><h3>Get unstuck gradually</h3></div><button id="closeTutorBtn" class="icon-btn">✕</button></div>
+          <div id="tutorMessages" class="tutor-messages"></div>
+          <div class="tutor-actions">
+            <button data-tutor="nudge" class="secondary-btn">Small nudge</button>
+            <button data-tutor="explain" class="secondary-btn">Explain concept</button>
+            <button data-tutor="error" class="secondary-btn">Explain my error</button>
+            <button data-tutor="similar" class="secondary-btn">Similar example</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+
+  <div id="projectOverlay" class="overlay hidden">
+    <section class="lesson-shell">
+      <header class="lesson-top">
+        <div><div class="eyebrow">PORTFOLIO PROJECT</div><h1 id="projectTitle"></h1></div>
+        <div class="lesson-top-actions"><span id="projectLevel" class="pill"></span><button id="closeProjectBtn" class="icon-btn">✕</button></div>
+      </header>
+      <div class="project-layout">
+        <aside class="project-brief">
+          <p id="projectDescription" class="muted"></p>
+          <h3>Milestones</h3>
+          <div id="projectMilestones"></div>
+          <h3>Project checks</h3>
+          <div id="projectChecks"></div>
+        </aside>
+        <section class="project-workspace">
+          <div class="workspace">
+            <div class="workspace-bar"><span>Project workspace</span><span id="projectRuntimeStatus">Python ready</span></div>
+            <textarea id="projectEditor" spellcheck="false"></textarea>
+            <div class="workspace-actions">
+              <button id="runProjectBtn" class="primary-btn">▶ Run project</button>
+              <button id="checkProjectBtn" class="secondary-btn">Run project checks</button>
+              <button id="saveProjectBtn" class="secondary-btn">Save draft</button>
+              <button id="exportProjectBtn" class="text-btn">Export .py</button>
+            </div>
+            <pre id="projectOutput">Your project output will appear here.</pre>
+            <div id="projectFeedback" class="feedback hidden"></div>
+          </div>
+          <div class="project-reflection card">
+            <h3>Project conclusions</h3>
+            <p class="muted">Write what the analysis shows. This becomes part of your portfolio evidence.</p>
+            <textarea id="projectReflection" placeholder="Write your conclusions here..."></textarea>
+          </div>
+        </section>
+      </div>
+    </section>
+  </div>
+
+  <div id="rewardModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="reward-icon">🏅</div>
+      <div class="eyebrow">MISSION COMPLETE</div>
+      <h2 id="rewardTitle"></h2>
+      <p id="rewardText"></p>
+      <div id="rewardXp" class="xp-award"></div>
+      <button id="rewardCloseBtn" class="primary-btn">Continue learning</button>
+    </div>
+  </div>
+
+  <script defer src="config/supabase-config.js?v=64.19"></script>
+  <script defer src="cloud-sync.js?v=64.19"></script>
+  <script defer src="app.js?v=64.19"></script>
+
+  <div id="academyChooser" class="academy-chooser hidden" role="dialog" aria-modal="true">
+    <div class="academy-chooser-shell">
+      <div class="academy-chooser-header"><div><div class="eyebrow">CODEQUEST ACADEMY</div><h1>What would you like to learn?</h1><p>Choose an academy. Your course map, projects, teaching tools and credentials will adapt to the selected track.</p></div><button id="closeAcademyChooserBtn" class="icon-btn" type="button">×</button></div>
+      <div id="academyChooserGrid" class="academy-chooser-grid"></div>
+      <div class="academy-chooser-footer"><div><strong>One learner profile. Multiple academies.</strong><span>Your XP, portfolio and career evidence remain connected across tracks.</span></div><button id="academyChooserContinueBtn" class="primary-btn" type="button">Continue to academy</button></div>
+    </div>
+  </div>
+<script defer src="cloud-platform.js?v=64.19"></script>
+</body>
+</html>

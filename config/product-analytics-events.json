@@ -1,0 +1,16 @@
+[
+  "signup_completed",
+  "academy_selected",
+  "lesson_started",
+  "lesson_completed",
+  "exercise_passed",
+  "project_created",
+  "project_completed",
+  "ai_coach_used",
+  "paywall_viewed",
+  "starter_pack_started",
+  "checkout_started",
+  "subscription_activated",
+  "subscription_cancelled",
+  "verified_assessment_started"
+]

@@ -1,0 +1,38 @@
+{
+  "readability": {
+    "title": "Readability",
+    "checks": [
+      "Names explain purpose",
+      "Functions do one clear job",
+      "Comments explain why, not obvious syntax",
+      "Long blocks are broken into smaller units"
+    ]
+  },
+  "correctness": {
+    "title": "Correctness",
+    "checks": [
+      "The code handles the stated requirement",
+      "Boundary cases are considered",
+      "No silent failure paths",
+      "Outputs match the expected data shape"
+    ]
+  },
+  "reliability": {
+    "title": "Reliability",
+    "checks": [
+      "Likely failures are handled explicitly",
+      "Inputs are validated",
+      "Important behaviour has assertions or tests",
+      "Resources are closed or managed safely"
+    ]
+  },
+  "efficiency": {
+    "title": "Efficiency",
+    "checks": [
+      "Repeated work is avoided",
+      "Appropriate data structures are used",
+      "Large data is not copied unnecessarily",
+      "The solution is simple before it is clever"
+    ]
+  }
+}

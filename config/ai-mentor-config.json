@@ -1,0 +1,18 @@
+{
+  "mode": "hybrid",
+  "remoteEndpoint": "",
+  "provider": "server-proxy",
+  "modelPolicy": {
+    "neverExposeProviderKeyInBrowser": true,
+    "requireServerProxy": true,
+    "maxContextCharacters": 24000,
+    "maxResponseCharacters": 5000
+  },
+  "teachingPolicy": {
+    "answerRevealAfterHints": 3,
+    "requireLearnerAttempt": true,
+    "preferQuestionsBeforeAnswers": true,
+    "storeSummariesNotRawSecrets": true
+  },
+  "localFallback": true
+}

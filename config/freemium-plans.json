@@ -1,0 +1,80 @@
+{
+  "free": {
+    "id": "free",
+    "name": "Free",
+    "priceLabel": "\u00a30",
+    "billingLabel": "forever",
+    "description": "Learn the foundations and complete your first real project.",
+    "features": {
+      "academy_pathways": 1,
+      "lessons": 30,
+      "practice_sessions_daily": 3,
+      "engineering_projects": 1,
+      "ai_coach_monthly": 5,
+      "verified_assessments": 0,
+      "capstones": 0,
+      "team_engineering": false,
+      "github_exports": 1,
+      "skills_passport_exports": 1
+    }
+  },
+  "starter_15_day": {
+    "id": "starter_15_day",
+    "name": "15-Day Starter Pack",
+    "priceLabel": "\u00a37",
+    "billingLabel": "one-off",
+    "description": "Try the full Pro experience for 15 days with no renewal.",
+    "durationDays": 15,
+    "features": {
+      "academy_pathways": "unlimited",
+      "lessons": "unlimited",
+      "practice_sessions_daily": "unlimited",
+      "engineering_projects": 5,
+      "ai_coach_monthly": 25,
+      "verified_assessments": 2,
+      "capstones": 2,
+      "team_engineering": true,
+      "github_exports": 5,
+      "skills_passport_exports": 5
+    }
+  },
+  "pro_monthly": {
+    "id": "pro_monthly",
+    "name": "Pro Monthly",
+    "priceLabel": "\u00a310",
+    "billingLabel": "per month",
+    "description": "Build job-ready evidence across every academy.",
+    "features": {
+      "academy_pathways": "unlimited",
+      "lessons": "unlimited",
+      "practice_sessions_daily": "unlimited",
+      "engineering_projects": "unlimited",
+      "ai_coach_monthly": 100,
+      "verified_assessments": 12,
+      "capstones": "unlimited",
+      "team_engineering": true,
+      "github_exports": "unlimited",
+      "skills_passport_exports": "unlimited"
+    }
+  },
+  "pro_annual": {
+    "id": "pro_annual",
+    "name": "Pro Annual",
+    "priceLabel": "\u00a384",
+    "billingLabel": "per year",
+    "monthlyEquivalent": "\u00a37/month",
+    "description": "Best value for continuous learning and portfolio building.",
+    "features": {
+      "academy_pathways": "unlimited",
+      "lessons": "unlimited",
+      "practice_sessions_daily": "unlimited",
+      "engineering_projects": "unlimited",
+      "ai_coach_monthly": 1200,
+      "verified_assessments": 144,
+      "capstones": "unlimited",
+      "team_engineering": true,
+      "github_exports": "unlimited",
+      "skills_passport_exports": "unlimited"
+    }
+  }
+}

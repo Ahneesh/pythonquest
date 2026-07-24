@@ -1,0 +1,73 @@
+[
+  {
+    "id": "analytics-portal",
+    "title": "Executive Analytics Portal",
+    "role": "Data Analyst",
+    "academies": [
+      "sql",
+      "python",
+      "web"
+    ],
+    "brief": "Build a data pipeline, SQL analysis and responsive dashboard for leadership reporting.",
+    "milestones": [
+      "Clean and validate source data",
+      "Create analytical SQL queries",
+      "Build charts or summary cards",
+      "Document assumptions and recommendations"
+    ]
+  },
+  {
+    "id": "production-data-platform",
+    "title": "Production Data Pipeline",
+    "role": "Data Engineer",
+    "academies": [
+      "python",
+      "sql",
+      "java"
+    ],
+    "brief": "Design a restart-safe data pipeline with quality controls, persistence and operational documentation.",
+    "milestones": [
+      "Define canonical schema",
+      "Build transformation logic",
+      "Add quality checks",
+      "Persist validated records",
+      "Document monitoring and recovery"
+    ]
+  },
+  {
+    "id": "full-stack-product",
+    "title": "Full-Stack Product",
+    "role": "Full-Stack Developer",
+    "academies": [
+      "web",
+      "python",
+      "sql"
+    ],
+    "brief": "Build a responsive frontend connected to an API and relational database.",
+    "milestones": [
+      "Design user flow",
+      "Build accessible frontend",
+      "Define API contract",
+      "Create persistence model",
+      "Add tests and deployment evidence"
+    ]
+  },
+  {
+    "id": "enterprise-service",
+    "title": "Production Service Platform",
+    "role": "Backend Engineer",
+    "academies": [
+      "java",
+      "sql",
+      "python"
+    ],
+    "brief": "Design an enterprise-style service with business logic, persistence and operational controls.",
+    "milestones": [
+      "Model the domain",
+      "Create service boundaries",
+      "Define database model",
+      "Add validation and tests",
+      "Document health and deployment"
+    ]
+  }
+]

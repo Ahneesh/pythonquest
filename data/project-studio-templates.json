@@ -1,0 +1,56 @@
+[
+  {
+    "id": "data-quality-cli",
+    "title": "Data Quality CLI",
+    "track": "Automation",
+    "description": "Build a multi-file CSV profiling tool.",
+    "milestones": [
+      "Structure",
+      "Profiler",
+      "CLI",
+      "Tests and release"
+    ],
+    "files": {
+      "README.md": "# Data Quality CLI\n\nProfile CSV files for missing values and duplicates.\n",
+      "src/data_quality/profiler.py": "def profile_rows(rows: list[dict]) -> dict:\n    if not rows:\n        return {'rows': 0, 'missing': 0, 'duplicates': 0}\n    missing = sum(v in (None, '') for row in rows for v in row.values())\n    signatures = [tuple(sorted(row.items())) for row in rows]\n    return {'rows': len(rows), 'missing': missing, 'duplicates': len(signatures)-len(set(signatures))}\n",
+      "tests/test_profiler.py": "from data_quality.profiler import profile_rows\n\ndef test_profile_rows():\n    rows=[{'id':'1','name':'A'},{'id':'1','name':'A'},{'id':'2','name':''}]\n    result=profile_rows(rows)\n    assert result['missing']==1\n    assert result['duplicates']==1\n",
+      "requirements.txt": "pytest>=8.0\n"
+    }
+  },
+  {
+    "id": "analytics-api",
+    "title": "Analytics API",
+    "track": "Backend",
+    "description": "Build a tested analytics service.",
+    "milestones": [
+      "Contract",
+      "Core logic",
+      "Validation",
+      "Production readiness"
+    ],
+    "files": {
+      "README.md": "# Analytics API\n\nStore and retrieve business metrics.\n",
+      "app/main.py": "from dataclasses import dataclass, asdict\n\n@dataclass\nclass Metric:\n    name: str\n    value: float\n\nmetrics=[]\n\ndef health():\n    return {'status':'ok'}\n\ndef create_metric(name: str, value: float):\n    metric=Metric(name,float(value)); metrics.append(metric); return asdict(metric)\n",
+      "tests/test_main.py": "from app.main import health, create_metric\n\ndef test_health():\n    assert health()=={'status':'ok'}\n\ndef test_create():\n    assert create_metric('revenue',10)['value']==10.0\n",
+      "requirements.txt": "pytest>=8.0\nfastapi>=0.115\n"
+    }
+  },
+  {
+    "id": "job-market-analyser",
+    "title": "Job Market Analyser",
+    "track": "Data Analyst",
+    "description": "Analyse skills and remote-work patterns.",
+    "milestones": [
+      "Prepare data",
+      "Analyse",
+      "Communicate",
+      "Release"
+    ],
+    "files": {
+      "README.md": "# Job Market Analyser\n\nAnalyse recurring skills in job data.\n",
+      "src/analyser.py": "from collections import Counter\n\ndef count_skills(records: list[dict]) -> Counter:\n    skills=[]\n    for row in records:\n        skills.extend(s.strip() for s in row.get('skills','').split('|') if s.strip())\n    return Counter(skills)\n",
+      "tests/test_analyser.py": "from src.analyser import count_skills\n\ndef test_count_skills():\n    assert count_skills([{'skills':'Python|SQL'},{'skills':'SQL'}])['SQL']==2\n",
+      "sample.json": "[{\"skills\":\"Python|SQL\"}]\n"
+    }
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "id": "python-core",
+    "title": "Python Core",
+    "lessons": [
+      "variables-data-types",
+      "control-flow",
+      "functions"
+    ],
+    "description": "Syntax, control flow and reusable functions."
+  },
+  {
+    "id": "data-analysis",
+    "title": "Data Analysis",
+    "lessons": [
+      "dataframes",
+      "data-cleaning",
+      "data-grouping"
+    ],
+    "description": "Inspect, transform and summarise data."
+  },
+  {
+    "id": "web-data",
+    "title": "Web Data",
+    "lessons": [
+      "html-structure",
+      "beautifulsoup-basics",
+      "scraping-project"
+    ],
+    "description": "Extract and validate web information."
+  },
+  {
+    "id": "sql",
+    "title": "SQL",
+    "lessons": [
+      "sql-select",
+      "sql-joins",
+      "sql-aggregation"
+    ],
+    "description": "Query and combine relational data."
+  },
+  {
+    "id": "automation",
+    "title": "Automation",
+    "lessons": [
+      "file-automation",
+      "api-requests",
+      "workflow-reliability"
+    ],
+    "description": "Automate repeatable workflows safely."
+  },
+  {
+    "id": "engineering",
+    "title": "Engineering Practice",
+    "lessons": [
+      "functions-advanced",
+      "classes-oop",
+      "testing-basics",
+      "debugging"
+    ],
+    "description": "Design, test and maintain Python systems."
+  },
+  {
+    "id": "data-engineering",
+    "title": "Data Engineering",
+    "lessons": [
+      "data-pipelines",
+      "data-quality",
+      "data-lineage"
+    ],
+    "description": "Create reliable data-processing workflows."
+  },
+  {
+    "id": "machine-learning",
+    "title": "Machine Learning",
+    "lessons": [
+      "rest-fundamentals"
+    ],
+    "description": "Frame, train and evaluate predictive models."
+  },
+  {
+    "id": "apis",
+    "title": "Web APIs",
+    "lessons": [
+      "rest-fundamentals",
+      "json-validation",
+      "fastapi-routes"
+    ],
+    "description": "Design validated service interfaces."
+  },
+  {
+    "id": "databases",
+    "title": "Databases",
+    "lessons": [
+      "relational-design",
+      "sqlite-crud",
+      "sqlalchemy-models"
+    ],
+    "description": "Persist and model relational data."
+  },
+  {
+    "id": "devops",
+    "title": "Deployment & DevOps",
+    "lessons": [
+      "deployment-environments",
+      "docker-basics",
+      "ci-cd-pipelines"
+    ],
+    "description": "Package, release and observe services."
+  }
+]

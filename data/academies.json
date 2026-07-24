@@ -1,0 +1,72 @@
+[
+  {
+    "id": "python",
+    "name": "Python Academy",
+    "shortName": "Python",
+    "status": "available",
+    "icon": "PY",
+    "description": "Learn Python for automation, data, APIs, machine learning and production engineering.",
+    "level": "Beginner to professional",
+    "duration": "6\u201312 months",
+    "careerPaths": [
+      "Data Analyst",
+      "Automation Engineer",
+      "Data Engineer",
+      "Backend Developer",
+      "ML Analyst"
+    ],
+    "accent": "violet",
+    "courseFile": "data/course.json"
+  },
+  {
+    "id": "java",
+    "name": "Java Academy",
+    "shortName": "Java",
+    "status": "available",
+    "icon": "JV",
+    "description": "Progress from Java foundations through Advanced Java, Spring Boot and enterprise engineering.",
+    "level": "Beginner to advanced",
+    "duration": "7\u201314 months",
+    "careerPaths": [
+      "Java Developer",
+      "Backend Engineer",
+      "Spring Developer"
+    ],
+    "accent": "amber",
+    "courseFile": "data/java-course.json"
+  },
+  {
+    "id": "web",
+    "name": "Web Development Academy",
+    "shortName": "Web Development",
+    "status": "available",
+    "icon": "WEB",
+    "description": "Build accessible, responsive web experiences with HTML, CSS, JavaScript and modern frontend tools.",
+    "level": "Beginner to professional",
+    "duration": "5\u201310 months",
+    "careerPaths": [
+      "Frontend Developer",
+      "Web Developer",
+      "UI Engineer"
+    ],
+    "accent": "blue",
+    "courseFile": "data/web-course.json"
+  },
+  {
+    "id": "sql",
+    "name": "SQL & Database Academy",
+    "shortName": "SQL",
+    "status": "available",
+    "icon": "SQL",
+    "description": "Master analytical SQL, relational design, optimisation and database engineering.",
+    "level": "Beginner to advanced",
+    "duration": "3\u20137 months",
+    "careerPaths": [
+      "Data Analyst",
+      "SQL Developer",
+      "Database Engineer"
+    ],
+    "accent": "green",
+    "courseFile": "data/sql-course.json"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "missing-return",
+    "title": "Return-value confusion"
+  },
+  {
+    "id": "sql-grain",
+    "title": "Result-grain confusion"
+  },
+  {
+    "id": "unsafe-dom",
+    "title": "Unsafe DOM rendering"
+  },
+  {
+    "id": "validation",
+    "title": "Boundary validation weakness"
+  },
+  {
+    "id": "testing",
+    "title": "Insufficient test evidence"
+  }
+]

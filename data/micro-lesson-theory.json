@@ -1,0 +1,587 @@
+[
+  {
+    "id": "variables",
+    "match": [
+      "variable",
+      "data type",
+      "field",
+      "state"
+    ],
+    "principle": "A variable is a name that refers to a value. The name gives the program a stable way to reuse or change that value.",
+    "mentalModel": "Think of a labelled card pointing to a value\u2014not a permanently typed storage box.",
+    "example": "price = 12.50 gives the name price a numeric value. A later expression can use price without repeating 12.50.",
+    "mistake": "Choosing vague names or assuming a variable can only ever hold one type.",
+    "check": "If total = price * quantity, what changes when quantity changes?",
+    "detail": "A variable name can be reused in later expressions, passed into functions and reassigned when state changes. Python determines the current value\u2019s type at runtime.",
+    "exampleTitle": "Variables in Python",
+    "exampleCode": "name = \"Anish\"\nage = 45\nis_learning = True\n\nprint(name)\nprint(age)\nprint(is_learning)",
+    "exampleNotes": [
+      "name refers to a string",
+      "age refers to an integer",
+      "is_learning refers to a Boolean"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "web"
+    ]
+  },
+  {
+    "id": "collections",
+    "match": [
+      "list",
+      "array",
+      "collection",
+      "set",
+      "map",
+      "dictionary",
+      "index"
+    ],
+    "principle": "Collections group related values so code can process them consistently rather than creating one variable per item.",
+    "mentalModel": "A collection is a container with access rules: position for lists, key for maps, uniqueness for sets.",
+    "example": "A list of temperatures can be looped over, filtered or averaged with one piece of logic.",
+    "mistake": "Using the wrong access rule, such as treating a map key like a numeric list index.",
+    "check": "Would order, uniqueness or key-based lookup matter most for this problem?",
+    "detail": "Choose a collection according to the behaviour you need: ordered access, immutability, unique values or key-based lookup.",
+    "exampleTitle": "Common Python collections",
+    "exampleCode": "skills_list = [\"Python\", \"SQL\", \"Java\"]\ncoordinates_tuple = (51.5074, -0.1278)\nprofile_dict = {\"name\": \"Anish\", \"level\": \"Beginner\"}\nunique_tags = {\"python\", \"sql\", \"python\"}",
+    "exampleNotes": [
+      "List: ordered and changeable",
+      "Tuple: ordered and usually treated as fixed",
+      "Dictionary: keys map to values",
+      "Set: stores unique values"
+    ],
+    "academyIds": [
+      "python",
+      "java"
+    ]
+  },
+  {
+    "id": "conditions",
+    "match": [
+      "condition",
+      "decision",
+      "boolean",
+      "if ",
+      "case"
+    ],
+    "principle": "Conditional logic selects behaviour according to a true-or-false test.",
+    "mentalModel": "Ask one precise question, then define what happens when the answer is yes and when it is no.",
+    "example": "If stock is zero, show 'Unavailable'; otherwise allow the purchase.",
+    "mistake": "Writing overlapping or unreachable conditions because the rules were not ordered clearly.",
+    "check": "Which input makes the first branch run, and which input reaches the fallback?",
+    "detail": "Conditions are evaluated from top to bottom. The first matching branch runs, so the order of rules can change behaviour.",
+    "exampleTitle": "A simple decision",
+    "exampleCode": "stock = 0\n\nif stock == 0:\n    print(\"Unavailable\")\nelse:\n    print(\"Available\")",
+    "exampleNotes": [
+      "The expression stock == 0 produces True or False",
+      "Only one branch runs"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "web"
+    ]
+  },
+  {
+    "id": "loops",
+    "match": [
+      "loop",
+      "iteration",
+      "for ",
+      "while ",
+      "stream"
+    ],
+    "principle": "Iteration applies the same behaviour to multiple values without duplicating code.",
+    "mentalModel": "Take one item, apply the rule, then move to the next until the collection or condition is exhausted.",
+    "example": "Loop through orders and add each order value to a running total.",
+    "mistake": "Changing the collection while iterating or forgetting the condition that stops a while loop.",
+    "check": "What is different on each iteration, and what remains constant?",
+    "detail": "Loops are useful when the same rule must be applied to every item. The loop variable refers to one item at a time.",
+    "exampleTitle": "Loop through a list",
+    "exampleCode": "skills = [\"Python\", \"SQL\", \"Java\"]\n\nfor skill in skills:\n    print(skill)",
+    "exampleNotes": [
+      "skill changes on each iteration",
+      "The print rule stays the same"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "web"
+    ]
+  },
+  {
+    "id": "functions",
+    "match": [
+      "function",
+      "method",
+      "decomposition",
+      "parameter",
+      "return"
+    ],
+    "principle": "A function packages one meaningful responsibility behind a clear name and input/output contract.",
+    "mentalModel": "A small machine: values enter, focused work happens, and a result or side effect leaves.",
+    "example": "calculate_total(items) can be tested independently from the screen that displays the result.",
+    "mistake": "Creating a large function that reads input, changes data, saves files and prints output all at once.",
+    "check": "Can you describe this function in one sentence without using the word 'and'?",
+    "detail": "Functions reduce duplication and separate responsibilities. Parameters describe what the function needs; return values describe what it produces.",
+    "exampleTitle": "A small reusable function",
+    "exampleCode": "def calculate_total(price, quantity):\n    return price * quantity\n\nresult = calculate_total(12.5, 3)\nprint(result)",
+    "exampleNotes": [
+      "price and quantity are inputs",
+      "return sends the result back to the caller"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "web"
+    ]
+  },
+  {
+    "id": "oop",
+    "match": [
+      "object",
+      "class",
+      "encapsulation",
+      "inheritance",
+      "interface",
+      "solid"
+    ],
+    "principle": "Object-oriented design places related state and behaviour together behind a controlled interface.",
+    "mentalModel": "An object protects its own rules; callers ask it to act rather than directly changing its internals.",
+    "example": "A Task owns its completed state and exposes complete(), while a TaskService manages the collection.",
+    "mistake": "Using classes only as data bags while unrelated code changes their fields directly.",
+    "check": "Which object should own this rule, and why?",
+    "detail": "Object-oriented design places related state and behaviour together behind a controlled interface. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "A Task owns its completed state and exposes complete(), while a TaskService manages the collection.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "python",
+      "java"
+    ]
+  },
+  {
+    "id": "errors",
+    "match": [
+      "error",
+      "exception",
+      "validation",
+      "debug",
+      "try",
+      "catch"
+    ],
+    "principle": "Errors are information about an unmet assumption. Good programs detect foreseeable problems and report them clearly.",
+    "mentalModel": "Validate at the boundary, fail close to the cause and give the caller enough context to recover.",
+    "example": "Reject a negative expense amount before saving it, rather than repairing corrupt data later.",
+    "mistake": "Catching every exception and hiding the reason the operation failed.",
+    "check": "Is this failure caused by invalid input, a programming defect or an unavailable dependency?",
+    "detail": "Errors are information about an unmet assumption. Good programs detect foreseeable problems and report them clearly. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "Reject a negative expense amount before saving it, rather than repairing corrupt data later.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "web",
+      "sql"
+    ]
+  },
+  {
+    "id": "testing",
+    "match": [
+      "test",
+      "quality",
+      "assert",
+      "unit",
+      "integration"
+    ],
+    "principle": "A test states an expected behaviour and checks whether the implementation still satisfies it.",
+    "mentalModel": "Arrange the situation, perform one action and assert the observable result.",
+    "example": "Given an empty expense list, adding \u00a312.50 should create one record with amount 12.50.",
+    "mistake": "Testing implementation details instead of behaviour the user or caller depends on.",
+    "check": "What exact behaviour would break if this test failed?",
+    "detail": "A test states an expected behaviour and checks whether the implementation still satisfies it. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "Given an empty expense list, adding \u00a312.50 should create one record with amount 12.50.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "web",
+      "sql"
+    ]
+  },
+  {
+    "id": "sql-select",
+    "match": [
+      "select",
+      "from",
+      "filter",
+      "where",
+      "projection"
+    ],
+    "principle": "A SQL query transforms a source relation into a result relation. SELECT chooses columns; FROM identifies the source; WHERE chooses rows.",
+    "mentalModel": "First define one row in the source, then decide which rows and columns belong in the answer.",
+    "example": "SELECT customer, revenue FROM orders WHERE revenue > 100 returns only qualifying orders and two chosen columns.",
+    "mistake": "Writing syntax before deciding the grain\u2014what one row in the result represents.",
+    "check": "What does one row in the result mean?",
+    "detail": "SQL reads relations as sets of rows. Before writing the query, decide the source, the row filter and the columns required in the result.",
+    "exampleTitle": "Select and filter rows",
+    "exampleCode": "SELECT customer_name, revenue\nFROM orders\nWHERE revenue > 100;",
+    "exampleNotes": [
+      "FROM identifies the source table",
+      "WHERE filters rows",
+      "SELECT chooses result columns"
+    ],
+    "academyIds": [
+      "sql"
+    ]
+  },
+  {
+    "id": "sql-aggregate",
+    "match": [
+      "aggregate",
+      "group by",
+      "sum",
+      "average",
+      "count",
+      "grain"
+    ],
+    "principle": "Aggregation changes detail rows into summary rows. GROUP BY defines the dimensions that remain.",
+    "mentalModel": "Place detail rows into buckets, then calculate one result per bucket.",
+    "example": "GROUP BY region produces one row per region; SUM(revenue) calculates each bucket's total.",
+    "mistake": "Selecting a non-aggregated column that is not part of the grouping grain.",
+    "check": "After grouping, what does one result row represent?",
+    "detail": "Aggregation changes the grain. After grouping by region, one result row represents one region rather than one transaction.",
+    "exampleTitle": "Revenue by region",
+    "exampleCode": "SELECT region, SUM(revenue) AS total_revenue\nFROM orders\nGROUP BY region;",
+    "exampleNotes": [
+      "Detail rows are placed into regional groups",
+      "SUM produces one value per group"
+    ],
+    "academyIds": [
+      "sql"
+    ]
+  },
+  {
+    "id": "sql-join",
+    "match": [
+      "join",
+      "cardinality",
+      "relationship",
+      "foreign key"
+    ],
+    "principle": "A join combines rows using a relationship. Correctness depends on understanding how many matches each row can have.",
+    "mentalModel": "For every row on the left, ask how many rows on the right can match: zero, one or many.",
+    "example": "Joining orders to customers is commonly many orders to one customer.",
+    "mistake": "Ignoring many-to-many multiplication and then trusting inflated totals.",
+    "check": "Could one row on either side match more than once?",
+    "detail": "A join combines rows using a relationship. Correctness depends on understanding how many matches each row can have. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "Joining orders to customers is commonly many orders to one customer.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "sql"
+    ]
+  },
+  {
+    "id": "sql-window",
+    "match": [
+      "window",
+      "lag",
+      "rank",
+      "partition"
+    ],
+    "principle": "Window functions calculate across related rows without collapsing them into one summary row.",
+    "mentalModel": "Keep every row visible while giving each row a view of its neighbours or group.",
+    "example": "LAG(revenue) compares each month with the previous month for the same customer.",
+    "mistake": "Using GROUP BY when row-level detail must remain in the result.",
+    "check": "Do you need fewer rows, or the same rows with additional context?",
+    "detail": "Window functions calculate across related rows without collapsing them into one summary row. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "LAG(revenue) compares each month with the previous month for the same customer.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "sql"
+    ]
+  },
+  {
+    "id": "html",
+    "match": [
+      "html",
+      "semantic",
+      "page structure",
+      "element"
+    ],
+    "principle": "HTML describes the meaning and hierarchy of content; it is not merely a collection of boxes for CSS.",
+    "mentalModel": "Create a document outline that makes sense even before visual styling is applied.",
+    "example": "Use header, main, article and footer to communicate page structure to browsers and assistive technology.",
+    "mistake": "Using generic div elements when a meaningful native element already exists.",
+    "check": "What is this piece of content, not merely how should it look?",
+    "detail": "Semantic HTML gives meaning to content. This improves accessibility, document structure and maintainability before any styling is applied.",
+    "exampleTitle": "Semantic page structure",
+    "exampleCode": "<header>Site header</header>\n<main>\n  <article>Learning content</article>\n</main>\n<footer>Site footer</footer>",
+    "exampleNotes": [
+      "main identifies the primary content",
+      "article represents a self-contained section"
+    ],
+    "academyIds": [
+      "web"
+    ]
+  },
+  {
+    "id": "css",
+    "match": [
+      "css",
+      "layout",
+      "responsive",
+      "grid",
+      "flex"
+    ],
+    "principle": "CSS controls presentation by applying rules to the document structure. Responsive design allows those rules to adapt.",
+    "mentalModel": "Let the container distribute available space rather than fixing every element to one screen size.",
+    "example": "A grid using minmax() can change from several columns to one without rewriting the HTML.",
+    "mistake": "Using rigid widths that work only on the developer's screen.",
+    "check": "What should happen when available width becomes smaller than the content?",
+    "detail": "Responsive CSS should describe how space is distributed rather than assuming one fixed screen size.",
+    "exampleTitle": "Responsive grid",
+    "exampleCode": ".cards {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\n  gap: 1rem;\n}",
+    "exampleNotes": [
+      "auto-fit adapts the number of columns",
+      "minmax sets a practical minimum card width"
+    ],
+    "academyIds": [
+      "web"
+    ]
+  },
+  {
+    "id": "javascript",
+    "match": [
+      "javascript",
+      "event",
+      "dom",
+      "browser",
+      "state"
+    ],
+    "principle": "Browser JavaScript reacts to events, updates application state and renders the resulting interface.",
+    "mentalModel": "Event \u2192 state change \u2192 render. Keep those steps distinct whenever possible.",
+    "example": "A form submit event validates input, updates the task list and rerenders the visible tasks.",
+    "mistake": "Changing the DOM in many unrelated places without a clear source of truth.",
+    "check": "What event occurred, what state changed and what must be rerendered?",
+    "detail": "Interactive browser code becomes easier to understand when events, state updates and rendering are kept separate.",
+    "exampleTitle": "Event \u2192 state \u2192 render",
+    "exampleCode": "let count = 0;\n\nbutton.addEventListener(\"click\", () => {\n  count += 1;\n  output.textContent = count;\n});",
+    "exampleNotes": [
+      "The click event triggers the function",
+      "count is updated before the interface is rendered"
+    ],
+    "academyIds": [
+      "web"
+    ]
+  },
+  {
+    "id": "async",
+    "match": [
+      "async",
+      "fetch",
+      "api",
+      "promise",
+      "loading"
+    ],
+    "principle": "Asynchronous work finishes later, so the interface must represent waiting, success and failure explicitly.",
+    "mentalModel": "Start the request, show progress, await the outcome, then render either data or an error.",
+    "example": "A weather search displays loading feedback before the response arrives and an error if the city cannot be found.",
+    "mistake": "Assuming data is available immediately after starting a request.",
+    "check": "What should the user see before, during and after the request?",
+    "detail": "Asynchronous work finishes later, so the interface must represent waiting, success and failure explicitly. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "A weather search displays loading feedback before the response arrives and an error if the city cannot be found.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "web",
+      "python"
+    ]
+  },
+  {
+    "id": "java-structure",
+    "match": [
+      "program structure",
+      "main method",
+      "class",
+      "statement"
+    ],
+    "principle": "A Java program is organised into classes. Execution commonly starts in a public static void main method.",
+    "mentalModel": "Class defines the container; method defines behaviour; statements perform the individual actions.",
+    "example": "Main contains main(), and main() calls System.out.println() as one executable statement.",
+    "mistake": "Placing executable statements directly in the class body or mismatching braces.",
+    "check": "Which class contains the entry point, and which method begins execution?",
+    "detail": "Java requires behaviour to live inside classes and methods. Braces define structure, and the main method is a common starting point.",
+    "exampleTitle": "Minimal Java program",
+    "exampleCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello\");\n    }\n}",
+    "exampleNotes": [
+      "Main is the class",
+      "main is the entry method",
+      "println is the executed statement"
+    ],
+    "academyIds": [
+      "java"
+    ]
+  },
+  {
+    "id": "api",
+    "match": [
+      "api",
+      "endpoint",
+      "request",
+      "response",
+      "rest"
+    ],
+    "principle": "An API is a contract between systems: accepted input, observable output, failure behaviour and stability expectations.",
+    "mentalModel": "Treat every endpoint as a public function used over a network boundary.",
+    "example": "POST /expenses accepts validated expense data and returns the created resource or a clear validation error.",
+    "mistake": "Designing only the success response and leaving error contracts ambiguous.",
+    "check": "What can the caller rely on when the request succeeds or fails?",
+    "detail": "An API is a contract between systems: accepted input, observable output, failure behaviour and stability expectations. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "POST /expenses accepts validated expense data and returns the created resource or a clear validation error.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "python",
+      "web",
+      "java"
+    ]
+  },
+  {
+    "id": "persistence",
+    "match": [
+      "database",
+      "persistence",
+      "json",
+      "save",
+      "storage"
+    ],
+    "principle": "Persistence keeps state beyond the current process or browser session.",
+    "mentalModel": "Convert in-memory state into a durable representation, then reconstruct it safely later.",
+    "example": "An expense list is serialised to JSON and loaded back as a list when the application starts.",
+    "mistake": "Saving invalid state or assuming stored content is always present and well formed.",
+    "check": "What validation is required before writing and after reading?",
+    "detail": "In-memory data disappears when the process ends. Persistence converts that data into a durable format such as JSON or database rows.",
+    "exampleTitle": "A dataframe example",
+    "exampleCode": "import pandas as pd\n\ndata = {\n    \"name\": [\"Ana\", \"Ben\"],\n    \"score\": [82, 91]\n}\n\ndf = pd.DataFrame(data)\nprint(df)",
+    "exampleNotes": [
+      "A dataframe is a table with named columns",
+      "Each row contains related values",
+      "Columns may have different data types"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "sql"
+    ]
+  },
+  {
+    "id": "production",
+    "match": [
+      "production",
+      "deployment",
+      "observability",
+      "monitoring",
+      "release"
+    ],
+    "principle": "Production engineering makes software operable after development: configurable, observable, recoverable and repeatable.",
+    "mentalModel": "A release is not complete when code starts; it is complete when health can be verified and failure can be handled.",
+    "example": "A service exposes a health check, logs failures and documents rollback conditions.",
+    "mistake": "Treating deployment as a one-time upload without verification or recovery planning.",
+    "check": "How will you know this is healthy, and what will you do if it is not?",
+    "detail": "Production engineering makes software operable after development: configurable, observable, recoverable and repeatable. The key is to understand the data, rule and result before concentrating on syntax.",
+    "exampleTitle": "Concept in practice",
+    "exampleCode": "A service exposes a health check, logs failures and documents rollback conditions.",
+    "exampleNotes": [
+      "Read the example from input to result",
+      "Identify the rule being applied"
+    ],
+    "academyIds": [
+      "python",
+      "java",
+      "web",
+      "sql"
+    ]
+  },
+  {
+    "id": "dataframe",
+    "match": [
+      "dataframe",
+      "pandas",
+      "table",
+      "column",
+      "row"
+    ],
+    "principle": "A dataframe is a labelled two-dimensional table. Rows represent observations and columns represent attributes.",
+    "detail": "Dataframes are designed for analytical work: filtering, grouping, joining, calculating and validating structured data.",
+    "mentalModel": "Think of a spreadsheet with programmable operations and explicit column names.",
+    "example": "A learner dataframe may contain name, academy and score columns.",
+    "exampleTitle": "What a dataframe looks like",
+    "exampleCode": "import pandas as pd\n\nlearners = pd.DataFrame({\n    \"name\": [\"Ana\", \"Ben\", \"Cara\"],\n    \"academy\": [\"Python\", \"SQL\", \"Web\"],\n    \"score\": [82, 91, 76]\n})\n\nprint(learners)",
+    "exampleNotes": [
+      "Each dictionary key becomes a column",
+      "Each list position contributes one row",
+      "learners['score'] selects one column"
+    ],
+    "mistake": "Treating a dataframe as an unstructured list and ignoring row and column meaning.",
+    "check": "What does one row represent, and what does each column describe?",
+    "academyIds": [
+      "python"
+    ]
+  },
+  {
+    "id": "pandas-filtering",
+    "academyIds": [
+      "python"
+    ],
+    "match": [
+      "pandas",
+      "dataframe",
+      "filter",
+      "high-value",
+      "boolean filter",
+      "select one column",
+      "records",
+      "sales"
+    ],
+    "principle": "A pandas Boolean filter keeps dataframe rows where a condition evaluates to True.",
+    "detail": "The comparison creates one True-or-False value per row. Using that Boolean series inside square brackets returns only the matching records.",
+    "mentalModel": "Imagine placing a keep/discard marker beside every row, then retaining only rows marked True.",
+    "example": "Filter sales worth at least 300.",
+    "exampleTitle": "Filtering dataframe rows",
+    "exampleCode": "import pandas as pd\n\ndf = pd.DataFrame({\n    \"product\": [\"A\", \"B\", \"C\", \"D\"],\n    \"sales\": [120, 420, 260, 510]\n})\n\nhigh_value = df[df[\"sales\"] >= 300]\nprint(high_value)",
+    "exampleNotes": [
+      "df['sales'] >= 300 creates a Boolean series",
+      "df[...] applies that series as a row filter",
+      "The result remains a dataframe"
+    ],
+    "mistake": "Writing SQL syntax such as SELECT or WHERE inside a pandas expression, or forgetting the inner column brackets.",
+    "check": "For the four sales values, which rows produce True for sales >= 300?"
+  }
+]

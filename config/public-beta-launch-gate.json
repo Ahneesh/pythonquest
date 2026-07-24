@@ -1,0 +1,75 @@
+{
+  "version": "64.0",
+  "gates": [
+    {
+      "id": "auth",
+      "label": "Email and Google sign-in",
+      "required": true
+    },
+    {
+      "id": "onboarding",
+      "label": "Goal and academy onboarding",
+      "required": true
+    },
+    {
+      "id": "academy-integrity",
+      "label": "Correct academy after refresh",
+      "required": true
+    },
+    {
+      "id": "lesson",
+      "label": "Textbook, audio and exercise",
+      "required": true
+    },
+    {
+      "id": "mastery",
+      "label": "Mastery scoring and feedback",
+      "required": true
+    },
+    {
+      "id": "persistence",
+      "label": "Progress restored across sessions",
+      "required": true
+    },
+    {
+      "id": "project",
+      "label": "At least one usable project",
+      "required": true
+    },
+    {
+      "id": "payments",
+      "label": "Stripe test journey",
+      "required": true
+    },
+    {
+      "id": "security",
+      "label": "RLS and server entitlements",
+      "required": true
+    },
+    {
+      "id": "navigation",
+      "label": "No dead primary menu items",
+      "required": true
+    },
+    {
+      "id": "mobile",
+      "label": "Core journey usable on mobile",
+      "required": true
+    },
+    {
+      "id": "errors",
+      "label": "No uncaught critical journey errors",
+      "required": true
+    },
+    {
+      "id": "feedback",
+      "label": "Problem reporting available",
+      "required": true
+    },
+    {
+      "id": "legal",
+      "label": "Privacy, terms and cancellation clear",
+      "required": true
+    }
+  ]
+}

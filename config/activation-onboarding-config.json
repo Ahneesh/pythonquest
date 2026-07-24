@@ -1,0 +1,37 @@
+{
+  "version": "60.0",
+  "goals": [
+    {
+      "id": "learn-programming",
+      "label": "Learn programming"
+    },
+    {
+      "id": "improve-data-skills",
+      "label": "Improve data skills"
+    },
+    {
+      "id": "build-portfolio",
+      "label": "Build portfolio evidence"
+    },
+    {
+      "id": "prepare-interviews",
+      "label": "Prepare for technical interviews"
+    },
+    {
+      "id": "career-transition",
+      "label": "Transition into software or data work"
+    }
+  ],
+  "milestones": [
+    "account_created",
+    "academy_selected",
+    "diagnostic_completed",
+    "first_lesson_started",
+    "first_exercise_passed",
+    "first_module_completed",
+    "first_project_created",
+    "first_project_executed",
+    "first_portfolio_evidence_created"
+  ],
+  "activationMilestone": "first_exercise_passed"
+}

@@ -1,0 +1,304 @@
+{
+  "academyId": "java",
+  "title": "Java Academy",
+  "modules": [
+    {
+      "id": "java-foundations",
+      "title": "Stage 1 \u00b7 Java Foundations",
+      "description": "Learn Java syntax, types, control flow and methods.",
+      "credential": "Java Core Practitioner",
+      "lessons": [
+        {
+          "id": "java-program-structure",
+          "title": "Program structure",
+          "description": "Understand classes, main methods and statements.",
+          "kind": "foundation",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"Hello, CodeQuest\");\n  }\n}",
+          "challenge": "Create a valid Java program with a Main class and main method.",
+          "duration": "15 min",
+          "xp": 110,
+          "prerequisites": []
+        },
+        {
+          "id": "java-types",
+          "title": "Variables and primitive types",
+          "description": "Work with integers, decimals, booleans and strings.",
+          "kind": "foundation",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    int quantity = 3;\n    double price = 12.5;\n    boolean available = true;\n    String product = \"Book\";\n    System.out.println(product + \": \" + (quantity * price));\n  }\n}",
+          "challenge": "Declare several primitive values and print a calculated result.",
+          "duration": "17 min",
+          "xp": 110,
+          "prerequisites": [
+            "java-program-structure"
+          ]
+        },
+        {
+          "id": "java-conditionals",
+          "title": "Conditionals",
+          "description": "Express business rules with if, else if and else.",
+          "kind": "foundation",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    int score = 78;\n    if (score >= 70) {\n      System.out.println(\"Pass\");\n    } else {\n      System.out.println(\"Retry\");\n    }\n  }\n}",
+          "challenge": "Print Pass when score is at least 70, otherwise Retry.",
+          "duration": "19 min",
+          "xp": 110,
+          "prerequisites": [
+            "java-types"
+          ]
+        },
+        {
+          "id": "java-loops-methods",
+          "title": "Loops and methods",
+          "description": "Repeat work and move logic into reusable methods.",
+          "kind": "foundation",
+          "starter": "public class Main {\n  static int square(int value) {\n    return value * value;\n  }\n\n  public static void main(String[] args) {\n    for (int i = 1; i <= 3; i++) {\n      System.out.println(square(i));\n    }\n  }\n}",
+          "challenge": "Create a method and call it from a loop.",
+          "duration": "21 min",
+          "xp": 110,
+          "prerequisites": [
+            "java-conditionals"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java-oop",
+      "title": "Stage 2 \u00b7 Object-Oriented Java",
+      "description": "Model behaviour with classes, objects and interfaces.",
+      "credential": "Object-Oriented Java Practitioner",
+      "lessons": [
+        {
+          "id": "java-classes",
+          "title": "Classes and objects",
+          "description": "Represent data and behaviour together.",
+          "kind": "oop",
+          "starter": "class Account {\n  String owner;\n  double balance;\n\n  Account(String owner, double balance) {\n    this.owner = owner;\n    this.balance = balance;\n  }\n\n  void deposit(double amount) {\n    balance += amount;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Account account = new Account(\"Asha\", 100);\n    account.deposit(50);\n    System.out.println(account.balance);\n  }\n}",
+          "challenge": "Create an Account object and update its balance through a method.",
+          "duration": "15 min",
+          "xp": 130,
+          "prerequisites": [
+            "java-loops-methods"
+          ]
+        },
+        {
+          "id": "java-encapsulation",
+          "title": "Encapsulation",
+          "description": "Protect state with private fields and controlled access.",
+          "kind": "oop",
+          "starter": "class Account {\n  private double balance;\n\n  Account(double balance) {\n    this.balance = balance;\n  }\n\n  public double getBalance() {\n    return balance;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Account account = new Account(250);\n    System.out.println(account.getBalance());\n  }\n}",
+          "challenge": "Keep balance private and expose it through a public method.",
+          "duration": "17 min",
+          "xp": 130,
+          "prerequisites": [
+            "java-classes"
+          ]
+        },
+        {
+          "id": "java-inheritance",
+          "title": "Inheritance and polymorphism",
+          "description": "Reuse abstractions while allowing specialised behaviour.",
+          "kind": "oop",
+          "starter": "class Animal {\n  String sound() { return \"unknown\"; }\n}\n\nclass Dog extends Animal {\n  @Override\n  String sound() { return \"woof\"; }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Animal animal = new Dog();\n    System.out.println(animal.sound());\n  }\n}",
+          "challenge": "Override a method and call it polymorphically.",
+          "duration": "19 min",
+          "xp": 130,
+          "prerequisites": [
+            "java-encapsulation"
+          ]
+        },
+        {
+          "id": "java-interfaces",
+          "title": "Interfaces and abstractions",
+          "description": "Define contracts independently of implementation.",
+          "kind": "oop",
+          "starter": "interface Payable {\n  double amount();\n}\n\nclass Invoice implements Payable {\n  public double amount() { return 125.0; }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Payable item = new Invoice();\n    System.out.println(item.amount());\n  }\n}",
+          "challenge": "Create an interface and a class that implements it.",
+          "duration": "21 min",
+          "xp": 130,
+          "prerequisites": [
+            "java-inheritance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java-advanced",
+      "title": "Stage 3 \u00b7 Advanced Java",
+      "description": "Use collections, generics, streams and robust exception handling.",
+      "credential": "Advanced Java Developer",
+      "lessons": [
+        {
+          "id": "java-collections",
+          "title": "Collections framework",
+          "description": "Use List, Set and Map effectively.",
+          "kind": "advanced",
+          "starter": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    List<String> names = new ArrayList<>();\n    names.add(\"Asha\");\n    names.add(\"Ben\");\n    System.out.println(names.size());\n  }\n}",
+          "challenge": "Create and populate a typed List.",
+          "duration": "15 min",
+          "xp": 150,
+          "prerequisites": [
+            "java-interfaces"
+          ]
+        },
+        {
+          "id": "java-generics",
+          "title": "Generics",
+          "description": "Write reusable type-safe code.",
+          "kind": "advanced",
+          "starter": "class Box<T> {\n  private T value;\n  Box(T value) { this.value = value; }\n  T get() { return value; }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Box<String> box = new Box<>(\"CodeQuest\");\n    System.out.println(box.get());\n  }\n}",
+          "challenge": "Create a generic Box<T> and retrieve its value.",
+          "duration": "17 min",
+          "xp": 150,
+          "prerequisites": [
+            "java-collections"
+          ]
+        },
+        {
+          "id": "java-streams",
+          "title": "Lambdas and streams",
+          "description": "Transform collections declaratively.",
+          "kind": "advanced",
+          "starter": "import java.util.*;\n\npublic class Main {\n  public static void main(String[] args) {\n    List<Integer> values = List.of(1,2,3,4);\n    int total = values.stream()\n      .filter(v -> v % 2 == 0)\n      .mapToInt(v -> v)\n      .sum();\n    System.out.println(total);\n  }\n}",
+          "challenge": "Use a stream to filter even numbers and calculate their total.",
+          "duration": "19 min",
+          "xp": 150,
+          "prerequisites": [
+            "java-generics"
+          ]
+        },
+        {
+          "id": "java-exceptions",
+          "title": "Exceptions",
+          "description": "Handle failures without hiding them.",
+          "kind": "advanced",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    try {\n      int value = Integer.parseInt(\"42\");\n      System.out.println(value);\n    } catch (NumberFormatException error) {\n      System.out.println(\"Invalid number\");\n    }\n  }\n}",
+          "challenge": "Catch a specific parsing exception and show a useful message.",
+          "duration": "21 min",
+          "xp": 150,
+          "prerequisites": [
+            "java-streams"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java-engineering",
+      "title": "Stage 4 \u00b7 Java Engineering",
+      "description": "Apply testing, build tools, design principles and concurrency.",
+      "credential": "Java Engineering Practitioner",
+      "lessons": [
+        {
+          "id": "java-testing",
+          "title": "JUnit-style testing",
+          "description": "Verify behaviour through focused tests.",
+          "kind": "engineering",
+          "starter": "class Calculator {\n  int add(int a, int b) { return a + b; }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Calculator calculator = new Calculator();\n    if (calculator.add(2, 3) != 5) {\n      throw new AssertionError(\"Expected 5\");\n    }\n    System.out.println(\"Test passed\");\n  }\n}",
+          "challenge": "Create a simple behavioural test and fail clearly when the result is wrong.",
+          "duration": "15 min",
+          "xp": 170,
+          "prerequisites": [
+            "java-exceptions"
+          ]
+        },
+        {
+          "id": "java-solid",
+          "title": "SOLID and design",
+          "description": "Separate responsibilities and depend on abstractions.",
+          "kind": "engineering",
+          "starter": "interface MessageSender {\n  void send(String message);\n}\n\nclass ConsoleSender implements MessageSender {\n  public void send(String message) { System.out.println(message); }\n}\n\nclass NotificationService {\n  private final MessageSender sender;\n  NotificationService(MessageSender sender) { this.sender = sender; }\n  void notifyUser() { sender.send(\"Welcome\"); }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    new NotificationService(new ConsoleSender()).notifyUser();\n  }\n}",
+          "challenge": "Inject an interface dependency rather than hard-coding an implementation.",
+          "duration": "17 min",
+          "xp": 170,
+          "prerequisites": [
+            "java-testing"
+          ]
+        },
+        {
+          "id": "java-build",
+          "title": "Maven and project structure",
+          "description": "Understand standard Java project organisation.",
+          "kind": "engineering",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"src/main/java\");\n    System.out.println(\"src/test/java\");\n    System.out.println(\"pom.xml\");\n  }\n}",
+          "challenge": "Describe the purpose of src/main/java, src/test/java and pom.xml.",
+          "duration": "19 min",
+          "xp": 170,
+          "prerequisites": [
+            "java-solid"
+          ]
+        },
+        {
+          "id": "java-concurrency",
+          "title": "Concurrency fundamentals",
+          "description": "Reason about independent tasks and shared state.",
+          "kind": "engineering",
+          "starter": "public class Main {\n  public static void main(String[] args) throws InterruptedException {\n    Thread worker = new Thread(() -> System.out.println(\"Background task\"));\n    worker.start();\n    worker.join();\n    System.out.println(\"Complete\");\n  }\n}",
+          "challenge": "Start a worker thread and wait for it to finish.",
+          "duration": "21 min",
+          "xp": 170,
+          "prerequisites": [
+            "java-build"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java-enterprise",
+      "title": "Stage 5 \u00b7 Enterprise Java",
+      "description": "Design database-backed APIs and Spring Boot services.",
+      "credential": "Spring Boot Application Developer",
+      "lessons": [
+        {
+          "id": "java-jdbc",
+          "title": "JDBC and persistence",
+          "description": "Understand database connections and prepared statements.",
+          "kind": "enterprise",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    String sql = \"SELECT * FROM customers WHERE customer_id = ?\";\n    System.out.println(sql);\n    System.out.println(\"Use PreparedStatement for values\");\n  }\n}",
+          "challenge": "Explain why prepared statements are safer than string concatenation.",
+          "duration": "15 min",
+          "xp": 190,
+          "prerequisites": [
+            "java-concurrency"
+          ]
+        },
+        {
+          "id": "java-spring-core",
+          "title": "Spring dependency injection",
+          "description": "Use containers to wire application components.",
+          "kind": "enterprise",
+          "starter": "interface Repository {}\nclass CustomerRepository implements Repository {}\n\nclass CustomerService {\n  private final Repository repository;\n  CustomerService(Repository repository) { this.repository = repository; }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    CustomerService service = new CustomerService(new CustomerRepository());\n    System.out.println(service.getClass().getSimpleName());\n  }\n}",
+          "challenge": "Model a service whose repository dependency is injected.",
+          "duration": "17 min",
+          "xp": 190,
+          "prerequisites": [
+            "java-jdbc"
+          ]
+        },
+        {
+          "id": "java-spring-rest",
+          "title": "Spring Boot REST APIs",
+          "description": "Design controllers, requests and responses.",
+          "kind": "enterprise",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    System.out.println(\"GET /api/customers/{id}\");\n    System.out.println(\"200 OK or 404 Not Found\");\n  }\n}",
+          "challenge": "Describe a REST endpoint and its success and failure responses.",
+          "duration": "19 min",
+          "xp": 190,
+          "prerequisites": [
+            "java-spring-core"
+          ]
+        },
+        {
+          "id": "java-production",
+          "title": "Validation and production readiness",
+          "description": "Add health, validation, logging and deployment checks.",
+          "kind": "enterprise",
+          "starter": "public class Main {\n  public static void main(String[] args) {\n    String[] checks = {\"validation\", \"structured logging\", \"health endpoint\", \"tests\", \"container image\"};\n    for (String check : checks) {\n      System.out.println(check);\n    }\n  }\n}",
+          "challenge": "Create a production-readiness checklist for a Spring Boot service.",
+          "duration": "21 min",
+          "xp": 190,
+          "prerequisites": [
+            "java-spring-rest"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "lessonTemplates": [
+    {
+      "id": "concept-practice",
+      "title": "Concept + Practice Lesson",
+      "description": "Explain a concept, ask for a prediction, then provide a coding task.",
+      "sections": [
+        "concept",
+        "example",
+        "prediction",
+        "practice",
+        "reflection"
+      ]
+    },
+    {
+      "id": "debugging-workshop",
+      "title": "Debugging Workshop",
+      "description": "Present faulty code, guide diagnosis, then validate a repaired solution.",
+      "sections": [
+        "scenario",
+        "faultyCode",
+        "diagnosticQuestions",
+        "repairTask",
+        "tests"
+      ]
+    },
+    {
+      "id": "career-scenario",
+      "title": "Career Scenario",
+      "description": "Use a workplace brief with deliverables and evidence requirements.",
+      "sections": [
+        "role",
+        "brief",
+        "constraints",
+        "deliverables",
+        "reviewRubric"
+      ]
+    }
+  ],
+  "assessmentTemplates": [
+    {
+      "id": "knowledge-check",
+      "title": "Knowledge Check",
+      "questionTypes": [
+        "multiple-choice",
+        "confidence",
+        "explanation"
+      ]
+    },
+    {
+      "id": "coding-checkpoint",
+      "title": "Coding Checkpoint",
+      "questionTypes": [
+        "public-tests",
+        "hidden-tests",
+        "quality",
+        "explanation"
+      ]
+    },
+    {
+      "id": "portfolio-review",
+      "title": "Portfolio Review",
+      "questionTypes": [
+        "rubric",
+        "evidence",
+        "reflection"
+      ]
+    }
+  ],
+  "supportedAcademies": [
+    "python",
+    "sql",
+    "web",
+    "java"
+  ],
+  "statuses": [
+    "draft",
+    "review",
+    "published",
+    "archived"
+  ]
+}

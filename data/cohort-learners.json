@@ -1,0 +1,34 @@
+[
+  {
+    "id": "learner-001",
+    "name": "Maya Patel",
+    "email": "maya@example.com",
+    "cohortId": "cohort-data-analyst-01",
+    "status": "active",
+    "joinedAt": "2026-07-20"
+  },
+  {
+    "id": "learner-002",
+    "name": "Daniel Reed",
+    "email": "daniel@example.com",
+    "cohortId": "cohort-data-analyst-01",
+    "status": "active",
+    "joinedAt": "2026-07-20"
+  },
+  {
+    "id": "learner-003",
+    "name": "Sofia Khan",
+    "email": "sofia@example.com",
+    "cohortId": "cohort-data-analyst-01",
+    "status": "active",
+    "joinedAt": "2026-07-20"
+  },
+  {
+    "id": "learner-004",
+    "name": "Noah Williams",
+    "email": "noah@example.com",
+    "cohortId": "cohort-data-analyst-01",
+    "status": "at-risk",
+    "joinedAt": "2026-07-20"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ann-001",
+    "cohortId": "cohort-data-analyst-01",
+    "title": "Week 1 begins",
+    "body": "Start with the SQL foundations checkpoint and attend the Friday review session.",
+    "publishedAt": "2026-07-20T08:00:00",
+    "priority": "normal"
+  },
+  {
+    "id": "ann-002",
+    "cohortId": "cohort-data-analyst-01",
+    "title": "SQL checkpoint reminder",
+    "body": "Submissions are due Monday at 5pm. Include your explanation before submitting.",
+    "publishedAt": "2026-07-25T12:00:00",
+    "priority": "high"
+  }
+]

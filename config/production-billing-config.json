@@ -1,0 +1,48 @@
+{
+  "version": "60.0",
+  "checkoutEndpoint": "/api/create-checkout-session",
+  "billingPortalEndpoint": "/api/billing-portal",
+  "entitlementEndpoint": "/api/entitlements",
+  "starterPackDays": 15,
+  "plans": {
+    "free": {
+      "stripeMode": null,
+      "serverPriceEnv": null
+    },
+    "starter_15_day": {
+      "stripeMode": "payment",
+      "serverPriceEnv": "STRIPE_PRICE_STARTER_15_DAY",
+      "renewing": false
+    },
+    "pro_monthly": {
+      "stripeMode": "subscription",
+      "serverPriceEnv": "STRIPE_PRICE_PRO_MONTHLY",
+      "renewing": true
+    },
+    "pro_annual": {
+      "stripeMode": "subscription",
+      "serverPriceEnv": "STRIPE_PRICE_PRO_ANNUAL",
+      "renewing": true
+    }
+  },
+  "entitlementStates": [
+    "active",
+    "trialling",
+    "cancelling",
+    "past_due",
+    "expired",
+    "payment_failed",
+    "refunded"
+  ],
+  "starterPackRemindersDays": [
+    7,
+    3,
+    1
+  ],
+  "downgradeRules": {
+    "preserveProjects": true,
+    "preserveCompletedLessons": true,
+    "preserveCredentials": true,
+    "preserveExistingExports": true
+  }
+}

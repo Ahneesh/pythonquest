@@ -1,0 +1,163 @@
+[
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst Mock Interview",
+    "role": "Data Analyst",
+    "duration": "20\u201330 min",
+    "questions": [
+      {
+        "type": "technical",
+        "question": "How would you clean a dataset containing duplicates, missing revenue values and inconsistent date formats?",
+        "signals": [
+          "duplicates",
+          "missing values",
+          "date conversion",
+          "validation",
+          "assumptions"
+        ]
+      },
+      {
+        "type": "technical",
+        "question": "Explain the difference between INNER JOIN and LEFT JOIN using a customer-orders example.",
+        "signals": [
+          "matched rows",
+          "all left rows",
+          "unmatched customers",
+          "business use case"
+        ]
+      },
+      {
+        "type": "analysis",
+        "question": "A dashboard shows revenue increasing while profit falls. How would you investigate?",
+        "signals": [
+          "costs",
+          "mix",
+          "discounts",
+          "segments",
+          "data quality",
+          "trend"
+        ]
+      },
+      {
+        "type": "behavioural",
+        "question": "Tell me about a time you turned ambiguous data into a useful decision.",
+        "signals": [
+          "problem",
+          "stakeholders",
+          "approach",
+          "evidence",
+          "impact"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "python-automation",
+    "title": "Python Automation Mock Interview",
+    "role": "Python Automation Specialist",
+    "duration": "20\u201330 min",
+    "questions": [
+      {
+        "type": "technical",
+        "question": "How would you design a script that processes many files safely and can be rerun?",
+        "signals": [
+          "functions",
+          "idempotency",
+          "validation",
+          "logging",
+          "errors",
+          "checkpoint"
+        ]
+      },
+      {
+        "type": "technical",
+        "question": "How do you handle an API response where fields may be missing?",
+        "signals": [
+          "status code",
+          "dict.get",
+          "schema validation",
+          "defaults",
+          "error payload"
+        ]
+      },
+      {
+        "type": "debugging",
+        "question": "A scheduled Python script works manually but fails overnight. What do you check?",
+        "signals": [
+          "environment",
+          "paths",
+          "permissions",
+          "logs",
+          "credentials",
+          "timezone"
+        ]
+      },
+      {
+        "type": "behavioural",
+        "question": "Describe an automation that reduced repetitive work.",
+        "signals": [
+          "manual process",
+          "solution",
+          "controls",
+          "time saved",
+          "adoption"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "junior-data-engineer",
+    "title": "Junior Data Engineer Mock Interview",
+    "role": "Junior Data Engineer",
+    "duration": "25\u201335 min",
+    "questions": [
+      {
+        "type": "technical",
+        "question": "Walk me through an ETL pipeline you would build for daily order data.",
+        "signals": [
+          "extract",
+          "transform",
+          "load",
+          "validation",
+          "logging",
+          "testing"
+        ]
+      },
+      {
+        "type": "technical",
+        "question": "What is incremental processing and why are checkpoints important?",
+        "signals": [
+          "new data",
+          "changed data",
+          "checkpoint",
+          "recovery",
+          "duplicate prevention"
+        ]
+      },
+      {
+        "type": "data-quality",
+        "question": "How would you stop bad records from reaching downstream consumers?",
+        "signals": [
+          "schema",
+          "required fields",
+          "types",
+          "quarantine",
+          "metrics",
+          "alerting"
+        ]
+      },
+      {
+        "type": "behavioural",
+        "question": "Tell me about a defect you diagnosed systematically.",
+        "signals": [
+          "reproduce",
+          "isolate",
+          "traceback",
+          "hypothesis",
+          "test",
+          "prevention"
+        ]
+      }
+    ]
+  }
+]

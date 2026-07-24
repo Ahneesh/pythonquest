@@ -1,0 +1,142 @@
+[
+  {
+    "id": "python-data-quality-squad",
+    "academyId": "python",
+    "title": "Data Quality Automation Squad",
+    "summary": "Build validation, profiling and exception-reporting features as a small engineering team.",
+    "projectTemplateId": "python-expense-api",
+    "roles": [
+      "Tech Lead",
+      "Developer",
+      "Reviewer",
+      "Test Engineer"
+    ],
+    "backlog": [
+      {
+        "title": "Add reusable amount validation",
+        "type": "feature",
+        "points": 3
+      },
+      {
+        "title": "Add duplicate-record detection",
+        "type": "feature",
+        "points": 5
+      },
+      {
+        "title": "Add failure-path tests",
+        "type": "test",
+        "points": 3
+      },
+      {
+        "title": "Document data-quality controls",
+        "type": "docs",
+        "points": 2
+      }
+    ]
+  },
+  {
+    "id": "sql-controls-squad",
+    "academyId": "sql",
+    "title": "Analytics Controls Squad",
+    "summary": "Develop a governed revenue model with joins, reconciliations and peer-reviewed controls.",
+    "projectTemplateId": "sql-revenue-model",
+    "roles": [
+      "Product Owner",
+      "Developer",
+      "Reviewer",
+      "Test Engineer"
+    ],
+    "backlog": [
+      {
+        "title": "Define regional result grain",
+        "type": "analysis",
+        "points": 2
+      },
+      {
+        "title": "Implement revenue aggregation",
+        "type": "feature",
+        "points": 3
+      },
+      {
+        "title": "Add reconciliation controls",
+        "type": "control",
+        "points": 5
+      },
+      {
+        "title": "Review join cardinality",
+        "type": "review",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "id": "web-accessibility-squad",
+    "academyId": "web",
+    "title": "Accessible Product Squad",
+    "summary": "Ship an accessible task board through branches, reviews and responsive UI testing.",
+    "projectTemplateId": "web-task-board",
+    "roles": [
+      "Product Owner",
+      "Developer",
+      "Reviewer",
+      "Test Engineer"
+    ],
+    "backlog": [
+      {
+        "title": "Implement task creation",
+        "type": "feature",
+        "points": 3
+      },
+      {
+        "title": "Add keyboard interaction",
+        "type": "accessibility",
+        "points": 5
+      },
+      {
+        "title": "Add responsive layout",
+        "type": "feature",
+        "points": 3
+      },
+      {
+        "title": "Review safe DOM rendering",
+        "type": "review",
+        "points": 3
+      }
+    ]
+  },
+  {
+    "id": "java-service-squad",
+    "academyId": "java",
+    "title": "Enterprise Service Squad",
+    "summary": "Build and review a layered Java service with domain, repository and test responsibilities.",
+    "projectTemplateId": "java-order-service",
+    "roles": [
+      "Tech Lead",
+      "Developer",
+      "Reviewer",
+      "Test Engineer"
+    ],
+    "backlog": [
+      {
+        "title": "Implement repository save",
+        "type": "feature",
+        "points": 2
+      },
+      {
+        "title": "Implement service validation",
+        "type": "feature",
+        "points": 3
+      },
+      {
+        "title": "Add JUnit service tests",
+        "type": "test",
+        "points": 5
+      },
+      {
+        "title": "Review class responsibilities",
+        "type": "review",
+        "points": 3
+      }
+    ]
+  }
+]

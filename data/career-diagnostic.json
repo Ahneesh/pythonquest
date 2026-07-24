@@ -1,0 +1,123 @@
+[
+  {
+    "id": "py-vars",
+    "skill": "Python Foundations",
+    "question": "Can you confidently use variables, loops, conditions and functions?",
+    "lessonIds": [
+      "variables",
+      "loops",
+      "functions"
+    ]
+  },
+  {
+    "id": "pandas-clean",
+    "skill": "Data Analytics",
+    "question": "Can you clean missing values, duplicates and inconsistent types in pandas?",
+    "lessonIds": [
+      "clean-data"
+    ]
+  },
+  {
+    "id": "pandas-analysis",
+    "skill": "Data Analytics",
+    "question": "Can you group, aggregate and explain business findings?",
+    "lessonIds": [
+      "groupby-analysis",
+      "charts"
+    ]
+  },
+  {
+    "id": "sql-core",
+    "skill": "SQL",
+    "question": "Can you write SELECT, WHERE, GROUP BY and ORDER BY queries?",
+    "lessonIds": [
+      "sql-select",
+      "sql-grouping"
+    ]
+  },
+  {
+    "id": "sql-joins",
+    "skill": "SQL",
+    "question": "Can you choose and explain INNER JOIN versus LEFT JOIN?",
+    "lessonIds": [
+      "sql-joins"
+    ]
+  },
+  {
+    "id": "web-scrape",
+    "skill": "Web Scraping",
+    "question": "Can you extract repeated HTML elements using BeautifulSoup?",
+    "lessonIds": [
+      "beautiful-soup",
+      "scrape-tables"
+    ]
+  },
+  {
+    "id": "json-api",
+    "skill": "Automation",
+    "question": "Can you parse JSON and safely handle missing API fields?",
+    "lessonIds": [
+      "json-data",
+      "api-responses"
+    ]
+  },
+  {
+    "id": "automation",
+    "skill": "Automation",
+    "question": "Can you turn repetitive logic into reusable file-processing functions?",
+    "lessonIds": [
+      "file-automation"
+    ]
+  },
+  {
+    "id": "testing",
+    "skill": "Testing",
+    "question": "Can you write assertions, unit tests and edge-case checks?",
+    "lessonIds": [
+      "assertions",
+      "unit-tests"
+    ]
+  },
+  {
+    "id": "exceptions",
+    "skill": "Testing",
+    "question": "Can you raise and catch specific exceptions without hiding defects?",
+    "lessonIds": [
+      "exceptions"
+    ]
+  },
+  {
+    "id": "advanced",
+    "skill": "Advanced Python",
+    "question": "Do you understand generators, decorators and context managers?",
+    "lessonIds": [
+      "generators",
+      "decorators",
+      "context-managers"
+    ]
+  },
+  {
+    "id": "etl",
+    "skill": "Data Engineering",
+    "question": "Can you design an ETL workflow with separate stages?",
+    "lessonIds": [
+      "etl-pipelines"
+    ]
+  },
+  {
+    "id": "validation",
+    "skill": "Data Engineering",
+    "question": "Can you validate schemas and return useful data-quality errors?",
+    "lessonIds": [
+      "schema-validation"
+    ]
+  },
+  {
+    "id": "incremental",
+    "skill": "Data Engineering",
+    "question": "Can you explain checkpoints and incremental processing?",
+    "lessonIds": [
+      "incremental-processing"
+    ]
+  }
+]

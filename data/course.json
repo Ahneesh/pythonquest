@@ -1,0 +1,3421 @@
+{
+  "modules": [
+    {
+      "id": "foundations",
+      "title": "Module 1 \u00b7 Python Foundations",
+      "description": "Build confidence with core Python through small, practical tasks.",
+      "lessons": [
+        {
+          "id": "variables",
+          "title": "Variables and data types",
+          "description": "Store names, numbers and decisions in Python.",
+          "duration": "12 min",
+          "xp": 80,
+          "badge": "Variable Voyager",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create useful variables",
+              "content": "<p>Variables are labelled containers. Python infers the type from the value.</p><div class='callout'>Create name, age and is_learning variables, then print them.</div>",
+              "starter": "# Create the three variables below\n\n# Print each variable\n",
+              "hint": "Use name = 'Anish', age = 45 and is_learning = True.",
+              "solution": "name = 'Anish'\nage = 45\nis_learning = True\nprint(name)\nprint(age)\nprint(is_learning)",
+              "test": "variables"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Calculate a future age",
+              "content": "<p>Python can combine variables with arithmetic operators.</p><div class='callout'>Create future_age by adding 5 to age, then print it.</div>",
+              "starter": "age = 45\n# Create future_age and print it\n",
+              "hint": "future_age = age + 5",
+              "solution": "future_age = age + 5\nprint(future_age)",
+              "test": "future_age"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the correct type",
+              "content": "<p>Finish with a quick retrieval check.</p>",
+              "starter": "print('Answer the quiz below.')",
+              "hint": "Quotes create text.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is the type of the value '250'?",
+                "options": [
+                  "int",
+                  "float",
+                  "str",
+                  "bool"
+                ],
+                "answer": 2
+              }
+            }
+          ],
+          "prerequisites": [],
+          "keywords": [
+            "Variables and data types",
+            "Module 1 \u00b7 Python Foundations",
+            "Store",
+            "names",
+            "numbers",
+            "and",
+            "decisions",
+            "in",
+            "Python."
+          ]
+        },
+        {
+          "id": "lists",
+          "title": "Lists and indexing",
+          "description": "Work with ordered collections of values.",
+          "duration": "14 min",
+          "xp": 90,
+          "badge": "List Navigator",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create and inspect a list",
+              "content": "<p>A list stores an ordered group of values.</p><div class='callout'>Create sales = [120, 180, 90, 250] and print the first item.</div>",
+              "starter": "# Create the sales list\n\n# Print the first item\n",
+              "hint": "Python indexing starts at zero.",
+              "solution": "sales = [120, 180, 90, 250]\nprint(sales[0])",
+              "test": "list_first"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Find the total",
+              "content": "<p>The built-in sum function adds numeric list values.</p>",
+              "starter": "sales = [120, 180, 90, 250]\n# Print the total sales\n",
+              "hint": "Use sum(sales).",
+              "solution": "print(sum(sales))",
+              "test": "list_sum"
+            },
+            {
+              "type": "DEBUG",
+              "title": "Fix an index error",
+              "content": "<p>This list has four items, indexed from 0 to 3.</p>",
+              "starter": "sales = [120, 180, 90, 250]\nprint(sales[4])",
+              "hint": "The final valid index is 3, or use -1.",
+              "solution": "print(sales[-1])",
+              "test": "list_last"
+            }
+          ],
+          "prerequisites": [
+            "variables"
+          ],
+          "keywords": [
+            "Lists and indexing",
+            "Module 1 \u00b7 Python Foundations",
+            "Work",
+            "with",
+            "ordered",
+            "collections",
+            "of",
+            "values."
+          ]
+        },
+        {
+          "id": "conditions",
+          "title": "Conditions and decisions",
+          "description": "Make programs respond differently to different values.",
+          "duration": "15 min",
+          "xp": 90,
+          "badge": "Logic Builder",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Write an if statement",
+              "content": "<p>Conditions let a program choose what to do.</p><div class='callout'>Print 'Target reached' when revenue is at least 1000.</div>",
+              "starter": "revenue = 1250\n\n# Write the condition below\n",
+              "hint": "Use if revenue >= 1000: and indent the print line.",
+              "solution": "if revenue >= 1000:\n    print('Target reached')",
+              "test": "condition"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Add an alternative",
+              "content": "<p>An else block runs when the condition is false.</p>",
+              "starter": "revenue = 700\n# Print 'Target reached' or 'Keep going'\n",
+              "hint": "Use if, then else.",
+              "solution": "if revenue >= 1000:\n    print('Target reached')\nelse:\n    print('Keep going')",
+              "test": "condition_else"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Read a condition",
+              "content": "<p>Predict before running.</p>",
+              "starter": "print('Complete the quiz below.')",
+              "hint": "800 is not greater than 1000.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What does 800 >= 1000 evaluate to?",
+                "options": [
+                  "True",
+                  "False",
+                  "800",
+                  "An error"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "lists"
+          ],
+          "keywords": [
+            "Conditions and decisions",
+            "Module 1 \u00b7 Python Foundations",
+            "Make",
+            "programs",
+            "respond",
+            "differently",
+            "to",
+            "different",
+            "values."
+          ]
+        },
+        {
+          "id": "functions",
+          "title": "Functions and reuse",
+          "description": "Package logic into reusable building blocks.",
+          "duration": "18 min",
+          "xp": 110,
+          "badge": "Function Maker",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Define a function",
+              "content": "<p>A function gives a name to reusable logic.</p><div class='callout'>Create calculate_total(values) that returns sum(values).</div>",
+              "starter": "# Define the function\n\nprint(calculate_total([10, 20, 30]))",
+              "hint": "Use def calculate_total(values): then return sum(values).",
+              "solution": "def calculate_total(values):\n    return sum(values)\n\nprint(calculate_total([10, 20, 30]))",
+              "test": "function"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Add a default argument",
+              "content": "<p>Default values make parameters optional.</p>",
+              "starter": "def add_tax(amount, rate=0.2):\n    # Return amount including tax\n    pass\n\nprint(add_tax(100))",
+              "hint": "Return amount * (1 + rate).",
+              "solution": "return amount * (1 + rate)",
+              "test": "default_arg"
+            },
+            {
+              "type": "DEBUG",
+              "title": "Return, do not only print",
+              "content": "<p>Printing displays a value. Returning sends it back to the caller.</p>",
+              "starter": "def double(number):\n    print(number * 2)\n\nresult = double(5)\nprint('Result:', result)",
+              "hint": "Replace print inside the function with return.",
+              "solution": "def double(number):\n    return number * 2\n\nresult = double(5)\nprint('Result:', result)",
+              "test": "return_value"
+            }
+          ],
+          "prerequisites": [
+            "conditions"
+          ],
+          "keywords": [
+            "Functions and reuse",
+            "Module 1 \u00b7 Python Foundations",
+            "Package",
+            "logic",
+            "into",
+            "reusable",
+            "building",
+            "blocks."
+          ]
+        }
+      ],
+      "stage": "core-python"
+    },
+    {
+      "id": "analytics",
+      "title": "Module 2 \u00b7 Data Analytics with pandas",
+      "description": "Move from Python syntax to realistic business-data analysis.",
+      "lessons": [
+        {
+          "id": "dataframe",
+          "title": "Create and inspect DataFrames",
+          "description": "Turn records into a table and inspect its structure.",
+          "duration": "16 min",
+          "xp": 100,
+          "badge": "DataFrame Explorer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Build a DataFrame",
+              "content": "<p>A DataFrame is pandas' table structure.</p><div class='callout'>Create <code>df</code>, then print it without the row index so the table columns align cleanly.</div>",
+              "starter": "import pandas as pd\ndata = {'product':['A','B','C'], 'sales':[120,180,150]}\n# Create df and print it without the row index\n",
+              "hint": "Create df with pd.DataFrame(data), then use print(df.to_string(index=False)).",
+              "solution": "df = pd.DataFrame(data)\nprint(df.to_string(index=False))",
+              "test": "dataframe"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Inspect shape and columns",
+              "content": "<p>shape returns rows and columns. columns returns column labels.</p>",
+              "starter": "# Print df.shape and df.columns\n",
+              "hint": "Use print(df.shape) and print(df.columns).",
+              "solution": "print(df.shape)\nprint(df.columns)",
+              "test": "inspect_df"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand dimensions",
+              "content": "<p>Check your understanding.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Three records and two fields.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is the shape of a DataFrame with 3 rows and 2 columns?",
+                "options": [
+                  "(2, 3)",
+                  "(3, 2)",
+                  "3 x 2 x 1",
+                  "6"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "functions"
+          ],
+          "keywords": [
+            "Create and inspect DataFrames",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Turn",
+            "records",
+            "into",
+            "a",
+            "table",
+            "and",
+            "inspect",
+            "its",
+            "structure."
+          ]
+        },
+        {
+          "id": "cleaning",
+          "title": "Clean a messy sales dataset",
+          "description": "Remove duplicates, handle missing values and prepare reliable data.",
+          "duration": "20 min",
+          "xp": 120,
+          "badge": "Data Cleaner",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Load the sales data",
+              "content": "<p>Create a DataFrame from the supplied records.</p>",
+              "starter": "import pandas as pd\nsales = {'order_id':[101,102,102,103,104], 'region':['North','South','South','West','North'], 'sales':[250,300,300,None,450]}\n# Create df and print its first rows\n",
+              "hint": "Use pd.DataFrame(sales), then df.head().",
+              "solution": "df = pd.DataFrame(sales)\nprint(df.head())",
+              "test": "messy_df"
+            },
+            {
+              "type": "INSPECT",
+              "title": "Count missing values",
+              "content": "<p>Use isna and sum to count missing cells.</p>",
+              "starter": "# Print missing values by column\n",
+              "hint": "print(df.isna().sum())",
+              "solution": "print(df.isna().sum())",
+              "test": "missing"
+            },
+            {
+              "type": "DEBUG",
+              "title": "Remove duplicate orders",
+              "content": "<p>Order 102 appears twice.</p>",
+              "starter": "df = df.drop_duplicate(subset='order_id')\nprint(df)",
+              "hint": "The correct method is plural: drop_duplicates.",
+              "solution": "df = df.drop_duplicates(subset='order_id')\nprint(df)",
+              "test": "duplicates"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Fill missing sales",
+              "content": "<p>For this exercise, replace missing sales with zero.</p>",
+              "starter": "# Fill missing values in df['sales']\nprint(df['sales'])",
+              "hint": "Assign df['sales'].fillna(0) back to the column.",
+              "solution": "df['sales'] = df['sales'].fillna(0)\nprint(df['sales'])",
+              "test": "fillna"
+            }
+          ],
+          "prerequisites": [
+            "dataframe"
+          ],
+          "keywords": [
+            "Clean a messy sales dataset",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Remove",
+            "duplicates",
+            "handle",
+            "missing",
+            "values",
+            "and",
+            "prepare",
+            "reliable",
+            "data."
+          ]
+        },
+        {
+          "id": "groupby",
+          "title": "Group and summarise data",
+          "description": "Answer business questions with groupby and aggregation.",
+          "duration": "18 min",
+          "xp": 110,
+          "badge": "Aggregation Analyst",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Calculate regional totals",
+              "content": "<p>groupby combines rows that share a category.</p>",
+              "starter": "import pandas as pd\ndf = pd.DataFrame({'region':['North','South','North','West'], 'sales':[200,300,150,250]})\n# Create regional_sales and print it\n",
+              "hint": "df.groupby('region')['sales'].sum()",
+              "solution": "regional_sales = df.groupby('region')['sales'].sum()\nprint(regional_sales)",
+              "test": "groupby"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Calculate an average",
+              "content": "<p>Change the aggregation from sum to mean.</p>",
+              "starter": "# Create average_sales by region\n",
+              "hint": "Use mean() after selecting sales.",
+              "solution": "average_sales = df.groupby('region')['sales'].mean()\nprint(average_sales)",
+              "test": "groupby_mean"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the right operation",
+              "content": "<p>Match the question to the method.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "The question asks for an average.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which method calculates the average sales value?",
+                "options": [
+                  "sum()",
+                  "mean()",
+                  "count()",
+                  "max()"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "cleaning"
+          ],
+          "keywords": [
+            "Group and summarise data",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Answer",
+            "business",
+            "questions",
+            "with",
+            "groupby",
+            "and",
+            "aggregation."
+          ]
+        },
+        {
+          "id": "filtering",
+          "title": "Filter and explore records",
+          "description": "Select the exact rows and columns needed for analysis.",
+          "duration": "17 min",
+          "xp": 100,
+          "badge": "Data Detective",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Filter high-value sales",
+              "content": "<p>Boolean filters select rows matching a condition.</p>",
+              "starter": "import pandas as pd\ndf = pd.DataFrame({'product':['A','B','C','D'], 'sales':[120,420,260,510]})\n# Create high_value for sales >= 300\n",
+              "hint": "high_value = df[df['sales'] >= 300]",
+              "solution": "high_value = df[df['sales'] >= 300]\nprint(high_value)",
+              "test": "filter"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Select one column",
+              "content": "<p>You can select a Series using square brackets.</p>",
+              "starter": "# Print only the product column from high_value\n",
+              "hint": "print(high_value['product'])",
+              "solution": "print(high_value['product'])",
+              "test": "select_column"
+            },
+            {
+              "type": "DEBUG",
+              "title": "Fix the comparison",
+              "content": "<p>Single equals assigns; double equals compares.</p>",
+              "starter": "product_c = df[df['product'] = 'C']\nprint(product_c)",
+              "hint": "Use == inside the filter.",
+              "solution": "product_c = df[df['product'] == 'C']\nprint(product_c)",
+              "test": "filter_equal"
+            }
+          ],
+          "prerequisites": [
+            "groupby"
+          ],
+          "keywords": [
+            "Filter and explore records",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Select",
+            "the",
+            "exact",
+            "rows",
+            "and",
+            "columns",
+            "needed",
+            "for",
+            "analysis."
+          ]
+        },
+        {
+          "id": "csv-files",
+          "title": "Read and inspect CSV files",
+          "description": "Load CSV text, inspect columns and detect data-quality issues.",
+          "duration": "18 min",
+          "xp": 110,
+          "badge": "CSV Navigator",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Read CSV data",
+              "content": "<p>CSV is one of the most common data-exchange formats. pandas can read CSV text using <code>StringIO</code>.</p><div class=\"callout\">Create <code>df</code> from the supplied CSV text and print it.</div>",
+              "starter": "import pandas as pd\nfrom io import StringIO\n\ncsv_text = '''customer,region,revenue\nAsha,North,1200\nBen,South,900\nCara,North,1500\n'''\n\n# Read csv_text into df\n",
+              "hint": "Use pd.read_csv(StringIO(csv_text)).",
+              "solution": "df = pd.read_csv(StringIO(csv_text))\nprint(df)",
+              "test": "csv_read"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Inspect data types",
+              "content": "<p><code>dtypes</code> shows how pandas interpreted each column.</p>",
+              "starter": "# Print the data types for df\n",
+              "hint": "Use print(df.dtypes).",
+              "solution": "print(df.dtypes)",
+              "test": "csv_dtypes"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the right reader",
+              "content": "<p>Match the file type to the pandas function.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "The function name mirrors the file format.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which pandas function reads a CSV file?",
+                "options": [
+                  "read_tableau()",
+                  "read_csv()",
+                  "open_csv()",
+                  "load_rows()"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "filtering"
+          ],
+          "keywords": [
+            "Read and inspect CSV files",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Load",
+            "CSV",
+            "text",
+            "inspect",
+            "columns",
+            "and",
+            "detect",
+            "data-quality",
+            "issues."
+          ]
+        },
+        {
+          "id": "merge-data",
+          "title": "Merge related datasets",
+          "description": "Combine customer and transaction tables using a shared key.",
+          "duration": "21 min",
+          "xp": 130,
+          "badge": "Data Joiner",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Join two DataFrames",
+              "content": "<p>Real analysis often requires combining datasets. <code>merge</code> joins tables using a shared key.</p>",
+              "starter": "import pandas as pd\ncustomers = pd.DataFrame({'customer_id':[1,2,3], 'name':['Asha','Ben','Cara']})\norders = pd.DataFrame({'customer_id':[1,1,3], 'amount':[200,350,500]})\n\n# Merge customers and orders on customer_id\n",
+              "hint": "Use merged = customers.merge(orders, on='customer_id').",
+              "solution": "merged = customers.merge(orders, on='customer_id')\nprint(merged)",
+              "test": "merge_inner"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Keep customers without orders",
+              "content": "<p>A left join keeps every row from the left table.</p>",
+              "starter": "# Create all_customers using a left join\n",
+              "hint": "Use how='left'.",
+              "solution": "all_customers = customers.merge(orders, on='customer_id', how='left')\nprint(all_customers)",
+              "test": "merge_left"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand join behaviour",
+              "content": "<p>Choose the join that preserves all rows from the first table.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think from the perspective of the left-hand DataFrame.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which join keeps every customer even when they have no order?",
+                "options": [
+                  "inner",
+                  "left",
+                  "cross",
+                  "anti"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "csv-files"
+          ],
+          "keywords": [
+            "Merge related datasets",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Combine",
+            "customer",
+            "and",
+            "transaction",
+            "tables",
+            "using",
+            "a",
+            "shared",
+            "key."
+          ]
+        },
+        {
+          "id": "pivot-tables",
+          "title": "Build pivot tables",
+          "description": "Summarise multiple dimensions with compact analytical tables.",
+          "duration": "20 min",
+          "xp": 120,
+          "badge": "Pivot Planner",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a pivot table",
+              "content": "<p>Pivot tables summarise values across categories.</p>",
+              "starter": "import pandas as pd\nsales = pd.DataFrame({'region':['North','North','South','South'],'product':['A','B','A','B'],'revenue':[120,180,150,210]})\n# Create pivot with region rows, product columns and revenue sums\n",
+              "hint": "Use pd.pivot_table with index='region', columns='product', values='revenue', aggfunc='sum'.",
+              "solution": "pivot = pd.pivot_table(sales, index='region', columns='product', values='revenue', aggfunc='sum')\nprint(pivot)",
+              "test": "pivot"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Add totals",
+              "content": "<p><code>margins=True</code> adds overall totals.</p>",
+              "starter": "# Create pivot_with_totals with margins=True\n",
+              "hint": "Repeat the pivot_table call and add margins=True.",
+              "solution": "pivot_with_totals = pd.pivot_table(sales, index='region', columns='product', values='revenue', aggfunc='sum', margins=True)\nprint(pivot_with_totals)",
+              "test": "pivot_totals"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the purpose",
+              "content": "<p>Recall what a pivot table is best at.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "It summarises values across categories.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is the main purpose of a pivot table?",
+                "options": [
+                  "Install packages",
+                  "Summarise data across dimensions",
+                  "Create Python classes",
+                  "Scrape HTML"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "merge-data"
+          ],
+          "keywords": [
+            "Build pivot tables",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Summarise",
+            "multiple",
+            "dimensions",
+            "with",
+            "compact",
+            "analytical",
+            "tables."
+          ]
+        },
+        {
+          "id": "charts",
+          "title": "Create clear analytical charts",
+          "description": "Turn pandas results into simple business visualisations.",
+          "duration": "22 min",
+          "xp": 130,
+          "badge": "Chart Communicator",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a bar chart",
+              "content": "<p>Charts should answer a question clearly. pandas plotting provides a convenient starting point.</p>",
+              "starter": "import pandas as pd\nimport matplotlib.pyplot as plt\nregional = pd.Series({'North':700, 'South':500, 'West':300})\n# Create a bar chart and set the title to Regional Sales\n",
+              "hint": "Use regional.plot(kind='bar') and plt.title('Regional Sales').",
+              "solution": "regional.plot(kind='bar')\nplt.title('Regional Sales')\nplt.tight_layout()\nplt.show()\nprint('Regional Sales')",
+              "test": "chart_bar"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Label the vertical axis",
+              "content": "<p>Axis labels help viewers interpret values.</p>",
+              "starter": "# Add the y-axis label Revenue\n",
+              "hint": "Use plt.ylabel('Revenue').",
+              "solution": "plt.ylabel('Revenue')\nprint('Revenue label added')",
+              "test": "chart_label"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose an appropriate chart",
+              "content": "<p>Select the chart type that best compares categories.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Bars make category comparisons easy.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which chart is usually best for comparing sales across regions?",
+                "options": [
+                  "Bar chart",
+                  "Pie chart with 30 slices",
+                  "3D surface",
+                  "Candlestick chart"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "pivot-tables"
+          ],
+          "keywords": [
+            "Create clear analytical charts",
+            "Module 2 \u00b7 Data Analytics with pandas",
+            "Turn",
+            "pandas",
+            "results",
+            "into",
+            "simple",
+            "business",
+            "visualisations."
+          ]
+        }
+      ],
+      "stage": "core-python"
+    },
+    {
+      "id": "scraping",
+      "title": "Module 3 \u00b7 Web Scraping and APIs",
+      "description": "Learn how webpages, HTML and ethical data collection work before moving to live scraping.",
+      "lessons": [
+        {
+          "id": "html-basics",
+          "title": "Read HTML like data",
+          "description": "Understand tags, attributes and the document tree.",
+          "duration": "16 min",
+          "xp": 100,
+          "badge": "HTML Pathfinder",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Find information in HTML",
+              "content": "<p>HTML describes the structure of a webpage. Tags such as <code>h1</code>, <code>p</code> and <code>a</code> identify different elements.</p><div class='callout'>Use BeautifulSoup to extract the heading text from the sample HTML.</div>",
+              "starter": "from bs4 import BeautifulSoup\n\nhtml = '''\n<html><body>\n<h1>Life Sciences Jobs</h1>\n<p class=\"count\">24 roles found</p>\n</body></html>\n'''\n\nsoup = BeautifulSoup(html, 'html.parser')\n# Print the h1 text\n",
+              "hint": "Use soup.find('h1').get_text(strip=True).",
+              "solution": "print(soup.find('h1').get_text(strip=True))",
+              "test": "html_heading"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Select by CSS class",
+              "content": "<p>CSS selectors help target elements precisely.</p><div class='callout'>Print the text inside the element with class <code>count</code>.</div>",
+              "starter": "# Use a CSS selector to find .count\n",
+              "hint": "Use soup.select_one('.count').get_text(strip=True).",
+              "solution": "print(soup.select_one('.count').get_text(strip=True))",
+              "test": "html_class"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the right selector",
+              "content": "<p>Lock in the idea before moving on.</p>",
+              "starter": "print('Answer the quiz below.')",
+              "hint": "A dot prefix selects a CSS class.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which CSS selector targets an element with class job-card?",
+                "options": [
+                  "#job-card",
+                  ".job-card",
+                  "job-card",
+                  "@job-card"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "charts"
+          ],
+          "keywords": [
+            "Read HTML like data",
+            "Module 3 \u00b7 Web Scraping and APIs",
+            "Understand",
+            "tags",
+            "attributes",
+            "and",
+            "the",
+            "document",
+            "tree."
+          ]
+        },
+        {
+          "id": "scrape-cards",
+          "title": "Extract repeated job cards",
+          "description": "Turn repeated webpage elements into structured Python records.",
+          "duration": "20 min",
+          "xp": 120,
+          "badge": "Scraping Scout",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Find repeated elements",
+              "content": "<p>Many pages repeat the same HTML pattern for products, jobs or articles.</p><div class='callout'>Find all elements with class <code>job</code> and print how many were found.</div>",
+              "starter": "from bs4 import BeautifulSoup\nhtml = '''<div class=\"job\"><h2>Data Analyst</h2><span>London</span></div>\n<div class=\"job\"><h2>Python Developer</h2><span>Remote</span></div>'''\nsoup = BeautifulSoup(html, 'html.parser')\n# Find all job cards\n",
+              "hint": "Use jobs = soup.select('.job'), then print(len(jobs)).",
+              "solution": "jobs = soup.select('.job')\nprint(len(jobs))",
+              "test": "job_count"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Build structured records",
+              "content": "<p>Convert each card into a dictionary so it can later become a DataFrame.</p>",
+              "starter": "records = []\nfor job in jobs:\n    # Append a dictionary with title and location\n    pass\n\nprint(records)",
+              "hint": "Read h2 and span from each job, then append {'title': ..., 'location': ...}.",
+              "solution": "records.append({'title': job.select_one('h2').get_text(strip=True), 'location': job.select_one('span').get_text(strip=True)})",
+              "test": "job_records"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Create a DataFrame",
+              "content": "<p>Once records are structured, pandas can analyse them.</p>",
+              "starter": "import pandas as pd\n# Create jobs_df from records and print it\n",
+              "hint": "jobs_df = pd.DataFrame(records)",
+              "solution": "jobs_df = pd.DataFrame(records)\nprint(jobs_df)",
+              "test": "jobs_df"
+            }
+          ],
+          "prerequisites": [
+            "html-basics"
+          ],
+          "keywords": [
+            "Extract repeated job cards",
+            "Module 3 \u00b7 Web Scraping and APIs",
+            "Turn",
+            "repeated",
+            "webpage",
+            "elements",
+            "into",
+            "structured",
+            "Python",
+            "records."
+          ]
+        },
+        {
+          "id": "ethical-scraping",
+          "title": "Scrape responsibly",
+          "description": "Understand robots.txt, rate limits, terms and safer alternatives.",
+          "duration": "14 min",
+          "xp": 90,
+          "badge": "Responsible Collector",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Add a polite delay",
+              "content": "<p>Repeated requests can overload a website. A delay reduces request frequency.</p><div class='callout'>Create a variable named <code>delay_seconds</code> with the value 2 and print it.</div>",
+              "starter": "# Create delay_seconds\n",
+              "hint": "delay_seconds = 2",
+              "solution": "delay_seconds = 2\nprint(delay_seconds)",
+              "test": "delay"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Know when not to scrape",
+              "content": "<p>Ethical scraping includes checking permissions and preferring official APIs where available.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "An official API is normally more stable and explicitly designed for automated access.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "A site offers an official API containing the data you need. What is normally the best first choice?",
+                "options": [
+                  "Ignore it and scrape faster",
+                  "Use the official API",
+                  "Open many parallel browser tabs",
+                  "Hide your identity"
+                ],
+                "answer": 1
+              }
+            },
+            {
+              "type": "QUIZ",
+              "title": "Respect access rules",
+              "content": "<p>Technical possibility is not the same as permission.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Check rules before collecting data.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Before scraping a site, which combination should you review?",
+                "options": [
+                  "Only the page colours",
+                  "Terms, robots.txt, rate limits and data rights",
+                  "Your laptop battery",
+                  "The site's logo"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "scrape-cards"
+          ],
+          "keywords": [
+            "Scrape responsibly",
+            "Module 3 \u00b7 Web Scraping and APIs",
+            "Understand",
+            "robots.txt",
+            "rate",
+            "limits",
+            "terms",
+            "and",
+            "safer",
+            "alternatives."
+          ]
+        }
+      ],
+      "stage": "core-python"
+    },
+    {
+      "id": "sql-python",
+      "title": "Module 4 \u00b7 SQL with Python",
+      "description": "Query structured data with SQL and connect the results to pandas.",
+      "lessons": [
+        {
+          "id": "sql-select",
+          "title": "Query data with SELECT",
+          "description": "Use SQL to retrieve columns and filter records.",
+          "duration": "18 min",
+          "xp": 110,
+          "badge": "SQL Starter",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Run your first SQL query",
+              "content": "<p>SQLite is a lightweight database included with Python. A <code>SELECT</code> query retrieves data from a table.</p><div class='callout'>Create the sample table, then select every row from <code>sales</code>.</div>",
+              "starter": "import sqlite3\nimport pandas as pd\n\nconn = sqlite3.connect(':memory:')\npd.DataFrame({\n    'product':['A','B','C'],\n    'region':['North','South','North'],\n    'revenue':[120,180,150]\n}).to_sql('sales', conn, index=False)\n\n# Read all rows from sales into result\n",
+              "hint": "Use pd.read_sql_query('SELECT * FROM sales', conn).",
+              "solution": "result = pd.read_sql_query('SELECT * FROM sales', conn)\nprint(result.to_string(index=False))",
+              "test": "sql_select"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Filter rows with WHERE",
+              "content": "<p><code>WHERE</code> keeps only rows matching a condition.</p><div class='callout'>Return only rows where revenue is at least 150.</div>",
+              "starter": "# Create high_revenue using a WHERE clause\n",
+              "hint": "Use SELECT * FROM sales WHERE revenue >= 150.",
+              "solution": "high_revenue = pd.read_sql_query('SELECT * FROM sales WHERE revenue >= 150', conn)\nprint(high_revenue.to_string(index=False))",
+              "test": "sql_where"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the correct clause",
+              "content": "<p>Recall which SQL clause filters rows.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "It appears after FROM.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which SQL clause filters rows based on a condition?",
+                "options": [
+                  "ORDER BY",
+                  "WHERE",
+                  "GROUP BY",
+                  "JOIN"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "ethical-scraping"
+          ],
+          "keywords": [
+            "Query data with SELECT",
+            "Module 4 \u00b7 SQL with Python",
+            "Use",
+            "SQL",
+            "to",
+            "retrieve",
+            "columns",
+            "and",
+            "filter",
+            "records."
+          ]
+        },
+        {
+          "id": "sql-grouping",
+          "title": "Aggregate with SQL",
+          "description": "Use GROUP BY, SUM and aliases to answer business questions.",
+          "duration": "20 min",
+          "xp": 120,
+          "badge": "SQL Aggregator",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Calculate totals by region",
+              "content": "<p>SQL aggregation works much like pandas groupby.</p>",
+              "starter": "import sqlite3\nimport pandas as pd\nconn = sqlite3.connect(':memory:')\npd.DataFrame({\n 'region':['North','South','North','West'],\n 'revenue':[200,300,150,250]\n}).to_sql('sales', conn, index=False)\n\n# Query total revenue by region\n",
+              "hint": "Use SELECT region, SUM(revenue) AS total_revenue FROM sales GROUP BY region.",
+              "solution": "regional = pd.read_sql_query('SELECT region, SUM(revenue) AS total_revenue FROM sales GROUP BY region', conn)\nprint(regional.to_string(index=False))",
+              "test": "sql_group"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Sort the summary",
+              "content": "<p><code>ORDER BY</code> controls the output order.</p>",
+              "starter": "# Create ranked with highest total_revenue first\n",
+              "hint": "Add ORDER BY total_revenue DESC.",
+              "solution": "ranked = pd.read_sql_query('SELECT region, SUM(revenue) AS total_revenue FROM sales GROUP BY region ORDER BY total_revenue DESC', conn)\nprint(ranked.to_string(index=False))",
+              "test": "sql_order"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand aliases",
+              "content": "<p>An alias gives a calculated column a readable name.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "The keyword is AS.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What does AS total_revenue do in SQL?",
+                "options": [
+                  "Deletes revenue",
+                  "Names the calculated column",
+                  "Filters rows",
+                  "Creates a table"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "sql-select"
+          ],
+          "keywords": [
+            "Aggregate with SQL",
+            "Module 4 \u00b7 SQL with Python",
+            "Use",
+            "GROUP",
+            "BY",
+            "SUM",
+            "and",
+            "aliases",
+            "to",
+            "answer",
+            "business",
+            "questions."
+          ]
+        },
+        {
+          "id": "sql-joins",
+          "title": "Join tables in SQL",
+          "description": "Combine customer and order records using a shared identifier.",
+          "duration": "22 min",
+          "xp": 130,
+          "badge": "SQL Joiner",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create an inner join",
+              "content": "<p>A SQL join combines related rows from different tables.</p>",
+              "starter": "import sqlite3\nimport pandas as pd\nconn = sqlite3.connect(':memory:')\npd.DataFrame({'customer_id':[1,2,3], 'name':['Asha','Ben','Cara']}).to_sql('customers', conn, index=False)\npd.DataFrame({'customer_id':[1,1,3], 'amount':[200,350,500]}).to_sql('orders', conn, index=False)\n\n# Join customers and orders on customer_id\n",
+              "hint": "Use INNER JOIN orders o ON c.customer_id = o.customer_id.",
+              "solution": "joined = pd.read_sql_query('''\nSELECT c.name, o.amount\nFROM customers c\nINNER JOIN orders o\nON c.customer_id = o.customer_id\n''', conn)\nprint(joined.to_string(index=False))",
+              "test": "sql_join"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Keep unmatched customers",
+              "content": "<p>A left join keeps every row from the left table.</p>",
+              "starter": "# Create all_customers using LEFT JOIN\n",
+              "hint": "Replace INNER JOIN with LEFT JOIN.",
+              "solution": "all_customers = pd.read_sql_query('''\nSELECT c.name, o.amount\nFROM customers c\nLEFT JOIN orders o\nON c.customer_id = o.customer_id\n''', conn)\nprint(all_customers.to_string(index=False))",
+              "test": "sql_left_join"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the right join",
+              "content": "<p>Match the business requirement to the join type.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Keep every customer from the first table.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which join keeps customers who have no orders?",
+                "options": [
+                  "INNER JOIN",
+                  "LEFT JOIN",
+                  "CROSS JOIN",
+                  "SELF JOIN"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "sql-grouping"
+          ],
+          "keywords": [
+            "Join tables in SQL",
+            "Module 4 \u00b7 SQL with Python",
+            "Combine",
+            "customer",
+            "and",
+            "order",
+            "records",
+            "using",
+            "a",
+            "shared",
+            "identifier."
+          ]
+        }
+      ],
+      "stage": "data-automation"
+    },
+    {
+      "id": "automation-apis",
+      "title": "Module 5 \u00b7 Automation and APIs",
+      "description": "Work with JSON, simulated API responses and repeatable file-processing workflows.",
+      "lessons": [
+        {
+          "id": "json-data",
+          "title": "Read and transform JSON",
+          "description": "Convert JSON text into Python objects and extract nested values.",
+          "duration": "18 min",
+          "xp": 110,
+          "badge": "JSON Explorer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Parse JSON text",
+              "content": "<p>APIs commonly return JSON. Python's <code>json.loads()</code> converts JSON text into dictionaries and lists.</p><div class='callout'>Parse the supplied response and print the company name.</div>",
+              "starter": "import json\n\nresponse_text = '''{\n  \"company\": \"BioNova\",\n  \"sector\": \"Life Sciences\",\n  \"employees\": 420\n}'''\n\n# Parse response_text into data and print company\n",
+              "hint": "Use data = json.loads(response_text), then print(data['company']).",
+              "solution": "data = json.loads(response_text)\nprint(data['company'])",
+              "test": "json_parse"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Extract nested values",
+              "content": "<p>JSON can contain dictionaries inside dictionaries.</p><div class='callout'>Print the city from the nested office object.</div>",
+              "starter": "response_text = '''{\n  \"company\": \"BioNova\",\n  \"office\": {\"city\": \"London\", \"country\": \"UK\"}\n}'''\ndata = json.loads(response_text)\n\n# Print the city\n",
+              "hint": "Use data['office']['city'].",
+              "solution": "print(data['office']['city'])",
+              "test": "json_nested"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the parser",
+              "content": "<p>Recall the difference between loading text and reading a file.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "The final letter s refers to a string.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which function parses JSON stored in a Python string?",
+                "options": [
+                  "json.load()",
+                  "json.loads()",
+                  "json.read()",
+                  "json.parse_file()"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "sql-joins"
+          ],
+          "keywords": [
+            "Read and transform JSON",
+            "Module 5 \u00b7 Automation and APIs",
+            "Convert",
+            "JSON",
+            "text",
+            "into",
+            "Python",
+            "objects",
+            "and",
+            "extract",
+            "nested",
+            "values."
+          ]
+        },
+        {
+          "id": "api-responses",
+          "title": "Handle API responses safely",
+          "description": "Check status codes, missing fields and error payloads.",
+          "duration": "20 min",
+          "xp": 120,
+          "badge": "API Interpreter",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Check the status code",
+              "content": "<p>An API response should be checked before its data is used.</p><div class='callout'>Print <code>Success</code> only when the status code is 200.</div>",
+              "starter": "status_code = 200\npayload = {'results': 12}\n\n# Check the status code\n",
+              "hint": "Use if status_code == 200: and indent the print statement.",
+              "solution": "if status_code == 200:\n    print('Success')",
+              "test": "api_status"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Use a safe default",
+              "content": "<p><code>dict.get()</code> prevents a KeyError when an optional field is absent.</p>",
+              "starter": "payload = {'company': 'BioNova'}\n\n# Read results with a default value of 0\nresults = \nprint(results)\n",
+              "hint": "Use payload.get('results', 0).",
+              "solution": "results = payload.get('results', 0)\nprint(results)",
+              "test": "api_default"
+            },
+            {
+              "type": "DEBUG",
+              "title": "Fix unsafe field access",
+              "content": "<p>The response does not always contain an error message.</p>",
+              "starter": "payload = {'status': 'ok'}\nmessage = payload['error']\nprint(message)\n",
+              "hint": "Use payload.get('error', 'No error').",
+              "solution": "message = payload.get('error', 'No error')\nprint(message)",
+              "test": "api_safe_error"
+            }
+          ],
+          "prerequisites": [
+            "json-data"
+          ],
+          "keywords": [
+            "Handle API responses safely",
+            "Module 5 \u00b7 Automation and APIs",
+            "Check",
+            "status",
+            "codes",
+            "missing",
+            "fields",
+            "and",
+            "error",
+            "payloads."
+          ]
+        },
+        {
+          "id": "file-automation",
+          "title": "Automate repetitive data tasks",
+          "description": "Process multiple files using functions and loops.",
+          "duration": "22 min",
+          "xp": 130,
+          "badge": "Automation Builder",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Process several filenames",
+              "content": "<p>Automation often means applying the same rule to many inputs.</p><div class='callout'>Loop through the filenames and print only CSV files.</div>",
+              "starter": "files = ['sales.csv', 'notes.txt', 'customers.csv', 'image.png']\n\n# Print only filenames ending in .csv\n",
+              "hint": "Loop through files and use filename.endswith('.csv').",
+              "solution": "for filename in files:\n    if filename.endswith('.csv'):\n        print(filename)",
+              "test": "automation_csv"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Create a reusable cleaner",
+              "content": "<p>Functions make automation easier to test and reuse.</p>",
+              "starter": "def clean_filename(filename):\n    # Remove surrounding spaces and convert to lowercase\n    pass\n\nprint(clean_filename('  SALES JULY.CSV  '))\n",
+              "hint": "Return filename.strip().lower().",
+              "solution": "return filename.strip().lower()",
+              "test": "clean_filename"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Build an output list",
+              "content": "<p>List comprehensions can express short transformations clearly.</p>",
+              "starter": "files = [' A.CSV ', ' B.csv ', 'notes.txt']\n# Create cleaned_csvs containing cleaned CSV filenames only\n",
+              "hint": "Filter with endswith after strip/lower, and transform using strip().lower().",
+              "solution": "cleaned_csvs = [f.strip().lower() for f in files if f.strip().lower().endswith('.csv')]\nprint(cleaned_csvs)",
+              "test": "cleaned_csvs"
+            }
+          ],
+          "prerequisites": [
+            "api-responses"
+          ],
+          "keywords": [
+            "Automate repetitive data tasks",
+            "Module 5 \u00b7 Automation and APIs",
+            "Process",
+            "multiple",
+            "files",
+            "using",
+            "functions",
+            "and",
+            "loops."
+          ]
+        }
+      ],
+      "stage": "data-automation"
+    },
+    {
+      "id": "advanced-python",
+      "title": "Module 6 \u00b7 Advanced Python",
+      "description": "Understand generators, decorators, context managers, type hints and asynchronous workflows.",
+      "lessons": [
+        {
+          "id": "generators",
+          "title": "Generators and lazy iteration",
+          "description": "Produce values one at a time instead of storing everything in memory.",
+          "duration": "20 min",
+          "xp": 130,
+          "badge": "Generator Guide",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Yield values gradually",
+              "content": "<p>A generator uses <code>yield</code> to produce one value at a time.</p><div class='callout'>Create <code>count_up_to(limit)</code> and yield numbers from 1 to the limit.</div>",
+              "starter": "def count_up_to(limit):\n    # Yield numbers from 1 to limit\n    pass\n\nprint(list(count_up_to(4)))\n",
+              "hint": "Use a for loop with range(1, limit + 1), then yield each number.",
+              "solution": "def count_up_to(limit):\n    for number in range(1, limit + 1):\n        yield number\n\nprint(list(count_up_to(4)))",
+              "test": "generator_basic"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Filter with a generator",
+              "content": "<p>Generators can combine filtering and lazy iteration.</p>",
+              "starter": "def even_numbers(values):\n    # Yield only even values\n    pass\n\nprint(list(even_numbers([1,2,3,4,5,6])))\n",
+              "hint": "Loop through values and yield a value when value % 2 == 0.",
+              "solution": "def even_numbers(values):\n    for value in values:\n        if value % 2 == 0:\n            yield value\n\nprint(list(even_numbers([1,2,3,4,5,6])))",
+              "test": "generator_filter"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand lazy evaluation",
+              "content": "<p>Recall why generators are useful.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "They do not need to create every value in advance.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is a major benefit of generators?",
+                "options": [
+                  "They always run faster",
+                  "They produce values lazily and can reduce memory use",
+                  "They replace all loops",
+                  "They automatically use multiple CPU cores"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "file-automation"
+          ],
+          "keywords": [
+            "Generators and lazy iteration",
+            "Module 6 \u00b7 Advanced Python",
+            "Produce",
+            "values",
+            "one",
+            "at",
+            "a",
+            "time",
+            "instead",
+            "of",
+            "storing",
+            "everything",
+            "in",
+            "memory."
+          ]
+        },
+        {
+          "id": "decorators",
+          "title": "Decorators and reusable behaviour",
+          "description": "Wrap functions to add logging, timing or validation.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Decorator Designer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Wrap a function",
+              "content": "<p>A decorator receives a function and returns a new function.</p>",
+              "starter": "def announce(func):\n    def wrapper():\n        # Print before calling func\n        pass\n    return wrapper\n\n@announce\ndef greet():\n    print('Hello')\n\ngreet()\n",
+              "hint": "Inside wrapper, print 'Starting' and then call func().",
+              "solution": "def announce(func):\n    def wrapper():\n        print('Starting')\n        func()\n    return wrapper\n\n@announce\ndef greet():\n    print('Hello')\n\ngreet()",
+              "test": "decorator_basic"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Return the wrapped value",
+              "content": "<p>A wrapper should often return the original function result.</p>",
+              "starter": "def double_result(func):\n    def wrapper(*args, **kwargs):\n        pass\n    return wrapper\n\n@double_result\ndef add(a, b):\n    return a + b\n\nprint(add(2, 3))\n",
+              "hint": "Return func(*args, **kwargs) * 2.",
+              "solution": "def double_result(func):\n    def wrapper(*args, **kwargs):\n        return func(*args, **kwargs) * 2\n    return wrapper\n\n@double_result\ndef add(a, b):\n    return a + b\n\nprint(add(2, 3))",
+              "test": "decorator_return"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Identify decorator syntax",
+              "content": "<p>Recall how decorators are applied.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "It appears above the function definition.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which symbol is used to apply a decorator?",
+                "options": [
+                  "#",
+                  "@",
+                  "$",
+                  "%"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "generators"
+          ],
+          "keywords": [
+            "Decorators and reusable behaviour",
+            "Module 6 \u00b7 Advanced Python",
+            "Wrap",
+            "functions",
+            "to",
+            "add",
+            "logging",
+            "timing",
+            "or",
+            "validation."
+          ]
+        },
+        {
+          "id": "context-managers",
+          "title": "Context managers",
+          "description": "Manage files and resources safely with with-blocks.",
+          "duration": "18 min",
+          "xp": 120,
+          "badge": "Resource Guardian",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Use a with-block",
+              "content": "<p>A context manager handles setup and cleanup automatically.</p>",
+              "starter": "from io import StringIO\nstream = StringIO('PythonQuest')\n# Use with stream as resource and print resource.read()\n",
+              "hint": "Use: with stream as resource:",
+              "solution": "with stream as resource:\n    print(resource.read())",
+              "test": "context_basic"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Create a custom context manager",
+              "content": "<p>The contextmanager decorator can create simple context managers.</p>",
+              "starter": "from contextlib import contextmanager\n\n@contextmanager\ndef managed_message():\n    print('Open')\n    yield\n    print('Close')\n\nwith managed_message():\n    print('Working')\n",
+              "hint": "Run it and observe the order.",
+              "solution": "print('Open')\nyield\nprint('Close')",
+              "test": "context_custom"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand cleanup",
+              "content": "<p>Recall why context managers are useful.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about files and database connections.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What does a context manager primarily help with?",
+                "options": [
+                  "Automatic resource setup and cleanup",
+                  "Replacing all functions",
+                  "Making every variable global",
+                  "Installing packages"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "decorators"
+          ],
+          "keywords": [
+            "Context managers",
+            "Module 6 \u00b7 Advanced Python",
+            "Manage",
+            "files",
+            "and",
+            "resources",
+            "safely",
+            "with",
+            "with-blocks."
+          ]
+        },
+        {
+          "id": "type-hints",
+          "title": "Type hints and readable contracts",
+          "description": "Describe expected inputs and outputs without changing runtime behaviour.",
+          "duration": "18 min",
+          "xp": 120,
+          "badge": "Type Guide",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Annotate a function",
+              "content": "<p>Type hints make intent clearer for readers and tools.</p>",
+              "starter": "def calculate_total(values):\n    return sum(values)\n\nprint(calculate_total([10.0, 20.0]))\n",
+              "hint": "Use values: list[float] and -> float.",
+              "solution": "def calculate_total(values: list[float]) -> float:\n    return sum(values)\n\nprint(calculate_total([10.0, 20.0]))",
+              "test": "type_hints"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Use optional values",
+              "content": "<p>A value may be a string or None.</p>",
+              "starter": "def display_name(name):\n    return name if name is not None else 'Anonymous'\n\nprint(display_name(None))\n",
+              "hint": "Annotate name as str | None and the return as str.",
+              "solution": "def display_name(name: str | None) -> str:\n    return name if name is not None else 'Anonymous'\n\nprint(display_name(None))",
+              "test": "type_optional"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Know what hints do",
+              "content": "<p>Python remains dynamically typed.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "They describe intent rather than enforcing it automatically.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Do standard Python type hints automatically block every incorrect type at runtime?",
+                "options": [
+                  "Yes, always",
+                  "No, they mainly support readability and tooling",
+                  "Only on Tuesdays",
+                  "Only inside loops"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "context-managers"
+          ],
+          "keywords": [
+            "Type hints and readable contracts",
+            "Module 6 \u00b7 Advanced Python",
+            "Describe",
+            "expected",
+            "inputs",
+            "and",
+            "outputs",
+            "without",
+            "changing",
+            "runtime",
+            "behaviour."
+          ]
+        },
+        {
+          "id": "async-python",
+          "title": "Async Python fundamentals",
+          "description": "Understand coroutines, await and concurrent waiting.",
+          "duration": "24 min",
+          "xp": 150,
+          "badge": "Async Adventurer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a coroutine",
+              "content": "<p>async def defines a coroutine. await pauses it without blocking other async work.</p>",
+              "starter": "import asyncio\n\nasync def fetch_value():\n    await asyncio.sleep(0)\n    return 42\n\n# Run the coroutine and print the result\n",
+              "hint": "Use result = await fetch_value().",
+              "solution": "result = await fetch_value()\nprint(result)",
+              "test": "async_basic"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Run tasks together",
+              "content": "<p>asyncio.gather waits for several coroutines together.</p>",
+              "starter": "import asyncio\n\nasync def get_number(value):\n    await asyncio.sleep(0)\n    return value\n\n# Gather three calls\n",
+              "hint": "Use results = await asyncio.gather(...).",
+              "solution": "results = await asyncio.gather(get_number(1), get_number(2), get_number(3))\nprint(results)",
+              "test": "async_gather"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand async use cases",
+              "content": "<p>Async is useful for waiting-heavy workloads.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about network waiting.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which workload is often a good fit for async Python?",
+                "options": [
+                  "Waiting for many API responses",
+                  "A single CPU-heavy matrix calculation",
+                  "Renaming one variable",
+                  "Writing a comment"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "type-hints"
+          ],
+          "keywords": [
+            "Async Python fundamentals",
+            "Module 6 \u00b7 Advanced Python",
+            "Understand",
+            "coroutines",
+            "await",
+            "and",
+            "concurrent",
+            "waiting."
+          ]
+        }
+      ],
+      "stage": "engineering"
+    },
+    {
+      "id": "testing-debugging",
+      "title": "Module 7 \u00b7 Testing and Debugging",
+      "description": "Write reliable Python using assertions, unit tests, exceptions and systematic debugging.",
+      "lessons": [
+        {
+          "id": "assertions",
+          "title": "Assertions and expected behaviour",
+          "description": "Turn assumptions into executable checks.",
+          "duration": "18 min",
+          "xp": 120,
+          "badge": "Assertion Analyst",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Check a function result",
+              "content": "<p>An assertion states what must be true. If the condition is false, Python raises an <code>AssertionError</code>.</p><div class='callout'>Add an assertion verifying that <code>add(2, 3)</code> equals 5.</div>",
+              "starter": "def add(a, b):\n    return a + b\n\n# Add an assertion below\nprint('Check completed')\n",
+              "hint": "Use assert add(2, 3) == 5.",
+              "solution": "assert add(2, 3) == 5\nprint('Check completed')",
+              "test": "assert_basic"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Add a helpful message",
+              "content": "<p>An assertion message explains what failed.</p>",
+              "starter": "def calculate_discount(price, rate):\n    return price * (1 - rate)\n\n# Assert that the result is 80 and add a message\n",
+              "hint": "Use assert calculate_discount(100, 0.2) == 80, 'Discount calculation failed'.",
+              "solution": "assert calculate_discount(100, 0.2) == 80, 'Discount calculation failed'\nprint('Discount check passed')",
+              "test": "assert_message"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Know what assertions are for",
+              "content": "<p>Assertions are especially useful during development and testing.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "They verify an assumption.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What happens when an assertion condition is false?",
+                "options": [
+                  "Python silently ignores it",
+                  "Python raises AssertionError",
+                  "The variable becomes None",
+                  "The program installs pytest"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "async-python"
+          ],
+          "keywords": [
+            "Assertions and expected behaviour",
+            "Module 7 \u00b7 Testing and Debugging",
+            "Turn",
+            "assumptions",
+            "into",
+            "executable",
+            "checks."
+          ]
+        },
+        {
+          "id": "unit-tests",
+          "title": "Unit tests with unittest",
+          "description": "Organise repeatable tests for functions and edge cases.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Unit Test Builder",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a test case",
+              "content": "<p>Python's built-in <code>unittest</code> module groups related tests.</p>",
+              "starter": "import unittest\n\ndef is_even(number):\n    return number % 2 == 0\n\nclass TestNumbers(unittest.TestCase):\n    def test_even_number(self):\n        # Check that is_even(4) is True\n        pass\n\nsuite = unittest.defaultTestLoader.loadTestsFromTestCase(TestNumbers)\nresult = unittest.TextTestRunner(verbosity=0).run(suite)\nprint('Tests successful:', result.wasSuccessful())\n",
+              "hint": "Use self.assertTrue(is_even(4)).",
+              "solution": "self.assertTrue(is_even(4))",
+              "test": "unittest_basic"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Test an edge case",
+              "content": "<p>Good tests include boundaries and unusual inputs.</p>",
+              "starter": "import unittest\n\ndef safe_average(values):\n    return 0 if not values else sum(values) / len(values)\n\nclass TestAverage(unittest.TestCase):\n    def test_empty_list(self):\n        # Check that an empty list returns 0\n        pass\n\nsuite = unittest.defaultTestLoader.loadTestsFromTestCase(TestAverage)\nresult = unittest.TextTestRunner(verbosity=0).run(suite)\nprint('Tests successful:', result.wasSuccessful())\n",
+              "hint": "Use self.assertEqual(safe_average([]), 0).",
+              "solution": "self.assertEqual(safe_average([]), 0)",
+              "test": "unittest_edge"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand unit-test scope",
+              "content": "<p>A unit test normally focuses on one small behaviour.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think small and isolated.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What should a unit test usually verify?",
+                "options": [
+                  "One small behaviour in isolation",
+                  "The entire internet",
+                  "Only visual styling",
+                  "Every application feature at once"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "assertions"
+          ],
+          "keywords": [
+            "Unit tests with unittest",
+            "Module 7 \u00b7 Testing and Debugging",
+            "Organise",
+            "repeatable",
+            "tests",
+            "for",
+            "functions",
+            "and",
+            "edge",
+            "cases."
+          ]
+        },
+        {
+          "id": "exceptions",
+          "title": "Exceptions and defensive code",
+          "description": "Handle expected failures without hiding every error.",
+          "duration": "20 min",
+          "xp": 130,
+          "badge": "Exception Handler",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Catch a specific exception",
+              "content": "<p>Catch only the errors you expect and know how to handle.</p><div class='callout'>Catch <code>ValueError</code> when converting invalid text to an integer.</div>",
+              "starter": "value = 'not-a-number'\n\ntry:\n    number = int(value)\nexcept:\n    print('Invalid number')\n",
+              "hint": "Replace the bare except with except ValueError:.",
+              "solution": "try:\n    number = int(value)\nexcept ValueError:\n    print('Invalid number')",
+              "test": "exception_specific"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Raise a meaningful error",
+              "content": "<p>Functions should reject invalid input clearly.</p>",
+              "starter": "def calculate_average(values):\n    # Raise ValueError when values is empty\n    return sum(values) / len(values)\n\ntry:\n    calculate_average([])\nexcept ValueError as error:\n    print(error)\n",
+              "hint": "Use if not values: raise ValueError('values cannot be empty').",
+              "solution": "def calculate_average(values):\n    if not values:\n        raise ValueError('values cannot be empty')\n    return sum(values) / len(values)",
+              "test": "exception_raise"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Avoid over-catching",
+              "content": "<p>A broad exception handler can hide unrelated defects.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Catch the narrowest exception you can handle.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Why is a bare except often discouraged?",
+                "options": [
+                  "It can hide unexpected errors",
+                  "It is too colourful",
+                  "It only works with pandas",
+                  "It automatically deletes logs"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "unit-tests"
+          ],
+          "keywords": [
+            "Exceptions and defensive code",
+            "Module 7 \u00b7 Testing and Debugging",
+            "Handle",
+            "expected",
+            "failures",
+            "without",
+            "hiding",
+            "every",
+            "error."
+          ]
+        },
+        {
+          "id": "debugging-workflow",
+          "title": "A systematic debugging workflow",
+          "description": "Reproduce, isolate, inspect and verify defects.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Bug Investigator",
+          "steps": [
+            {
+              "type": "DEBUG",
+              "title": "Fix an accumulating total",
+              "content": "<p>The total is reset inside the loop, so only the final value survives.</p>",
+              "starter": "sales = [100, 200, 300]\nfor amount in sales:\n    total = 0\n    total += amount\n\nprint(total)\n",
+              "hint": "Initialise total before the loop.",
+              "solution": "sales = [100, 200, 300]\ntotal = 0\nfor amount in sales:\n    total += amount\n\nprint(total)",
+              "test": "debug_total"
+            },
+            {
+              "type": "DEBUG",
+              "title": "Fix a mutable default",
+              "content": "<p>A mutable default list is shared between function calls.</p>",
+              "starter": "def add_item(item, items=[]):\n    items.append(item)\n    return items\n\nfirst = add_item('A')\nsecond = add_item('B')\nprint(first)\nprint(second)\n",
+              "hint": "Use items=None, then create a new list inside the function.",
+              "solution": "def add_item(item, items=None):\n    if items is None:\n        items = []\n    items.append(item)\n    return items\n\nfirst = add_item('A')\nsecond = add_item('B')\nprint(first)\nprint(second)",
+              "test": "debug_mutable"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the first debugging step",
+              "content": "<p>A reliable defect must first be reproducible.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Confirm the problem consistently before changing code.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is usually the best first step when debugging?",
+                "options": [
+                  "Rewrite the entire application",
+                  "Reproduce the problem consistently",
+                  "Delete all tests",
+                  "Change several unrelated things"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "exceptions"
+          ],
+          "keywords": [
+            "A systematic debugging workflow",
+            "Module 7 \u00b7 Testing and Debugging",
+            "Reproduce",
+            "isolate",
+            "inspect",
+            "and",
+            "verify",
+            "defects."
+          ]
+        }
+      ],
+      "stage": "engineering"
+    },
+    {
+      "id": "data-engineering",
+      "title": "Module 8 \u00b7 Data Engineering Foundations",
+      "description": "Build repeatable ETL pipelines with validation, logging and incremental processing.",
+      "lessons": [
+        {
+          "id": "etl-pipelines",
+          "title": "Design an ETL pipeline",
+          "description": "Separate extraction, transformation and loading into testable stages.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "ETL Architect",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Separate pipeline stages",
+              "content": "<p>ETL stands for extract, transform and load. Keeping each stage separate makes the workflow easier to test and reuse.</p><div class='callout'>Complete the transform stage so it adds a <code>net_revenue</code> field.</div>",
+              "starter": "def extract():\n    return [\n        {'order_id': 1, 'revenue': 120, 'cost': 40},\n        {'order_id': 2, 'revenue': 200, 'cost': 70}\n    ]\n\ndef transform(records):\n    # Add net_revenue to each record\n    pass\n\ndef load(records):\n    return records\n\nresult = load(transform(extract()))\nprint(result)\n",
+              "hint": "Loop through records, copy each dictionary and add revenue - cost.",
+              "solution": "def transform(records):\n    transformed = []\n    for record in records:\n        clean = record.copy()\n        clean['net_revenue'] = clean['revenue'] - clean['cost']\n        transformed.append(clean)\n    return transformed",
+              "test": "etl_transform"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Compose the pipeline",
+              "content": "<p>A pipeline function coordinates the stages without mixing their responsibilities.</p>",
+              "starter": "def run_pipeline():\n    # Extract, transform, load and return the result\n    pass\n\nprint(run_pipeline())\n",
+              "hint": "Return load(transform(extract())).",
+              "solution": "def run_pipeline():\n    return load(transform(extract()))\n\nprint(run_pipeline())",
+              "test": "etl_run"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand pipeline separation",
+              "content": "<p>Recall why stages are separated.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about testing and reuse.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Why separate extract, transform and load stages?",
+                "options": [
+                  "To make the code longer",
+                  "To improve testing, reuse and maintainability",
+                  "To avoid using functions",
+                  "To remove all validation"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "debugging-workflow"
+          ],
+          "keywords": [
+            "Design an ETL pipeline",
+            "Module 8 \u00b7 Data Engineering Foundations",
+            "Separate",
+            "extraction",
+            "transformation",
+            "and",
+            "loading",
+            "into",
+            "testable",
+            "stages."
+          ]
+        },
+        {
+          "id": "schema-validation",
+          "title": "Validate schemas and data quality",
+          "description": "Reject malformed records before they reach downstream analysis.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Schema Guardian",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Check required fields",
+              "content": "<p>Schema validation confirms that required fields are present before processing continues.</p>",
+              "starter": "required_fields = {'order_id', 'revenue', 'region'}\nrecord = {'order_id': 101, 'revenue': 250, 'region': 'North'}\n\n# Create is_valid by checking whether all required fields exist\n",
+              "hint": "Use required_fields.issubset(record.keys()).",
+              "solution": "is_valid = required_fields.issubset(record.keys())\nprint(is_valid)",
+              "test": "schema_required"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Validate field types",
+              "content": "<p>Type checks catch values that would break calculations.</p>",
+              "starter": "record = {'order_id': 101, 'revenue': 250, 'region': 'North'}\n\n# Create type_valid checking order_id is int, revenue is numeric and region is str\n",
+              "hint": "Use isinstance and allow int or float for revenue.",
+              "solution": "type_valid = (\n    isinstance(record['order_id'], int)\n    and isinstance(record['revenue'], (int, float))\n    and isinstance(record['region'], str)\n)\nprint(type_valid)",
+              "test": "schema_types"
+            },
+            {
+              "type": "DEBUG",
+              "title": "Return useful validation errors",
+              "content": "<p>A Boolean says that something failed. A list of errors explains what failed.</p>",
+              "starter": "def validate_record(record):\n    errors = []\n    if 'order_id' not in record:\n        errors.append('Missing order_id')\n    if record.get('revenue', 0) < 0:\n        errors.append('Revenue cannot be negative')\n    # Return the errors list\n    return True\n\nprint(validate_record({'revenue': -10}))\n",
+              "hint": "Return errors instead of True.",
+              "solution": "return errors",
+              "test": "schema_errors"
+            }
+          ],
+          "prerequisites": [
+            "etl-pipelines"
+          ],
+          "keywords": [
+            "Validate schemas and data quality",
+            "Module 8 \u00b7 Data Engineering Foundations",
+            "Reject",
+            "malformed",
+            "records",
+            "before",
+            "they",
+            "reach",
+            "downstream",
+            "analysis."
+          ]
+        },
+        {
+          "id": "logging-observability",
+          "title": "Add logging and observability",
+          "description": "Record pipeline progress, warnings and failures.",
+          "duration": "20 min",
+          "xp": 130,
+          "badge": "Pipeline Observer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a logger",
+              "content": "<p>Logging provides a durable record of what a pipeline did.</p>",
+              "starter": "import logging\n\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger('pythonquest')\n\n# Log the message Pipeline started\n",
+              "hint": "Use logger.info('Pipeline started').",
+              "solution": "logger.info('Pipeline started')\nprint('Log emitted')",
+              "test": "logging_basic"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Log record counts",
+              "content": "<p>Useful logs include measurable context.</p>",
+              "starter": "records = [{'id': 1}, {'id': 2}, {'id': 3}]\n# Log the number of extracted records\n",
+              "hint": "Use logger.info with len(records).",
+              "solution": "logger.info('Extracted %s records', len(records))\nprint(len(records))",
+              "test": "logging_count"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose the right log level",
+              "content": "<p>Different levels communicate different severity.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "The pipeline continues, but attention may be needed.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which level suits a recoverable issue that deserves attention?",
+                "options": [
+                  "DEBUG",
+                  "INFO",
+                  "WARNING",
+                  "CRITICAL only"
+                ],
+                "answer": 2
+              }
+            }
+          ],
+          "prerequisites": [
+            "schema-validation"
+          ],
+          "keywords": [
+            "Add logging and observability",
+            "Module 8 \u00b7 Data Engineering Foundations",
+            "Record",
+            "pipeline",
+            "progress",
+            "warnings",
+            "and",
+            "failures."
+          ]
+        },
+        {
+          "id": "incremental-processing",
+          "title": "Process data incrementally",
+          "description": "Handle only new records instead of rebuilding everything.",
+          "duration": "24 min",
+          "xp": 150,
+          "badge": "Incremental Engineer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Filter new records",
+              "content": "<p>Incremental processing uses a checkpoint such as the highest processed ID or timestamp.</p>",
+              "starter": "records = [\n    {'id': 101, 'amount': 10},\n    {'id': 102, 'amount': 20},\n    {'id': 103, 'amount': 30}\n]\nlast_processed_id = 101\n\n# Create new_records containing only records after the checkpoint\n",
+              "hint": "Filter where record['id'] > last_processed_id.",
+              "solution": "new_records = [record for record in records if record['id'] > last_processed_id]\nprint(new_records)",
+              "test": "incremental_filter"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Advance the checkpoint",
+              "content": "<p>The checkpoint should advance only after successful processing.</p>",
+              "starter": "# Set new_checkpoint to the highest id in new_records\n",
+              "hint": "Use max(record['id'] for record in new_records).",
+              "solution": "new_checkpoint = max(record['id'] for record in new_records)\nprint(new_checkpoint)",
+              "test": "incremental_checkpoint"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand incremental benefits",
+              "content": "<p>Recall why checkpoints matter.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Avoid repeating work already completed.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is the main benefit of incremental processing?",
+                "options": [
+                  "It always removes the need for backups",
+                  "It processes only new or changed data",
+                  "It makes every dataset smaller",
+                  "It replaces validation"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "logging-observability"
+          ],
+          "keywords": [
+            "Process data incrementally",
+            "Module 8 \u00b7 Data Engineering Foundations",
+            "Handle",
+            "only",
+            "new",
+            "records",
+            "instead",
+            "of",
+            "rebuilding",
+            "everything."
+          ]
+        }
+      ],
+      "stage": "engineering"
+    },
+    {
+      "id": "machine-learning",
+      "title": "Module 9 \u00b7 Machine Learning Foundations",
+      "description": "Prepare features, train simple models, evaluate predictions and think responsibly about bias.",
+      "lessons": [
+        {
+          "id": "ml-problem-framing",
+          "title": "Frame a machine-learning problem",
+          "description": "Distinguish prediction targets, features and success metrics.",
+          "duration": "18 min",
+          "xp": 120,
+          "badge": "Problem Framer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Identify target and features",
+              "content": "<p>A supervised model learns to predict a target from one or more features.</p><div class='callout'>Create the target and feature names for a churn prediction problem.</div>",
+              "starter": "columns = ['tenure_months', 'monthly_spend', 'support_tickets', 'churned']\n\n# Set target to churned and features to the remaining columns\n",
+              "hint": "Use target = 'churned' and a list for the other three columns.",
+              "solution": "target = 'churned'\nfeatures = ['tenure_months', 'monthly_spend', 'support_tickets']\nprint(target)\nprint(features)",
+              "test": "ml_frame"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Choose a metric",
+              "content": "<p>The metric should reflect the business cost of different errors.</p>",
+              "starter": "# Choose a metric name for a balanced binary classification problem\nmetric = \nprint(metric)\n",
+              "hint": "Use 'accuracy' for this simple balanced example.",
+              "solution": "metric = 'accuracy'\nprint(metric)",
+              "test": "ml_metric"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Recognise leakage",
+              "content": "<p>Data leakage happens when training data contains information unavailable at prediction time.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about information recorded after the outcome.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which feature would cause leakage when predicting whether a loan will default?",
+                "options": [
+                  "Applicant income",
+                  "Loan amount",
+                  "Final recovery amount after default",
+                  "Employment length"
+                ],
+                "answer": 2
+              }
+            }
+          ],
+          "prerequisites": [
+            "incremental-processing"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "ml-train-test",
+          "title": "Create train and test sets",
+          "description": "Hold back data to evaluate generalisation.",
+          "duration": "20 min",
+          "xp": 130,
+          "badge": "Validation Starter",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Split records deterministically",
+              "content": "<p>A test set approximates performance on unseen data.</p>",
+              "starter": "records = list(range(10))\n\n# Use the first 8 records for training and the final 2 for testing\n",
+              "hint": "Use slicing: records[:8] and records[8:].",
+              "solution": "train_records = records[:8]\ntest_records = records[8:]\nprint(train_records)\nprint(test_records)",
+              "test": "ml_split"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Protect the test set",
+              "content": "<p>The test set should not guide repeated tuning decisions.</p>",
+              "starter": "uses = ['fit model', 'choose hyperparameters', 'final evaluation']\n# Set test_set_use to the appropriate item\n",
+              "hint": "Choose 'final evaluation'.",
+              "solution": "test_set_use = 'final evaluation'\nprint(test_set_use)",
+              "test": "ml_test_use"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand overfitting",
+              "content": "<p>Overfitting means learning the training data too specifically.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Compare training and unseen performance.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which pattern most strongly suggests overfitting?",
+                "options": [
+                  "Low training score and low test score",
+                  "High training score and much lower test score",
+                  "Similar training and test scores",
+                  "No model was trained"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "ml-problem-framing"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "ml-regression",
+          "title": "Build a simple regression model",
+          "description": "Fit a line and calculate prediction error.",
+          "duration": "24 min",
+          "xp": 150,
+          "badge": "Regression Rookie",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Fit a line with NumPy",
+              "content": "<p>Linear regression estimates a relationship between an input and a numeric target.</p>",
+              "starter": "import numpy as np\n\nx = np.array([1, 2, 3, 4, 5], dtype=float)\ny = np.array([3, 5, 7, 9, 11], dtype=float)\n\n# Fit a first-degree polynomial and store slope and intercept\n",
+              "hint": "Use slope, intercept = np.polyfit(x, y, 1).",
+              "solution": "slope, intercept = np.polyfit(x, y, 1)\nprint(round(slope, 2), round(intercept, 2))",
+              "test": "ml_regression_fit"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Calculate mean absolute error",
+              "content": "<p>Mean absolute error measures the average absolute difference between prediction and reality.</p>",
+              "starter": "predictions = slope * x + intercept\n# Calculate mae from y and predictions\n",
+              "hint": "Use np.mean(np.abs(y - predictions)).",
+              "solution": "mae = np.mean(np.abs(y - predictions))\nprint(round(mae, 4))",
+              "test": "ml_mae"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Interpret MAE",
+              "content": "<p>MAE is expressed in the same unit as the target.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Lower average error is better when comparing like-for-like models.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What does an MAE of 5 mean?",
+                "options": [
+                  "Predictions are wrong by 5 units on average",
+                  "The model used five features",
+                  "Accuracy is 5%",
+                  "The model has five rows"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "ml-train-test"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "ml-classification",
+          "title": "Evaluate a binary classifier",
+          "description": "Calculate accuracy, precision and recall from predictions.",
+          "duration": "24 min",
+          "xp": 150,
+          "badge": "Classification Evaluator",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Calculate accuracy",
+              "content": "<p>Accuracy is the proportion of predictions that are correct.</p>",
+              "starter": "actual = [1, 0, 1, 1, 0]\npredicted = [1, 0, 0, 1, 0]\n\n# Calculate accuracy\n",
+              "hint": "Count matching pairs and divide by len(actual).",
+              "solution": "correct = sum(a == p for a, p in zip(actual, predicted))\naccuracy = correct / len(actual)\nprint(accuracy)",
+              "test": "ml_accuracy"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Calculate precision and recall",
+              "content": "<p>Precision asks how many predicted positives were correct. Recall asks how many actual positives were found.</p>",
+              "starter": "tp = sum(a == 1 and p == 1 for a, p in zip(actual, predicted))\nfp = sum(a == 0 and p == 1 for a, p in zip(actual, predicted))\nfn = sum(a == 1 and p == 0 for a, p in zip(actual, predicted))\n\n# Calculate precision and recall\n",
+              "hint": "precision = tp / (tp + fp), recall = tp / (tp + fn).",
+              "solution": "precision = tp / (tp + fp) if tp + fp else 0\nrecall = tp / (tp + fn) if tp + fn else 0\nprint(precision)\nprint(recall)",
+              "test": "ml_precision_recall"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose recall",
+              "content": "<p>Recall matters when missing a positive case is especially costly.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about detecting serious conditions.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "When is recall often especially important?",
+                "options": [
+                  "When false negatives are costly",
+                  "When chart colours matter most",
+                  "When there is no target",
+                  "When all values are text"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "ml-regression"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "ml-responsible",
+          "title": "Responsible model evaluation",
+          "description": "Check fairness, explainability, privacy and monitoring needs.",
+          "duration": "20 min",
+          "xp": 140,
+          "badge": "Responsible AI Reviewer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Compare group outcomes",
+              "content": "<p>A single overall score can hide weaker performance for particular groups.</p>",
+              "starter": "group_scores = {'Group A': 0.88, 'Group B': 0.72}\n\n# Calculate the absolute performance gap\n",
+              "hint": "Use abs(group_scores['Group A'] - group_scores['Group B']).",
+              "solution": "performance_gap = abs(group_scores['Group A'] - group_scores['Group B'])\nprint(round(performance_gap, 2))",
+              "test": "ml_group_gap"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Create a monitoring checklist",
+              "content": "<p>Models can degrade as data and behaviour change.</p>",
+              "starter": "# Create checks containing accuracy, data drift and group performance\n",
+              "hint": "Use a list with those three strings.",
+              "solution": "checks = ['accuracy', 'data drift', 'group performance']\nprint(checks)",
+              "test": "ml_monitoring"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Recognise responsible deployment",
+              "content": "<p>Human oversight and clear accountability remain important.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "A model should not be treated as infallible.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which practice best supports responsible deployment?",
+                "options": [
+                  "Never monitor the model",
+                  "Document limitations and monitor outcomes",
+                  "Hide the target definition",
+                  "Use every available personal field"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "ml-classification"
+          ],
+          "keywords": []
+        }
+      ],
+      "stage": "ai-production"
+    },
+    {
+      "id": "software-engineering",
+      "title": "Module 10 \u00b7 Python Software Engineering",
+      "description": "Structure projects, use Git, manage dependencies, build command-line tools and document reusable packages.",
+      "lessons": [
+        {
+          "id": "project-structure",
+          "title": "Structure a Python project",
+          "description": "Separate source code, tests, documentation and configuration.",
+          "duration": "20 min",
+          "xp": 130,
+          "badge": "Project Architect",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a source layout",
+              "content": "<p>A maintainable project separates application code from tests and documentation.</p>",
+              "starter": "folders = ['src', 'tests', 'docs']\n\n# Create project_files containing README.md and pyproject.toml\n",
+              "hint": "Use a two-item list.",
+              "solution": "project_files = ['README.md', 'pyproject.toml']\nprint(folders)\nprint(project_files)",
+              "test": "se_project_structure"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Define a package path",
+              "content": "<p>Importable code commonly lives below <code>src</code>.</p>",
+              "starter": "project_name = 'sales_tool'\n\n# Create package_path equal to src/sales_tool\n",
+              "hint": "Use an f-string.",
+              "solution": "package_path = f'src/{project_name}'\nprint(package_path)",
+              "test": "se_package_path"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand separation",
+              "content": "<p>A clear layout simplifies testing and packaging.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Keep verification code separate.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Why keep tests in a separate tests directory?",
+                "options": [
+                  "To hide failures",
+                  "To separate verification code from application code",
+                  "To prevent imports",
+                  "To remove documentation"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "ml-responsible"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "git-workflow",
+          "title": "Use a safe Git workflow",
+          "description": "Stage, commit and inspect changes in a predictable sequence.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Git Navigator",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Order the core commands",
+              "content": "<p>A normal workflow is inspect, stage and commit.</p>",
+              "starter": "commands = []\n\n# Add git status, git add ., and a commit command in order\n",
+              "hint": "Use three command strings.",
+              "solution": "commands = ['git status', 'git add .', 'git commit -m \"Add feature\"']\nprint(commands)",
+              "test": "se_git_order"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Write a meaningful message",
+              "content": "<p>A useful commit message describes the change.</p>",
+              "starter": "# Create commit_message describing a CSV validation feature\n",
+              "hint": "Use a concise imperative message.",
+              "solution": "commit_message = 'Add CSV schema validation'\nprint(commit_message)",
+              "test": "se_commit_message"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Protect shared history",
+              "content": "<p>Force-pushing can overwrite remote commits.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Shared branches need extra care.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "When should force-push be treated with particular caution?",
+                "options": [
+                  "When working on a shared branch",
+                  "When reading a file",
+                  "When running tests",
+                  "When writing comments"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "project-structure"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "dependencies-environments",
+          "title": "Manage dependencies and environments",
+          "description": "Keep project packages isolated and reproducible.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Environment Keeper",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a virtual environment",
+              "content": "<p>A virtual environment isolates dependencies.</p>",
+              "starter": "# Store python -m venv .venv in create_env\n",
+              "hint": "Use a string.",
+              "solution": "create_env = 'python -m venv .venv'\nprint(create_env)",
+              "test": "se_venv"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Declare a dependency",
+              "content": "<p>Dependencies can be declared in pyproject.toml.</p>",
+              "starter": "dependencies = []\n\n# Add pandas>=2.0\n",
+              "hint": "Append the dependency string.",
+              "solution": "dependencies.append('pandas>=2.0')\nprint(dependencies)",
+              "test": "se_dependency"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand reproducibility",
+              "content": "<p>Recorded dependencies help reproduce environments.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about another computer.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is the main purpose of recording dependencies?",
+                "options": [
+                  "To make imports slower",
+                  "To reproduce the project environment",
+                  "To remove all versions",
+                  "To replace testing"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "git-workflow"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "cli-tools",
+          "title": "Build a command-line tool",
+          "description": "Accept arguments and expose a reusable main function.",
+          "duration": "24 min",
+          "xp": 150,
+          "badge": "CLI Builder",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a main function",
+              "content": "<p>A main function provides a clear entry point.</p>",
+              "starter": "def main(name):\n    # Return a greeting\n    pass\n\nprint(main('Asha'))\n",
+              "hint": "Return an f-string.",
+              "solution": "def main(name):\n    return f'Hello, {name}!'\n\nprint(main('Asha'))",
+              "test": "se_cli_main"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Protect the entry point",
+              "content": "<p>The name guard prevents CLI code running during import.</p>",
+              "starter": "def run():\n    return 'running'\n\n# Create is_entry_point by checking __name__\n",
+              "hint": "Use __name__ == '__main__'.",
+              "solution": "is_entry_point = (__name__ == '__main__')\nprint(is_entry_point)",
+              "test": "se_name_guard"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Use command arguments",
+              "content": "<p>Arguments let one program accept different inputs.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about reusable scripts.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is a benefit of a command-line argument?",
+                "options": [
+                  "It hardcodes every input",
+                  "It lets users provide values at runtime",
+                  "It disables functions",
+                  "It removes error handling"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "dependencies-environments"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "documentation-release",
+          "title": "Document and release a package",
+          "description": "Write useful README content, version software and prepare a release checklist.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Release Steward",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Define a semantic version",
+              "content": "<p>Semantic versions commonly use major.minor.patch.</p>",
+              "starter": "# Create version for the first stable release\n",
+              "hint": "Use 1.0.0.",
+              "solution": "version = '1.0.0'\nprint(version)",
+              "test": "se_version"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Build a release checklist",
+              "content": "<p>A release should be tested and documented.</p>",
+              "starter": "release_checks = []\n\n# Add tests pass, README updated, and version tagged\n",
+              "hint": "Use three strings.",
+              "solution": "release_checks = ['tests pass', 'README updated', 'version tagged']\nprint(release_checks)",
+              "test": "se_release_checks"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Write a useful README",
+              "content": "<p>A README helps another person install and run the project.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about first-time users.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which README section is most important for first-time users?",
+                "options": [
+                  "Installation and usage",
+                  "Private passwords",
+                  "Unrelated notes",
+                  "Every terminal command ever run"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "cli-tools"
+          ],
+          "keywords": []
+        }
+      ],
+      "stage": "ai-production"
+    },
+    {
+      "id": "web-apis",
+      "title": "Module 11 \u00b7 Python Web APIs",
+      "description": "Design REST endpoints, validate JSON payloads, handle status codes and build a small FastAPI service.",
+      "lessons": [
+        {
+          "id": "rest-fundamentals",
+          "title": "Understand REST fundamentals",
+          "description": "Use resources, HTTP methods and status codes consistently.",
+          "duration": "20 min",
+          "xp": 130,
+          "badge": "REST Explorer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Choose an HTTP method",
+              "content": "<p>REST APIs use HTTP methods to communicate intent.</p>",
+              "starter": "# Set method for retrieving a list of customers\nmethod = \nprint(method)\n",
+              "hint": "Use 'GET'.",
+              "solution": "method = 'GET'\nprint(method)",
+              "test": "api_method_get"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Choose a status code",
+              "content": "<p>A successful resource creation normally returns 201.</p>",
+              "starter": "# Set status_code for a successfully created resource\nstatus_code = \nprint(status_code)\n",
+              "hint": "Use 201.",
+              "solution": "status_code = 201\nprint(status_code)",
+              "test": "api_status_created"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Recognise resource URLs",
+              "content": "<p>URLs should normally describe resources rather than actions.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Prefer nouns.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which endpoint is more REST-like for retrieving order 42?",
+                "options": [
+                  "/getOrder?id=42",
+                  "/orders/42",
+                  "/run-order-lookup",
+                  "/order-action"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "documentation-release"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "json-validation",
+          "title": "Validate JSON request bodies",
+          "description": "Check required fields and types before processing data.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Payload Validator",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Check required fields",
+              "content": "<p>Request validation should fail early with a useful message.</p>",
+              "starter": "payload = {'name': 'Asha', 'email': 'asha@example.com'}\nrequired = {'name', 'email'}\n\n# Create is_valid\n",
+              "hint": "Use required.issubset(payload.keys()).",
+              "solution": "is_valid = required.issubset(payload.keys())\nprint(is_valid)",
+              "test": "api_required_fields"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Return validation errors",
+              "content": "<p>Error lists help clients fix invalid requests.</p>",
+              "starter": "def validate_user(payload):\n    errors = []\n    if not payload.get('name'):\n        errors.append('name is required')\n    if '@' not in payload.get('email', ''):\n        errors.append('email is invalid')\n    # Return errors\n",
+              "hint": "Return the errors list.",
+              "solution": "return errors",
+              "test": "api_validation_errors"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Use client-error status codes",
+              "content": "<p>Invalid request data is normally a client error.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think 4xx.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which status code commonly represents an invalid request body?",
+                "options": [
+                  "200",
+                  "201",
+                  "400",
+                  "503"
+                ],
+                "answer": 2
+              }
+            }
+          ],
+          "prerequisites": [
+            "rest-fundamentals"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "fastapi-routes",
+          "title": "Create FastAPI routes",
+          "description": "Define path operations and return JSON-compatible values.",
+          "duration": "24 min",
+          "xp": 150,
+          "badge": "FastAPI Starter",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Define a route response",
+              "content": "<p>FastAPI converts dictionaries into JSON responses.</p>",
+              "starter": "def health():\n    # Return status ok\n    pass\n\nprint(health())\n",
+              "hint": "Return {'status': 'ok'}.",
+              "solution": "def health():\n    return {'status': 'ok'}\n\nprint(health())",
+              "test": "api_health_response"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Return a path parameter",
+              "content": "<p>Path parameters identify a specific resource.</p>",
+              "starter": "def get_order(order_id):\n    # Return a dictionary containing order_id\n    pass\n\nprint(get_order(42))\n",
+              "hint": "Return {'order_id': order_id}.",
+              "solution": "def get_order(order_id):\n    return {'order_id': order_id}\n\nprint(get_order(42))",
+              "test": "api_path_parameter"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand automatic docs",
+              "content": "<p>FastAPI generates interactive API documentation from routes and models.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "The common Swagger UI path is short.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is FastAPI's common interactive documentation path?",
+                "options": [
+                  "/docs",
+                  "/home",
+                  "/admin",
+                  "/database"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "json-validation"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "api-errors",
+          "title": "Handle API errors",
+          "description": "Return useful error messages without exposing internal details.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "API Error Handler",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a not-found response",
+              "content": "<p>A missing resource normally returns 404.</p>",
+              "starter": "# Create response with status 404 and a clear message\n",
+              "hint": "Use a dictionary.",
+              "solution": "response = {'status': 404, 'detail': 'Order not found'}\nprint(response)",
+              "test": "api_not_found"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Avoid leaking internals",
+              "content": "<p>Clients need a stable message, not database passwords or stack traces.</p>",
+              "starter": "internal_error = 'Database password failed for user admin'\n\n# Create public_message without exposing the internal detail\n",
+              "hint": "Use a generic service message.",
+              "solution": "public_message = 'Unable to process the request'\nprint(public_message)",
+              "test": "api_safe_error"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Choose retryable failures",
+              "content": "<p>Temporary service failures are often represented by 503.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Service unavailable.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which status code commonly signals temporary service unavailability?",
+                "options": [
+                  "204",
+                  "301",
+                  "404",
+                  "503"
+                ],
+                "answer": 3
+              }
+            }
+          ],
+          "prerequisites": [
+            "fastapi-routes"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "api-testing",
+          "title": "Test API behaviour",
+          "description": "Assert response status, schema and edge cases.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "API Tester",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Assert status and body",
+              "content": "<p>API tests should verify both transport behaviour and returned data.</p>",
+              "starter": "response = {'status_code': 200, 'json': {'status': 'ok'}}\n\n# Add assertions for status_code and status\n",
+              "hint": "Assert 200 and 'ok'.",
+              "solution": "assert response['status_code'] == 200\nassert response['json']['status'] == 'ok'\nprint('tests passed')",
+              "test": "api_test_response"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Check a missing resource",
+              "content": "<p>Negative tests protect expected failure behaviour.</p>",
+              "starter": "missing_response = {'status_code': 404, 'json': {'detail': 'Not found'}}\n\n# Assert the missing response status\n",
+              "hint": "Assert status_code equals 404.",
+              "solution": "assert missing_response['status_code'] == 404\nprint('negative test passed')",
+              "test": "api_test_not_found"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Test contracts",
+              "content": "<p>API contracts include fields, types and status behaviour.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "A 200 response alone is not enough.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What should a useful API test verify?",
+                "options": [
+                  "Only that the server starts",
+                  "Status code and response contract",
+                  "Only print output",
+                  "Only file names"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "api-errors"
+          ],
+          "keywords": []
+        }
+      ],
+      "stage": "ai-production"
+    },
+    {
+      "id": "databases-orm",
+      "title": "Module 12 \u00b7 Databases and SQLAlchemy",
+      "description": "Design relational schemas, persist data, use transactions, model relationships and manage database migrations.",
+      "lessons": [
+        {
+          "id": "relational-design",
+          "title": "Design relational tables",
+          "description": "Choose primary keys, foreign keys and appropriate column types.",
+          "duration": "22 min",
+          "xp": 140,
+          "badge": "Schema Designer",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Choose a primary key",
+              "content": "<p>A primary key uniquely identifies each row.</p>",
+              "starter": "columns = ['customer_id', 'name', 'email']\n\n# Set primary_key\n",
+              "hint": "Use customer_id.",
+              "solution": "primary_key = 'customer_id'\nprint(primary_key)",
+              "test": "db_primary_key"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Define a foreign key",
+              "content": "<p>A foreign key links one table to a row in another table.</p>",
+              "starter": "# Create foreign_key for orders.customer_id -> customers.customer_id\nforeign_key = \nprint(foreign_key)\n",
+              "hint": "Use a descriptive string.",
+              "solution": "foreign_key = 'orders.customer_id -> customers.customer_id'\nprint(foreign_key)",
+              "test": "db_foreign_key"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand normalisation",
+              "content": "<p>Normalisation reduces duplicated facts and update inconsistency.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Think about storing customer details once.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Why store customer details in a customer table rather than repeat them on every order?",
+                "options": [
+                  "To increase duplication",
+                  "To reduce inconsistency and repeated data",
+                  "To remove all relationships",
+                  "To avoid primary keys"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "api-testing"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "sqlite-crud",
+          "title": "Perform SQLite CRUD operations",
+          "description": "Create tables and safely insert, select, update and delete rows.",
+          "duration": "26 min",
+          "xp": 160,
+          "badge": "CRUD Builder",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a table",
+              "content": "<p>SQLite is included with Python and is useful for local applications and learning.</p>",
+              "starter": "create_sql = \"\"\"\n\n\"\"\"\n# Define a customers table with id and name\n",
+              "hint": "Use CREATE TABLE customers.",
+              "solution": "create_sql = \"\"\"\nCREATE TABLE customers (\n    id INTEGER PRIMARY KEY,\n    name TEXT NOT NULL\n)\n\"\"\"\nprint(create_sql)",
+              "test": "db_create_table"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Use parameterised SQL",
+              "content": "<p>Parameters keep data separate from SQL syntax and reduce injection risk.</p>",
+              "starter": "insert_sql = 'INSERT INTO customers (name) VALUES (?)'\n\n# Create params for customer Asha\n",
+              "hint": "Use a one-item tuple.",
+              "solution": "params = ('Asha',)\nprint(insert_sql, params)",
+              "test": "db_parameters"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Avoid SQL injection",
+              "content": "<p>User values should not be concatenated into SQL strings.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Use driver-supported parameters.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is the safest way to include user input in SQL?",
+                "options": [
+                  "String concatenation",
+                  "Parameterised queries",
+                  "Copy and paste",
+                  "Comments"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "relational-design"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "transactions",
+          "title": "Use transactions safely",
+          "description": "Commit complete units of work and roll back failures.",
+          "duration": "22 min",
+          "xp": 145,
+          "badge": "Transaction Keeper",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Commit a unit of work",
+              "content": "<p>A transaction keeps related changes together.</p>",
+              "starter": "steps = ['begin', 'insert order', 'update balance']\n\n# Add the final successful transaction action\n",
+              "hint": "Append commit.",
+              "solution": "steps.append('commit')\nprint(steps)",
+              "test": "db_commit"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Roll back a failure",
+              "content": "<p>Rollback restores the database when a transaction cannot complete safely.</p>",
+              "starter": "error_occurred = True\n\n# Set action to rollback when there is an error\n",
+              "hint": "Use a conditional expression.",
+              "solution": "action = 'rollback' if error_occurred else 'commit'\nprint(action)",
+              "test": "db_rollback"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand atomicity",
+              "content": "<p>Atomic work either completes fully or has no effect.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "All or nothing.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What does transaction atomicity mean?",
+                "options": [
+                  "Every row is public",
+                  "All transaction changes succeed together or none do",
+                  "Every table has one column",
+                  "Queries cannot fail"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "sqlite-crud"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "sqlalchemy-models",
+          "title": "Model data with SQLAlchemy",
+          "description": "Represent tables as Python classes and manage sessions.",
+          "duration": "26 min",
+          "xp": 160,
+          "badge": "ORM Modeler",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Describe a model",
+              "content": "<p>An ORM maps Python objects to relational rows.</p>",
+              "starter": "model = {\n    'table': 'customers',\n    'columns': []\n}\n\n# Add id and name columns\n",
+              "hint": "Use a two-item list.",
+              "solution": "model['columns'] = ['id', 'name']\nprint(model)",
+              "test": "db_model_columns"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Track a session workflow",
+              "content": "<p>SQLAlchemy sessions collect work before committing it.</p>",
+              "starter": "session_steps = []\n\n# Add object, flush, commit in order\n",
+              "hint": "Use three strings.",
+              "solution": "session_steps = ['add object', 'flush', 'commit']\nprint(session_steps)",
+              "test": "db_session_steps"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand ORM trade-offs",
+              "content": "<p>ORMs improve productivity but do not remove the need to understand SQL.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Generated queries still matter.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Why should ORM users still understand SQL?",
+                "options": [
+                  "ORMs never query databases",
+                  "To reason about performance and generated queries",
+                  "To remove models",
+                  "To avoid transactions"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "transactions"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "database-migrations",
+          "title": "Manage database migrations",
+          "description": "Evolve schemas safely and keep environments consistent.",
+          "duration": "24 min",
+          "xp": 150,
+          "badge": "Migration Planner",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a migration sequence",
+              "content": "<p>Migrations record ordered schema changes.</p>",
+              "starter": "migrations = ['001_create_customers']\n\n# Add 002_add_customer_email\n",
+              "hint": "Append the migration name.",
+              "solution": "migrations.append('002_add_customer_email')\nprint(migrations)",
+              "test": "db_migration_order"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Plan a reversible change",
+              "content": "<p>A migration should define both upgrade and downgrade behaviour where practical.</p>",
+              "starter": "migration = {}\n\n# Add upgrade and downgrade descriptions\n",
+              "hint": "Use keys upgrade and downgrade.",
+              "solution": "migration = {'upgrade': 'add email column', 'downgrade': 'remove email column'}\nprint(migration)",
+              "test": "db_migration_reverse"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Protect production data",
+              "content": "<p>Schema changes should be reviewed, tested and backed up.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Production changes need safeguards.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What should happen before a risky production migration?",
+                "options": [
+                  "Delete backups",
+                  "Test the migration and prepare rollback or recovery",
+                  "Skip review",
+                  "Disable logging"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "sqlalchemy-models"
+          ],
+          "keywords": []
+        }
+      ],
+      "stage": "ai-production"
+    },
+    {
+      "id": "deployment-devops",
+      "title": "Module 13 \u00b7 Deployment and DevOps",
+      "description": "Containerise services, automate delivery, monitor systems and plan safe releases.",
+      "lessons": [
+        {
+          "id": "deployment-environments",
+          "title": "Understand deployment environments",
+          "description": "Separate development, staging and production safely.",
+          "duration": "22 min",
+          "xp": 145,
+          "badge": "Environment Planner",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Order environments",
+              "content": "<p>Changes normally move through progressively more production-like environments.</p>",
+              "starter": "environments = []\n# Add development, staging and production\n",
+              "hint": "Use three strings.",
+              "solution": "environments=['development','staging','production']\nprint(environments)",
+              "test": "devops_environments"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Keep config external",
+              "content": "<p>Environment-specific values should not be hardcoded.</p>",
+              "starter": "config_source = \nprint(config_source)\n",
+              "hint": "Use 'environment variables'.",
+              "solution": "config_source='environment variables'\nprint(config_source)",
+              "test": "devops_config"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Protect production",
+              "content": "<p>Staging should resemble production.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Test before production.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "What is staging mainly for?",
+                "options": [
+                  "Store passwords",
+                  "Test in a production-like environment",
+                  "Replace Git",
+                  "Skip tests"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "database-migrations"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "docker-basics",
+          "title": "Containerise a Python application",
+          "description": "Create reproducible Docker images and runtime commands.",
+          "duration": "22 min",
+          "xp": 145,
+          "badge": "Container Starter",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Choose a base image",
+              "content": "<p>Slim images reduce unnecessary packages.</p>",
+              "starter": "base_image = \n",
+              "hint": "Use python:3.12-slim.",
+              "solution": "base_image='python:3.12-slim'\nprint(base_image)",
+              "test": "devops_base_image"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Create the server command",
+              "content": "<p>The container should start Uvicorn explicitly.</p>",
+              "starter": "command=[]\n# Add uvicorn, app.main:app, --host, 0.0.0.0\n",
+              "hint": "Use four strings.",
+              "solution": "command=['uvicorn','app.main:app','--host','0.0.0.0']\nprint(command)",
+              "test": "devops_container_command"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand images",
+              "content": "<p>Images package the application and runtime.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Consistency matters.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Why use a container image?",
+                "options": [
+                  "Remove all dependencies",
+                  "Package runtime consistently",
+                  "Avoid code",
+                  "Disable networking"
+                ],
+                "answer": 1
+              }
+            }
+          ],
+          "prerequisites": [
+            "deployment-environments"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "ci-cd-pipelines",
+          "title": "Build a CI/CD pipeline",
+          "description": "Automate validation, testing, building and deployment gates.",
+          "duration": "22 min",
+          "xp": 145,
+          "badge": "Pipeline Builder",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Order pipeline stages",
+              "content": "<p>Fail fast before deployment.</p>",
+              "starter": "stages=[]\n# Add lint, test, build, deploy\n",
+              "hint": "Use four strings.",
+              "solution": "stages=['lint','test','build','deploy']\nprint(stages)",
+              "test": "devops_pipeline_stages"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Create a deployment gate",
+              "content": "<p>Deployment depends on successful earlier stages.</p>",
+              "starter": "tests_passed=True\nbuild_passed=True\n# Set can_deploy\n",
+              "hint": "Both must be true.",
+              "solution": "can_deploy=tests_passed and build_passed\nprint(can_deploy)",
+              "test": "devops_deploy_gate"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Use CI effectively",
+              "content": "<p>CI provides rapid feedback.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Automate repeatable checks.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which task belongs in CI?",
+                "options": [
+                  "Automated tests",
+                  "Password sharing",
+                  "Editing production data",
+                  "Skipping review"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "docker-basics"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "health-observability",
+          "title": "Add health checks and observability",
+          "description": "Use logs, metrics and health endpoints to understand systems.",
+          "duration": "22 min",
+          "xp": 145,
+          "badge": "Observability Starter",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Define health output",
+              "content": "<p>Infrastructure needs a readiness signal.</p>",
+              "starter": "health={}\n# Add status healthy and database connected\n",
+              "hint": "Use two keys.",
+              "solution": "health={'status':'healthy','database':'connected'}\nprint(health)",
+              "test": "devops_health"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Create structured context",
+              "content": "<p>Structured fields make logs searchable.</p>",
+              "starter": "log_context={}\n# Add request_id abc123 and endpoint /orders\n",
+              "hint": "Use a dictionary.",
+              "solution": "log_context={'request_id':'abc123','endpoint':'/orders'}\nprint(log_context)",
+              "test": "devops_log_context"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Understand traces",
+              "content": "<p>Traces follow requests across services.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Request journey.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which signal follows one request across services?",
+                "options": [
+                  "Distributed trace",
+                  "README",
+                  "Package name",
+                  "Migration file"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "ci-cd-pipelines"
+          ],
+          "keywords": []
+        },
+        {
+          "id": "safe-releases",
+          "title": "Plan safe releases and rollback",
+          "description": "Use verification, monitoring and rollback plans.",
+          "duration": "22 min",
+          "xp": 145,
+          "badge": "Release Guardian",
+          "steps": [
+            {
+              "type": "CONCEPT",
+              "title": "Create a release sequence",
+              "content": "<p>Releases need safeguards.</p>",
+              "starter": "release=[]\n# Add backup, deploy, verify, monitor\n",
+              "hint": "Use four strings.",
+              "solution": "release=['backup','deploy','verify','monitor']\nprint(release)",
+              "test": "devops_release_checklist"
+            },
+            {
+              "type": "PRACTICE",
+              "title": "Choose rollback behaviour",
+              "content": "<p>Failed verification should trigger recovery.</p>",
+              "starter": "verification_passed=False\n# Set action\n",
+              "hint": "Use a conditional.",
+              "solution": "action='continue' if verification_passed else 'rollback'\nprint(action)",
+              "test": "devops_rollback"
+            },
+            {
+              "type": "QUIZ",
+              "title": "Reduce rollout risk",
+              "content": "<p>Gradual exposure limits impact.</p>",
+              "starter": "print('Answer below.')",
+              "hint": "Small percentage first.",
+              "solution": "",
+              "test": "quiz",
+              "quiz": {
+                "question": "Which strategy gradually exposes a release?",
+                "options": [
+                  "Canary deployment",
+                  "Delete and hope",
+                  "Bare except",
+                  "Full reset"
+                ],
+                "answer": 0
+              }
+            }
+          ],
+          "prerequisites": [
+            "health-observability"
+          ],
+          "keywords": []
+        }
+      ],
+      "stage": "ai-production"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "sql": [
+    {
+      "day": 1,
+      "title": "Foundation and query accuracy",
+      "focus": [
+        "SELECT and filtering",
+        "NULL reasoning",
+        "Result validation"
+      ]
+    },
+    {
+      "day": 30,
+      "title": "Analytical confidence",
+      "focus": [
+        "Aggregation",
+        "Joins",
+        "Business interpretation"
+      ]
+    },
+    {
+      "day": 60,
+      "title": "Advanced analysis",
+      "focus": [
+        "CTEs",
+        "Window functions",
+        "Performance"
+      ]
+    },
+    {
+      "day": 90,
+      "title": "Portfolio readiness",
+      "focus": [
+        "Database design",
+        "Projects",
+        "Credential evidence"
+      ]
+    }
+  ],
+  "web": [
+    {
+      "day": 1,
+      "title": "Structure and accessibility",
+      "focus": [
+        "Semantic HTML",
+        "Forms",
+        "Accessibility"
+      ]
+    },
+    {
+      "day": 30,
+      "title": "Responsive visual systems",
+      "focus": [
+        "CSS layout",
+        "Grid and Flexbox",
+        "Responsive design"
+      ]
+    },
+    {
+      "day": 60,
+      "title": "Interactive applications",
+      "focus": [
+        "JavaScript",
+        "DOM",
+        "APIs and storage"
+      ]
+    },
+    {
+      "day": 90,
+      "title": "Production frontend",
+      "focus": [
+        "Testing",
+        "Performance",
+        "Portfolio deployment"
+      ]
+    }
+  ],
+  "java": [
+    {
+      "day": 1,
+      "title": "Core Java fluency",
+      "focus": [
+        "Syntax",
+        "Types",
+        "Control flow",
+        "Methods"
+      ]
+    },
+    {
+      "day": 30,
+      "title": "Object-oriented modelling",
+      "focus": [
+        "Classes",
+        "Encapsulation",
+        "Interfaces"
+      ]
+    },
+    {
+      "day": 60,
+      "title": "Engineering depth",
+      "focus": [
+        "Collections",
+        "Streams",
+        "Testing",
+        "SOLID"
+      ]
+    },
+    {
+      "day": 90,
+      "title": "Enterprise readiness",
+      "focus": [
+        "Persistence",
+        "Spring",
+        "REST",
+        "Production controls"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cohort-data-analyst-01",
+    "title": "Data Analyst Career Accelerator",
+    "academyIds": [
+      "python",
+      "sql",
+      "web"
+    ],
+    "status": "active",
+    "startDate": "2026-07-20",
+    "endDate": "2026-10-12",
+    "capacity": 25,
+    "instructor": "Anish",
+    "description": "A 12-week programme covering Python, SQL, analytics and dashboard delivery."
+  },
+  {
+    "id": "cohort-backend-01",
+    "title": "Backend Engineering Foundations",
+    "academyIds": [
+      "java",
+      "sql",
+      "python"
+    ],
+    "status": "draft",
+    "startDate": "2026-08-10",
+    "endDate": "2026-11-30",
+    "capacity": 20,
+    "instructor": "Anish",
+    "description": "Java, APIs, persistence, testing and production-readiness."
+  }
+]

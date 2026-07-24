@@ -1,0 +1,40 @@
+{
+  "version": "61.0",
+  "defaultWeeklyMinutes": 120,
+  "minimumSessionMinutes": 5,
+  "recommendedSessionMinutes": [
+    5,
+    10,
+    20,
+    30
+  ],
+  "streakGraceDays": 1,
+  "dailyPlanSlots": [
+    "continue",
+    "review",
+    "practice"
+  ],
+  "momentumLevels": [
+    {
+      "id": "starting",
+      "minWeeklyMinutes": 0
+    },
+    {
+      "id": "building",
+      "minWeeklyMinutes": 30
+    },
+    {
+      "id": "steady",
+      "minWeeklyMinutes": 90
+    },
+    {
+      "id": "strong",
+      "minWeeklyMinutes": 150
+    }
+  ],
+  "retentionPrompts": {
+    "inactive2Days": "Your pathway is ready when you are. Continue with a five-minute session.",
+    "weeklyGoalNear": "You are close to your weekly goal. One short session can complete it.",
+    "streakRecovery": "A recovery session today will protect your learning momentum."
+  }
+}

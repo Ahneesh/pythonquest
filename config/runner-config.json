@@ -1,0 +1,24 @@
+{
+  "mode": "hybrid",
+  "browserRunners": [
+    "python",
+    "javascript",
+    "sql",
+    "html"
+  ],
+  "remoteRunners": [
+    "java",
+    "python-project",
+    "javascript-project"
+  ],
+  "remoteEndpoint": "",
+  "limits": {
+    "wallTimeMs": 5000,
+    "memoryMb": 128,
+    "outputKb": 64,
+    "maxFiles": 30,
+    "maxFileSizeKb": 256,
+    "networkAccess": false
+  },
+  "disclosure": "Real Java execution requires an isolated backend runner. Without one, Java is analysed structurally and is not represented as JVM execution."
+}

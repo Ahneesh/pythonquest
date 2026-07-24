@@ -1,0 +1,71 @@
+{
+  "slides": [
+    {
+      "title": "Switch academies at any time",
+      "body": "Move between Python, SQL, Web and Java while keeping one developer profile."
+    },
+    {
+      "title": "Follow the course map",
+      "body": "Each academy contains modules, lessons, projects, assessments and credentials."
+    },
+    {
+      "title": "Use learning intelligence",
+      "body": "Diagnostics, adaptive coaching, mastery maps and smart review target weak areas."
+    },
+    {
+      "title": "Build real things",
+      "body": "Projects, coding labs, missions and team work create practical evidence."
+    },
+    {
+      "title": "Create professional proof",
+      "body": "Your academy-aware portfolio records credentials, projects and mission dossiers."
+    },
+    {
+      "title": "Ask the AI mentor",
+      "body": "Use Socratic tutoring, debugging, review and interview practice when stuck."
+    }
+  ],
+  "steps": [
+    {
+      "id": "goal",
+      "title": "What is your main goal?",
+      "options": [
+        "Learn my first programming language",
+        "Move into data or analytics",
+        "Become a software engineer",
+        "Strengthen professional skills",
+        "Run a class or team"
+      ]
+    },
+    {
+      "id": "academy",
+      "title": "Choose your starting academy",
+      "options": [
+        "python",
+        "sql",
+        "web",
+        "java"
+      ]
+    },
+    {
+      "id": "experience",
+      "title": "Set your experience level",
+      "options": [
+        "Complete beginner",
+        "Some basics",
+        "Working knowledge",
+        "Experienced professional"
+      ]
+    },
+    {
+      "id": "weekly",
+      "title": "Choose a weekly commitment",
+      "options": [
+        "1\u20132 hours",
+        "3\u20135 hours",
+        "6\u20138 hours",
+        "9+ hours"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+[
+  {
+    "id": "web-html-exam",
+    "moduleId": "web-html",
+    "title": "Stage 1 \u00b7 HTML Foundations Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which practice most improves maintainability?",
+        "options": [
+          "Clear structure and meaningful names",
+          "Inline every style",
+          "Ignore browser errors",
+          "Duplicate markup"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What should be checked before calling a feature complete?",
+        "options": [
+          "Only desktop appearance",
+          "Behaviour, accessibility and edge cases",
+          "Only colour choice",
+          "File length"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use semantic HTML?",
+        "options": [
+          "It communicates structure to browsers and assistive technology",
+          "It disables CSS",
+          "It replaces JavaScript",
+          "It guarantees SEO rankings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional frontend deliverable?",
+        "options": [
+          "A screenshot only",
+          "Working code plus evidence of testing and responsiveness",
+          "An unexplained snippet",
+          "A page that works in one browser size"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is progressive enhancement?",
+        "options": [
+          "Start with a functional baseline, then add richer behaviour",
+          "Require JavaScript for all content",
+          "Hide all content before load",
+          "Avoid accessibility"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "web-css-exam",
+    "moduleId": "web-css",
+    "title": "Stage 2 \u00b7 CSS Foundations Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which practice most improves maintainability?",
+        "options": [
+          "Clear structure and meaningful names",
+          "Inline every style",
+          "Ignore browser errors",
+          "Duplicate markup"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What should be checked before calling a feature complete?",
+        "options": [
+          "Only desktop appearance",
+          "Behaviour, accessibility and edge cases",
+          "Only colour choice",
+          "File length"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use semantic HTML?",
+        "options": [
+          "It communicates structure to browsers and assistive technology",
+          "It disables CSS",
+          "It replaces JavaScript",
+          "It guarantees SEO rankings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional frontend deliverable?",
+        "options": [
+          "A screenshot only",
+          "Working code plus evidence of testing and responsiveness",
+          "An unexplained snippet",
+          "A page that works in one browser size"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is progressive enhancement?",
+        "options": [
+          "Start with a functional baseline, then add richer behaviour",
+          "Require JavaScript for all content",
+          "Hide all content before load",
+          "Avoid accessibility"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "web-js-exam",
+    "moduleId": "web-js",
+    "title": "Stage 3 \u00b7 JavaScript Foundations Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which practice most improves maintainability?",
+        "options": [
+          "Clear structure and meaningful names",
+          "Inline every style",
+          "Ignore browser errors",
+          "Duplicate markup"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What should be checked before calling a feature complete?",
+        "options": [
+          "Only desktop appearance",
+          "Behaviour, accessibility and edge cases",
+          "Only colour choice",
+          "File length"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use semantic HTML?",
+        "options": [
+          "It communicates structure to browsers and assistive technology",
+          "It disables CSS",
+          "It replaces JavaScript",
+          "It guarantees SEO rankings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional frontend deliverable?",
+        "options": [
+          "A screenshot only",
+          "Working code plus evidence of testing and responsiveness",
+          "An unexplained snippet",
+          "A page that works in one browser size"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is progressive enhancement?",
+        "options": [
+          "Start with a functional baseline, then add richer behaviour",
+          "Require JavaScript for all content",
+          "Hide all content before load",
+          "Avoid accessibility"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "web-browser-exam",
+    "moduleId": "web-browser",
+    "title": "Stage 4 \u00b7 Browser Development Assessment",
+    "passMark": 75,
+    "questions": [
+      {
+        "question": "Which practice most improves maintainability?",
+        "options": [
+          "Clear structure and meaningful names",
+          "Inline every style",
+          "Ignore browser errors",
+          "Duplicate markup"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What should be checked before calling a feature complete?",
+        "options": [
+          "Only desktop appearance",
+          "Behaviour, accessibility and edge cases",
+          "Only colour choice",
+          "File length"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use semantic HTML?",
+        "options": [
+          "It communicates structure to browsers and assistive technology",
+          "It disables CSS",
+          "It replaces JavaScript",
+          "It guarantees SEO rankings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional frontend deliverable?",
+        "options": [
+          "A screenshot only",
+          "Working code plus evidence of testing and responsiveness",
+          "An unexplained snippet",
+          "A page that works in one browser size"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is progressive enhancement?",
+        "options": [
+          "Start with a functional baseline, then add richer behaviour",
+          "Require JavaScript for all content",
+          "Hide all content before load",
+          "Avoid accessibility"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  {
+    "id": "web-professional-exam",
+    "moduleId": "web-professional",
+    "title": "Stage 5 \u00b7 Professional Frontend Assessment",
+    "passMark": 75,
+    "questions": [
+      {
+        "question": "Which practice most improves maintainability?",
+        "options": [
+          "Clear structure and meaningful names",
+          "Inline every style",
+          "Ignore browser errors",
+          "Duplicate markup"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What should be checked before calling a feature complete?",
+        "options": [
+          "Only desktop appearance",
+          "Behaviour, accessibility and edge cases",
+          "Only colour choice",
+          "File length"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use semantic HTML?",
+        "options": [
+          "It communicates structure to browsers and assistive technology",
+          "It disables CSS",
+          "It replaces JavaScript",
+          "It guarantees SEO rankings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional frontend deliverable?",
+        "options": [
+          "A screenshot only",
+          "Working code plus evidence of testing and responsiveness",
+          "An unexplained snippet",
+          "A page that works in one browser size"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is progressive enhancement?",
+        "options": [
+          "Start with a functional baseline, then add richer behaviour",
+          "Require JavaScript for all content",
+          "Hide all content before load",
+          "Avoid accessibility"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+]

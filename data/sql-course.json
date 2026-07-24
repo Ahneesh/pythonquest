@@ -1,0 +1,324 @@
+{
+  "academyId": "sql",
+  "title": "SQL & Database Academy",
+  "modules": [
+    {
+      "id": "sql-foundations",
+      "title": "Stage 1 \u00b7 SQL Foundations",
+      "description": "Read tables, select columns and filter rows confidently.",
+      "credential": "SQL Query Practitioner",
+      "lessons": [
+        {
+          "id": "sql-select-basics",
+          "title": "SELECT and FROM",
+          "description": "Retrieve columns from a table.",
+          "duration": "12 min",
+          "xp": 100,
+          "datasetId": "sales",
+          "starter": "SELECT order_id, customer, revenue FROM data LIMIT 5;",
+          "solution": "SELECT order_id, customer, revenue FROM data LIMIT 5;",
+          "challenge": "Select order_id, customer and revenue, returning only five rows.",
+          "prerequisites": []
+        },
+        {
+          "id": "sql-filtering",
+          "title": "Filtering with WHERE",
+          "description": "Use conditions to find relevant records.",
+          "duration": "14 min",
+          "xp": 100,
+          "datasetId": "sales",
+          "starter": "SELECT * FROM data WHERE revenue >= 500;",
+          "solution": "SELECT * FROM data WHERE revenue >= 500;",
+          "challenge": "Return every order with revenue of at least 500.",
+          "prerequisites": [
+            "sql-select-basics"
+          ]
+        },
+        {
+          "id": "sql-order-limit",
+          "title": "ORDER BY and LIMIT",
+          "description": "Sort results and control result size.",
+          "duration": "16 min",
+          "xp": 100,
+          "datasetId": "sales",
+          "starter": "SELECT customer, revenue FROM data ORDER BY revenue DESC LIMIT 3;",
+          "solution": "SELECT customer, revenue FROM data ORDER BY revenue DESC LIMIT 3;",
+          "challenge": "Return the three highest-revenue customers.",
+          "prerequisites": [
+            "sql-filtering"
+          ]
+        },
+        {
+          "id": "sql-null-distinct",
+          "title": "NULL and DISTINCT",
+          "description": "Handle missing values and unique categories.",
+          "duration": "18 min",
+          "xp": 100,
+          "datasetId": "customers",
+          "starter": "SELECT DISTINCT region FROM data WHERE region IS NOT NULL ORDER BY region;",
+          "solution": "SELECT DISTINCT region FROM data WHERE region IS NOT NULL ORDER BY region;",
+          "challenge": "Return unique non-null regions in alphabetical order.",
+          "prerequisites": [
+            "sql-order-limit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sql-analysis",
+      "title": "Stage 2 \u00b7 Analytical SQL",
+      "description": "Aggregate data and express business rules.",
+      "credential": "SQL Analytics Practitioner",
+      "lessons": [
+        {
+          "id": "sql-aggregate",
+          "title": "COUNT, SUM and AVG",
+          "description": "Calculate useful summary metrics.",
+          "duration": "12 min",
+          "xp": 120,
+          "datasetId": "sales",
+          "starter": "SELECT COUNT(*) AS orders, ROUND(SUM(revenue),2) AS total_revenue, ROUND(AVG(revenue),2) AS avg_revenue FROM data;",
+          "solution": "SELECT COUNT(*) AS orders, ROUND(SUM(revenue),2) AS total_revenue, ROUND(AVG(revenue),2) AS avg_revenue FROM data;",
+          "challenge": "Calculate order count, total revenue and average revenue.",
+          "prerequisites": [
+            "sql-null-distinct"
+          ]
+        },
+        {
+          "id": "sql-group-by",
+          "title": "GROUP BY",
+          "description": "Create summaries by category.",
+          "duration": "14 min",
+          "xp": 120,
+          "datasetId": "sales",
+          "starter": "SELECT region, ROUND(SUM(revenue),2) AS revenue FROM data GROUP BY region ORDER BY revenue DESC;",
+          "solution": "SELECT region, ROUND(SUM(revenue),2) AS revenue FROM data GROUP BY region ORDER BY revenue DESC;",
+          "challenge": "Calculate total revenue by region, highest first.",
+          "prerequisites": [
+            "sql-aggregate"
+          ]
+        },
+        {
+          "id": "sql-having",
+          "title": "HAVING",
+          "description": "Filter aggregated groups.",
+          "duration": "16 min",
+          "xp": 120,
+          "datasetId": "sales",
+          "starter": "SELECT region, COUNT(*) AS orders FROM data GROUP BY region HAVING COUNT(*) >= 2 ORDER BY orders DESC;",
+          "solution": "SELECT region, COUNT(*) AS orders FROM data GROUP BY region HAVING COUNT(*) >= 2 ORDER BY orders DESC;",
+          "challenge": "Return regions with at least two orders.",
+          "prerequisites": [
+            "sql-group-by"
+          ]
+        },
+        {
+          "id": "sql-case",
+          "title": "CASE expressions",
+          "description": "Translate rules into readable categories.",
+          "duration": "18 min",
+          "xp": 120,
+          "datasetId": "sales",
+          "starter": "SELECT order_id, revenue, CASE WHEN revenue >= 700 THEN 'High' WHEN revenue >= 400 THEN 'Medium' ELSE 'Low' END AS revenue_band FROM data ORDER BY order_id;",
+          "solution": "SELECT order_id, revenue, CASE WHEN revenue >= 700 THEN 'High' WHEN revenue >= 400 THEN 'Medium' ELSE 'Low' END AS revenue_band FROM data ORDER BY order_id;",
+          "challenge": "Classify each order into High, Medium or Low revenue.",
+          "prerequisites": [
+            "sql-having"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sql-relational",
+      "title": "Stage 3 \u00b7 Relational SQL",
+      "description": "Combine tables and reason about relationships.",
+      "credential": "Relational SQL Practitioner",
+      "lessons": [
+        {
+          "id": "sql-inner-join",
+          "title": "INNER JOIN",
+          "description": "Combine matching records.",
+          "duration": "12 min",
+          "xp": 140,
+          "datasetId": "commerce",
+          "starter": "SELECT o.order_id, c.customer_name, o.revenue FROM orders o INNER JOIN customers c ON o.customer_id = c.customer_id ORDER BY o.order_id;",
+          "solution": "SELECT o.order_id, c.customer_name, o.revenue FROM orders o INNER JOIN customers c ON o.customer_id = c.customer_id ORDER BY o.order_id;",
+          "challenge": "Join orders to customers and show order id, customer name and revenue.",
+          "prerequisites": [
+            "sql-case"
+          ]
+        },
+        {
+          "id": "sql-left-join",
+          "title": "LEFT JOIN",
+          "description": "Preserve unmatched records.",
+          "duration": "14 min",
+          "xp": 140,
+          "datasetId": "commerce",
+          "starter": "SELECT c.customer_name, COUNT(o.order_id) AS order_count FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id, c.customer_name ORDER BY c.customer_name;",
+          "solution": "SELECT c.customer_name, COUNT(o.order_id) AS order_count FROM customers c LEFT JOIN orders o ON c.customer_id = o.customer_id GROUP BY c.customer_id, c.customer_name ORDER BY c.customer_name;",
+          "challenge": "Show every customer and their order count, including zero.",
+          "prerequisites": [
+            "sql-inner-join"
+          ]
+        },
+        {
+          "id": "sql-multi-join",
+          "title": "Multiple joins",
+          "description": "Navigate a simple relational model.",
+          "duration": "16 min",
+          "xp": 140,
+          "datasetId": "commerce",
+          "starter": "SELECT o.order_id, c.customer_name, p.product_name, oi.quantity FROM order_items oi JOIN orders o ON oi.order_id=o.order_id JOIN customers c ON o.customer_id=c.customer_id JOIN products p ON oi.product_id=p.product_id ORDER BY o.order_id, p.product_name;",
+          "solution": "SELECT o.order_id, c.customer_name, p.product_name, oi.quantity FROM order_items oi JOIN orders o ON oi.order_id=o.order_id JOIN customers c ON o.customer_id=c.customer_id JOIN products p ON oi.product_id=p.product_id ORDER BY o.order_id, p.product_name;",
+          "challenge": "Combine order items, orders, customers and products.",
+          "prerequisites": [
+            "sql-left-join"
+          ]
+        },
+        {
+          "id": "sql-subquery",
+          "title": "Subqueries",
+          "description": "Use one query to inform another.",
+          "duration": "18 min",
+          "xp": 140,
+          "datasetId": "sales",
+          "starter": "SELECT customer, revenue FROM data WHERE revenue > (SELECT AVG(revenue) FROM data) ORDER BY revenue DESC;",
+          "solution": "SELECT customer, revenue FROM data WHERE revenue > (SELECT AVG(revenue) FROM data) ORDER BY revenue DESC;",
+          "challenge": "Return orders above average revenue.",
+          "prerequisites": [
+            "sql-multi-join"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sql-advanced",
+      "title": "Stage 4 \u00b7 Advanced SQL",
+      "description": "Use CTEs and window functions for deeper analysis.",
+      "credential": "Advanced SQL Analyst",
+      "lessons": [
+        {
+          "id": "sql-cte",
+          "title": "Common table expressions",
+          "description": "Break complex analysis into understandable steps.",
+          "duration": "12 min",
+          "xp": 160,
+          "datasetId": "sales",
+          "starter": "WITH regional AS (SELECT region, SUM(revenue) AS revenue FROM data GROUP BY region) SELECT region, ROUND(revenue,2) AS revenue FROM regional ORDER BY revenue DESC;",
+          "solution": "WITH regional AS (SELECT region, SUM(revenue) AS revenue FROM data GROUP BY region) SELECT region, ROUND(revenue,2) AS revenue FROM regional ORDER BY revenue DESC;",
+          "challenge": "Use a CTE to calculate and rank regional revenue.",
+          "prerequisites": [
+            "sql-subquery"
+          ]
+        },
+        {
+          "id": "sql-ranking",
+          "title": "ROW_NUMBER and RANK",
+          "description": "Rank records within groups.",
+          "duration": "14 min",
+          "xp": 160,
+          "datasetId": "sales",
+          "starter": "SELECT region, customer, revenue, ROW_NUMBER() OVER (PARTITION BY region ORDER BY revenue DESC) AS region_rank FROM data ORDER BY region, region_rank;",
+          "solution": "SELECT region, customer, revenue, ROW_NUMBER() OVER (PARTITION BY region ORDER BY revenue DESC) AS region_rank FROM data ORDER BY region, region_rank;",
+          "challenge": "Rank orders by revenue within each region.",
+          "prerequisites": [
+            "sql-cte"
+          ]
+        },
+        {
+          "id": "sql-running-total",
+          "title": "Running totals",
+          "description": "Analyse cumulative change over time.",
+          "duration": "16 min",
+          "xp": 160,
+          "datasetId": "sales",
+          "starter": "SELECT order_date, revenue, ROUND(SUM(revenue) OVER (ORDER BY order_date, order_id),2) AS running_revenue FROM data ORDER BY order_date, order_id;",
+          "solution": "SELECT order_date, revenue, ROUND(SUM(revenue) OVER (ORDER BY order_date, order_id),2) AS running_revenue FROM data ORDER BY order_date, order_id;",
+          "challenge": "Calculate cumulative revenue by order date.",
+          "prerequisites": [
+            "sql-ranking"
+          ]
+        },
+        {
+          "id": "sql-lag",
+          "title": "LAG and change analysis",
+          "description": "Compare a row with an earlier row.",
+          "duration": "18 min",
+          "xp": 160,
+          "datasetId": "sales",
+          "starter": "WITH daily AS (SELECT order_date, SUM(revenue) AS revenue FROM data GROUP BY order_date) SELECT order_date, ROUND(revenue,2) AS revenue, ROUND(revenue-LAG(revenue) OVER (ORDER BY order_date),2) AS change_from_previous FROM daily ORDER BY order_date;",
+          "solution": "WITH daily AS (SELECT order_date, SUM(revenue) AS revenue FROM data GROUP BY order_date) SELECT order_date, ROUND(revenue,2) AS revenue, ROUND(revenue-LAG(revenue) OVER (ORDER BY order_date),2) AS change_from_previous FROM daily ORDER BY order_date;",
+          "challenge": "Calculate daily revenue and change from the previous date.",
+          "prerequisites": [
+            "sql-running-total"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "database-engineering",
+      "title": "Stage 5 \u00b7 Database Engineering",
+      "description": "Design reliable schemas and reason about performance and controls.",
+      "credential": "Database Engineering Practitioner",
+      "lessons": [
+        {
+          "id": "sql-schema-design",
+          "title": "Relational modelling",
+          "description": "Translate business entities into tables.",
+          "duration": "12 min",
+          "xp": 180,
+          "datasetId": "commerce",
+          "starter": "SELECT name, sql FROM sqlite_master WHERE type='table' ORDER BY name;",
+          "solution": "SELECT name, sql FROM sqlite_master WHERE type='table' ORDER BY name;",
+          "challenge": "Inspect the available table definitions.",
+          "prerequisites": [
+            "sql-lag"
+          ]
+        },
+        {
+          "id": "sql-constraints",
+          "title": "Keys and constraints",
+          "description": "Protect integrity through database rules.",
+          "duration": "14 min",
+          "xp": 180,
+          "datasetId": "commerce",
+          "starter": "PRAGMA foreign_key_list(order_items);",
+          "solution": "PRAGMA foreign_key_list(order_items);",
+          "challenge": "Inspect the foreign keys on order_items.",
+          "prerequisites": [
+            "sql-schema-design"
+          ]
+        },
+        {
+          "id": "sql-indexes",
+          "title": "Indexes and query plans",
+          "description": "Understand how databases locate rows.",
+          "duration": "16 min",
+          "xp": 180,
+          "datasetId": "commerce",
+          "starter": "EXPLAIN QUERY PLAN SELECT * FROM orders WHERE customer_id = 2;",
+          "solution": "EXPLAIN QUERY PLAN SELECT * FROM orders WHERE customer_id = 2;",
+          "challenge": "Inspect the query plan for filtering orders by customer.",
+          "prerequisites": [
+            "sql-constraints"
+          ]
+        },
+        {
+          "id": "sql-transactions",
+          "title": "Transactions and consistency",
+          "description": "Keep related changes atomic.",
+          "duration": "18 min",
+          "xp": 180,
+          "datasetId": "commerce",
+          "starter": "SELECT 'BEGIN \u2192 validate \u2192 write \u2192 COMMIT, otherwise ROLLBACK' AS transaction_pattern;",
+          "solution": "SELECT 'BEGIN \u2192 validate \u2192 write \u2192 COMMIT, otherwise ROLLBACK' AS transaction_pattern;",
+          "challenge": "Return a concise transaction pattern describing commit and rollback.",
+          "prerequisites": [
+            "sql-indexes"
+          ]
+        }
+      ]
+    }
+  ]
+}

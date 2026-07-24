@@ -1,0 +1,272 @@
+[
+  {
+    "id": "data-analyst-internship",
+    "title": "Data Analyst Internship",
+    "role": "Junior Data Analyst",
+    "difficulty": "Foundation",
+    "duration": "5 workdays",
+    "company": "Northstar Retail",
+    "brief": "The commercial team needs a reliable weekly sales view before Monday's leadership meeting.",
+    "outcome": "Produce a cleaned analysis, three insights and a stakeholder-ready summary.",
+    "skills": [
+      "pandas",
+      "data cleaning",
+      "aggregation",
+      "communication"
+    ],
+    "tickets": [
+      {
+        "id": "DA-101",
+        "title": "Inspect the sales extract",
+        "type": "Analysis",
+        "points": 2,
+        "acceptance": [
+          "Identify row and column count",
+          "List missing-value risks",
+          "Record one data assumption"
+        ]
+      },
+      {
+        "id": "DA-102",
+        "title": "Clean duplicate and missing records",
+        "type": "Build",
+        "points": 3,
+        "acceptance": [
+          "Remove exact duplicates",
+          "Handle missing region values",
+          "Preserve a reproducible workflow"
+        ]
+      },
+      {
+        "id": "DA-103",
+        "title": "Calculate weekly performance",
+        "type": "Analysis",
+        "points": 5,
+        "acceptance": [
+          "Revenue by region",
+          "Top product category",
+          "Week-over-week change"
+        ]
+      },
+      {
+        "id": "DA-104",
+        "title": "Write the leadership brief",
+        "type": "Communication",
+        "points": 3,
+        "acceptance": [
+          "One headline",
+          "Three supporting insights",
+          "One limitation",
+          "One recommendation"
+        ]
+      }
+    ],
+    "starterFiles": {
+      "analysis.py": "import pandas as pd\n\n\ndef analyse_sales(df: pd.DataFrame) -> dict:\n    \"\"\"Return a concise sales-performance summary.\"\"\"\n    # TODO: clean and analyse the dataset\n    return {}\n",
+      "README.md": "# Northstar Retail Sales Analysis\n\n## Business question\n\nWhat changed in weekly sales performance?\n\n## Deliverables\n\n- Reproducible analysis\n- Three insights\n- Leadership recommendation\n",
+      "tests/test_analysis.py": "import pandas as pd\nfrom analysis import analyse_sales\n\n\ndef test_analysis_returns_dictionary():\n    df = pd.DataFrame({\"region\":[\"North\"],\"revenue\":[100.0]})\n    assert isinstance(analyse_sales(df), dict)\n"
+    }
+  },
+  {
+    "id": "automation-engineer-placement",
+    "title": "Automation Engineer Placement",
+    "role": "Python Automation Engineer",
+    "difficulty": "Intermediate",
+    "duration": "1 sprint",
+    "company": "BrightOps Services",
+    "brief": "Operations manually consolidates daily CSV files and emails a summary. The process takes 90 minutes and often fails silently.",
+    "outcome": "Build a safe, testable automation workflow with clear failure reporting.",
+    "skills": [
+      "file automation",
+      "validation",
+      "logging",
+      "testing"
+    ],
+    "tickets": [
+      {
+        "id": "AE-201",
+        "title": "Discover the manual workflow",
+        "type": "Discovery",
+        "points": 2,
+        "acceptance": [
+          "Document inputs",
+          "Document outputs",
+          "Identify three failure points"
+        ]
+      },
+      {
+        "id": "AE-202",
+        "title": "Build the file consolidator",
+        "type": "Build",
+        "points": 5,
+        "acceptance": [
+          "Read multiple CSV files",
+          "Validate expected columns",
+          "Produce one consolidated output"
+        ]
+      },
+      {
+        "id": "AE-203",
+        "title": "Add operational safeguards",
+        "type": "Reliability",
+        "points": 5,
+        "acceptance": [
+          "Structured logging",
+          "Useful exceptions",
+          "No partial output on failure"
+        ]
+      },
+      {
+        "id": "AE-204",
+        "title": "Add automated tests",
+        "type": "Testing",
+        "points": 3,
+        "acceptance": [
+          "Happy path",
+          "Missing-column case",
+          "Empty-folder case"
+        ]
+      }
+    ],
+    "starterFiles": {
+      "workflow.py": "from pathlib import Path\nimport pandas as pd\n\n\ndef consolidate(folder: Path) -> pd.DataFrame:\n    \"\"\"Combine valid CSV files from a folder.\"\"\"\n    # TODO\n    return pd.DataFrame()\n",
+      "README.md": "# BrightOps Daily Consolidation\n\nA safe automation workflow for operational reporting.\n",
+      "tests/test_workflow.py": "from pathlib import Path\nfrom workflow import consolidate\n\n\ndef test_empty_folder_returns_empty_dataframe(tmp_path: Path):\n    result = consolidate(tmp_path)\n    assert result.empty\n"
+    }
+  },
+  {
+    "id": "data-engineer-rotation",
+    "title": "Data Engineering Rotation",
+    "role": "Junior Data Engineer",
+    "difficulty": "Advanced",
+    "duration": "2 sprints",
+    "company": "Atlas Payments",
+    "brief": "Payment events arrive from several systems with inconsistent schemas. Downstream reporting needs a dependable daily pipeline.",
+    "outcome": "Design a validated pipeline with lineage, quality checks and restart-safe processing.",
+    "skills": [
+      "pipelines",
+      "data quality",
+      "schema validation",
+      "lineage"
+    ],
+    "tickets": [
+      {
+        "id": "DE-301",
+        "title": "Define the canonical event schema",
+        "type": "Design",
+        "points": 3,
+        "acceptance": [
+          "Required fields",
+          "Data types",
+          "Invalid-record strategy"
+        ]
+      },
+      {
+        "id": "DE-302",
+        "title": "Build the transformation pipeline",
+        "type": "Build",
+        "points": 8,
+        "acceptance": [
+          "Normalise inputs",
+          "Create canonical output",
+          "Make processing deterministic"
+        ]
+      },
+      {
+        "id": "DE-303",
+        "title": "Add quality controls",
+        "type": "Quality",
+        "points": 5,
+        "acceptance": [
+          "Completeness rule",
+          "Uniqueness rule",
+          "Reconciliation total"
+        ]
+      },
+      {
+        "id": "DE-304",
+        "title": "Document lineage and recovery",
+        "type": "Operations",
+        "points": 5,
+        "acceptance": [
+          "Source-to-target mapping",
+          "Restart strategy",
+          "Known limitations"
+        ]
+      }
+    ],
+    "starterFiles": {
+      "pipeline.py": "from collections.abc import Iterable\n\n\ndef transform_events(records: Iterable[dict]) -> list[dict]:\n    \"\"\"Normalise payment events into the canonical schema.\"\"\"\n    # TODO\n    return []\n",
+      "quality.py": "def validate_events(records: list[dict]) -> dict:\n    \"\"\"Return data-quality results.\"\"\"\n    # TODO\n    return {\"valid\": False, \"checks\": []}\n",
+      "README.md": "# Atlas Payments Event Pipeline\n"
+    }
+  },
+  {
+    "id": "ml-product-simulation",
+    "title": "Machine Learning Product Simulation",
+    "role": "Junior ML / Data Product Analyst",
+    "difficulty": "Advanced",
+    "duration": "2 sprints",
+    "company": "Harbour Telecom",
+    "brief": "Customer-service leaders want an early-warning model for churn, but they need transparent trade-offs and responsible use controls.",
+    "outcome": "Frame, evaluate and communicate a responsible churn prototype.",
+    "skills": [
+      "problem framing",
+      "evaluation",
+      "responsible AI",
+      "stakeholder communication"
+    ],
+    "tickets": [
+      {
+        "id": "ML-401",
+        "title": "Frame the prediction decision",
+        "type": "Discovery",
+        "points": 3,
+        "acceptance": [
+          "Target definition",
+          "Intervention decision",
+          "Success metric",
+          "Out-of-scope statement"
+        ]
+      },
+      {
+        "id": "ML-402",
+        "title": "Create an evaluation baseline",
+        "type": "Analysis",
+        "points": 5,
+        "acceptance": [
+          "Train/test split",
+          "Baseline metric",
+          "Chosen model metric"
+        ]
+      },
+      {
+        "id": "ML-403",
+        "title": "Review fairness and explainability",
+        "type": "Responsible AI",
+        "points": 5,
+        "acceptance": [
+          "Group comparison",
+          "Feature-risk review",
+          "Human oversight plan"
+        ]
+      },
+      {
+        "id": "ML-404",
+        "title": "Present the recommendation",
+        "type": "Communication",
+        "points": 5,
+        "acceptance": [
+          "Executive summary",
+          "Model limitations",
+          "Go/no-go recommendation",
+          "Monitoring plan"
+        ]
+      }
+    ],
+    "starterFiles": {
+      "model_review.py": "def evaluate_predictions(actual: list[int], predicted: list[int]) -> dict:\n    \"\"\"Calculate classification metrics for a learning prototype.\"\"\"\n    # TODO\n    return {}\n",
+      "MODEL_CARD.md": "# Churn Prototype Model Card\n\n## Intended use\n\n## Metrics\n\n## Limitations\n\n## Monitoring\n"
+    }
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "description": "Analyse data, communicate insight and build repeatable reporting.",
+    "skills": {
+      "data-querying": 25,
+      "programming-logic": 15,
+      "database-engineering": 15,
+      "web-fundamentals": 5,
+      "testing-quality": 10,
+      "automation": 10,
+      "data-engineering": 10,
+      "production-delivery": 10
+    },
+    "recommendedAcademies": [
+      "sql",
+      "python",
+      "web"
+    ],
+    "capstone": "Executive Analytics Portal"
+  },
+  {
+    "id": "data-engineer",
+    "title": "Data Engineer",
+    "description": "Build reliable pipelines, quality controls and database-backed systems.",
+    "skills": {
+      "programming-logic": 10,
+      "data-querying": 15,
+      "database-engineering": 20,
+      "testing-quality": 10,
+      "automation": 10,
+      "data-engineering": 25,
+      "production-delivery": 10
+    },
+    "recommendedAcademies": [
+      "python",
+      "sql",
+      "java"
+    ],
+    "capstone": "Production Data Pipeline"
+  },
+  {
+    "id": "frontend-developer",
+    "title": "Frontend Developer",
+    "description": "Build accessible, responsive and interactive web applications.",
+    "skills": {
+      "programming-logic": 15,
+      "web-fundamentals": 35,
+      "api-engineering": 15,
+      "testing-quality": 15,
+      "production-delivery": 20
+    },
+    "recommendedAcademies": [
+      "web",
+      "python",
+      "sql"
+    ],
+    "capstone": "API-Powered Web Application"
+  },
+  {
+    "id": "backend-engineer",
+    "title": "Backend Engineer",
+    "description": "Design APIs, persistence, business logic and production services.",
+    "skills": {
+      "programming-logic": 15,
+      "object-oriented-design": 15,
+      "api-engineering": 20,
+      "database-engineering": 20,
+      "testing-quality": 10,
+      "production-delivery": 20
+    },
+    "recommendedAcademies": [
+      "java",
+      "python",
+      "sql"
+    ],
+    "capstone": "Production Service Platform"
+  },
+  {
+    "id": "full-stack-developer",
+    "title": "Full-Stack Developer",
+    "description": "Connect frontend, backend, APIs and databases into one product.",
+    "skills": {
+      "programming-logic": 15,
+      "web-fundamentals": 20,
+      "api-engineering": 20,
+      "database-engineering": 15,
+      "testing-quality": 10,
+      "production-delivery": 20
+    },
+    "recommendedAcademies": [
+      "web",
+      "python",
+      "sql",
+      "java"
+    ],
+    "capstone": "Full-Stack Product"
+  }
+]

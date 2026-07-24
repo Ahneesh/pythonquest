@@ -1,0 +1,66 @@
+[
+  {
+    "id": "python-expense-verified",
+    "academyId": "python",
+    "title": "Verified Expense Service",
+    "durationMinutes": 45,
+    "projectTemplateId": "python-expense-api",
+    "hiddenTests": 5,
+    "visibleTests": 2,
+    "requirements": [
+      "Reject non-positive amounts",
+      "Return the created record",
+      "Persist every valid expense",
+      "Do not mutate earlier records",
+      "Include focused unit tests"
+    ]
+  },
+  {
+    "id": "sql-revenue-verified",
+    "academyId": "sql",
+    "title": "Verified Revenue Analysis",
+    "durationMinutes": 45,
+    "projectTemplateId": "sql-revenue-model",
+    "hiddenTests": 6,
+    "visibleTests": 2,
+    "requirements": [
+      "Produce one row per region",
+      "Calculate correct revenue totals",
+      "Handle null revenue defensibly",
+      "Avoid row multiplication",
+      "Include reconciliation controls"
+    ]
+  },
+  {
+    "id": "web-task-board-verified",
+    "academyId": "web",
+    "title": "Verified Accessible Task Board",
+    "durationMinutes": 60,
+    "projectTemplateId": "web-task-board",
+    "hiddenTests": 6,
+    "visibleTests": 3,
+    "requirements": [
+      "Add tasks through the form",
+      "Render user content safely",
+      "Support keyboard interaction",
+      "Provide meaningful labels",
+      "Remain usable on mobile widths"
+    ]
+  },
+  {
+    "id": "java-order-service-verified",
+    "academyId": "java",
+    "title": "Verified Java Order Service",
+    "durationMinutes": 60,
+    "projectTemplateId": "java-order-service",
+    "hiddenTests": 7,
+    "visibleTests": 3,
+    "requirements": [
+      "Compile all project classes",
+      "Reject invalid order amounts",
+      "Save valid orders",
+      "Return the created Order",
+      "Pass JUnit service tests"
+    ]
+  }
+]

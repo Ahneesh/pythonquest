@@ -1,0 +1,216 @@
+[
+  {
+    "id": "sales-performance",
+    "title": "Sales Performance Analysis",
+    "level": "Foundation",
+    "duration": "60\u201390 min",
+    "skills": [
+      "pandas",
+      "cleaning",
+      "groupby",
+      "charts"
+    ],
+    "description": "Clean a sales dataset, calculate regional performance and write three business observations.",
+    "milestones": [
+      "Load and inspect the dataset",
+      "Remove duplicates and handle missing values",
+      "Calculate revenue by region and product",
+      "Create one clear chart",
+      "Write three evidence-based conclusions"
+    ],
+    "starterCode": "import pandas as pd\n\nsales = pd.DataFrame({\n    'order_id':[101,102,102,103,104,105],\n    'region':['North','South','South','West','North','South'],\n    'product':['A','B','B','A','C','A'],\n    'revenue':[250,300,300,None,450,380]\n})\n\n# Begin your analysis below\n",
+    "checks": [
+      {
+        "label": "Duplicates removed",
+        "test": "sales['order_id'].duplicated().sum() == 0"
+      },
+      {
+        "label": "Missing revenue handled",
+        "test": "sales['revenue'].isna().sum() == 0"
+      },
+      {
+        "label": "Regional summary created",
+        "test": "'regional_summary' in globals()"
+      },
+      {
+        "label": "At least three observations written",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "job-market-scraper",
+    "title": "Job Market Skills Analyser",
+    "level": "Intermediate",
+    "duration": "90\u2013120 min",
+    "skills": [
+      "HTML",
+      "BeautifulSoup",
+      "pandas",
+      "text analysis"
+    ],
+    "description": "Extract simulated job cards, identify recurring skills and produce a concise market summary.",
+    "milestones": [
+      "Parse the supplied HTML",
+      "Extract title, location and skills",
+      "Create a DataFrame",
+      "Count recurring skills",
+      "Write a short market summary"
+    ],
+    "starterCode": "from bs4 import BeautifulSoup\nimport pandas as pd\n\nhtml = '''\n<div class=\"job\"><h2>Data Analyst</h2><span class=\"location\">London</span><p class=\"skills\">Python, SQL, Tableau</p></div>\n<div class=\"job\"><h2>Analytics Engineer</h2><span class=\"location\">Remote</span><p class=\"skills\">Python, SQL, dbt</p></div>\n<div class=\"job\"><h2>BI Analyst</h2><span class=\"location\">Manchester</span><p class=\"skills\">SQL, Power BI, Python</p></div>\n'''\n\n# Begin your extraction below\n",
+    "checks": [
+      {
+        "label": "Job cards extracted",
+        "test": "'jobs' in globals() and len(jobs) == 3"
+      },
+      {
+        "label": "Structured records created",
+        "test": "'records' in globals() and len(records) == 3"
+      },
+      {
+        "label": "DataFrame created",
+        "test": "'jobs_df' in globals() and len(jobs_df) == 3"
+      },
+      {
+        "label": "Skill counts created",
+        "test": "'skill_counts' in globals()"
+      }
+    ]
+  },
+  {
+    "id": "customer-orders-sql",
+    "title": "Customer Orders SQL Analysis",
+    "level": "Intermediate",
+    "duration": "75\u2013100 min",
+    "skills": [
+      "SQLite",
+      "joins",
+      "aggregation",
+      "pandas"
+    ],
+    "description": "Combine customer and order data, rank customers and identify inactive accounts.",
+    "milestones": [
+      "Create the SQLite tables",
+      "Join customers and orders",
+      "Calculate total spend by customer",
+      "Identify customers without orders",
+      "Summarise the findings"
+    ],
+    "starterCode": "import sqlite3\nimport pandas as pd\n\nconn = sqlite3.connect(':memory:')\ncustomers = pd.DataFrame({'customer_id':[1,2,3,4], 'name':['Asha','Ben','Cara','Dev']})\norders = pd.DataFrame({'customer_id':[1,1,3], 'amount':[200,350,500]})\ncustomers.to_sql('customers', conn, index=False)\norders.to_sql('orders', conn, index=False)\n\n# Begin your SQL analysis below\n",
+    "checks": [
+      {
+        "label": "Joined result created",
+        "test": "'joined' in globals()"
+      },
+      {
+        "label": "Customer totals created",
+        "test": "'customer_totals' in globals()"
+      },
+      {
+        "label": "Inactive customers found",
+        "test": "'inactive_customers' in globals()"
+      },
+      {
+        "label": "At least one conclusion written",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "api-company-reporter",
+    "title": "API Company Data Reporter",
+    "level": "Intermediate",
+    "duration": "75\u2013100 min",
+    "skills": [
+      "JSON",
+      "API handling",
+      "pandas",
+      "reporting"
+    ],
+    "description": "Process simulated company API responses, handle missing fields and produce a ranked business report.",
+    "milestones": [
+      "Parse the supplied JSON responses",
+      "Handle failed and incomplete responses",
+      "Create a clean company DataFrame",
+      "Rank companies by employee count",
+      "Write three observations"
+    ],
+    "starterCode": "import json\nimport pandas as pd\n\nresponses = [\n    '{\"status\": 200, \"company\": \"BioNova\", \"sector\": \"Life Sciences\", \"employees\": 420}',\n    '{\"status\": 200, \"company\": \"DataCore\", \"sector\": \"Technology\", \"employees\": 780}',\n    '{\"status\": 503, \"error\": \"Service unavailable\"}',\n    '{\"status\": 200, \"company\": \"EduSpark\", \"sector\": \"EdTech\"}'\n]\n\n# Begin your API-response processing below\n",
+    "checks": [
+      {
+        "label": "Responses parsed",
+        "test": "'parsed_responses' in globals() and len(parsed_responses) == 4"
+      },
+      {
+        "label": "Successful records isolated",
+        "test": "'successful' in globals() and len(successful) == 3"
+      },
+      {
+        "label": "Company DataFrame created",
+        "test": "'companies_df' in globals() and len(companies_df) == 3"
+      },
+      {
+        "label": "Missing employee values handled",
+        "test": "'companies_df' in globals() and companies_df['employees'].isna().sum() == 0"
+      },
+      {
+        "label": "Three observations written",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "analytics-capstone",
+    "title": "Python Analytics Capstone",
+    "level": "Advanced",
+    "duration": "3\u20135 hours",
+    "skills": [
+      "pandas",
+      "SQL",
+      "testing",
+      "visualisation",
+      "reporting"
+    ],
+    "description": "Build a complete analytics workflow that cleans data, queries it with SQL, validates results and produces an executive summary.",
+    "milestones": [
+      "Load and clean the supplied dataset",
+      "Create at least two data-quality checks",
+      "Load the clean data into SQLite",
+      "Write one aggregation query and one join",
+      "Create a chart",
+      "Write an executive summary",
+      "Add at least three automated assertions"
+    ],
+    "starterCode": "import sqlite3\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ncustomers = pd.DataFrame({\n    'customer_id':[1,2,3,4],\n    'name':['Asha','Ben','Cara','Dev'],\n    'region':['North','South','North','West']\n})\norders = pd.DataFrame({\n    'order_id':[101,102,102,103,104],\n    'customer_id':[1,2,2,3,4],\n    'revenue':[250,300,300,None,450]\n})\n\n# Build your end-to-end capstone below\n",
+    "checks": [
+      {
+        "label": "Duplicate orders removed",
+        "test": "orders['order_id'].duplicated().sum() == 0"
+      },
+      {
+        "label": "Missing revenue handled",
+        "test": "orders['revenue'].isna().sum() == 0"
+      },
+      {
+        "label": "SQLite connection created",
+        "test": "'conn' in globals()"
+      },
+      {
+        "label": "Regional summary created",
+        "test": "'regional_summary' in globals()"
+      },
+      {
+        "label": "Joined customer results created",
+        "test": "'customer_results' in globals()"
+      },
+      {
+        "label": "At least three assertions included",
+        "test": "__project_code__.count('assert ') >= 3"
+      },
+      {
+        "label": "Executive summary written",
+        "manual": true
+      }
+    ]
+  }
+]

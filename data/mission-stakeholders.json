@@ -1,0 +1,42 @@
+{
+  "CFO": {
+    "tone": "direct",
+    "priorities": [
+      "accuracy",
+      "deadline",
+      "explainability"
+    ]
+  },
+  "Product Manager": {
+    "tone": "outcome-focused",
+    "priorities": [
+      "customer impact",
+      "scope",
+      "release confidence"
+    ]
+  },
+  "Engineering Manager": {
+    "tone": "technical",
+    "priorities": [
+      "risk",
+      "maintainability",
+      "team capacity"
+    ]
+  },
+  "Operations Lead": {
+    "tone": "risk-averse",
+    "priorities": [
+      "stability",
+      "rollback",
+      "monitoring"
+    ]
+  },
+  "Security Reviewer": {
+    "tone": "challenging",
+    "priorities": [
+      "access",
+      "data exposure",
+      "auditability"
+    ]
+  }
+}

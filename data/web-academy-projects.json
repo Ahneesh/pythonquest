@@ -1,0 +1,36 @@
+[
+  {
+    "id": "web-portfolio-site",
+    "title": "Responsive Personal Portfolio",
+    "level": "Foundation",
+    "brief": "Build a responsive portfolio with semantic HTML, a clear visual system and accessible navigation.",
+    "deliverables": [
+      "Responsive home page",
+      "Projects section",
+      "Accessible contact form"
+    ]
+  },
+  {
+    "id": "web-dashboard",
+    "title": "Interactive Learning Dashboard",
+    "level": "Intermediate",
+    "brief": "Create an interactive dashboard with filters, cards and persisted preferences.",
+    "deliverables": [
+      "DOM-rendered data",
+      "At least two interactions",
+      "localStorage persistence"
+    ]
+  },
+  {
+    "id": "web-api-app",
+    "title": "API-Powered Web Application",
+    "level": "Advanced",
+    "brief": "Build a production-style frontend that loads remote data and handles loading, empty and error states.",
+    "deliverables": [
+      "Async data loading",
+      "Error handling",
+      "Responsive UI",
+      "Deployment checklist"
+    ]
+  }
+]

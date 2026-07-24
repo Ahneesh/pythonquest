@@ -1,0 +1,35 @@
+{
+  "schema": "codequest.applypilot.evidence-package",
+  "version": "1.0",
+  "required": [
+    "schema",
+    "version",
+    "generatedAt",
+    "consent",
+    "profile",
+    "evidence"
+  ],
+  "profile": {
+    "displayName": "string",
+    "headline": "string",
+    "summary": "string",
+    "targetRole": "string"
+  },
+  "evidence": {
+    "academyScores": "object",
+    "credentials": "array",
+    "capstones": "array",
+    "missions": "array",
+    "releases": "array",
+    "peerReviews": "array",
+    "technicalViva": "array",
+    "cvBullets": "array",
+    "skillGaps": "array"
+  },
+  "futureApi": {
+    "endpoint": "/api/integrations/codequest/import",
+    "method": "POST",
+    "authentication": "user-authorised OAuth or signed one-time exchange",
+    "status": "not implemented in v51"
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "navigation",
+    "title": "Navigate a project",
+    "description": "Use pwd, ls and cd to reach the tests directory.",
+    "startPath": "/pythonquest",
+    "goalPath": "/pythonquest/tests"
+  },
+  {
+    "id": "environment",
+    "title": "Create an environment",
+    "description": "Create and activate a virtual environment, then inspect packages.",
+    "startPath": "/pythonquest",
+    "goalCommands": [
+      "python -m venv .venv",
+      "source .venv/bin/activate",
+      "pip list"
+    ]
+  },
+  {
+    "id": "testing",
+    "title": "Run the test suite",
+    "description": "Move to the project root and run pytest.",
+    "startPath": "/pythonquest/src",
+    "goalCommands": [
+      "cd ..",
+      "pytest"
+    ]
+  }
+]

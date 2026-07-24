@@ -1,0 +1,304 @@
+{
+  "academyId": "web",
+  "title": "Web Development Academy",
+  "modules": [
+    {
+      "id": "web-html",
+      "title": "Stage 1 \u00b7 HTML Foundations",
+      "description": "Create semantic, accessible page structure.",
+      "credential": "HTML Foundations Practitioner",
+      "lessons": [
+        {
+          "id": "web-html-structure",
+          "title": "Semantic page structure",
+          "description": "Use meaningful elements to organise content.",
+          "kind": "html",
+          "starter": "<header>\n  <h1>CodeQuest News</h1>\n</header>\n<main>\n  <article>\n    <h2>Learning by building</h2>\n    <p>Practice creates confidence.</p>\n  </article>\n</main>",
+          "challenge": "Build a semantic article page with header, main and article elements.",
+          "duration": "14 min",
+          "xp": 100,
+          "prerequisites": []
+        },
+        {
+          "id": "web-html-links-images",
+          "title": "Links and images",
+          "description": "Connect pages and add meaningful media.",
+          "kind": "html",
+          "starter": "<main>\n  <h1>Travel guide</h1>\n  <img src=\"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80\" alt=\"Mountain landscape\">\n  <p><a href=\"https://example.com\">Read the full guide</a></p>\n</main>",
+          "challenge": "Create an accessible image and external link.",
+          "duration": "16 min",
+          "xp": 100,
+          "prerequisites": [
+            "web-html-structure"
+          ]
+        },
+        {
+          "id": "web-html-forms",
+          "title": "Forms and labels",
+          "description": "Collect data with accessible controls.",
+          "kind": "html",
+          "starter": "<form>\n  <label for=\"email\">Email</label>\n  <input id=\"email\" type=\"email\" required>\n  <button>Subscribe</button>\n</form>",
+          "challenge": "Build an email subscription form with a label and required validation.",
+          "duration": "18 min",
+          "xp": 100,
+          "prerequisites": [
+            "web-html-links-images"
+          ]
+        },
+        {
+          "id": "web-html-accessibility",
+          "title": "Accessibility foundations",
+          "description": "Use landmarks, labels and useful alternative text.",
+          "kind": "html",
+          "starter": "<nav aria-label=\"Primary\">\n  <a href=\"#main\">Skip to content</a>\n</nav>\n<main id=\"main\">\n  <h1>Accessible page</h1>\n</main>",
+          "challenge": "Create a page with useful navigation and a main landmark.",
+          "duration": "20 min",
+          "xp": 100,
+          "prerequisites": [
+            "web-html-forms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web-css",
+      "title": "Stage 2 \u00b7 CSS Foundations",
+      "description": "Style interfaces with layout, hierarchy and responsive behaviour.",
+      "credential": "Responsive CSS Practitioner",
+      "lessons": [
+        {
+          "id": "web-css-selectors",
+          "title": "Selectors and cascade",
+          "description": "Target elements and reason about precedence.",
+          "kind": "css",
+          "starter": "<div class=\"card\"><h2>Welcome</h2><p>Start learning.</p></div>\n<style>\n.card { padding: 24px; border: 1px solid #ddd; }\n.card h2 { margin-top: 0; }\n</style>",
+          "challenge": "Style a card and its heading with class and descendant selectors.",
+          "duration": "14 min",
+          "xp": 120,
+          "prerequisites": [
+            "web-html-accessibility"
+          ]
+        },
+        {
+          "id": "web-css-box",
+          "title": "Box model",
+          "description": "Control spacing, borders and sizing.",
+          "kind": "css",
+          "starter": "<div class=\"box\">Content</div>\n<style>\n.box { width: 240px; padding: 24px; border: 4px solid #555; box-sizing: border-box; }\n</style>",
+          "challenge": "Create a fixed-width box whose padding stays inside the declared width.",
+          "duration": "16 min",
+          "xp": 120,
+          "prerequisites": [
+            "web-css-selectors"
+          ]
+        },
+        {
+          "id": "web-css-flex-grid",
+          "title": "Flexbox and Grid",
+          "description": "Build reliable one- and two-dimensional layouts.",
+          "kind": "css",
+          "starter": "<section class=\"grid\">\n  <article>One</article><article>Two</article><article>Three</article>\n</section>\n<style>\n.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }\n</style>",
+          "challenge": "Create a three-column grid with equal columns and gaps.",
+          "duration": "18 min",
+          "xp": 120,
+          "prerequisites": [
+            "web-css-box"
+          ]
+        },
+        {
+          "id": "web-css-responsive",
+          "title": "Responsive design",
+          "description": "Adapt layouts across screen sizes.",
+          "kind": "css",
+          "starter": "<section class=\"cards\"><article>A</article><article>B</article></section>\n<style>\n.cards { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }\n@media (max-width:600px) { .cards { grid-template-columns:1fr; } }\n</style>",
+          "challenge": "Make a two-column layout collapse to one column on small screens.",
+          "duration": "20 min",
+          "xp": 120,
+          "prerequisites": [
+            "web-css-flex-grid"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web-js",
+      "title": "Stage 3 \u00b7 JavaScript Foundations",
+      "description": "Add behaviour with variables, functions and collections.",
+      "credential": "JavaScript Foundations Developer",
+      "lessons": [
+        {
+          "id": "web-js-variables",
+          "title": "Variables and types",
+          "description": "Store values and inspect their types.",
+          "kind": "js",
+          "starter": "<button id=\"show\">Show total</button><p id=\"output\"></p>\n<script>\nconst price = 12;\nconst quantity = 3;\ndocument.querySelector('#show').addEventListener('click', () => {\n  document.querySelector('#output').textContent = price * quantity;\n});\n</script>",
+          "challenge": "Calculate and display a total when the button is clicked.",
+          "duration": "14 min",
+          "xp": 140,
+          "prerequisites": [
+            "web-css-responsive"
+          ]
+        },
+        {
+          "id": "web-js-functions",
+          "title": "Functions",
+          "description": "Create reusable behaviour.",
+          "kind": "js",
+          "starter": "<button id=\"greet\">Greet</button><p id=\"output\"></p>\n<script>\nfunction greeting(name) { return `Hello, ${name}!`; }\ndocument.querySelector('#greet').onclick = () => {\n  document.querySelector('#output').textContent = greeting('Learner');\n};\n</script>",
+          "challenge": "Create a reusable greeting function and call it from an event.",
+          "duration": "16 min",
+          "xp": 140,
+          "prerequisites": [
+            "web-js-variables"
+          ]
+        },
+        {
+          "id": "web-js-arrays",
+          "title": "Arrays and objects",
+          "description": "Transform collections of structured data.",
+          "kind": "js",
+          "starter": "<ul id=\"list\"></ul>\n<script>\nconst courses = [{name:'HTML',level:'Beginner'},{name:'JavaScript',level:'Intermediate'}];\ndocument.querySelector('#list').innerHTML = courses.map(c => `<li>${c.name} \u00b7 ${c.level}</li>`).join('');\n</script>",
+          "challenge": "Render an array of course objects into a list.",
+          "duration": "18 min",
+          "xp": 140,
+          "prerequisites": [
+            "web-js-functions"
+          ]
+        },
+        {
+          "id": "web-js-errors",
+          "title": "Errors and debugging",
+          "description": "Use browser feedback to find and fix problems.",
+          "kind": "js",
+          "starter": "<button id=\"run\">Run</button><pre id=\"output\"></pre>\n<script>\ndocument.querySelector('#run').onclick = () => {\n  try { JSON.parse('{invalid}'); } catch (error) { document.querySelector('#output').textContent = error.message; }\n};\n</script>",
+          "challenge": "Catch a JSON parsing error and show a useful message.",
+          "duration": "20 min",
+          "xp": 140,
+          "prerequisites": [
+            "web-js-arrays"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web-browser",
+      "title": "Stage 4 \u00b7 Browser Development",
+      "description": "Work with the DOM, events, storage and asynchronous APIs.",
+      "credential": "Browser Application Developer",
+      "lessons": [
+        {
+          "id": "web-dom",
+          "title": "DOM manipulation",
+          "description": "Create and update interface elements.",
+          "kind": "browser",
+          "starter": "<button id=\"add\">Add item</button><ul id=\"items\"></ul>\n<script>\nlet count=0;\ndocument.querySelector('#add').onclick=()=>{\n const li=document.createElement('li'); li.textContent=`Item ${++count}`; document.querySelector('#items').append(li);\n};\n</script>",
+          "challenge": "Add a new list item each time the button is clicked.",
+          "duration": "14 min",
+          "xp": 160,
+          "prerequisites": [
+            "web-js-errors"
+          ]
+        },
+        {
+          "id": "web-events",
+          "title": "Events and forms",
+          "description": "Respond to user input safely.",
+          "kind": "browser",
+          "starter": "<form id=\"form\"><input id=\"name\" required><button>Submit</button></form><p id=\"message\"></p>\n<script>\ndocument.querySelector('#form').addEventListener('submit',e=>{e.preventDefault();document.querySelector('#message').textContent=`Hello ${document.querySelector('#name').value}`;});\n</script>",
+          "challenge": "Handle a form submission without reloading the page.",
+          "duration": "16 min",
+          "xp": 160,
+          "prerequisites": [
+            "web-dom"
+          ]
+        },
+        {
+          "id": "web-fetch",
+          "title": "Fetch and async JavaScript",
+          "description": "Load remote data and handle failure.",
+          "kind": "browser",
+          "starter": "<button id=\"load\">Load</button><pre id=\"output\"></pre>\n<script>\ndocument.querySelector('#load').onclick=async()=>{try{const r=await fetch('https://jsonplaceholder.typicode.com/todos/1');if(!r.ok)throw new Error('Request failed');document.querySelector('#output').textContent=JSON.stringify(await r.json(),null,2);}catch(e){document.querySelector('#output').textContent=e.message;}};\n</script>",
+          "challenge": "Fetch JSON data and display either the result or an error.",
+          "duration": "18 min",
+          "xp": 160,
+          "prerequisites": [
+            "web-events"
+          ]
+        },
+        {
+          "id": "web-storage",
+          "title": "Local storage",
+          "description": "Persist small amounts of browser state.",
+          "kind": "browser",
+          "starter": "<input id=\"note\"><button id=\"save\">Save</button><p id=\"status\"></p>\n<script>\nconst input=document.querySelector('#note'); input.value=localStorage.getItem('demo_note')||'';\ndocument.querySelector('#save').onclick=()=>{localStorage.setItem('demo_note',input.value);document.querySelector('#status').textContent='Saved';};\n</script>",
+          "challenge": "Save and restore a note using localStorage.",
+          "duration": "20 min",
+          "xp": 160,
+          "prerequisites": [
+            "web-fetch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "web-professional",
+      "title": "Stage 5 \u00b7 Professional Frontend",
+      "description": "Build maintainable, tested and deployable frontend applications.",
+      "credential": "Professional Frontend Developer",
+      "lessons": [
+        {
+          "id": "web-modules",
+          "title": "JavaScript modules",
+          "description": "Separate code into focused units.",
+          "kind": "professional",
+          "starter": "<main><h1>Module design</h1><p>Split data, rendering and event handling into separate functions.</p></main>",
+          "challenge": "Describe how you would separate data, rendering and event logic.",
+          "duration": "14 min",
+          "xp": 180,
+          "prerequisites": [
+            "web-storage"
+          ]
+        },
+        {
+          "id": "web-components",
+          "title": "Component thinking",
+          "description": "Design reusable UI structures.",
+          "kind": "professional",
+          "starter": "<section class=\"profile-card\"><img alt=\"Profile avatar\"><div><h2>Name</h2><p>Role</p></div></section>",
+          "challenge": "Create a reusable profile-card structure with clear content slots.",
+          "duration": "16 min",
+          "xp": 180,
+          "prerequisites": [
+            "web-modules"
+          ]
+        },
+        {
+          "id": "web-testing",
+          "title": "Frontend testing",
+          "description": "Validate behaviour and accessibility.",
+          "kind": "professional",
+          "starter": "<button id=\"toggle\" aria-expanded=\"false\">Menu</button><nav id=\"menu\" hidden>Links</nav>\n<script>\nconst b=document.querySelector('#toggle'),m=document.querySelector('#menu');b.onclick=()=>{const open=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!open));m.hidden=open;};\n</script>",
+          "challenge": "Create a menu toggle whose state is testable through aria-expanded.",
+          "duration": "18 min",
+          "xp": 180,
+          "prerequisites": [
+            "web-components"
+          ]
+        },
+        {
+          "id": "web-performance",
+          "title": "Performance and deployment",
+          "description": "Optimise assets and verify production readiness.",
+          "kind": "professional",
+          "starter": "<main><h1>Production checklist</h1><ul><li>Optimised images</li><li>Accessible interactions</li><li>No console errors</li><li>Responsive layout</li></ul></main>",
+          "challenge": "Create a frontend production-readiness checklist.",
+          "duration": "20 min",
+          "xp": 180,
+          "prerequisites": [
+            "web-testing"
+          ]
+        }
+      ]
+    }
+  ]
+}

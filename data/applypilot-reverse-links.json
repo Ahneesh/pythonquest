@@ -1,0 +1,38 @@
+{
+  "python": {
+    "academyUrl": "#academy=python",
+    "recommendedRoutes": [
+      "adaptivepath",
+      "course",
+      "capstonestudio",
+      "technicalviva"
+    ]
+  },
+  "sql": {
+    "academyUrl": "#academy=sql",
+    "recommendedRoutes": [
+      "adaptivepath",
+      "course",
+      "capstonestudio",
+      "technicalviva"
+    ]
+  },
+  "web": {
+    "academyUrl": "#academy=web",
+    "recommendedRoutes": [
+      "adaptivepath",
+      "course",
+      "capstonestudio",
+      "technicalviva"
+    ]
+  },
+  "java": {
+    "academyUrl": "#academy=java",
+    "recommendedRoutes": [
+      "adaptivepath",
+      "course",
+      "capstonestudio",
+      "technicalviva"
+    ]
+  }
+}

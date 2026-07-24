@@ -1,0 +1,186 @@
+[
+  {
+    "id": "python-expense-api",
+    "academyId": "python",
+    "title": "Expense Tracker Service",
+    "level": "Intermediate",
+    "summary": "Build a small multi-file Python service with validation, persistence and tests.",
+    "files": {
+      "README.md": "# Expense Tracker Service\n\nImplement validation, storage and tests.\n",
+      "app.py": "from expense_service import ExpenseService\n\nservice = ExpenseService()\nprint(service.add_expense(\"Travel\", 25.0))\n",
+      "expense_service.py": "class ExpenseService:\n    def __init__(self):\n        self.expenses = []\n\n    def add_expense(self, category, amount):\n        # TODO: validate and store the expense\n        pass\n",
+      "test_expense_service.py": "from expense_service import ExpenseService\n\ndef test_add_expense():\n    service = ExpenseService()\n    result = service.add_expense(\"Travel\", 25.0)\n    assert result[\"amount\"] == 25.0\n"
+    },
+    "checks": [
+      {
+        "id": "validation",
+        "label": "Reject invalid amounts",
+        "tokens": [
+          "amount <= 0",
+          "ValueError"
+        ]
+      },
+      {
+        "id": "storage",
+        "label": "Store an expense record",
+        "tokens": [
+          "self.expenses.append",
+          "category",
+          "amount"
+        ]
+      },
+      {
+        "id": "return",
+        "label": "Return the created record",
+        "tokens": [
+          "return"
+        ]
+      },
+      {
+        "id": "tests",
+        "label": "Include a focused test",
+        "tokens": [
+          "assert"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sql-revenue-model",
+    "academyId": "sql",
+    "title": "Revenue Analytics Model",
+    "level": "Intermediate",
+    "summary": "Build a small analytics package with schema, query, controls and documentation.",
+    "files": {
+      "README.md": "# Revenue Analytics Model\n\nDefine the grain, query and validation controls.\n",
+      "schema.sql": "CREATE TABLE orders (\n  order_id INTEGER PRIMARY KEY,\n  customer_id INTEGER NOT NULL,\n  region TEXT NOT NULL,\n  revenue NUMERIC NOT NULL\n);\n",
+      "analysis.sql": "-- TODO: produce one row per region with total revenue\n",
+      "controls.sql": "-- TODO: add row-count and reconciliation controls\n",
+      "assumptions.md": "# Assumptions\n\n- One order row represents one completed order.\n"
+    },
+    "checks": [
+      {
+        "id": "grain",
+        "label": "Define result grain",
+        "tokens": [
+          "GROUP BY"
+        ]
+      },
+      {
+        "id": "aggregate",
+        "label": "Calculate revenue total",
+        "tokens": [
+          "SUM("
+        ]
+      },
+      {
+        "id": "controls",
+        "label": "Add validation controls",
+        "tokens": [
+          "COUNT(",
+          "SUM("
+        ]
+      },
+      {
+        "id": "docs",
+        "label": "Document assumptions",
+        "tokens": [
+          "Assumptions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "web-task-board",
+    "academyId": "web",
+    "title": "Accessible Task Board",
+    "level": "Intermediate",
+    "summary": "Build an accessible multi-file frontend with state, events and responsive layout.",
+    "files": {
+      "README.md": "# Accessible Task Board\n\nBuild, test and document the user flow.\n",
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><link rel=\"stylesheet\" href=\"styles.css\"></head>\n<body>\n  <main>\n    <h1>Task Board</h1>\n    <form id=\"task-form\">\n      <label for=\"task-input\">Task</label>\n      <input id=\"task-input\" required>\n      <button>Add task</button>\n    </form>\n    <ul id=\"task-list\"></ul>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>\n",
+      "styles.css": "body { font-family: system-ui; margin: 0; padding: 2rem; }\nmain { max-width: 720px; margin: auto; }\n",
+      "app.js": "const form = document.querySelector('#task-form');\nconst input = document.querySelector('#task-input');\nconst list = document.querySelector('#task-list');\n\n// TODO: add tasks and render them safely\n",
+      "accessibility.md": "# Accessibility checks\n\n- Keyboard access\n- Visible focus\n- Meaningful labels\n"
+    },
+    "checks": [
+      {
+        "id": "event",
+        "label": "Handle form submission",
+        "tokens": [
+          "addEventListener",
+          "submit"
+        ]
+      },
+      {
+        "id": "state",
+        "label": "Maintain task state",
+        "tokens": [
+          "tasks"
+        ]
+      },
+      {
+        "id": "render",
+        "label": "Render tasks safely",
+        "tokens": [
+          "textContent",
+          "createElement"
+        ]
+      },
+      {
+        "id": "responsive",
+        "label": "Use responsive CSS",
+        "tokens": [
+          "max-width",
+          "@media"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "java-order-service",
+    "academyId": "java",
+    "title": "Order Service",
+    "level": "Intermediate",
+    "summary": "Build a multi-class Java service with validation, repository and tests.",
+    "files": {
+      "README.md": "# Order Service\n\nSeparate domain, service and repository responsibilities.\n",
+      "src/Order.java": "public class Order {\n    private final String id;\n    private final double amount;\n\n    public Order(String id, double amount) {\n        this.id = id;\n        this.amount = amount;\n    }\n\n    public String getId() { return id; }\n    public double getAmount() { return amount; }\n}\n",
+      "src/OrderRepository.java": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class OrderRepository {\n    private final List<Order> orders = new ArrayList<>();\n\n    public void save(Order order) {\n        // TODO\n    }\n}\n",
+      "src/OrderService.java": "public class OrderService {\n    private final OrderRepository repository;\n\n    public OrderService(OrderRepository repository) {\n        this.repository = repository;\n    }\n\n    public Order create(String id, double amount) {\n        // TODO: validate, create and save\n        return null;\n    }\n}\n",
+      "test/OrderServiceTest.java": "public class OrderServiceTest {\n    // TODO: add service tests\n}\n"
+    },
+    "checks": [
+      {
+        "id": "validation",
+        "label": "Validate order amount",
+        "tokens": [
+          "IllegalArgumentException",
+          "amount"
+        ]
+      },
+      {
+        "id": "repository",
+        "label": "Persist the order",
+        "tokens": [
+          "repository.save"
+        ]
+      },
+      {
+        "id": "return",
+        "label": "Return the created order",
+        "tokens": [
+          "return order"
+        ]
+      },
+      {
+        "id": "tests",
+        "label": "Add a test",
+        "tokens": [
+          "assert",
+          "Test"
+        ]
+      }
+    ]
+  }
+]

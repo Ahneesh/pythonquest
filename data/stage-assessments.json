@@ -1,0 +1,258 @@
+[
+  {
+    "id": "core-python-exam",
+    "stageId": "core-python",
+    "title": "Core Python Professional Assessment",
+    "passMark": 70,
+    "duration": "20 min",
+    "questions": [
+      {
+        "question": "Which structure is best for storing ordered values that may change?",
+        "options": [
+          "Tuple",
+          "List",
+          "Set",
+          "String"
+        ],
+        "answer": 1,
+        "explanation": "Lists are ordered and mutable."
+      },
+      {
+        "question": "What does a function's return statement do?",
+        "options": [
+          "Prints every variable",
+          "Ends the program",
+          "Sends a value back to the caller",
+          "Creates a loop"
+        ],
+        "answer": 2,
+        "explanation": "return passes a result to the code that called the function."
+      },
+      {
+        "question": "Which pandas method shows the first rows of a DataFrame?",
+        "options": [
+          "head()",
+          "shape()",
+          "groupby()",
+          "merge()"
+        ],
+        "answer": 0,
+        "explanation": "head() previews the first rows."
+      },
+      {
+        "question": "Why should scraped data be validated?",
+        "options": [
+          "Web pages never change",
+          "HTML structure and values can be incomplete or inconsistent",
+          "Validation makes scraping illegal",
+          "It removes all duplicates automatically"
+        ],
+        "answer": 1,
+        "explanation": "Web data is often incomplete, inconsistent or structurally unstable."
+      },
+      {
+        "question": "Which exception should normally be handled when converting invalid text to an integer?",
+        "options": [
+          "ValueError",
+          "KeyError",
+          "ImportError",
+          "StopIteration"
+        ],
+        "answer": 0,
+        "explanation": "int('invalid') raises ValueError."
+      }
+    ]
+  },
+  {
+    "id": "data-automation-exam",
+    "stageId": "data-automation",
+    "title": "Data & Automation Professional Assessment",
+    "passMark": 70,
+    "duration": "25 min",
+    "questions": [
+      {
+        "question": "Which SQL clause filters rows before aggregation?",
+        "options": [
+          "HAVING",
+          "WHERE",
+          "ORDER BY",
+          "LIMIT"
+        ],
+        "answer": 1,
+        "explanation": "WHERE filters source rows before GROUP BY."
+      },
+      {
+        "question": "Why use parameterised SQL queries?",
+        "options": [
+          "To make queries longer",
+          "To separate values from SQL syntax and reduce injection risk",
+          "To avoid indexes",
+          "To remove transactions"
+        ],
+        "answer": 1,
+        "explanation": "Parameters safely separate user values from executable SQL."
+      },
+      {
+        "question": "What should an automation workflow do when an external API is temporarily unavailable?",
+        "options": [
+          "Loop forever instantly",
+          "Use bounded retries and clear error handling",
+          "Delete input data",
+          "Ignore every error"
+        ],
+        "answer": 1,
+        "explanation": "Bounded retries with backoff are safer and observable."
+      },
+      {
+        "question": "Which HTTP status code usually indicates a successful resource creation?",
+        "options": [
+          "200",
+          "201",
+          "404",
+          "503"
+        ],
+        "answer": 1,
+        "explanation": "201 Created is the standard response."
+      },
+      {
+        "question": "What is idempotency?",
+        "options": [
+          "Running the same operation repeatedly produces the same intended result",
+          "Every request creates a duplicate",
+          "A function has no arguments",
+          "A query has no filters"
+        ],
+        "answer": 0,
+        "explanation": "Idempotent operations can be repeated without unintended extra effects."
+      }
+    ]
+  },
+  {
+    "id": "engineering-exam",
+    "stageId": "engineering",
+    "title": "Python Engineering Professional Assessment",
+    "passMark": 75,
+    "duration": "30 min",
+    "questions": [
+      {
+        "question": "What is the main purpose of an automated unit test?",
+        "options": [
+          "To replace source control",
+          "To verify a small behaviour repeatedly",
+          "To deploy directly to production",
+          "To store credentials"
+        ],
+        "answer": 1,
+        "explanation": "Unit tests verify small, isolated behaviours."
+      },
+      {
+        "question": "Why is logging preferable to scattered print statements in production?",
+        "options": [
+          "Logs support levels, structure and central collection",
+          "Logging prevents all errors",
+          "Print is illegal",
+          "Logs remove the need for tests"
+        ],
+        "answer": 0,
+        "explanation": "Structured logs can be filtered, correlated and retained."
+      },
+      {
+        "question": "Which data-engineering concept records where data came from and how it changed?",
+        "options": [
+          "Lineage",
+          "Recursion",
+          "Inheritance",
+          "Memoisation"
+        ],
+        "answer": 0,
+        "explanation": "Data lineage tracks origins and transformations."
+      },
+      {
+        "question": "What does dependency injection improve?",
+        "options": [
+          "Hard-coded global state",
+          "Testability and separation of concerns",
+          "File size only",
+          "Password length"
+        ],
+        "answer": 1,
+        "explanation": "Dependencies can be swapped and tested independently."
+      },
+      {
+        "question": "What is a useful property of a production data pipeline?",
+        "options": [
+          "No monitoring",
+          "Repeatability and observable failures",
+          "Manual edits only",
+          "Unknown schemas"
+        ],
+        "answer": 1,
+        "explanation": "Reliable pipelines are repeatable, validated and observable."
+      }
+    ]
+  },
+  {
+    "id": "ai-production-exam",
+    "stageId": "ai-production",
+    "title": "AI & Production Professional Assessment",
+    "passMark": 75,
+    "duration": "35 min",
+    "questions": [
+      {
+        "question": "Why keep a test set separate from model training?",
+        "options": [
+          "To make training slower",
+          "To estimate performance on unseen data",
+          "To remove features",
+          "To avoid metrics"
+        ],
+        "answer": 1,
+        "explanation": "The test set gives an unbiased estimate on unseen data."
+      },
+      {
+        "question": "Which metric is important when false negatives are especially costly?",
+        "options": [
+          "Recall",
+          "File size",
+          "Latency only",
+          "Row count"
+        ],
+        "answer": 0,
+        "explanation": "Recall measures how many actual positives were found."
+      },
+      {
+        "question": "What should a health endpoint communicate?",
+        "options": [
+          "Source-code secrets",
+          "Whether the service and critical dependencies are ready",
+          "Every database row",
+          "User passwords"
+        ],
+        "answer": 1,
+        "explanation": "Health checks expose operational readiness without sensitive data."
+      },
+      {
+        "question": "Why use database migrations?",
+        "options": [
+          "To evolve schemas consistently across environments",
+          "To remove backups",
+          "To avoid version control",
+          "To disable rollback"
+        ],
+        "answer": 0,
+        "explanation": "Migrations provide ordered, repeatable schema changes."
+      },
+      {
+        "question": "What is the safest response to a bad production release?",
+        "options": [
+          "Ignore error rates",
+          "Use verification gates and rollback",
+          "Delete monitoring",
+          "Immediately increase traffic"
+        ],
+        "answer": 1,
+        "explanation": "Verification and rollback limit impact."
+      }
+    ]
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "id": "python-associate",
+    "title": "CodeQuest Python Associate",
+    "academyId": "python",
+    "level": "Associate",
+    "durationMinutes": 60,
+    "passMark": 70,
+    "maxAttempts": 3,
+    "validity": "No expiry",
+    "summary": "Validates Python fundamentals, problem decomposition, testing and practical application.",
+    "domains": [
+      {
+        "id": "foundations",
+        "title": "Python foundations",
+        "weight": 20
+      },
+      {
+        "id": "structures",
+        "title": "Data structures",
+        "weight": 20
+      },
+      {
+        "id": "functions",
+        "title": "Functions and decomposition",
+        "weight": 20
+      },
+      {
+        "id": "testing",
+        "title": "Testing and debugging",
+        "weight": 20
+      },
+      {
+        "id": "application",
+        "title": "Practical application",
+        "weight": 20
+      }
+    ],
+    "eligibility": {
+      "academyProgress": 55,
+      "projects": 1,
+      "capstones": 1,
+      "viva": 1
+    }
+  },
+  {
+    "id": "sql-associate",
+    "title": "CodeQuest SQL & Data Associate",
+    "academyId": "sql",
+    "level": "Associate",
+    "durationMinutes": 60,
+    "passMark": 70,
+    "maxAttempts": 3,
+    "validity": "No expiry",
+    "summary": "Validates query reasoning, joins, aggregation, data grain and analytical controls.",
+    "domains": [
+      {
+        "id": "querying",
+        "title": "Filtering and projection",
+        "weight": 15
+      },
+      {
+        "id": "aggregation",
+        "title": "Aggregation and grain",
+        "weight": 20
+      },
+      {
+        "id": "joins",
+        "title": "Joins and cardinality",
+        "weight": 25
+      },
+      {
+        "id": "windows",
+        "title": "Window functions",
+        "weight": 20
+      },
+      {
+        "id": "quality",
+        "title": "Data quality and validation",
+        "weight": 20
+      }
+    ],
+    "eligibility": {
+      "academyProgress": 55,
+      "projects": 1,
+      "capstones": 1,
+      "viva": 1
+    }
+  },
+  {
+    "id": "web-associate",
+    "title": "CodeQuest Web Developer Associate",
+    "academyId": "web",
+    "level": "Associate",
+    "durationMinutes": 60,
+    "passMark": 70,
+    "maxAttempts": 3,
+    "validity": "No expiry",
+    "summary": "Validates semantic HTML, responsive CSS, JavaScript, browser APIs and frontend quality.",
+    "domains": [
+      {
+        "id": "html",
+        "title": "Semantic HTML",
+        "weight": 15
+      },
+      {
+        "id": "css",
+        "title": "Responsive CSS",
+        "weight": 20
+      },
+      {
+        "id": "javascript",
+        "title": "JavaScript",
+        "weight": 25
+      },
+      {
+        "id": "browser",
+        "title": "DOM and browser APIs",
+        "weight": 20
+      },
+      {
+        "id": "quality",
+        "title": "Accessibility and testing",
+        "weight": 20
+      }
+    ],
+    "eligibility": {
+      "academyProgress": 55,
+      "projects": 1,
+      "capstones": 1,
+      "viva": 1
+    }
+  },
+  {
+    "id": "java-associate",
+    "title": "CodeQuest Java Backend Associate",
+    "academyId": "java",
+    "level": "Associate",
+    "durationMinutes": 60,
+    "passMark": 70,
+    "maxAttempts": 3,
+    "validity": "No expiry",
+    "summary": "Validates core Java, OOP, collections, testing and backend service design.",
+    "domains": [
+      {
+        "id": "core",
+        "title": "Core Java",
+        "weight": 20
+      },
+      {
+        "id": "oop",
+        "title": "Object-oriented design",
+        "weight": 25
+      },
+      {
+        "id": "collections",
+        "title": "Collections and generics",
+        "weight": 15
+      },
+      {
+        "id": "testing",
+        "title": "Testing and exceptions",
+        "weight": 20
+      },
+      {
+        "id": "backend",
+        "title": "Backend service design",
+        "weight": 20
+      }
+    ],
+    "eligibility": {
+      "academyProgress": 55,
+      "projects": 1,
+      "capstones": 1,
+      "viva": 1
+    }
+  },
+  {
+    "id": "full-stack-professional",
+    "title": "CodeQuest Full-Stack Professional",
+    "academyId": "cross",
+    "level": "Professional",
+    "durationMinutes": 90,
+    "passMark": 75,
+    "maxAttempts": 2,
+    "validity": "No expiry",
+    "summary": "Validates end-to-end product delivery across frontend, backend, data and production release.",
+    "domains": [
+      {
+        "id": "frontend",
+        "title": "Frontend delivery",
+        "weight": 20
+      },
+      {
+        "id": "backend",
+        "title": "Backend/API delivery",
+        "weight": 20
+      },
+      {
+        "id": "database",
+        "title": "Database reasoning",
+        "weight": 20
+      },
+      {
+        "id": "testing",
+        "title": "Testing and quality",
+        "weight": 15
+      },
+      {
+        "id": "production",
+        "title": "Production delivery",
+        "weight": 15
+      },
+      {
+        "id": "judgement",
+        "title": "Engineering judgement",
+        "weight": 10
+      }
+    ],
+    "eligibility": {
+      "academyProgress": 45,
+      "projects": 3,
+      "capstones": 2,
+      "viva": 2,
+      "missions": 1,
+      "releases": 1
+    }
+  }
+]

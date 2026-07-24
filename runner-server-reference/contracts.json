@@ -1,0 +1,46 @@
+{
+  "request": {
+    "language": "java",
+    "files": [
+      {
+        "path": "Main.java",
+        "content": "..."
+      }
+    ],
+    "entryFile": "Main.java",
+    "limits": {
+      "wallTimeMs": 5000,
+      "memoryMb": 128,
+      "outputKb": 64,
+      "maxFiles": 30,
+      "maxFileSizeKb": 256,
+      "networkAccess": false
+    }
+  },
+  "response": {
+    "status": "passed",
+    "compile": {
+      "passed": true,
+      "messages": []
+    },
+    "publicTests": {
+      "passed": 1,
+      "total": 1,
+      "items": []
+    },
+    "hiddenTests": {
+      "passed": 2,
+      "total": 2,
+      "items": []
+    },
+    "quality": {
+      "score": 90,
+      "items": []
+    },
+    "limits": {
+      "wallTimeMs": 450,
+      "memoryMb": 32,
+      "outputBytes": 100
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "17 July 2026",
+    "sections": [
+      [
+        "Information we process",
+        "CodeQuest may process account details, authentication identifiers, learning progress, submitted work, preferences and platform activity needed to provide the service."
+      ],
+      [
+        "How information is used",
+        "Information is used to operate the platform, save progress, personalise learning, provide collaboration features, prevent abuse and improve reliability."
+      ],
+      [
+        "AI-assisted features",
+        "When an AI mentor endpoint is enabled, relevant prompts and limited learning context may be sent through the configured server-side AI service. Provider secrets are never stored in browser code."
+      ],
+      [
+        "Data sharing",
+        "Private learning data is not public by default. Portfolio files and evidence exports are created only at the user\u2019s request."
+      ],
+      [
+        "Retention and deletion",
+        "Production deployments should provide reasonable export and deletion controls and configure appropriate retention rules."
+      ],
+      [
+        "Security",
+        "The platform is designed around authentication, row-level security and least-privilege access. No system can guarantee absolute security."
+      ]
+    ]
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "updated": "17 July 2026",
+    "sections": [
+      [
+        "Use of the service",
+        "CodeQuest is provided for lawful learning, teaching and professional-development purposes."
+      ],
+      [
+        "Accounts",
+        "Users are responsible for maintaining account security and activity performed through their account."
+      ],
+      [
+        "Learning content",
+        "Educational content and credentials do not guarantee employment, external recognition or a particular outcome."
+      ],
+      [
+        "User submissions",
+        "Users remain responsible for submitted code and content and must not upload unlawful, confidential or malicious material."
+      ],
+      [
+        "Acceptable use",
+        "Users must not compromise the platform, access another user\u2019s data or abuse execution environments."
+      ],
+      [
+        "Availability and changes",
+        "Features may evolve. Reasonable efforts should preserve progress and communicate material changes."
+      ],
+      [
+        "Limitation",
+        "The service cannot guarantee that all content, execution results or recommendations are error-free. Important decisions should be independently verified."
+      ]
+    ]
+  }
+}

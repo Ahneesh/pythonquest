@@ -1,0 +1,23 @@
+{
+  "python": [
+    "Correctness",
+    "Return behaviour",
+    "Validation",
+    "Tests"
+  ],
+  "sql": [
+    "Result grain",
+    "Join cardinality",
+    "Controls"
+  ],
+  "web": [
+    "Semantics",
+    "Accessibility",
+    "DOM safety"
+  ],
+  "java": [
+    "Responsibilities",
+    "Contracts",
+    "Tests"
+  ]
+}

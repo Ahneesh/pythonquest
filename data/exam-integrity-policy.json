@@ -1,0 +1,15 @@
+{
+  "declaration": [
+    "I will complete this assessment without unauthorised assistance.",
+    "I will not copy answers from another person or external answer source.",
+    "I understand that CodeQuest browser assessments are learning credentials, not externally accredited qualifications.",
+    "I understand that practical competence should also be demonstrated through projects, viva and workplace evidence."
+  ],
+  "flags": [
+    "window blur frequency",
+    "very rapid completion",
+    "solution-view history",
+    "answer changes"
+  ],
+  "disclaimer": "Integrity signals are informational only. They must not be treated as proof of misconduct without human review."
+}

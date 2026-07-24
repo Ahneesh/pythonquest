@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sql-sales-insight",
+    "title": "Executive Sales Analysis",
+    "level": "Foundation",
+    "brief": "Answer five leadership questions about regional sales and present a concise recommendation.",
+    "deliverables": [
+      "Five saved SQL queries",
+      "One executive summary",
+      "One limitation"
+    ],
+    "datasetId": "sales"
+  },
+  {
+    "id": "sql-customer-360",
+    "title": "Customer 360 Model",
+    "level": "Intermediate",
+    "brief": "Join customer and order data to create a reusable customer performance view.",
+    "deliverables": [
+      "Customer-level metrics",
+      "Customers with zero orders",
+      "Documented join logic"
+    ],
+    "datasetId": "commerce"
+  },
+  {
+    "id": "sql-performance-review",
+    "title": "SQL Performance Review",
+    "level": "Advanced",
+    "brief": "Inspect query plans, propose indexes and document transaction controls.",
+    "deliverables": [
+      "Two EXPLAIN outputs",
+      "Index recommendation",
+      "Transaction pattern"
+    ],
+    "datasetId": "commerce"
+  }
+]

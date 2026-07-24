@@ -1,0 +1,119 @@
+[
+  {
+    "id": "variables-types",
+    "skill": "Python Foundations",
+    "title": "Variables and types",
+    "prompt": "Create variables called name, attempts and passed with values 'Asha', 3 and True. Print their types.",
+    "starter": "name = \nattempts = \npassed = \n\n# Print each type\n",
+    "solution": "name = 'Asha'\nattempts = 3\npassed = True\nprint(type(name))\nprint(type(attempts))\nprint(type(passed))",
+    "test": "'name' in globals() and name=='Asha' and attempts==3 and passed is True",
+    "tags": [
+      "variables",
+      "types"
+    ]
+  },
+  {
+    "id": "loops-filter",
+    "skill": "Python Foundations",
+    "title": "Filter with a loop",
+    "prompt": "Create a list called large containing only values greater than 10.",
+    "starter": "values = [4, 11, 7, 18, 22]\nlarge = []\n\n# Use a loop to populate large\n",
+    "solution": "for value in values:\n    if value > 10:\n        large.append(value)\nprint(large)",
+    "test": "'large' in globals() and large==[11,18,22]",
+    "tags": [
+      "loops",
+      "conditions"
+    ]
+  },
+  {
+    "id": "pandas-missing",
+    "skill": "Data Analytics",
+    "title": "Handle missing values",
+    "prompt": "Fill missing revenue values with 0 and store the result in cleaned.",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({'revenue': [100, None, 250]})\n\n# Create cleaned\n",
+    "solution": "cleaned = df['revenue'].fillna(0)\nprint(cleaned.tolist())",
+    "test": "'cleaned' in globals() and cleaned.tolist()==[100.0,0.0,250.0]",
+    "tags": [
+      "pandas",
+      "missing values"
+    ]
+  },
+  {
+    "id": "pandas-groupby",
+    "skill": "Data Analytics",
+    "title": "Group and aggregate",
+    "prompt": "Calculate total revenue by region and store it in summary.",
+    "starter": "import pandas as pd\n\ndf = pd.DataFrame({\n    'region': ['North','South','North'],\n    'revenue': [100,150,200]\n})\n\n# Create summary\n",
+    "solution": "summary = df.groupby('region')['revenue'].sum()\nprint(summary.to_dict())",
+    "test": "'summary' in globals() and summary.to_dict()=={'North':300,'South':150}",
+    "tags": [
+      "pandas",
+      "groupby"
+    ]
+  },
+  {
+    "id": "sql-grouping",
+    "skill": "SQL",
+    "title": "Write an aggregate query",
+    "prompt": "Write a SQL query string called query that returns region and total revenue from sales, grouped by region.",
+    "starter": "query = \"\"\"\n\n\"\"\"\nprint(query)\n",
+    "solution": "query = \"\"\"\nSELECT region, SUM(revenue) AS total_revenue\nFROM sales\nGROUP BY region\n\"\"\"\nprint(query)",
+    "test": "'query' in globals() and 'GROUP BY' in query.upper() and 'SUM' in query.upper()",
+    "tags": [
+      "sql",
+      "group by"
+    ]
+  },
+  {
+    "id": "dict-safe-access",
+    "skill": "Automation",
+    "title": "Access optional API fields safely",
+    "prompt": "Read employees from response using a default of 0.",
+    "starter": "response = {'company': 'EduSpark'}\n\n# Create employees safely\n",
+    "solution": "employees = response.get('employees', 0)\nprint(employees)",
+    "test": "'employees' in globals() and employees==0",
+    "tags": [
+      "dict",
+      "api"
+    ]
+  },
+  {
+    "id": "specific-exception",
+    "skill": "Testing",
+    "title": "Catch a specific exception",
+    "prompt": "Catch ValueError when converting text to an integer and store 'invalid' in result.",
+    "starter": "text = 'abc'\n\ntry:\n    result = int(text)\nexcept:\n    result = 'invalid'\n\nprint(result)\n",
+    "solution": "try:\n    result = int(text)\nexcept ValueError:\n    result = 'invalid'\n\nprint(result)",
+    "test": "'result' in globals() and result=='invalid'",
+    "tags": [
+      "exceptions",
+      "debugging"
+    ]
+  },
+  {
+    "id": "etl-validation",
+    "skill": "Data Engineering",
+    "title": "Validate required fields",
+    "prompt": "Create valid as True only when every required field is present in record.",
+    "starter": "required = {'id', 'amount', 'region'}\nrecord = {'id': 1, 'amount': 50, 'region': 'EMEA'}\n\n# Create valid\n",
+    "solution": "valid = required.issubset(record.keys())\nprint(valid)",
+    "test": "'valid' in globals() and valid is True",
+    "tags": [
+      "validation",
+      "etl"
+    ]
+  },
+  {
+    "id": "ml-metrics",
+    "skill": "Machine Learning",
+    "title": "Calculate accuracy",
+    "prompt": "Calculate classification accuracy from actual and predicted.",
+    "starter": "actual = [1, 0, 1, 1]\npredicted = [1, 0, 0, 1]\n\n# Create accuracy\n",
+    "solution": "accuracy = sum(a == p for a, p in zip(actual, predicted)) / len(actual)\nprint(accuracy)",
+    "test": "'accuracy' in globals() and abs(accuracy-0.75)<0.001",
+    "tags": [
+      "classification",
+      "metrics"
+    ]
+  }
+]

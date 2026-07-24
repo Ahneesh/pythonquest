@@ -1,0 +1,38 @@
+[
+  {
+    "id": "socratic",
+    "title": "Socratic tutor",
+    "description": "Clarifies thinking through questions and graduated hints.",
+    "icon": "?"
+  },
+  {
+    "id": "debug",
+    "title": "Debugging partner",
+    "description": "Separates symptoms, evidence, hypotheses and experiments.",
+    "icon": "\u2301"
+  },
+  {
+    "id": "review",
+    "title": "Senior code reviewer",
+    "description": "Reviews correctness, readability, testing and design trade-offs.",
+    "icon": "\u2713"
+  },
+  {
+    "id": "plan",
+    "title": "Project architect",
+    "description": "Turns an unclear project into milestones, risks and acceptance criteria.",
+    "icon": "\u25a6"
+  },
+  {
+    "id": "viva",
+    "title": "Technical viva",
+    "description": "Challenges the learner to defend decisions and explain alternatives.",
+    "icon": "\u25c9"
+  },
+  {
+    "id": "interview",
+    "title": "Interview coach",
+    "description": "Runs role-specific technical and behavioural interview loops.",
+    "icon": "\u25c6"
+  }
+]

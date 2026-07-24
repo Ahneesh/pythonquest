@@ -1,0 +1,251 @@
+[
+  {
+    "id": "mission-analytics-rescue",
+    "title": "Analytics Platform Rescue",
+    "role": "Data Product Engineer",
+    "academies": [
+      "python",
+      "sql",
+      "web"
+    ],
+    "difficulty": "Advanced",
+    "duration": "4\u20136 hours",
+    "summary": "A leadership dashboard is producing inconsistent revenue figures days before a board meeting.",
+    "client": "Northstar Retail",
+    "stakes": "Board reporting, investor confidence and regulatory traceability",
+    "stages": [
+      {
+        "id": "brief",
+        "title": "Ambiguous brief",
+        "type": "brief",
+        "objective": "Clarify the problem, users, scope and acceptance criteria.",
+        "deliverables": [
+          "Problem statement",
+          "Stakeholder map",
+          "Acceptance criteria"
+        ],
+        "inject": "The CFO says the dashboard is wrong, but Finance and Sales disagree on the definition of revenue."
+      },
+      {
+        "id": "diagnosis",
+        "title": "Data diagnosis",
+        "type": "technical",
+        "objective": "Trace the inconsistency across source data, SQL logic and transformation rules.",
+        "deliverables": [
+          "Data lineage sketch",
+          "Diagnostic SQL",
+          "Root-cause hypothesis"
+        ],
+        "inject": "A late-arriving orders feed was replayed twice after a pipeline restart."
+      },
+      {
+        "id": "repair",
+        "title": "Controlled repair",
+        "type": "implementation",
+        "objective": "Design a restart-safe correction and validation plan.",
+        "deliverables": [
+          "Repair plan",
+          "Quality controls",
+          "Regression tests"
+        ],
+        "inject": "Operations refuses a full reload because the reporting window is too tight."
+      },
+      {
+        "id": "incident",
+        "title": "Production incident",
+        "type": "incident",
+        "objective": "Respond to a fresh issue while protecting the board deadline.",
+        "deliverables": [
+          "Incident timeline",
+          "Containment decision",
+          "Stakeholder update"
+        ],
+        "inject": "Regional totals suddenly drop by 18% after the hotfix."
+      },
+      {
+        "id": "release",
+        "title": "Release and defence",
+        "type": "release",
+        "objective": "Ship, communicate and defend the solution.",
+        "deliverables": [
+          "Release note",
+          "Evidence pack",
+          "Technical defence"
+        ],
+        "inject": "The CFO asks why this will not happen again."
+      }
+    ],
+    "competencies": [
+      "data-querying",
+      "data-engineering",
+      "testing-quality",
+      "production-delivery"
+    ]
+  },
+  {
+    "id": "mission-checkout-recovery",
+    "title": "Checkout Recovery",
+    "role": "Full-Stack Developer",
+    "academies": [
+      "web",
+      "python",
+      "sql"
+    ],
+    "difficulty": "Advanced",
+    "duration": "4\u20136 hours",
+    "summary": "Checkout conversion has fallen after a frontend release, and duplicate orders are appearing.",
+    "client": "Aster Commerce",
+    "stakes": "Revenue loss, customer trust and payment integrity",
+    "stages": [
+      {
+        "id": "brief",
+        "title": "Customer-impact brief",
+        "type": "brief",
+        "objective": "Separate user symptoms from technical assumptions.",
+        "deliverables": [
+          "Impact statement",
+          "User journey",
+          "Initial hypotheses"
+        ],
+        "inject": "Support reports double charges, but payment logs show only one successful capture."
+      },
+      {
+        "id": "diagnosis",
+        "title": "Cross-layer diagnosis",
+        "type": "technical",
+        "objective": "Investigate browser events, API idempotency and database state.",
+        "deliverables": [
+          "Reproduction steps",
+          "Request trace",
+          "Data consistency check"
+        ],
+        "inject": "The submit handler is bound twice on one route transition."
+      },
+      {
+        "id": "repair",
+        "title": "Resilient implementation",
+        "type": "implementation",
+        "objective": "Design frontend and backend protections.",
+        "deliverables": [
+          "Code change plan",
+          "Idempotency contract",
+          "Automated tests"
+        ],
+        "inject": "A retry from the browser can arrive after the first response times out."
+      },
+      {
+        "id": "incident",
+        "title": "Traffic spike",
+        "type": "incident",
+        "objective": "Protect the system under a sudden load increase.",
+        "deliverables": [
+          "Mitigation plan",
+          "Customer communication",
+          "Monitoring checks"
+        ],
+        "inject": "A promotional campaign doubles checkout traffic during deployment."
+      },
+      {
+        "id": "release",
+        "title": "Recovery release",
+        "type": "release",
+        "objective": "Release safely and demonstrate restored trust.",
+        "deliverables": [
+          "Rollout plan",
+          "Verification metrics",
+          "Post-incident review"
+        ],
+        "inject": "Leadership asks for proof that duplicate orders cannot recur."
+      }
+    ],
+    "competencies": [
+      "web-fundamentals",
+      "api-engineering",
+      "database-engineering",
+      "production-delivery"
+    ]
+  },
+  {
+    "id": "mission-java-modernisation",
+    "title": "Legacy Service Modernisation",
+    "role": "Java Backend Engineer",
+    "academies": [
+      "java",
+      "sql"
+    ],
+    "difficulty": "Expert",
+    "duration": "5\u20138 hours",
+    "summary": "A fragile monolithic order service must be stabilised before a major product launch.",
+    "client": "Meridian Logistics",
+    "stakes": "Order fulfilment, launch readiness and operational resilience",
+    "stages": [
+      {
+        "id": "brief",
+        "title": "Modernisation brief",
+        "type": "brief",
+        "objective": "Define boundaries, risks and success measures.",
+        "deliverables": [
+          "Context map",
+          "Risk register",
+          "Success metrics"
+        ],
+        "inject": "The service has no reliable test suite and deploys require a two-hour outage."
+      },
+      {
+        "id": "diagnosis",
+        "title": "Architecture diagnosis",
+        "type": "technical",
+        "objective": "Identify coupling, transaction and persistence risks.",
+        "deliverables": [
+          "Dependency map",
+          "Failure analysis",
+          "Refactoring priorities"
+        ],
+        "inject": "Order validation, payment calls and database writes happen inside one controller."
+      },
+      {
+        "id": "repair",
+        "title": "Incremental modernisation",
+        "type": "implementation",
+        "objective": "Create a safe strangler-style migration plan.",
+        "deliverables": [
+          "Service boundary",
+          "Migration sequence",
+          "Contract tests"
+        ],
+        "inject": "The business refuses a full rewrite."
+      },
+      {
+        "id": "incident",
+        "title": "Database contention",
+        "type": "incident",
+        "objective": "Stabilise performance without corrupting orders.",
+        "deliverables": [
+          "Diagnosis",
+          "Containment",
+          "Long-term correction"
+        ],
+        "inject": "Lock waits rise sharply when bulk fulfilment starts."
+      },
+      {
+        "id": "release",
+        "title": "Zero-downtime release",
+        "type": "release",
+        "objective": "Demonstrate controlled release and rollback.",
+        "deliverables": [
+          "Deployment plan",
+          "Rollback proof",
+          "Operational dashboard"
+        ],
+        "inject": "The launch window permits only ten minutes of elevated risk."
+      }
+    ],
+    "competencies": [
+      "object-oriented-design",
+      "api-engineering",
+      "database-engineering",
+      "testing-quality",
+      "production-delivery"
+    ]
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "id": "static-web",
+    "title": "Static Web Deployment",
+    "academyIds": [
+      "web"
+    ],
+    "targets": [
+      "GitHub Pages",
+      "Vercel"
+    ],
+    "summary": "Deploy HTML, CSS and JavaScript applications with safe configuration and repeatable releases.",
+    "lessons": [
+      {
+        "id": "static-structure",
+        "title": "Prepare the project structure",
+        "objective": "Organise browser files so a static host can serve them predictably.",
+        "content": "A static deployment needs a clear entry file, relative asset paths and no dependency on local file-system paths.",
+        "checks": [
+          "index.html exists",
+          "assets use relative paths",
+          "no local machine paths"
+        ]
+      },
+      {
+        "id": "static-secrets",
+        "title": "Protect secrets",
+        "objective": "Recognise why browser code cannot safely contain private API keys.",
+        "content": "Anything shipped to a browser can be inspected. Private keys must stay on a trusted server or serverless function.",
+        "checks": [
+          "no secret tokens in files",
+          "public configuration documented",
+          "server proxy identified where required"
+        ]
+      },
+      {
+        "id": "static-release",
+        "title": "Create a release",
+        "objective": "Produce a version, release note and verification checklist.",
+        "content": "A release should describe what changed, what was tested, known limitations and how to roll back.",
+        "checks": [
+          "version defined",
+          "release notes present",
+          "verification steps documented"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "python-service",
+    "title": "Python Service Deployment",
+    "academyIds": [
+      "python"
+    ],
+    "targets": [
+      "Render-style service",
+      "Container platform"
+    ],
+    "summary": "Package and release a Python API or application with dependencies, configuration and health checks.",
+    "lessons": [
+      {
+        "id": "python-entry",
+        "title": "Define the entry point",
+        "objective": "Make application startup explicit and reproducible.",
+        "content": "A deployment platform needs a deterministic command that starts the application.",
+        "checks": [
+          "entry module documented",
+          "start command present",
+          "host and port configurable"
+        ]
+      },
+      {
+        "id": "python-dependencies",
+        "title": "Lock dependencies",
+        "objective": "Make runtime dependencies explicit.",
+        "content": "Production builds should not depend on packages that happen to be installed on a developer machine.",
+        "checks": [
+          "dependency file exists",
+          "versions constrained",
+          "development-only packages separated"
+        ]
+      },
+      {
+        "id": "python-observability",
+        "title": "Add operational evidence",
+        "objective": "Provide health checks, logs and failure visibility.",
+        "content": "A service is not production-ready merely because it starts. Operators need evidence that it is healthy.",
+        "checks": [
+          "health endpoint or check",
+          "structured errors",
+          "startup and failure logs"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "java-service",
+    "title": "Java Service Deployment",
+    "academyIds": [
+      "java"
+    ],
+    "targets": [
+      "Container platform",
+      "Managed JVM service"
+    ],
+    "summary": "Package a Java service with build automation, configuration and operational checks.",
+    "lessons": [
+      {
+        "id": "java-build",
+        "title": "Create a reproducible build",
+        "objective": "Use a build tool to create a deployable artefact.",
+        "content": "A production Java service should be built through Maven or Gradle rather than an IDE-only action.",
+        "checks": [
+          "build file exists",
+          "test command documented",
+          "artefact path defined"
+        ]
+      },
+      {
+        "id": "java-config",
+        "title": "Externalise configuration",
+        "objective": "Separate environment-specific values from source code.",
+        "content": "Database URLs, credentials and service endpoints should be supplied through controlled configuration.",
+        "checks": [
+          "no credentials in source",
+          "environment variables documented",
+          "safe defaults provided"
+        ]
+      },
+      {
+        "id": "java-health",
+        "title": "Prove service health",
+        "objective": "Expose health and diagnostic signals.",
+        "content": "A deployment pipeline needs a reliable way to distinguish successful startup from a broken release.",
+        "checks": [
+          "health endpoint",
+          "startup verification",
+          "rollback condition"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sql-release",
+    "title": "SQL Change Delivery",
+    "academyIds": [
+      "sql"
+    ],
+    "targets": [
+      "Migration pipeline",
+      "Analytics release"
+    ],
+    "summary": "Deliver SQL changes through controlled migrations, validation and rollback.",
+    "lessons": [
+      {
+        "id": "sql-versioning",
+        "title": "Version database changes",
+        "objective": "Represent schema and data changes as ordered migrations.",
+        "content": "Manual production edits are difficult to reproduce and audit. Versioned migration files create traceable change.",
+        "checks": [
+          "ordered migration",
+          "change purpose documented",
+          "repeatability considered"
+        ]
+      },
+      {
+        "id": "sql-validation",
+        "title": "Validate before and after",
+        "objective": "Create controls proving that the change preserved expected data.",
+        "content": "A SQL release should include row-count, reconciliation and business-rule checks.",
+        "checks": [
+          "pre-change control",
+          "post-change reconciliation",
+          "business rule validation"
+        ]
+      },
+      {
+        "id": "sql-rollback",
+        "title": "Plan rollback",
+        "objective": "Define how to recover when a migration fails.",
+        "content": "Some database changes cannot be safely reversed automatically. The release must state the recovery strategy.",
+        "checks": [
+          "rollback or forward-fix plan",
+          "backup dependency stated",
+          "failure owner identified"
+        ]
+      }
+    ]
+  }
+]

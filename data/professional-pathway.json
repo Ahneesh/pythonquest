@@ -1,0 +1,47 @@
+[
+  {
+    "id": "core-python",
+    "title": "Stage 1 \u00b7 Core Python",
+    "subtitle": "Write clear Python and work confidently with data.",
+    "module_ids": [
+      "foundations",
+      "analytics",
+      "scraping"
+    ],
+    "credential": "Python Core Practitioner"
+  },
+  {
+    "id": "data-automation",
+    "title": "Stage 2 \u00b7 Data & Automation",
+    "subtitle": "Query, automate and integrate real workflows.",
+    "module_ids": [
+      "sql-python",
+      "automation-apis"
+    ],
+    "credential": "Data Automation Practitioner"
+  },
+  {
+    "id": "engineering",
+    "title": "Stage 3 \u00b7 Python Engineering",
+    "subtitle": "Build reliable, testable and observable Python systems.",
+    "module_ids": [
+      "advanced-python",
+      "testing-debugging",
+      "data-engineering"
+    ],
+    "credential": "Python Engineering Practitioner"
+  },
+  {
+    "id": "ai-production",
+    "title": "Stage 4 \u00b7 AI & Production",
+    "subtitle": "Create models, services, persistence and deployment workflows.",
+    "module_ids": [
+      "machine-learning",
+      "software-engineering",
+      "web-apis",
+      "databases-orm",
+      "deployment-devops"
+    ],
+    "credential": "Python AI & Production Practitioner"
+  }
+]

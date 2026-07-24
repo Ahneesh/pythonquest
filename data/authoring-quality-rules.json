@@ -1,0 +1,72 @@
+{
+  "lesson": {
+    "required": [
+      "title",
+      "academyId",
+      "moduleTitle",
+      "objective",
+      "content",
+      "practicePrompt"
+    ],
+    "recommended": [
+      "estimatedMinutes",
+      "xp",
+      "prerequisites",
+      "hint",
+      "reflectionPrompt"
+    ],
+    "checks": [
+      {
+        "id": "objective-action",
+        "title": "Objective uses an action verb"
+      },
+      {
+        "id": "practice-present",
+        "title": "Includes active learner practice"
+      },
+      {
+        "id": "feedback-present",
+        "title": "Includes hint or feedback"
+      },
+      {
+        "id": "assessment-aligned",
+        "title": "Practice aligns with objective"
+      },
+      {
+        "id": "accessible-language",
+        "title": "Language is clear and accessible"
+      }
+    ]
+  },
+  "assessment": {
+    "required": [
+      "title",
+      "academyId",
+      "passMark",
+      "questions"
+    ],
+    "recommended": [
+      "timeLimit",
+      "attemptLimit",
+      "feedbackPolicy"
+    ],
+    "checks": [
+      {
+        "id": "answer-key",
+        "title": "Every objective item has an answer key"
+      },
+      {
+        "id": "coverage",
+        "title": "Questions cover more than one concept"
+      },
+      {
+        "id": "difficulty-balance",
+        "title": "Difficulty is balanced"
+      },
+      {
+        "id": "explanation",
+        "title": "Includes at least one reasoning prompt"
+      }
+    ]
+  }
+}

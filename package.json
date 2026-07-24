@@ -1,0 +1,21 @@
+{
+  "name": "pythonquest-v4",
+  "private": true,
+  "version": "64.19.0",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:live": "bash scripts/run-playwright-live.sh"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "stripe": "16.12.0"
+  },
+  "packageManager": "npm@10.9.2",
+  "devDependencies": {
+    "@playwright/test": "1.47.2"
+  }
+}

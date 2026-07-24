@@ -1,0 +1,92 @@
+[
+  {
+    "id": "hack-data-trust",
+    "title": "Data Trust Challenge",
+    "theme": "Build confidence in critical business data",
+    "durationHours": 48,
+    "academies": [
+      "python",
+      "sql",
+      "web"
+    ],
+    "brief": "Create a product that detects, explains and communicates data quality problems.",
+    "deliverables": [
+      "Working prototype",
+      "Architecture note",
+      "Quality controls",
+      "Demo narrative"
+    ],
+    "judging": [
+      {
+        "id": "impact",
+        "title": "Business impact",
+        "weight": 25
+      },
+      {
+        "id": "engineering",
+        "title": "Engineering quality",
+        "weight": 25
+      },
+      {
+        "id": "evidence",
+        "title": "Testing and evidence",
+        "weight": 20
+      },
+      {
+        "id": "ux",
+        "title": "User experience",
+        "weight": 15
+      },
+      {
+        "id": "pitch",
+        "title": "Demo and explanation",
+        "weight": 15
+      }
+    ]
+  },
+  {
+    "id": "hack-resilient-commerce",
+    "title": "Resilient Commerce Challenge",
+    "theme": "Protect customer journeys under failure",
+    "durationHours": 48,
+    "academies": [
+      "web",
+      "java",
+      "sql"
+    ],
+    "brief": "Design and prototype a resilient order journey with idempotency, observability and safe recovery.",
+    "deliverables": [
+      "Prototype",
+      "Failure scenarios",
+      "Recovery design",
+      "Operational dashboard"
+    ],
+    "judging": [
+      {
+        "id": "reliability",
+        "title": "Reliability",
+        "weight": 30
+      },
+      {
+        "id": "design",
+        "title": "System design",
+        "weight": 25
+      },
+      {
+        "id": "testing",
+        "title": "Failure testing",
+        "weight": 20
+      },
+      {
+        "id": "ux",
+        "title": "Customer experience",
+        "weight": 15
+      },
+      {
+        "id": "pitch",
+        "title": "Technical defence",
+        "weight": 10
+      }
+    ]
+  }
+]

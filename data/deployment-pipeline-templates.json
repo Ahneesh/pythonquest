@@ -1,0 +1,98 @@
+[
+  {
+    "id": "web-pipeline",
+    "title": "Web application pipeline",
+    "academyId": "web",
+    "stages": [
+      {
+        "id": "validate",
+        "title": "Validate files",
+        "description": "Check HTML structure, required assets and secret exposure."
+      },
+      {
+        "id": "test",
+        "title": "Run project checks",
+        "description": "Run capstone and quality checks."
+      },
+      {
+        "id": "build",
+        "title": "Build release",
+        "description": "Prepare a versioned static artefact."
+      },
+      {
+        "id": "deploy",
+        "title": "Deploy preview",
+        "description": "Publish to a preview environment."
+      },
+      {
+        "id": "verify",
+        "title": "Verify release",
+        "description": "Run accessibility, responsive and smoke checks."
+      }
+    ]
+  },
+  {
+    "id": "service-pipeline",
+    "title": "Backend service pipeline",
+    "academyId": "python",
+    "stages": [
+      {
+        "id": "lint",
+        "title": "Static validation",
+        "description": "Validate structure and dependency declarations."
+      },
+      {
+        "id": "test",
+        "title": "Automated tests",
+        "description": "Run unit and integration checks."
+      },
+      {
+        "id": "package",
+        "title": "Package artefact",
+        "description": "Create a deployable service bundle."
+      },
+      {
+        "id": "deploy",
+        "title": "Deploy candidate",
+        "description": "Release to a controlled environment."
+      },
+      {
+        "id": "health",
+        "title": "Health verification",
+        "description": "Verify startup, health and rollback signals."
+      }
+    ]
+  },
+  {
+    "id": "database-pipeline",
+    "title": "Database migration pipeline",
+    "academyId": "sql",
+    "stages": [
+      {
+        "id": "review",
+        "title": "Migration review",
+        "description": "Review ordering, locking and reversibility."
+      },
+      {
+        "id": "precheck",
+        "title": "Pre-change controls",
+        "description": "Capture counts and business controls."
+      },
+      {
+        "id": "migrate",
+        "title": "Apply migration",
+        "description": "Execute the ordered change."
+      },
+      {
+        "id": "reconcile",
+        "title": "Reconcile",
+        "description": "Compare pre- and post-change results."
+      },
+      {
+        "id": "release",
+        "title": "Approve release",
+        "description": "Record evidence and close the change."
+      }
+    ]
+  }
+]
