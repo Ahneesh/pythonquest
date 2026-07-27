@@ -1,0 +1,116 @@
+[
+  {
+    "id": "retail-orders",
+    "title": "Retail Orders",
+    "category": "Sales",
+    "difficulty": "Beginner",
+    "description": "Order-level retail data with duplicates, missing revenue and regional categories.",
+    "columns": [
+      "order_id",
+      "order_date",
+      "region",
+      "product",
+      "quantity",
+      "unit_price",
+      "revenue"
+    ],
+    "suggestedQuestions": [
+      "Which region generates the most revenue?",
+      "Which products have the highest average order value?",
+      "How many duplicate orders exist?",
+      "How should missing revenue be handled?"
+    ],
+    "csv": "order_id,order_date,region,product,quantity,unit_price,revenue\n1001,2026-01-02,North,Laptop Stand,2,35,70\n1002,2026-01-03,South,Keyboard,1,50,50\n1002,2026-01-03,South,Keyboard,1,50,50\n1003,2026-01-05,West,Monitor,2,180,360\n1004,2026-01-06,North,Mouse,3,25,75\n1005,2026-01-07,South,Monitor,1,180,\n1006,2026-01-08,West,Keyboard,4,50,200\n1007,2026-01-09,North,Monitor,1,180,180\n1008,2026-01-10,South,Mouse,2,25,50"
+  },
+  {
+    "id": "customer-support",
+    "title": "Customer Support Tickets",
+    "category": "Operations",
+    "difficulty": "Intermediate",
+    "description": "Support-ticket records for analysing response time, priority and resolution outcomes.",
+    "columns": [
+      "ticket_id",
+      "opened_at",
+      "priority",
+      "channel",
+      "team",
+      "response_hours",
+      "resolved"
+    ],
+    "suggestedQuestions": [
+      "Which channel has the longest average response time?",
+      "Are high-priority tickets resolved more quickly?",
+      "Which team handles the largest volume?",
+      "What is the overall resolution rate?"
+    ],
+    "csv": "ticket_id,opened_at,priority,channel,team,response_hours,resolved\nT001,2026-02-01 09:00,High,Email,Payments,1.2,Yes\nT002,2026-02-01 10:15,Medium,Chat,Accounts,0.4,Yes\nT003,2026-02-01 11:30,Low,Email,Accounts,6.1,No\nT004,2026-02-02 08:45,High,Phone,Payments,0.7,Yes\nT005,2026-02-02 13:10,Medium,Chat,Technical,1.8,Yes\nT006,2026-02-03 09:20,Low,Email,Technical,8.0,No\nT007,2026-02-03 14:00,High,Phone,Accounts,0.5,Yes\nT008,2026-02-04 15:30,Medium,Email,Payments,3.2,Yes"
+  },
+  {
+    "id": "job-skills",
+    "title": "Job Skills Market",
+    "category": "Careers",
+    "difficulty": "Intermediate",
+    "description": "A compact job-market dataset for comparing roles, locations and recurring technical skills.",
+    "columns": [
+      "job_id",
+      "role",
+      "location",
+      "salary_band",
+      "skills",
+      "remote"
+    ],
+    "suggestedQuestions": [
+      "Which skills appear most frequently?",
+      "Which roles are most often remote?",
+      "How do locations differ by salary band?",
+      "What skills overlap across analyst and engineering roles?"
+    ],
+    "csv": "job_id,role,location,salary_band,skills,remote\nJ001,Data Analyst,London,45-55k,\"Python|SQL|Tableau\",No\nJ002,Analytics Engineer,Remote,60-75k,\"Python|SQL|dbt\",Yes\nJ003,BI Analyst,Manchester,42-50k,\"SQL|Power BI|Excel\",Hybrid\nJ004,Junior Data Engineer,London,55-65k,\"Python|SQL|Airflow\",Hybrid\nJ005,Data Analyst,Remote,48-58k,\"Python|SQL|Power BI\",Yes\nJ006,Automation Analyst,Birmingham,45-55k,\"Python|APIs|Excel\",Hybrid\nJ007,Junior Data Engineer,Remote,58-70k,\"Python|SQL|Spark\",Yes"
+  },
+  {
+    "id": "trade-exceptions",
+    "title": "Trade Processing Exceptions",
+    "category": "Financial Services",
+    "difficulty": "Advanced",
+    "description": "Simulated operational exception data for analysing ageing, products and root causes.",
+    "columns": [
+      "exception_id",
+      "trade_date",
+      "product",
+      "region",
+      "severity",
+      "age_days",
+      "root_cause",
+      "status"
+    ],
+    "suggestedQuestions": [
+      "Which root causes drive the oldest exceptions?",
+      "Which products generate the most high-severity cases?",
+      "How many open exceptions exceed three days?",
+      "Which region should be prioritised?"
+    ],
+    "csv": "exception_id,trade_date,product,region,severity,age_days,root_cause,status\nE001,2026-03-01,OTC,EMEA,High,5,Missing Reference Data,Open\nE002,2026-03-02,ETD,APAC,Medium,2,Booking Mismatch,Open\nE003,2026-03-02,SFT,EMEA,High,7,Counterparty Mapping,Open\nE004,2026-03-03,OTC,Americas,Low,1,Late Confirmation,Closed\nE005,2026-03-03,ETD,EMEA,Medium,4,Booking Mismatch,Open\nE006,2026-03-04,SFT,APAC,High,6,Missing Reference Data,Open\nE007,2026-03-05,OTC,EMEA,High,3,Counterparty Mapping,Closed\nE008,2026-03-05,ETD,Americas,Medium,2,Late Confirmation,Open"
+  },
+  {
+    "id": "customer-churn",
+    "title": "Customer Churn",
+    "category": "Machine Learning",
+    "difficulty": "Intermediate",
+    "description": "A small classification dataset for exploring churn risk and model evaluation.",
+    "columns": [
+      "customer_id",
+      "tenure_months",
+      "monthly_spend",
+      "support_tickets",
+      "contract_type",
+      "churned"
+    ],
+    "suggestedQuestions": [
+      "Which features differ most between churned and retained customers?",
+      "How should categorical contract type be encoded?",
+      "Which metric matters if missing likely churners is costly?",
+      "Does model performance differ across contract types?"
+    ],
+    "csv": "customer_id,tenure_months,monthly_spend,support_tickets,contract_type,churned\nC001,3,95,5,Monthly,1\nC002,28,60,1,Annual,0\nC003,7,85,4,Monthly,1\nC004,42,55,0,Annual,0\nC005,13,75,3,Monthly,1\nC006,36,65,1,Annual,0\nC007,5,105,6,Monthly,1\nC008,24,70,2,Annual,0\nC009,18,80,2,Monthly,0\nC010,2,110,7,Monthly,1\nC011,48,50,0,Annual,0\nC012,9,90,4,Monthly,1"
+  }
+]

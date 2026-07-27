@@ -1,0 +1,292 @@
+[
+  {
+    "id": "sql-foundations-exam",
+    "moduleId": "sql-foundations",
+    "title": "Stage 1 \u00b7 SQL Foundations Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which statement best describes SQL Foundations?",
+        "options": [
+          "It is unrelated to data",
+          "It supports structured relational analysis",
+          "It replaces all programming languages",
+          "It requires no validation"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which habit most improves trustworthy SQL?",
+        "options": [
+          "Use SELECT * everywhere",
+          "Validate row counts and assumptions",
+          "Avoid aliases",
+          "Ignore NULL values"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What should you do before accepting a query result?",
+        "options": [
+          "Check grain, filters and totals",
+          "Only inspect the first row",
+          "Remove ORDER BY",
+          "Convert everything to text"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Why use explicit column names?",
+        "options": [
+          "They clarify intent and reduce accidental schema dependence",
+          "They make queries invalid",
+          "They disable indexes",
+          "They create duplicates"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional SQL deliverable?",
+        "options": [
+          "A query with no context",
+          "A reproducible query plus interpretation and limitations",
+          "Only a screenshot",
+          "An undocumented result"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "sql-analysis-exam",
+    "moduleId": "sql-analysis",
+    "title": "Stage 2 \u00b7 Analytical SQL Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which statement best describes Analytical SQL?",
+        "options": [
+          "It is unrelated to data",
+          "It supports structured relational analysis",
+          "It replaces all programming languages",
+          "It requires no validation"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which habit most improves trustworthy SQL?",
+        "options": [
+          "Use SELECT * everywhere",
+          "Validate row counts and assumptions",
+          "Avoid aliases",
+          "Ignore NULL values"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What should you do before accepting a query result?",
+        "options": [
+          "Check grain, filters and totals",
+          "Only inspect the first row",
+          "Remove ORDER BY",
+          "Convert everything to text"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Why use explicit column names?",
+        "options": [
+          "They clarify intent and reduce accidental schema dependence",
+          "They make queries invalid",
+          "They disable indexes",
+          "They create duplicates"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional SQL deliverable?",
+        "options": [
+          "A query with no context",
+          "A reproducible query plus interpretation and limitations",
+          "Only a screenshot",
+          "An undocumented result"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "sql-relational-exam",
+    "moduleId": "sql-relational",
+    "title": "Stage 3 \u00b7 Relational SQL Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which statement best describes Relational SQL?",
+        "options": [
+          "It is unrelated to data",
+          "It supports structured relational analysis",
+          "It replaces all programming languages",
+          "It requires no validation"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which habit most improves trustworthy SQL?",
+        "options": [
+          "Use SELECT * everywhere",
+          "Validate row counts and assumptions",
+          "Avoid aliases",
+          "Ignore NULL values"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What should you do before accepting a query result?",
+        "options": [
+          "Check grain, filters and totals",
+          "Only inspect the first row",
+          "Remove ORDER BY",
+          "Convert everything to text"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Why use explicit column names?",
+        "options": [
+          "They clarify intent and reduce accidental schema dependence",
+          "They make queries invalid",
+          "They disable indexes",
+          "They create duplicates"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional SQL deliverable?",
+        "options": [
+          "A query with no context",
+          "A reproducible query plus interpretation and limitations",
+          "Only a screenshot",
+          "An undocumented result"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "sql-advanced-exam",
+    "moduleId": "sql-advanced",
+    "title": "Stage 4 \u00b7 Advanced SQL Assessment",
+    "passMark": 80,
+    "questions": [
+      {
+        "question": "Which statement best describes Advanced SQL?",
+        "options": [
+          "It is unrelated to data",
+          "It supports structured relational analysis",
+          "It replaces all programming languages",
+          "It requires no validation"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which habit most improves trustworthy SQL?",
+        "options": [
+          "Use SELECT * everywhere",
+          "Validate row counts and assumptions",
+          "Avoid aliases",
+          "Ignore NULL values"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What should you do before accepting a query result?",
+        "options": [
+          "Check grain, filters and totals",
+          "Only inspect the first row",
+          "Remove ORDER BY",
+          "Convert everything to text"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Why use explicit column names?",
+        "options": [
+          "They clarify intent and reduce accidental schema dependence",
+          "They make queries invalid",
+          "They disable indexes",
+          "They create duplicates"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional SQL deliverable?",
+        "options": [
+          "A query with no context",
+          "A reproducible query plus interpretation and limitations",
+          "Only a screenshot",
+          "An undocumented result"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "database-engineering-exam",
+    "moduleId": "database-engineering",
+    "title": "Stage 5 \u00b7 Database Engineering Assessment",
+    "passMark": 80,
+    "questions": [
+      {
+        "question": "Which statement best describes Database Engineering?",
+        "options": [
+          "It is unrelated to data",
+          "It supports structured relational analysis",
+          "It replaces all programming languages",
+          "It requires no validation"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which habit most improves trustworthy SQL?",
+        "options": [
+          "Use SELECT * everywhere",
+          "Validate row counts and assumptions",
+          "Avoid aliases",
+          "Ignore NULL values"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What should you do before accepting a query result?",
+        "options": [
+          "Check grain, filters and totals",
+          "Only inspect the first row",
+          "Remove ORDER BY",
+          "Convert everything to text"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Why use explicit column names?",
+        "options": [
+          "They clarify intent and reduce accidental schema dependence",
+          "They make queries invalid",
+          "They disable indexes",
+          "They create duplicates"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional SQL deliverable?",
+        "options": [
+          "A query with no context",
+          "A reproducible query plus interpretation and limitations",
+          "Only a screenshot",
+          "An undocumented result"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "assignment-sql-foundations",
+    "cohortId": "cohort-data-analyst-01",
+    "title": "SQL Foundations Checkpoint",
+    "type": "coding-lab",
+    "academy": "sql",
+    "sourceId": "sql-customer-revenue",
+    "dueDate": "2026-07-28T17:00:00",
+    "points": 100,
+    "status": "published",
+    "instructions": "Complete the SQL customer revenue lab and submit a short explanation of your join strategy."
+  },
+  {
+    "id": "assignment-python-analysis",
+    "cohortId": "cohort-data-analyst-01",
+    "title": "Python Analysis Mini-Project",
+    "type": "project",
+    "academy": "python",
+    "sourceId": "python-order-summary",
+    "dueDate": "2026-08-04T17:00:00",
+    "points": 100,
+    "status": "published",
+    "instructions": "Complete the Python coding lab, pass public tests and explain one edge case."
+  },
+  {
+    "id": "assignment-dashboard",
+    "cohortId": "cohort-data-analyst-01",
+    "title": "Responsive Executive Dashboard",
+    "type": "project",
+    "academy": "web",
+    "sourceId": "web-dashboard",
+    "dueDate": "2026-08-18T17:00:00",
+    "points": 150,
+    "status": "draft",
+    "instructions": "Build a responsive dashboard with filters and persisted preferences."
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fastapi-service",
+    "title": "FastAPI service pipeline",
+    "stages": [
+      {
+        "name": "Install",
+        "command": "pip install -r requirements.txt"
+      },
+      {
+        "name": "Lint",
+        "command": "ruff check ."
+      },
+      {
+        "name": "Test",
+        "command": "pytest"
+      },
+      {
+        "name": "Build",
+        "command": "docker build -t app ."
+      },
+      {
+        "name": "Deploy",
+        "command": "deploy to staging"
+      }
+    ]
+  },
+  {
+    "id": "data-pipeline",
+    "title": "Data pipeline release",
+    "stages": [
+      {
+        "name": "Validate",
+        "command": "python validate_config.py"
+      },
+      {
+        "name": "Test",
+        "command": "pytest tests/"
+      },
+      {
+        "name": "Package",
+        "command": "python -m build"
+      },
+      {
+        "name": "Deploy",
+        "command": "deploy scheduled job"
+      }
+    ]
+  }
+]

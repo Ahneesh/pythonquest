@@ -1,0 +1,94 @@
+[
+  {
+    "id": "data-analyst-90",
+    "title": "Data Analyst \u00b7 90-Day Plan",
+    "role": "Data Analyst",
+    "summary": "Build analysis, SQL, storytelling and portfolio evidence.",
+    "days": {
+      "30": [
+        "Complete Core Python stage",
+        "Finish pandas analytics lessons",
+        "Publish one analysis project"
+      ],
+      "60": [
+        "Complete SQL with Python",
+        "Pass Data & Automation assessment",
+        "Complete Data Analyst simulation"
+      ],
+      "90": [
+        "Release a portfolio dashboard",
+        "Export recruiter evidence pack",
+        "Complete two mock interviews"
+      ]
+    }
+  },
+  {
+    "id": "automation-engineer-90",
+    "title": "Automation Engineer \u00b7 90-Day Plan",
+    "role": "Python Automation Engineer",
+    "summary": "Develop reliable automation, APIs, testing and deployment skills.",
+    "days": {
+      "30": [
+        "Complete Core Python stage",
+        "Build one file automation",
+        "Create a testing habit"
+      ],
+      "60": [
+        "Complete Automation and APIs",
+        "Pass Data & Automation assessment",
+        "Complete Automation Engineer simulation"
+      ],
+      "90": [
+        "Release a packaged automation tool",
+        "Add CI/CD evidence",
+        "Export recruiter evidence pack"
+      ]
+    }
+  },
+  {
+    "id": "data-engineer-90",
+    "title": "Data Engineer \u00b7 90-Day Plan",
+    "role": "Junior Data Engineer",
+    "summary": "Build pipeline, quality, database and production delivery evidence.",
+    "days": {
+      "30": [
+        "Complete Python and SQL foundations",
+        "Build one data-cleaning pipeline",
+        "Document assumptions"
+      ],
+      "60": [
+        "Complete Testing and Data Engineering",
+        "Pass Python Engineering assessment",
+        "Complete Data Engineering simulation"
+      ],
+      "90": [
+        "Build a database-backed pipeline",
+        "Add observability and deployment",
+        "Publish professional portfolio"
+      ]
+    }
+  },
+  {
+    "id": "ml-analyst-90",
+    "title": "ML / Data Product Analyst \u00b7 90-Day Plan",
+    "role": "ML / Data Product Analyst",
+    "summary": "Combine analytics, responsible ML and stakeholder communication.",
+    "days": {
+      "30": [
+        "Complete data analytics foundations",
+        "Create one data story",
+        "Review responsible AI basics"
+      ],
+      "60": [
+        "Complete Machine Learning foundations",
+        "Pass Python Engineering assessment",
+        "Build one model experiment"
+      ],
+      "90": [
+        "Complete ML product simulation",
+        "Create a model card",
+        "Export recruiter evidence pack"
+      ]
+    }
+  }
+]

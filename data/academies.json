@@ -1,0 +1,82 @@
+[
+  {
+    "id": "python",
+    "name": "Python Academy",
+    "shortName": "Python",
+    "status": "available",
+    "icon": "PY",
+    "description": "Learn Python from foundations through enterprise FastAPI, CI/CD, Kubernetes, LLM, RAG and MCP engineering.",
+    "level": "Beginner to enterprise architect",
+    "duration": "9–18 months",
+    "careerPaths": [
+      "Data Analyst",
+      "Automation Engineer",
+      "Data Engineer",
+      "Backend Developer",
+      "ML Analyst",
+      "FastAPI Backend Engineer",
+      "Platform Engineer",
+      "LLM Engineer",
+      "RAG Engineer",
+      "Enterprise AI Architect"
+    ],
+    "accent": "violet",
+    "courseFile": "data/course.json"
+  },
+  {
+    "id": "java",
+    "name": "Java Academy",
+    "shortName": "Java",
+    "status": "available",
+    "icon": "JV",
+    "description": "Learn Java from foundations through concurrency, JVM tuning, Apache Ignite, messaging, cloud operations and principal-level distributed architecture.",
+    "level": "Beginner to principal engineer",
+    "duration": "9–18 months",
+    "careerPaths": [
+      "Java Developer",
+      "Backend Engineer",
+      "Spring Developer",
+      "JVM Performance Engineer",
+      "Apache Ignite Developer",
+      "Distributed Systems Engineer",
+      "Messaging Engineer",
+      "Principal Java Architect"
+    ],
+    "accent": "amber",
+    "courseFile": "data/java-course.json"
+  },
+  {
+    "id": "web",
+    "name": "Web Development Academy",
+    "shortName": "Web Development",
+    "status": "available",
+    "icon": "WEB",
+    "description": "Build accessible, responsive web experiences with HTML, CSS, JavaScript and modern frontend tools.",
+    "level": "Beginner to professional",
+    "duration": "5–10 months",
+    "careerPaths": [
+      "Frontend Developer",
+      "Web Developer",
+      "UI Engineer"
+    ],
+    "accent": "blue",
+    "courseFile": "data/web-course.json"
+  },
+  {
+    "id": "sql",
+    "name": "SQL & Database Academy",
+    "shortName": "SQL",
+    "status": "available",
+    "icon": "SQL",
+    "description": "Master analytical SQL, relational design, optimisation and database engineering.",
+    "level": "Beginner to advanced",
+    "duration": "3–7 months",
+    "careerPaths": [
+      "Data Analyst",
+      "SQL Developer",
+      "Database Engineer"
+    ],
+    "accent": "green",
+    "courseFile": "data/sql-course.json"
+  }
+]

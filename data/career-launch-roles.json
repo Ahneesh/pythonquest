@@ -1,0 +1,287 @@
+[
+  {
+    "id": "python-developer",
+    "title": "Python Developer",
+    "academies": [
+      "python"
+    ],
+    "summary": "Build reliable Python applications, APIs, automation and tests.",
+    "skills": [
+      {
+        "id": "python-core",
+        "title": "Python fundamentals",
+        "weight": 15
+      },
+      {
+        "id": "python-oop",
+        "title": "Object-oriented Python",
+        "weight": 10
+      },
+      {
+        "id": "testing",
+        "title": "Testing and debugging",
+        "weight": 15
+      },
+      {
+        "id": "apis",
+        "title": "API engineering",
+        "weight": 15
+      },
+      {
+        "id": "databases",
+        "title": "Database integration",
+        "weight": 10
+      },
+      {
+        "id": "production",
+        "title": "Production engineering",
+        "weight": 15
+      },
+      {
+        "id": "projects",
+        "title": "Project evidence",
+        "weight": 20
+      }
+    ],
+    "portfolioSignals": [
+      "Python credential",
+      "API project",
+      "Testing evidence",
+      "Production mission"
+    ],
+    "interviewTopics": [
+      "Python data model",
+      "Testing",
+      "APIs",
+      "Error handling",
+      "Application design"
+    ]
+  },
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "academies": [
+      "sql",
+      "python"
+    ],
+    "summary": "Turn business questions into trustworthy analysis and communication.",
+    "skills": [
+      {
+        "id": "sql-analysis",
+        "title": "Analytical SQL",
+        "weight": 20
+      },
+      {
+        "id": "data-quality",
+        "title": "Data quality",
+        "weight": 15
+      },
+      {
+        "id": "python-analysis",
+        "title": "Python analytics",
+        "weight": 15
+      },
+      {
+        "id": "business-reasoning",
+        "title": "Business reasoning",
+        "weight": 15
+      },
+      {
+        "id": "visualisation",
+        "title": "Data communication",
+        "weight": 10
+      },
+      {
+        "id": "projects",
+        "title": "Portfolio projects",
+        "weight": 25
+      }
+    ],
+    "portfolioSignals": [
+      "SQL credential",
+      "Data-quality project",
+      "Analytics mission",
+      "Business finding"
+    ],
+    "interviewTopics": [
+      "SQL joins",
+      "Aggregation",
+      "Data quality",
+      "Analytical reasoning",
+      "Stakeholder communication"
+    ]
+  },
+  {
+    "id": "frontend-developer",
+    "title": "Frontend Developer",
+    "academies": [
+      "web"
+    ],
+    "summary": "Build accessible, responsive and resilient web interfaces.",
+    "skills": [
+      {
+        "id": "html",
+        "title": "Semantic HTML",
+        "weight": 10
+      },
+      {
+        "id": "css",
+        "title": "Responsive CSS",
+        "weight": 15
+      },
+      {
+        "id": "javascript",
+        "title": "JavaScript",
+        "weight": 20
+      },
+      {
+        "id": "browser",
+        "title": "Browser APIs",
+        "weight": 15
+      },
+      {
+        "id": "accessibility",
+        "title": "Accessibility",
+        "weight": 10
+      },
+      {
+        "id": "testing",
+        "title": "Frontend testing",
+        "weight": 10
+      },
+      {
+        "id": "projects",
+        "title": "Deployed projects",
+        "weight": 20
+      }
+    ],
+    "portfolioSignals": [
+      "Web credential",
+      "Responsive project",
+      "Accessibility evidence",
+      "Performance review"
+    ],
+    "interviewTopics": [
+      "DOM",
+      "JavaScript",
+      "CSS layout",
+      "Accessibility",
+      "Frontend architecture"
+    ]
+  },
+  {
+    "id": "java-backend",
+    "title": "Java Backend Engineer",
+    "academies": [
+      "java",
+      "sql"
+    ],
+    "summary": "Design, test and operate maintainable Java backend services.",
+    "skills": [
+      {
+        "id": "java-core",
+        "title": "Core Java",
+        "weight": 15
+      },
+      {
+        "id": "oop",
+        "title": "OOP and design",
+        "weight": 15
+      },
+      {
+        "id": "testing",
+        "title": "Testing",
+        "weight": 10
+      },
+      {
+        "id": "spring",
+        "title": "Spring and REST",
+        "weight": 20
+      },
+      {
+        "id": "databases",
+        "title": "Persistence and SQL",
+        "weight": 15
+      },
+      {
+        "id": "production",
+        "title": "Operational readiness",
+        "weight": 10
+      },
+      {
+        "id": "projects",
+        "title": "Backend evidence",
+        "weight": 15
+      }
+    ],
+    "portfolioSignals": [
+      "Java credential",
+      "Spring project",
+      "Database evidence",
+      "Production mission"
+    ],
+    "interviewTopics": [
+      "Java memory",
+      "OOP",
+      "Collections",
+      "Spring",
+      "Transactions",
+      "Service design"
+    ]
+  },
+  {
+    "id": "full-stack",
+    "title": "Full-Stack Developer",
+    "academies": [
+      "web",
+      "python",
+      "sql"
+    ],
+    "summary": "Deliver complete products across frontend, API and database layers.",
+    "skills": [
+      {
+        "id": "frontend",
+        "title": "Frontend delivery",
+        "weight": 20
+      },
+      {
+        "id": "backend",
+        "title": "Backend APIs",
+        "weight": 20
+      },
+      {
+        "id": "database",
+        "title": "Database design",
+        "weight": 15
+      },
+      {
+        "id": "testing",
+        "title": "End-to-end testing",
+        "weight": 15
+      },
+      {
+        "id": "delivery",
+        "title": "Production delivery",
+        "weight": 15
+      },
+      {
+        "id": "projects",
+        "title": "Full-stack portfolio",
+        "weight": 15
+      }
+    ],
+    "portfolioSignals": [
+      "Web credential",
+      "API evidence",
+      "Database evidence",
+      "Checkout mission"
+    ],
+    "interviewTopics": [
+      "System boundaries",
+      "API design",
+      "State management",
+      "Data modelling",
+      "Deployment"
+    ]
+  }
+]

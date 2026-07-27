@@ -1,0 +1,35 @@
+[
+  {
+    "id": "adr",
+    "title": "Architecture Decision Record",
+    "fields": [
+      "context",
+      "decision",
+      "alternatives",
+      "consequences",
+      "evidence"
+    ]
+  },
+  {
+    "id": "incident",
+    "title": "Incident Decision",
+    "fields": [
+      "symptom",
+      "impact",
+      "containment",
+      "rootCause",
+      "followUp"
+    ]
+  },
+  {
+    "id": "release",
+    "title": "Release Decision",
+    "fields": [
+      "scope",
+      "risk",
+      "verification",
+      "rollback",
+      "owner"
+    ]
+  }
+]

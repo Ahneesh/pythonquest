@@ -1,0 +1,49 @@
+{
+  "dimensions": [
+    {
+      "id": "functionality",
+      "title": "Functionality",
+      "items": [
+        "Core path works",
+        "Failure states handled",
+        "Known limitations documented"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "Quality",
+      "items": [
+        "Project checks pass",
+        "Code is readable",
+        "No debug-only output remains"
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Security",
+      "items": [
+        "No private secrets in client code",
+        "Inputs validated",
+        "Dependencies reviewed"
+      ]
+    },
+    {
+      "id": "operations",
+      "title": "Operations",
+      "items": [
+        "Release version set",
+        "Verification steps defined",
+        "Rollback or recovery documented"
+      ]
+    },
+    {
+      "id": "experience",
+      "title": "User experience",
+      "items": [
+        "Responsive behaviour checked",
+        "Accessibility considered",
+        "Loading and error states visible"
+      ]
+    }
+  ]
+}

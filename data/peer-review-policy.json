@@ -1,0 +1,34 @@
+{
+  "minimumReviewers": 1,
+  "requireAuthorResponse": true,
+  "states": [
+    "draft",
+    "open",
+    "changes-requested",
+    "approved",
+    "merged",
+    "closed"
+  ],
+  "dimensions": [
+    {
+      "id": "correctness",
+      "title": "Correctness"
+    },
+    {
+      "id": "clarity",
+      "title": "Clarity"
+    },
+    {
+      "id": "testing",
+      "title": "Testing"
+    },
+    {
+      "id": "design",
+      "title": "Design"
+    },
+    {
+      "id": "risk",
+      "title": "Delivery risk"
+    }
+  ]
+}

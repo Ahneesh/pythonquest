@@ -1,0 +1,138 @@
+{
+  "python": [
+    {
+      "level": "foundation",
+      "question": "Explain the difference between a list and a tuple, and give one situation where immutability matters.",
+      "signals": [
+        "mutability",
+        "syntax",
+        "hashability or safety",
+        "practical example"
+      ]
+    },
+    {
+      "level": "intermediate",
+      "question": "How would you make a data-processing script restart-safe?",
+      "signals": [
+        "idempotency",
+        "checkpoints",
+        "atomic writes",
+        "logging",
+        "error handling"
+      ]
+    },
+    {
+      "level": "advanced",
+      "question": "Design a Python API that processes long-running jobs without blocking requests.",
+      "signals": [
+        "queue",
+        "worker",
+        "job status",
+        "persistence",
+        "failure and retry"
+      ]
+    }
+  ],
+  "sql": [
+    {
+      "level": "foundation",
+      "question": "Explain the difference between WHERE and HAVING.",
+      "signals": [
+        "row filtering",
+        "before aggregation",
+        "group filtering",
+        "after aggregation"
+      ]
+    },
+    {
+      "level": "intermediate",
+      "question": "A join unexpectedly triples the row count. How would you diagnose it?",
+      "signals": [
+        "grain",
+        "cardinality",
+        "duplicate keys",
+        "pre-aggregation",
+        "validation counts"
+      ]
+    },
+    {
+      "level": "advanced",
+      "question": "How would you investigate and improve a slow analytical query?",
+      "signals": [
+        "query plan",
+        "indexes",
+        "partition pruning",
+        "join strategy",
+        "statistics"
+      ]
+    }
+  ],
+  "web": [
+    {
+      "level": "foundation",
+      "question": "Why is semantic HTML important beyond visual appearance?",
+      "signals": [
+        "accessibility",
+        "document structure",
+        "assistive technology",
+        "maintainability"
+      ]
+    },
+    {
+      "level": "intermediate",
+      "question": "How would you debug a form that submits twice?",
+      "signals": [
+        "event listeners",
+        "default submission",
+        "duplicate binding",
+        "network inspection",
+        "reproduction"
+      ]
+    },
+    {
+      "level": "advanced",
+      "question": "Design a resilient frontend data-fetching layer.",
+      "signals": [
+        "loading",
+        "error",
+        "cancellation",
+        "caching",
+        "retries",
+        "stale data"
+      ]
+    }
+  ],
+  "java": [
+    {
+      "level": "foundation",
+      "question": "Explain static versus instance members.",
+      "signals": [
+        "class ownership",
+        "object ownership",
+        "access",
+        "example"
+      ]
+    },
+    {
+      "level": "intermediate",
+      "question": "Why is constructor injection useful?",
+      "signals": [
+        "dependencies",
+        "testability",
+        "immutability",
+        "substitution"
+      ]
+    },
+    {
+      "level": "advanced",
+      "question": "Design a reliable Spring Boot order service.",
+      "signals": [
+        "controller/service/repository",
+        "transactions",
+        "validation",
+        "idempotency",
+        "observability"
+      ]
+    }
+  ]
+}

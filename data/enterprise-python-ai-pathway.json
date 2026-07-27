@@ -1,0 +1,76 @@
+{
+  "id": "enterprise-python-ai-engineer",
+  "title": "Enterprise Python & AI Engineer",
+  "academyId": "python",
+  "level": "Professional to architect",
+  "estimatedDuration": "8–14 months",
+  "summary": "Build, test, secure, containerize and operate enterprise Python services and modern AI applications.",
+  "roleOutcomes": [
+    "Professional Python Developer",
+    "FastAPI Backend Engineer",
+    "Platform and CI/CD Engineer",
+    "Kubernetes Application Engineer",
+    "LLM and RAG Engineer",
+    "MCP Integration Engineer",
+    "Enterprise AI Architect"
+  ],
+  "stages": [
+    {
+      "order": 1,
+      "moduleId": "professional-python",
+      "credential": "Professional Python Engineer"
+    },
+    {
+      "order": 2,
+      "moduleId": "enterprise-fastapi",
+      "credential": "FastAPI Backend Engineer"
+    },
+    {
+      "order": 3,
+      "moduleId": "cicd-containers",
+      "credential": "CI/CD and Container Engineer"
+    },
+    {
+      "order": 4,
+      "moduleId": "kubernetes-platform",
+      "credential": "Kubernetes Application Engineer"
+    },
+    {
+      "order": 5,
+      "moduleId": "llm-rag-engineering",
+      "credential": "LLM and RAG Engineer"
+    },
+    {
+      "order": 6,
+      "moduleId": "mcp-enterprise-ai",
+      "credential": "Enterprise AI Architect"
+    }
+  ],
+  "architecture": {
+    "client": "Web or mobile client",
+    "gateway": "API gateway and identity boundary",
+    "application": "FastAPI orchestration and domain services",
+    "ai": [
+      "LLM gateway",
+      "RAG retrieval",
+      "MCP clients and servers",
+      "evaluation and guardrails"
+    ],
+    "data": [
+      "PostgreSQL",
+      "vector store",
+      "object storage",
+      "event queue"
+    ],
+    "operations": [
+      "CI/CD",
+      "container registry",
+      "Kubernetes",
+      "metrics",
+      "logs",
+      "traces",
+      "audit events"
+    ]
+  },
+  "finalCapstone": "Build and deploy a governed enterprise knowledge and workflow assistant using FastAPI, PostgreSQL, RAG, MCP, background workers, CI/CD and Kubernetes."
+}

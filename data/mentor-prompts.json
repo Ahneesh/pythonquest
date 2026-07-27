@@ -1,0 +1,30 @@
+[
+  {
+    "id": "evidence-gap",
+    "title": "Your evidence is behind your learning",
+    "body": "You have completed lessons but have limited project evidence. Convert the next concept into a small deliverable.",
+    "action": "Open Project Studio",
+    "view": "projectstudio"
+  },
+  {
+    "id": "assessment-ready",
+    "title": "You may be ready for a stage assessment",
+    "body": "Your stage lessons are complete. Validate your knowledge and unlock the next professional stage.",
+    "action": "Open assessments",
+    "view": "stageexams"
+  },
+  {
+    "id": "communication-gap",
+    "title": "Practise professional communication",
+    "body": "Your technical progress is stronger than your communication evidence. Record a stand-up or stakeholder brief.",
+    "action": "Open simulations",
+    "view": "careersimulations"
+  },
+  {
+    "id": "review-due",
+    "title": "Your weekly review is due",
+    "body": "Reflect on progress, blockers and next actions before starting another week.",
+    "action": "Open weekly review",
+    "view": "weeklyreview"
+  }
+]

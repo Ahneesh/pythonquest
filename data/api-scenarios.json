@@ -1,0 +1,40 @@
+[
+  {
+    "id": "customers",
+    "title": "Customer API",
+    "resources": {
+      "customers": [
+        {
+          "id": 1,
+          "name": "Asha",
+          "segment": "Premium"
+        },
+        {
+          "id": 2,
+          "name": "Ravi",
+          "segment": "Standard"
+        }
+      ]
+    }
+  },
+  {
+    "id": "orders",
+    "title": "Orders API",
+    "resources": {
+      "orders": [
+        {
+          "id": 101,
+          "customer_id": 1,
+          "amount": 250,
+          "status": "confirmed"
+        },
+        {
+          "id": 102,
+          "customer_id": 2,
+          "amount": 80,
+          "status": "pending"
+        }
+      ]
+    }
+  }
+]

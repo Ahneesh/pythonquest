@@ -1,0 +1,48 @@
+{
+  "dimensions": [
+    {
+      "id": "correctness",
+      "title": "Correctness",
+      "weight": 30,
+      "questions": [
+        "Does the code meet the requirement?",
+        "Are edge cases handled?"
+      ]
+    },
+    {
+      "id": "clarity",
+      "title": "Clarity",
+      "weight": 20,
+      "questions": [
+        "Are names meaningful?",
+        "Is the control flow understandable?"
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Design",
+      "weight": 20,
+      "questions": [
+        "Are responsibilities separated?",
+        "Are abstractions justified?"
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Testing",
+      "weight": 20,
+      "questions": [
+        "Are important paths tested?",
+        "Would failures be diagnosable?"
+      ]
+    },
+    {
+      "id": "operations",
+      "title": "Operational readiness",
+      "weight": 10,
+      "questions": [
+        "Are errors, logs and limits considered?"
+      ]
+    }
+  ]
+}

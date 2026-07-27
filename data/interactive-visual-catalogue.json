@@ -1,0 +1,107 @@
+[
+  {
+    "id": "value-flow",
+    "title": "Value flow",
+    "academyIds": [
+      "python"
+    ],
+    "steps": [
+      "Input value enters the program",
+      "A variable or collection stores the value",
+      "An expression transforms it",
+      "The result is printed, returned or saved"
+    ]
+  },
+  {
+    "id": "relation-flow",
+    "title": "Relation flow",
+    "academyIds": [
+      "sql"
+    ],
+    "steps": [
+      "Identify the source table and source grain",
+      "Filter or join source rows",
+      "Aggregate or calculate when required",
+      "Confirm the result grain and controls"
+    ]
+  },
+  {
+    "id": "browser-flow",
+    "title": "Browser interaction flow",
+    "academyIds": [
+      "web"
+    ],
+    "steps": [
+      "HTML defines meaningful structure",
+      "CSS controls layout and presentation",
+      "A user event occurs",
+      "JavaScript updates state and renders feedback"
+    ]
+  },
+  {
+    "id": "object-flow",
+    "title": "Object responsibility flow",
+    "academyIds": [
+      "java"
+    ],
+    "steps": [
+      "A class defines state and behaviour",
+      "An object is created",
+      "A method receives input",
+      "The object updates state or returns a result"
+    ]
+  },
+  {
+    "id": "collection-visual",
+    "title": "Collection anatomy",
+    "academyIds": [
+      "python",
+      "java"
+    ],
+    "steps": [
+      "List: ordered values accessed by position",
+      "Tuple: ordered values treated as fixed",
+      "Dictionary or map: keys point to values",
+      "Set: only unique values remain"
+    ]
+  },
+  {
+    "id": "dataframe-visual",
+    "title": "Dataframe anatomy",
+    "academyIds": [
+      "python"
+    ],
+    "steps": [
+      "Columns describe attributes",
+      "Rows describe observations",
+      "A Boolean condition marks matching rows",
+      "The filter returns a new dataframe"
+    ]
+  },
+  {
+    "id": "join-visual",
+    "title": "Join matching",
+    "academyIds": [
+      "sql"
+    ],
+    "steps": [
+      "Start with one row on the left",
+      "Find matching keys on the right",
+      "Combine matching columns",
+      "Check whether rows multiplied unexpectedly"
+    ]
+  },
+  {
+    "id": "dom-visual",
+    "title": "DOM event path",
+    "academyIds": [
+      "web"
+    ],
+    "steps": [
+      "The browser creates a DOM tree",
+      "The user interacts with an element",
+      "The event travels through the tree",
+      "A handler updates state or the interface"
+    ]
+  }
+]

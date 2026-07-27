@@ -1,0 +1,29 @@
+{
+  "version": "51.0",
+  "partnerProduct": {
+    "id": "applypilotpro",
+    "name": "ApplyPilotPro",
+    "baseUrl": "https://applypilotpro.co.uk",
+    "description": "Turn CodeQuest evidence into targeted job applications."
+  },
+  "exportSchemaVersion": "1.0",
+  "defaultSections": [
+    "profile",
+    "targetRole",
+    "academyScores",
+    "credentials",
+    "capstones",
+    "missions",
+    "releases",
+    "peerReviews",
+    "technicalViva",
+    "cvBullets",
+    "skillGaps"
+  ],
+  "privacy": {
+    "requiresExplicitConsent": true,
+    "autoSendDisabled": true,
+    "sharedLoginDisabled": true,
+    "notes": "v51 exports a user-controlled file. It does not transmit data automatically."
+  }
+}

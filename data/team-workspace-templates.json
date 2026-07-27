@@ -1,0 +1,60 @@
+[
+  {
+    "id": "product-squad",
+    "title": "Product Engineering Squad",
+    "description": "Cross-functional team for shipping an end-to-end product increment.",
+    "roles": [
+      "Product Lead",
+      "Tech Lead",
+      "Frontend Engineer",
+      "Backend Engineer",
+      "Data Engineer",
+      "QA Engineer"
+    ],
+    "defaultColumns": [
+      "Backlog",
+      "Ready",
+      "In Progress",
+      "Review",
+      "Done"
+    ]
+  },
+  {
+    "id": "data-platform-team",
+    "title": "Data Platform Team",
+    "description": "Team structure for analytical products, pipelines and governance.",
+    "roles": [
+      "Data Product Manager",
+      "Analytics Engineer",
+      "Data Engineer",
+      "SQL Specialist",
+      "Quality Lead"
+    ],
+    "defaultColumns": [
+      "Discovery",
+      "Design",
+      "Build",
+      "Validate",
+      "Release"
+    ]
+  },
+  {
+    "id": "incident-response-team",
+    "title": "Incident Response Team",
+    "description": "Fast-moving team for diagnosis, containment and recovery.",
+    "roles": [
+      "Incident Commander",
+      "Operations Lead",
+      "Application Engineer",
+      "Database Engineer",
+      "Communications Lead"
+    ],
+    "defaultColumns": [
+      "Investigate",
+      "Contain",
+      "Repair",
+      "Verify",
+      "Review"
+    ]
+  }
+]

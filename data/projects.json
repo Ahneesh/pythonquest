@@ -1,0 +1,462 @@
+[
+  {
+    "id": "sales-performance",
+    "title": "Sales Performance Analysis",
+    "level": "Foundation",
+    "duration": "60–90 min",
+    "skills": [
+      "pandas",
+      "cleaning",
+      "groupby",
+      "charts"
+    ],
+    "description": "Clean a sales dataset, calculate regional performance and write three business observations.",
+    "milestones": [
+      "Load and inspect the dataset",
+      "Remove duplicates and handle missing values",
+      "Calculate revenue by region and product",
+      "Create one clear chart",
+      "Write three evidence-based conclusions"
+    ],
+    "starterCode": "import pandas as pd\n\nsales = pd.DataFrame({\n    'order_id':[101,102,102,103,104,105],\n    'region':['North','South','South','West','North','South'],\n    'product':['A','B','B','A','C','A'],\n    'revenue':[250,300,300,None,450,380]\n})\n\n# Begin your analysis below\n",
+    "checks": [
+      {
+        "label": "Duplicates removed",
+        "test": "sales['order_id'].duplicated().sum() == 0"
+      },
+      {
+        "label": "Missing revenue handled",
+        "test": "sales['revenue'].isna().sum() == 0"
+      },
+      {
+        "label": "Regional summary created",
+        "test": "'regional_summary' in globals()"
+      },
+      {
+        "label": "At least three observations written",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "job-market-scraper",
+    "title": "Job Market Skills Analyser",
+    "level": "Intermediate",
+    "duration": "90–120 min",
+    "skills": [
+      "HTML",
+      "BeautifulSoup",
+      "pandas",
+      "text analysis"
+    ],
+    "description": "Extract simulated job cards, identify recurring skills and produce a concise market summary.",
+    "milestones": [
+      "Parse the supplied HTML",
+      "Extract title, location and skills",
+      "Create a DataFrame",
+      "Count recurring skills",
+      "Write a short market summary"
+    ],
+    "starterCode": "from bs4 import BeautifulSoup\nimport pandas as pd\n\nhtml = '''\n<div class=\"job\"><h2>Data Analyst</h2><span class=\"location\">London</span><p class=\"skills\">Python, SQL, Tableau</p></div>\n<div class=\"job\"><h2>Analytics Engineer</h2><span class=\"location\">Remote</span><p class=\"skills\">Python, SQL, dbt</p></div>\n<div class=\"job\"><h2>BI Analyst</h2><span class=\"location\">Manchester</span><p class=\"skills\">SQL, Power BI, Python</p></div>\n'''\n\n# Begin your extraction below\n",
+    "checks": [
+      {
+        "label": "Job cards extracted",
+        "test": "'jobs' in globals() and len(jobs) == 3"
+      },
+      {
+        "label": "Structured records created",
+        "test": "'records' in globals() and len(records) == 3"
+      },
+      {
+        "label": "DataFrame created",
+        "test": "'jobs_df' in globals() and len(jobs_df) == 3"
+      },
+      {
+        "label": "Skill counts created",
+        "test": "'skill_counts' in globals()"
+      }
+    ]
+  },
+  {
+    "id": "customer-orders-sql",
+    "title": "Customer Orders SQL Analysis",
+    "level": "Intermediate",
+    "duration": "75–100 min",
+    "skills": [
+      "SQLite",
+      "joins",
+      "aggregation",
+      "pandas"
+    ],
+    "description": "Combine customer and order data, rank customers and identify inactive accounts.",
+    "milestones": [
+      "Create the SQLite tables",
+      "Join customers and orders",
+      "Calculate total spend by customer",
+      "Identify customers without orders",
+      "Summarise the findings"
+    ],
+    "starterCode": "import sqlite3\nimport pandas as pd\n\nconn = sqlite3.connect(':memory:')\ncustomers = pd.DataFrame({'customer_id':[1,2,3,4], 'name':['Asha','Ben','Cara','Dev']})\norders = pd.DataFrame({'customer_id':[1,1,3], 'amount':[200,350,500]})\ncustomers.to_sql('customers', conn, index=False)\norders.to_sql('orders', conn, index=False)\n\n# Begin your SQL analysis below\n",
+    "checks": [
+      {
+        "label": "Joined result created",
+        "test": "'joined' in globals()"
+      },
+      {
+        "label": "Customer totals created",
+        "test": "'customer_totals' in globals()"
+      },
+      {
+        "label": "Inactive customers found",
+        "test": "'inactive_customers' in globals()"
+      },
+      {
+        "label": "At least one conclusion written",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "api-company-reporter",
+    "title": "API Company Data Reporter",
+    "level": "Intermediate",
+    "duration": "75–100 min",
+    "skills": [
+      "JSON",
+      "API handling",
+      "pandas",
+      "reporting"
+    ],
+    "description": "Process simulated company API responses, handle missing fields and produce a ranked business report.",
+    "milestones": [
+      "Parse the supplied JSON responses",
+      "Handle failed and incomplete responses",
+      "Create a clean company DataFrame",
+      "Rank companies by employee count",
+      "Write three observations"
+    ],
+    "starterCode": "import json\nimport pandas as pd\n\nresponses = [\n    '{\"status\": 200, \"company\": \"BioNova\", \"sector\": \"Life Sciences\", \"employees\": 420}',\n    '{\"status\": 200, \"company\": \"DataCore\", \"sector\": \"Technology\", \"employees\": 780}',\n    '{\"status\": 503, \"error\": \"Service unavailable\"}',\n    '{\"status\": 200, \"company\": \"EduSpark\", \"sector\": \"EdTech\"}'\n]\n\n# Begin your API-response processing below\n",
+    "checks": [
+      {
+        "label": "Responses parsed",
+        "test": "'parsed_responses' in globals() and len(parsed_responses) == 4"
+      },
+      {
+        "label": "Successful records isolated",
+        "test": "'successful' in globals() and len(successful) == 3"
+      },
+      {
+        "label": "Company DataFrame created",
+        "test": "'companies_df' in globals() and len(companies_df) == 3"
+      },
+      {
+        "label": "Missing employee values handled",
+        "test": "'companies_df' in globals() and companies_df['employees'].isna().sum() == 0"
+      },
+      {
+        "label": "Three observations written",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "analytics-capstone",
+    "title": "Python Analytics Capstone",
+    "level": "Advanced",
+    "duration": "3–5 hours",
+    "skills": [
+      "pandas",
+      "SQL",
+      "testing",
+      "visualisation",
+      "reporting"
+    ],
+    "description": "Build a complete analytics workflow that cleans data, queries it with SQL, validates results and produces an executive summary.",
+    "milestones": [
+      "Load and clean the supplied dataset",
+      "Create at least two data-quality checks",
+      "Load the clean data into SQLite",
+      "Write one aggregation query and one join",
+      "Create a chart",
+      "Write an executive summary",
+      "Add at least three automated assertions"
+    ],
+    "starterCode": "import sqlite3\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ncustomers = pd.DataFrame({\n    'customer_id':[1,2,3,4],\n    'name':['Asha','Ben','Cara','Dev'],\n    'region':['North','South','North','West']\n})\norders = pd.DataFrame({\n    'order_id':[101,102,102,103,104],\n    'customer_id':[1,2,2,3,4],\n    'revenue':[250,300,300,None,450]\n})\n\n# Build your end-to-end capstone below\n",
+    "checks": [
+      {
+        "label": "Duplicate orders removed",
+        "test": "orders['order_id'].duplicated().sum() == 0"
+      },
+      {
+        "label": "Missing revenue handled",
+        "test": "orders['revenue'].isna().sum() == 0"
+      },
+      {
+        "label": "SQLite connection created",
+        "test": "'conn' in globals()"
+      },
+      {
+        "label": "Regional summary created",
+        "test": "'regional_summary' in globals()"
+      },
+      {
+        "label": "Joined customer results created",
+        "test": "'customer_results' in globals()"
+      },
+      {
+        "label": "At least three assertions included",
+        "test": "__project_code__.count('assert ') >= 3"
+      },
+      {
+        "label": "Executive summary written",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "enterprise-fastapi-service",
+    "title": "Componentized Enterprise FastAPI Service",
+    "level": "Professional",
+    "duration": "12–18 hours",
+    "skills": [
+      "FastAPI",
+      "Pydantic",
+      "SQLAlchemy",
+      "RBAC",
+      "pytest",
+      "observability"
+    ],
+    "description": "Build a multi-layer workflow API with authentication, tenant-aware authorization, persistence, audit history and automated tests.",
+    "milestones": [
+      "Create domain, service, repository and API packages",
+      "Implement PostgreSQL persistence and Alembic migrations",
+      "Add authentication, RBAC and tenant policies",
+      "Add structured logging, request IDs and health endpoints",
+      "Build unit, integration and contract tests"
+    ],
+    "starterCode": "# Create the enterprise FastAPI project structure here\n",
+    "checks": [
+      {
+        "label": "Routers delegate business logic",
+        "manual": true
+      },
+      {
+        "label": "Repository abstraction exists",
+        "manual": true
+      },
+      {
+        "label": "Authorization tests pass",
+        "manual": true
+      },
+      {
+        "label": "Health and observability endpoints exist",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "cloud-native-fastapi-release",
+    "title": "Cloud-Native FastAPI Release",
+    "level": "Advanced",
+    "duration": "10–16 hours",
+    "skills": [
+      "Docker",
+      "CI/CD",
+      "Kubernetes",
+      "Helm",
+      "security scanning"
+    ],
+    "description": "Containerize the enterprise service and promote the same tested artifact through staging into Kubernetes.",
+    "milestones": [
+      "Create a non-root multi-stage image",
+      "Build CI quality and security gates",
+      "Deploy to a local Kubernetes cluster",
+      "Add probes, autoscaling and Helm values",
+      "Demonstrate rollback after a failed release"
+    ],
+    "starterCode": "# Add Dockerfile, pipeline and Kubernetes manifests\n",
+    "checks": [
+      {
+        "label": "Container runs as non-root",
+        "manual": true
+      },
+      {
+        "label": "Pipeline promotes an immutable image",
+        "manual": true
+      },
+      {
+        "label": "Readiness and liveness probes work",
+        "manual": true
+      },
+      {
+        "label": "Rollback procedure demonstrated",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "governed-rag-mcp-platform",
+    "title": "Governed RAG and MCP Enterprise Assistant",
+    "level": "Architect",
+    "duration": "20–30 hours",
+    "skills": [
+      "LLMs",
+      "RAG",
+      "MCP",
+      "FastAPI",
+      "evaluation",
+      "Kubernetes"
+    ],
+    "description": "Build a cited enterprise assistant that retrieves permissioned knowledge and invokes governed MCP tools.",
+    "milestones": [
+      "Implement document ingestion with lineage and permissions",
+      "Build hybrid retrieval, reranking and citations",
+      "Expose a validated MCP tool server",
+      "Add prompt-injection controls and approval gates",
+      "Evaluate retrieval, groundedness, cost and latency",
+      "Deploy the complete platform with CI/CD and Kubernetes"
+    ],
+    "starterCode": "# Start with architecture, evaluation dataset and trust boundaries\n",
+    "checks": [
+      {
+        "label": "Every answer includes verifiable citations",
+        "manual": true
+      },
+      {
+        "label": "Retrieval enforces document permissions",
+        "manual": true
+      },
+      {
+        "label": "MCP tools enforce authorization",
+        "manual": true
+      },
+      {
+        "label": "Evaluation report includes quality, cost and latency",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "high-throughput-java-engine",
+    "title": "High-Throughput Java Processing Engine",
+    "level": "Advanced",
+    "duration": "14–20 hours",
+    "skills": [
+      "Core Java",
+      "multithreading",
+      "JMH",
+      "JFR",
+      "GC tuning",
+      "TDD"
+    ],
+    "description": "Build a bounded concurrent processing engine and prove throughput, latency and allocation behaviour.",
+    "milestones": [
+      "Write behaviour tests first",
+      "Implement bounded executor and backpressure",
+      "Profile allocation and contention",
+      "Tune JVM and GC from evidence",
+      "Add benchmark regression thresholds"
+    ],
+    "starterCode": "// Start with a failing test for the processing contract\n",
+    "checks": [
+      {
+        "label": "TDD history visible in commits",
+        "manual": true
+      },
+      {
+        "label": "Backpressure is bounded",
+        "manual": true
+      },
+      {
+        "label": "JFR or profiling evidence included",
+        "manual": true
+      },
+      {
+        "label": "Benchmark regression gate exists",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "ignite-event-platform",
+    "title": "Apache Ignite Event and Position Platform",
+    "level": "Professional",
+    "duration": "18–26 hours",
+    "skills": [
+      "Apache Ignite",
+      "Kafka or Solace",
+      "Oracle",
+      "MongoDB",
+      "distributed SQL"
+    ],
+    "description": "Create a distributed in-memory event platform with persistence, affinity, messaging and query optimisation.",
+    "milestones": [
+      "Model Ignite caches and affinity",
+      "Build idempotent message consumers",
+      "Persist transactional data in Oracle",
+      "Store flexible operational data in MongoDB",
+      "Test rebalance and node failure"
+    ],
+    "starterCode": "// Define domain events and partitioning strategy first\n",
+    "checks": [
+      {
+        "label": "Affinity design documented",
+        "manual": true
+      },
+      {
+        "label": "Oracle plans analysed",
+        "manual": true
+      },
+      {
+        "label": "MongoDB indexes justified",
+        "manual": true
+      },
+      {
+        "label": "Failure recovery demonstrated",
+        "manual": true
+      }
+    ]
+  },
+  {
+    "id": "cloud-java-production-capstone",
+    "title": "Cloud Production Java Capstone",
+    "level": "Principal",
+    "duration": "24–36 hours",
+    "skills": [
+      "Java",
+      "Ignite",
+      "messaging",
+      "Linux",
+      "cloud",
+      "observability",
+      "TDD"
+    ],
+    "description": "Deploy and operate the complete high-throughput Java platform with automation, monitoring, scaling and recovery.",
+    "milestones": [
+      "Automate Linux deployment and diagnostics",
+      "Deploy to AWS, Azure or equivalent",
+      "Add logs, metrics, traces and SLOs",
+      "Implement autoscaling and capacity tests",
+      "Run incident, failover and rollback exercises"
+    ],
+    "starterCode": "# Begin with production readiness criteria and failure scenarios\n",
+    "checks": [
+      {
+        "label": "Cloud architecture documented",
+        "manual": true
+      },
+      {
+        "label": "SLOs and alerts defined",
+        "manual": true
+      },
+      {
+        "label": "Runbooks tested",
+        "manual": true
+      },
+      {
+        "label": "Recovery evidence captured",
+        "manual": true
+      }
+    ]
+  }
+]

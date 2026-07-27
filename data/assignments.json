@@ -1,0 +1,176 @@
+[
+  {
+    "id": "sales-analysis-brief",
+    "title": "Sales Analysis Brief",
+    "level": "Foundation",
+    "estimatedHours": 2,
+    "description": "Clean a retail dataset, answer three business questions and write a concise recommendation.",
+    "datasetId": "retail-orders",
+    "deliverables": [
+      "A reproducible Python analysis",
+      "A cleaned dataset summary",
+      "At least one chart",
+      "Three findings",
+      "One recommendation and one limitation"
+    ],
+    "starterCode": "import pandas as pd\nfrom io import StringIO\n\n# Load the Retail Orders dataset here\n# Then clean, analyse and summarise it.\n",
+    "rubric": [
+      {
+        "criterion": "Correctness",
+        "weight": 30,
+        "description": "Calculations and conclusions are supported by the data."
+      },
+      {
+        "criterion": "Data quality",
+        "weight": 20,
+        "description": "Duplicates, missing values and assumptions are handled clearly."
+      },
+      {
+        "criterion": "Code quality",
+        "weight": 20,
+        "description": "Code is readable, structured and reproducible."
+      },
+      {
+        "criterion": "Communication",
+        "weight": 20,
+        "description": "Findings are concise and understandable to a stakeholder."
+      },
+      {
+        "criterion": "Limitations",
+        "weight": 10,
+        "description": "At least one meaningful limitation is documented."
+      }
+    ]
+  },
+  {
+    "id": "api-automation-assignment",
+    "title": "API Response Automation",
+    "level": "Intermediate",
+    "estimatedHours": 3,
+    "description": "Process simulated API responses, handle failures and produce a clean company report.",
+    "datasetId": "",
+    "deliverables": [
+      "JSON parsing logic",
+      "Status-code handling",
+      "Missing-field defaults",
+      "A clean pandas DataFrame",
+      "At least three automated assertions"
+    ],
+    "starterCode": "import json\nimport pandas as pd\n\nresponses = [\n    '{\"status\": 200, \"company\": \"BioNova\", \"employees\": 420}',\n    '{\"status\": 503, \"error\": \"Service unavailable\"}',\n    '{\"status\": 200, \"company\": \"EduSpark\"}'\n]\n\n# Build a reliable processing workflow below\n",
+    "rubric": [
+      {
+        "criterion": "Correctness",
+        "weight": 30,
+        "description": "Successful and failed responses are handled correctly."
+      },
+      {
+        "criterion": "Reliability",
+        "weight": 25,
+        "description": "Missing fields and invalid payloads do not break the workflow."
+      },
+      {
+        "criterion": "Testing",
+        "weight": 20,
+        "description": "Important behaviour is protected by assertions or tests."
+      },
+      {
+        "criterion": "Code quality",
+        "weight": 15,
+        "description": "The solution uses clear functions and names."
+      },
+      {
+        "criterion": "Explanation",
+        "weight": 10,
+        "description": "The design choices are explained."
+      }
+    ]
+  },
+  {
+    "id": "etl-pipeline-assignment",
+    "title": "Validated ETL Pipeline",
+    "level": "Advanced",
+    "estimatedHours": 4,
+    "description": "Build a small ETL pipeline with validation, logging, incremental processing and tests.",
+    "datasetId": "trade-exceptions",
+    "deliverables": [
+      "Separate extract, transform and load stages",
+      "Schema and type validation",
+      "Logging of row counts and failures",
+      "Incremental checkpoint logic",
+      "Automated tests",
+      "Operational README"
+    ],
+    "starterCode": "import logging\nimport pandas as pd\n\nlogger = logging.getLogger('etl-assignment')\n\n# Define extract, validate, transform and load functions below\n",
+    "rubric": [
+      {
+        "criterion": "Pipeline design",
+        "weight": 25,
+        "description": "ETL stages are separated and reusable."
+      },
+      {
+        "criterion": "Data quality",
+        "weight": 20,
+        "description": "Bad records are identified and handled transparently."
+      },
+      {
+        "criterion": "Reliability",
+        "weight": 20,
+        "description": "Logging, errors and checkpoints are implemented safely."
+      },
+      {
+        "criterion": "Testing",
+        "weight": 20,
+        "description": "Core behaviour and edge cases are tested."
+      },
+      {
+        "criterion": "Documentation",
+        "weight": 15,
+        "description": "The README explains usage, assumptions and limitations."
+      }
+    ]
+  },
+  {
+    "id": "ml-evaluation-assignment",
+    "title": "Responsible Churn Model Review",
+    "level": "Advanced",
+    "estimatedHours": 4,
+    "description": "Train and evaluate a simple churn model, compare metrics and complete a responsible-AI review.",
+    "datasetId": "customer-churn",
+    "deliverables": [
+      "Feature and target definition",
+      "Train/test split",
+      "Classification metrics",
+      "Group comparison",
+      "Model limitations",
+      "Responsible-AI checklist"
+    ],
+    "starterCode": "import pandas as pd\nimport numpy as np\n\n# Load the Customer Churn dataset and build a simple evaluation below\n",
+    "rubric": [
+      {
+        "criterion": "Problem framing",
+        "weight": 15,
+        "description": "The target, features and intended use are appropriate."
+      },
+      {
+        "criterion": "Evaluation",
+        "weight": 25,
+        "description": "Metrics are calculated and interpreted correctly."
+      },
+      {
+        "criterion": "Validation",
+        "weight": 20,
+        "description": "The test approach avoids obvious leakage."
+      },
+      {
+        "criterion": "Responsible AI",
+        "weight": 25,
+        "description": "Group performance, limitations and oversight are addressed."
+      },
+      {
+        "criterion": "Communication",
+        "weight": 15,
+        "description": "The recommendation is proportionate to the evidence."
+      }
+    ]
+  }
+]

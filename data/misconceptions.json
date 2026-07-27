@@ -1,0 +1,50 @@
+[
+  {
+    "id": "assignment-vs-comparison",
+    "skill": "Python Foundations",
+    "title": "Assignment versus comparison",
+    "pattern": "Using = where == is required",
+    "explanation": "A single equals sign assigns a value. Two equals signs compare values.",
+    "remedy": "Practise conditions that compare numbers and strings."
+  },
+  {
+    "id": "off-by-one",
+    "skill": "Python Foundations",
+    "title": "Off-by-one indexing",
+    "pattern": "Using len(items) as a valid final index",
+    "explanation": "The final valid list index is len(items) - 1.",
+    "remedy": "Prefer direct iteration when an index is not required."
+  },
+  {
+    "id": "missing-vs-zero",
+    "skill": "Data Analytics",
+    "title": "Missing values are not automatically zero",
+    "pattern": "Replacing every missing numeric value with 0 without justification",
+    "explanation": "Zero may represent a real observed value, while missing means unknown.",
+    "remedy": "Document the business meaning before imputing."
+  },
+  {
+    "id": "where-vs-having",
+    "skill": "SQL",
+    "title": "WHERE versus HAVING",
+    "pattern": "Using WHERE to filter an aggregate result",
+    "explanation": "WHERE filters rows before aggregation. HAVING filters grouped results.",
+    "remedy": "Practise filtering SUM and COUNT results."
+  },
+  {
+    "id": "bare-except",
+    "skill": "Testing",
+    "title": "Catching every exception",
+    "pattern": "Using bare except",
+    "explanation": "Bare except can hide programming defects and system interruptions.",
+    "remedy": "Catch the narrowest expected exception."
+  },
+  {
+    "id": "test-data-leakage",
+    "skill": "Machine Learning",
+    "title": "Test-set leakage",
+    "pattern": "Using test results repeatedly to tune the model",
+    "explanation": "The test set should approximate unseen performance, not guide every tuning decision.",
+    "remedy": "Use train/validation/test separation."
+  }
+]

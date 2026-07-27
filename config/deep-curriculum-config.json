@@ -1,0 +1,22 @@
+{
+  "python": {
+    "defaultVisual": "value-flow",
+    "realWorld": "Used in automation, data analysis, APIs and production services.",
+    "independentPrompt": "Rebuild the solution from a blank workspace without copying the guided version."
+  },
+  "sql": {
+    "defaultVisual": "relation-flow",
+    "realWorld": "Used in reporting, analytics, data products, controls and database change.",
+    "independentPrompt": "Write the query from the business question and explain the result grain."
+  },
+  "web": {
+    "defaultVisual": "browser-flow",
+    "realWorld": "Used to build accessible interfaces, responsive products and interactive browser experiences.",
+    "independentPrompt": "Recreate the interface from the requirement using your own structure and styling."
+  },
+  "java": {
+    "defaultVisual": "object-flow",
+    "realWorld": "Used in enterprise services, backend platforms and large-scale application development.",
+    "independentPrompt": "Rebuild the behaviour with a clean class and method structure."
+  }
+}

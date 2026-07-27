@@ -1,0 +1,15 @@
+{
+  "version": "56.0",
+  "endpoint": "/api/engineering-coach",
+  "remoteEnabled": false,
+  "localFallback": true,
+  "hintLevels": [
+    "Failure category",
+    "Concept reminder",
+    "Relevant file",
+    "Approximate area",
+    "Pseudocode",
+    "Partial correction",
+    "Reference direction"
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "draft-sql-data-quality",
+    "type": "lesson",
+    "academyId": "sql",
+    "title": "Detecting Data Quality Problems with SQL",
+    "moduleTitle": "Analytical SQL",
+    "objective": "Identify duplicates, missing values and invalid ranges using SQL.",
+    "content": "Data quality checks turn assumptions into executable controls.",
+    "practicePrompt": "Write queries that identify duplicate customer IDs, NULL regions and negative revenue.",
+    "hint": "Start with GROUP BY and COUNT, then add WHERE conditions for invalid values.",
+    "reflectionPrompt": "Which check protects the most important business assumption?",
+    "estimatedMinutes": 25,
+    "xp": 140,
+    "status": "draft",
+    "createdAt": "2026-07-17T10:00:00"
+  }
+]

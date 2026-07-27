@@ -1,0 +1,149 @@
+[
+  {
+    "id": "python-order-summary",
+    "title": "Python Order Summary",
+    "academy": "python",
+    "language": "python",
+    "runner": "browser",
+    "difficulty": "Foundation",
+    "brief": "Implement a function that calculates order total and rejects invalid quantities.",
+    "entryFile": "solution.py",
+    "files": {
+      "solution.py": "def order_total(price: float, quantity: int) -> float:\n    \"\"\"Return the total for a positive quantity.\"\"\"\n    # TODO\n    return 0.0\n",
+      "tests_public.py": "from solution import order_total\nassert order_total(10.0,2)==20.0\nassert order_total(2.5,4)==10.0\n"
+    },
+    "publicTests": [
+      {
+        "name": "Integer total",
+        "expression": "order_total(10.0,2) == 20.0"
+      },
+      {
+        "name": "Decimal total",
+        "expression": "order_total(2.5,4) == 10.0"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "name": "Rejects zero quantity"
+      },
+      {
+        "name": "Rejects negative quantity"
+      }
+    ],
+    "qualityRules": [
+      "function-defined",
+      "type-hints",
+      "documentation",
+      "no-debug-print"
+    ]
+  },
+  {
+    "id": "javascript-cart-total",
+    "title": "JavaScript Cart Total",
+    "academy": "web",
+    "language": "javascript",
+    "runner": "browser",
+    "difficulty": "Foundation",
+    "brief": "Calculate the total value of a cart without mutating the input.",
+    "entryFile": "solution.js",
+    "files": {
+      "solution.js": "export function cartTotal(items) {\n  // TODO\n  return 0;\n}\n",
+      "index.html": "<!doctype html><html><body><script type=\"module\" src=\"solution.js\"></script></body></html>"
+    },
+    "publicTests": [
+      {
+        "name": "Adds one item"
+      },
+      {
+        "name": "Adds several items"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "name": "Empty cart is zero"
+      },
+      {
+        "name": "Input is not mutated"
+      }
+    ],
+    "qualityRules": [
+      "named-export",
+      "const-preferred",
+      "no-console-log"
+    ]
+  },
+  {
+    "id": "sql-customer-revenue",
+    "title": "SQL Customer Revenue",
+    "academy": "sql",
+    "language": "sql",
+    "runner": "browser",
+    "difficulty": "Intermediate",
+    "brief": "Return every customer and total revenue, including customers with no orders.",
+    "entryFile": "solution.sql",
+    "files": {
+      "solution.sql": "SELECT c.customer_name, 0 AS total_revenue\nFROM customers c;\n",
+      "README.md": "Return customer_name and total_revenue. Include zero-order customers."
+    },
+    "publicTests": [
+      {
+        "name": "Required columns",
+        "expected": [
+          "customer_name",
+          "total_revenue"
+        ]
+      },
+      {
+        "name": "Every customer",
+        "expected": 4
+      }
+    ],
+    "hiddenTests": [
+      {
+        "name": "Zero-order customer included"
+      },
+      {
+        "name": "Asha revenue is correct"
+      }
+    ],
+    "qualityRules": [
+      "explicit-columns",
+      "left-join",
+      "group-by"
+    ]
+  },
+  {
+    "id": "java-discount-service",
+    "title": "Java Discount Service",
+    "academy": "java",
+    "language": "java",
+    "runner": "remote",
+    "difficulty": "Intermediate",
+    "brief": "Implement a discount service with validation and tests.",
+    "entryFile": "src/main/java/DiscountService.java",
+    "files": {
+      "src/main/java/DiscountService.java": "public class DiscountService {\n    public double apply(double amount, double rate) {\n        // TODO\n        return 0.0;\n    }\n}\n",
+      "src/test/java/DiscountServiceTest.java": "public class DiscountServiceTest {\n public static void main(String[] args) {\n  DiscountService service=new DiscountService();\n  if(service.apply(100.0,0.10)!=90.0) throw new AssertionError(\"Expected 90.0\");\n }\n}\n",
+      "pom.xml": "<project><modelVersion>4.0.0</modelVersion><groupId>academy.codequest</groupId><artifactId>discount-service</artifactId><version>1.0.0</version></project>\n"
+    },
+    "publicTests": [
+      {
+        "name": "Applies ten-percent discount"
+      }
+    ],
+    "hiddenTests": [
+      {
+        "name": "Rejects negative amount"
+      },
+      {
+        "name": "Rejects invalid rate"
+      }
+    ],
+    "qualityRules": [
+      "class-defined",
+      "method-signature",
+      "validation",
+      "no-system-out"
+    ]
+  }
+]

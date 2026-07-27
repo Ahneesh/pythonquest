@@ -1,0 +1,292 @@
+[
+  {
+    "id": "java-foundations-exam",
+    "moduleId": "java-foundations",
+    "title": "Stage 1 \u00b7 Java Foundations Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which practice most improves Java maintainability?",
+        "options": [
+          "Clear types and small focused classes",
+          "One class for everything",
+          "Public fields everywhere",
+          "Ignoring compiler warnings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the benefit of programming to an interface?",
+        "options": [
+          "It reduces testability",
+          "It allows implementations to be replaced more easily",
+          "It disables inheritance",
+          "It removes type safety"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why catch specific exceptions?",
+        "options": [
+          "To preserve intent and handle known failures clearly",
+          "To hide all errors",
+          "To avoid logging",
+          "To prevent compilation"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional Java deliverable?",
+        "options": [
+          "Only source code",
+          "Code plus tests, documentation and operational evidence",
+          "A screenshot",
+          "An unexplained class"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use dependency injection?",
+        "options": [
+          "To hard-code global state",
+          "To separate construction from behaviour and improve testability",
+          "To avoid constructors",
+          "To remove interfaces"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "java-oop-exam",
+    "moduleId": "java-oop",
+    "title": "Stage 2 \u00b7 Object-Oriented Java Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which practice most improves Java maintainability?",
+        "options": [
+          "Clear types and small focused classes",
+          "One class for everything",
+          "Public fields everywhere",
+          "Ignoring compiler warnings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the benefit of programming to an interface?",
+        "options": [
+          "It reduces testability",
+          "It allows implementations to be replaced more easily",
+          "It disables inheritance",
+          "It removes type safety"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why catch specific exceptions?",
+        "options": [
+          "To preserve intent and handle known failures clearly",
+          "To hide all errors",
+          "To avoid logging",
+          "To prevent compilation"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional Java deliverable?",
+        "options": [
+          "Only source code",
+          "Code plus tests, documentation and operational evidence",
+          "A screenshot",
+          "An unexplained class"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use dependency injection?",
+        "options": [
+          "To hard-code global state",
+          "To separate construction from behaviour and improve testability",
+          "To avoid constructors",
+          "To remove interfaces"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "java-advanced-exam",
+    "moduleId": "java-advanced",
+    "title": "Stage 3 \u00b7 Advanced Java Assessment",
+    "passMark": 70,
+    "questions": [
+      {
+        "question": "Which practice most improves Java maintainability?",
+        "options": [
+          "Clear types and small focused classes",
+          "One class for everything",
+          "Public fields everywhere",
+          "Ignoring compiler warnings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the benefit of programming to an interface?",
+        "options": [
+          "It reduces testability",
+          "It allows implementations to be replaced more easily",
+          "It disables inheritance",
+          "It removes type safety"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why catch specific exceptions?",
+        "options": [
+          "To preserve intent and handle known failures clearly",
+          "To hide all errors",
+          "To avoid logging",
+          "To prevent compilation"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional Java deliverable?",
+        "options": [
+          "Only source code",
+          "Code plus tests, documentation and operational evidence",
+          "A screenshot",
+          "An unexplained class"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use dependency injection?",
+        "options": [
+          "To hard-code global state",
+          "To separate construction from behaviour and improve testability",
+          "To avoid constructors",
+          "To remove interfaces"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "java-engineering-exam",
+    "moduleId": "java-engineering",
+    "title": "Stage 4 \u00b7 Java Engineering Assessment",
+    "passMark": 75,
+    "questions": [
+      {
+        "question": "Which practice most improves Java maintainability?",
+        "options": [
+          "Clear types and small focused classes",
+          "One class for everything",
+          "Public fields everywhere",
+          "Ignoring compiler warnings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the benefit of programming to an interface?",
+        "options": [
+          "It reduces testability",
+          "It allows implementations to be replaced more easily",
+          "It disables inheritance",
+          "It removes type safety"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why catch specific exceptions?",
+        "options": [
+          "To preserve intent and handle known failures clearly",
+          "To hide all errors",
+          "To avoid logging",
+          "To prevent compilation"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional Java deliverable?",
+        "options": [
+          "Only source code",
+          "Code plus tests, documentation and operational evidence",
+          "A screenshot",
+          "An unexplained class"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use dependency injection?",
+        "options": [
+          "To hard-code global state",
+          "To separate construction from behaviour and improve testability",
+          "To avoid constructors",
+          "To remove interfaces"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "java-enterprise-exam",
+    "moduleId": "java-enterprise",
+    "title": "Stage 5 \u00b7 Enterprise Java Assessment",
+    "passMark": 75,
+    "questions": [
+      {
+        "question": "Which practice most improves Java maintainability?",
+        "options": [
+          "Clear types and small focused classes",
+          "One class for everything",
+          "Public fields everywhere",
+          "Ignoring compiler warnings"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is the benefit of programming to an interface?",
+        "options": [
+          "It reduces testability",
+          "It allows implementations to be replaced more easily",
+          "It disables inheritance",
+          "It removes type safety"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why catch specific exceptions?",
+        "options": [
+          "To preserve intent and handle known failures clearly",
+          "To hide all errors",
+          "To avoid logging",
+          "To prevent compilation"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is a professional Java deliverable?",
+        "options": [
+          "Only source code",
+          "Code plus tests, documentation and operational evidence",
+          "A screenshot",
+          "An unexplained class"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why use dependency injection?",
+        "options": [
+          "To hard-code global state",
+          "To separate construction from behaviour and improve testability",
+          "To avoid constructors",
+          "To remove interfaces"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+]

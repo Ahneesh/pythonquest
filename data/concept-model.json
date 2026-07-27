@@ -1,0 +1,169 @@
+[
+  {
+    "id": "variables",
+    "title": "Variables and assignment",
+    "keywords": [
+      "variable",
+      "assignment",
+      "name binding"
+    ],
+    "lessons": [
+      "variables-data-types"
+    ]
+  },
+  {
+    "id": "types",
+    "title": "Data types and conversion",
+    "keywords": [
+      "int",
+      "float",
+      "str",
+      "bool",
+      "conversion"
+    ],
+    "lessons": [
+      "variables-data-types"
+    ]
+  },
+  {
+    "id": "conditionals",
+    "title": "Conditionals",
+    "keywords": [
+      "if",
+      "elif",
+      "else",
+      "boolean"
+    ],
+    "lessons": [
+      "control-flow"
+    ]
+  },
+  {
+    "id": "loops",
+    "title": "Loops and iteration",
+    "keywords": [
+      "for",
+      "while",
+      "range",
+      "iteration"
+    ],
+    "lessons": [
+      "control-flow"
+    ]
+  },
+  {
+    "id": "functions",
+    "title": "Functions and return values",
+    "keywords": [
+      "def",
+      "return",
+      "parameter",
+      "argument"
+    ],
+    "lessons": [
+      "functions"
+    ]
+  },
+  {
+    "id": "collections",
+    "title": "Lists and dictionaries",
+    "keywords": [
+      "list",
+      "dictionary",
+      "index",
+      "key"
+    ],
+    "lessons": [
+      "variables-data-types",
+      "control-flow"
+    ]
+  },
+  {
+    "id": "errors",
+    "title": "Errors and exceptions",
+    "keywords": [
+      "exception",
+      "traceback",
+      "try",
+      "except"
+    ],
+    "lessons": [
+      "debugging",
+      "testing-basics"
+    ]
+  },
+  {
+    "id": "dataframes",
+    "title": "DataFrame operations",
+    "keywords": [
+      "pandas",
+      "DataFrame",
+      "filter",
+      "groupby"
+    ],
+    "lessons": [
+      "dataframes",
+      "data-cleaning",
+      "data-grouping"
+    ]
+  },
+  {
+    "id": "sql",
+    "title": "SQL reasoning",
+    "keywords": [
+      "SELECT",
+      "JOIN",
+      "GROUP BY",
+      "WHERE"
+    ],
+    "lessons": [
+      "sql-select",
+      "sql-joins",
+      "sql-aggregation"
+    ]
+  },
+  {
+    "id": "apis",
+    "title": "API requests and responses",
+    "keywords": [
+      "HTTP",
+      "JSON",
+      "request",
+      "response"
+    ],
+    "lessons": [
+      "api-requests",
+      "rest-fundamentals",
+      "json-validation"
+    ]
+  },
+  {
+    "id": "testing",
+    "title": "Testing and edge cases",
+    "keywords": [
+      "assert",
+      "pytest",
+      "test",
+      "edge case"
+    ],
+    "lessons": [
+      "testing-basics",
+      "debugging"
+    ]
+  },
+  {
+    "id": "ml",
+    "title": "Machine-learning evaluation",
+    "keywords": [
+      "train",
+      "test",
+      "precision",
+      "recall"
+    ],
+    "lessons": [
+      "ml-frame-problem",
+      "ml-train-test",
+      "ml-classification"
+    ]
+  }
+]

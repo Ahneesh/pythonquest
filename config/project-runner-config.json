@@ -1,0 +1,20 @@
+{
+  "version": "55.0",
+  "python": {
+    "engine": "Pyodide",
+    "supported": true
+  },
+  "sql": {
+    "engine": "SQLite",
+    "supported": true
+  },
+  "web": {
+    "engine": "Sandboxed iframe",
+    "supported": true
+  },
+  "java": {
+    "engine": "Structural simulation",
+    "supported": false,
+    "notes": "Real JVM compilation requires a secured server-side runner."
+  }
+}

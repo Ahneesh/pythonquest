@@ -1,0 +1,55 @@
+{
+  "keywords": {
+    "python": [
+      "python",
+      "fastapi",
+      "flask",
+      "django",
+      "pytest",
+      "pandas",
+      "automation"
+    ],
+    "sql": [
+      "sql",
+      "database",
+      "postgresql",
+      "mysql",
+      "query",
+      "data quality",
+      "analytics"
+    ],
+    "web": [
+      "javascript",
+      "html",
+      "css",
+      "frontend",
+      "react",
+      "browser",
+      "accessibility"
+    ],
+    "java": [
+      "java",
+      "spring",
+      "spring boot",
+      "junit",
+      "maven",
+      "gradle",
+      "microservices"
+    ],
+    "delivery": [
+      "agile",
+      "testing",
+      "ci/cd",
+      "devops",
+      "production",
+      "incident",
+      "stakeholder"
+    ]
+  },
+  "levels": [
+    "foundation",
+    "developing",
+    "strong",
+    "evidence-backed"
+  ]
+}

@@ -1,0 +1,240 @@
+[
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "description": "Analyse business data, query SQL, visualise results and communicate findings.",
+    "skills": [
+      "Python Foundations",
+      "Data Analytics",
+      "SQL",
+      "Testing"
+    ],
+    "recommendedLessons": [
+      "clean-data",
+      "groupby-analysis",
+      "charts",
+      "sql-select",
+      "sql-grouping",
+      "sql-joins",
+      "assertions",
+      "unit-tests"
+    ],
+    "recommendedProjects": [
+      "sales-performance",
+      "customer-orders-sql",
+      "analytics-capstone"
+    ],
+    "evidence": [
+      "Clean and validate messy datasets",
+      "Write SQL aggregations and joins",
+      "Build charts and business summaries",
+      "Explain assumptions and limitations"
+    ]
+  },
+  {
+    "id": "automation-specialist",
+    "title": "Python Automation Specialist",
+    "description": "Automate repetitive work with files, JSON, APIs and reliable Python scripts.",
+    "skills": [
+      "Python Foundations",
+      "Automation",
+      "Testing",
+      "Advanced Python"
+    ],
+    "recommendedLessons": [
+      "json-data",
+      "api-responses",
+      "file-automation",
+      "exceptions",
+      "debugging-workflow",
+      "context-managers",
+      "type-hints"
+    ],
+    "recommendedProjects": [
+      "api-company-reporter"
+    ],
+    "evidence": [
+      "Parse JSON and handle incomplete responses",
+      "Automate repetitive file workflows",
+      "Use exceptions and logging responsibly",
+      "Write reusable, testable functions"
+    ]
+  },
+  {
+    "id": "data-engineer",
+    "title": "Junior Data Engineer",
+    "description": "Build validated ETL workflows with SQL, logging and incremental processing.",
+    "skills": [
+      "SQL",
+      "Data Engineering",
+      "Testing",
+      "Advanced Python"
+    ],
+    "recommendedLessons": [
+      "sql-select",
+      "sql-grouping",
+      "sql-joins",
+      "etl-pipelines",
+      "schema-validation",
+      "logging-observability",
+      "incremental-processing",
+      "unit-tests",
+      "exceptions",
+      "generators"
+    ],
+    "recommendedProjects": [
+      "customer-orders-sql",
+      "analytics-capstone"
+    ],
+    "evidence": [
+      "Separate extract, transform and load stages",
+      "Validate schemas and data quality",
+      "Use checkpoints for incremental processing",
+      "Add logging, tests and error handling"
+    ]
+  },
+  {
+    "id": "web-data-researcher",
+    "title": "Web Data Researcher",
+    "description": "Collect, structure and analyse public web data responsibly.",
+    "skills": [
+      "Web Scraping",
+      "Data Analytics",
+      "Automation",
+      "Testing"
+    ],
+    "recommendedLessons": [
+      "html-basics",
+      "beautiful-soup",
+      "scrape-tables",
+      "clean-data",
+      "groupby-analysis",
+      "json-data",
+      "exceptions"
+    ],
+    "recommendedProjects": [
+      "job-market-scraper",
+      "sales-performance"
+    ],
+    "evidence": [
+      "Extract structured fields from HTML",
+      "Turn web content into clean tabular data",
+      "Handle missing elements and parsing errors",
+      "Summarise recurring patterns"
+    ]
+  },
+  {
+    "id": "enterprise-python-ai-engineer",
+    "title": "Enterprise Python & AI Engineer",
+    "description": "Build secure componentized backend systems and governed LLM, RAG and MCP platforms.",
+    "skills": [
+      "Professional Python",
+      "FastAPI",
+      "Testing",
+      "Docker",
+      "CI/CD",
+      "Kubernetes",
+      "LLM engineering",
+      "RAG",
+      "MCP"
+    ],
+    "recommendedLessons": [
+      "python-project-architecture",
+      "typing-pydantic-contracts",
+      "pytest-quality-engineering",
+      "async-observability",
+      "fastapi-component-boundaries",
+      "fastapi-security-rbac",
+      "fastapi-persistence-events",
+      "fastapi-resilience-observability",
+      "docker-production-images",
+      "cicd-quality-gates",
+      "supply-chain-security",
+      "release-strategies",
+      "k8s-core-workloads",
+      "k8s-health-scaling",
+      "helm-environments",
+      "k8s-observability-incidents",
+      "llm-production-patterns",
+      "rag-ingestion-retrieval",
+      "rag-citations-evaluation",
+      "llm-security-guardrails",
+      "mcp-server-fundamentals",
+      "mcp-clients-orchestration",
+      "enterprise-ai-platform",
+      "enterprise-ai-capstone-design"
+    ],
+    "recommendedProjects": [
+      "enterprise-fastapi-service",
+      "cloud-native-fastapi-release",
+      "governed-rag-mcp-platform"
+    ],
+    "evidence": [
+      "Design componentized Python and FastAPI services",
+      "Build automated test and release pipelines",
+      "Operate applications on Kubernetes",
+      "Implement cited and evaluated RAG",
+      "Build secure MCP servers and clients",
+      "Explain architecture, controls and operational trade-offs"
+    ]
+  },
+  {
+    "id": "high-performance-java-engineer",
+    "title": "High-Performance Java & Distributed Systems Engineer",
+    "description": "Build and tune production Java platforms for high load, low latency and distributed resilience.",
+    "skills": [
+      "Core Java",
+      "multithreading",
+      "JVM tuning",
+      "Apache Ignite",
+      "MongoDB",
+      "Oracle SQL",
+      "Kafka",
+      "Solace",
+      "Linux",
+      "cloud",
+      "TDD"
+    ],
+    "recommendedLessons": [
+      "java-memory-model",
+      "java-locks-contention",
+      "java-executors-backpressure",
+      "java-performance-patterns",
+      "jvm-memory-layout",
+      "jvm-profiling",
+      "gc-tuning",
+      "jvm-benchmarking",
+      "distributed-systems-foundations",
+      "in-memory-computing",
+      "apache-ignite-core",
+      "apache-ignite-production",
+      "mongodb-data-modeling",
+      "mongodb-indexing",
+      "oracle-sql-optimisation",
+      "oracle-plan-stability",
+      "kafka-solace-messaging",
+      "linux-production-operations",
+      "cloud-deployment",
+      "cloud-operability",
+      "java-tdd-red-green-refactor",
+      "java-tdd-concurrency-integration",
+      "java-resilience-capstone",
+      "java-architecture-viva"
+    ],
+    "recommendedProjects": [
+      "high-throughput-java-engine",
+      "ignite-event-platform",
+      "cloud-java-production-capstone"
+    ],
+    "evidence": [
+      "Concurrency design",
+      "GC and memory profile",
+      "Ignite topology",
+      "MongoDB index analysis",
+      "Oracle execution plans",
+      "Messaging resilience",
+      "Cloud runbook",
+      "TDD history"
+    ]
+  }
+]

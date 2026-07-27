@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sub-001",
+    "assignmentId": "assignment-sql-foundations",
+    "learnerId": "learner-001",
+    "submittedAt": "2026-07-26T14:20:00",
+    "status": "submitted",
+    "score": 88,
+    "feedback": "",
+    "flags": []
+  },
+  {
+    "id": "sub-002",
+    "assignmentId": "assignment-sql-foundations",
+    "learnerId": "learner-002",
+    "submittedAt": "2026-07-27T10:15:00",
+    "status": "reviewed",
+    "score": 92,
+    "feedback": "Strong join logic and clear explanation.",
+    "flags": []
+  },
+  {
+    "id": "sub-003",
+    "assignmentId": "assignment-sql-foundations",
+    "learnerId": "learner-003",
+    "submittedAt": "2026-07-28T16:40:00",
+    "status": "submitted",
+    "score": 76,
+    "feedback": "",
+    "flags": [
+      "late-risk"
+    ]
+  },
+  {
+    "id": "sub-004",
+    "assignmentId": "assignment-sql-foundations",
+    "learnerId": "learner-004",
+    "submittedAt": null,
+    "status": "missing",
+    "score": 0,
+    "feedback": "",
+    "flags": [
+      "missing",
+      "intervention"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "baseline",
+    "title": "Establish baseline",
+    "description": "Complete diagnostics and select a target role."
+  },
+  {
+    "id": "foundation",
+    "title": "Build foundations",
+    "description": "Complete the core lessons required by the role."
+  },
+  {
+    "id": "evidence",
+    "title": "Create evidence",
+    "description": "Complete role-aligned projects and coding labs."
+  },
+  {
+    "id": "defence",
+    "title": "Defend your work",
+    "description": "Complete technical viva and peer review."
+  },
+  {
+    "id": "mission",
+    "title": "Complete workplace mission",
+    "description": "Demonstrate judgement under realistic pressure."
+  },
+  {
+    "id": "application",
+    "title": "Prepare application pack",
+    "description": "Generate CV evidence, interview plan and talent profile."
+  }
+]

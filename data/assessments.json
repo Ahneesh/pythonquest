@@ -1,0 +1,134 @@
+[
+  {
+    "skill": "Python Foundations",
+    "question": "What does a Python function return when no return statement is used?",
+    "options": [
+      "0",
+      "None",
+      "False",
+      "An empty string"
+    ],
+    "answer": 1
+  },
+  {
+    "skill": "Python Foundations",
+    "question": "Which collection stores key-value pairs?",
+    "options": [
+      "list",
+      "tuple",
+      "dict",
+      "set only"
+    ],
+    "answer": 2
+  },
+  {
+    "skill": "Data Analytics",
+    "question": "Which pandas method combines rows sharing a category?",
+    "options": [
+      "groupby",
+      "head",
+      "astype",
+      "rename"
+    ],
+    "answer": 0
+  },
+  {
+    "skill": "Data Analytics",
+    "question": "What does a left merge preserve?",
+    "options": [
+      "Only matched rows",
+      "All rows from the left DataFrame",
+      "Only duplicate rows",
+      "No columns"
+    ],
+    "answer": 1
+  },
+  {
+    "skill": "Web Scraping",
+    "question": "Which CSS selector targets a class named card?",
+    "options": [
+      "#card",
+      ".card",
+      "@card",
+      "card#"
+    ],
+    "answer": 1
+  },
+  {
+    "skill": "SQL",
+    "question": "Which clause filters aggregated groups?",
+    "options": [
+      "WHERE only",
+      "HAVING",
+      "SELECT",
+      "LIMIT"
+    ],
+    "answer": 1
+  },
+  {
+    "skill": "Advanced Python",
+    "question": "What keyword produces values lazily from a generator?",
+    "options": [
+      "return",
+      "yield",
+      "async",
+      "pass"
+    ],
+    "answer": 1
+  },
+  {
+    "skill": "Testing",
+    "question": "What should a unit test normally focus on?",
+    "options": [
+      "One behaviour",
+      "The entire system",
+      "Only styling",
+      "Deployment configuration"
+    ],
+    "answer": 0
+  },
+  {
+    "skill": "Automation",
+    "question": "Which dictionary method safely returns a default for a missing key?",
+    "options": [
+      "fetch",
+      "find",
+      "get",
+      "select"
+    ],
+    "answer": 2
+  },
+  {
+    "skill": "Data Engineering",
+    "question": "What does ETL stand for?",
+    "options": [
+      "Extract Transform Load",
+      "Evaluate Test Launch",
+      "Export Type Link",
+      "Execute Track Log"
+    ],
+    "answer": 0
+  },
+  {
+    "skill": "Data Engineering",
+    "question": "What is a checkpoint used for in incremental processing?",
+    "options": [
+      "To identify already processed data",
+      "To format charts",
+      "To rename every column",
+      "To install SQLite"
+    ],
+    "answer": 0
+  },
+  {
+    "skill": "Testing",
+    "question": "Why catch a specific exception instead of using bare except?",
+    "options": [
+      "To avoid hiding unrelated errors",
+      "To make code slower",
+      "To disable logs",
+      "To remove tracebacks permanently"
+    ],
+    "answer": 0
+  }
+]

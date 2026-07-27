@@ -1,0 +1,388 @@
+[
+  {
+    "id": "py-q1",
+    "certificationId": "python-associate",
+    "domainId": "foundations",
+    "type": "mcq",
+    "prompt": "Which statement best describes a Python variable?",
+    "options": [
+      "A named reference to an object",
+      "A fixed memory box with one type",
+      "A compiled class field",
+      "A database column"
+    ],
+    "answer": 0,
+    "explanation": "Python names reference objects; they are not fixed typed boxes."
+  },
+  {
+    "id": "py-q2",
+    "certificationId": "python-associate",
+    "domainId": "structures",
+    "type": "mcq",
+    "prompt": "Which collection is most appropriate for unique unordered values?",
+    "options": [
+      "list",
+      "tuple",
+      "set",
+      "string"
+    ],
+    "answer": 2,
+    "explanation": "A set stores unique values and does not preserve duplicates."
+  },
+  {
+    "id": "py-q3",
+    "certificationId": "python-associate",
+    "domainId": "functions",
+    "type": "mcq",
+    "prompt": "What is the main benefit of decomposing logic into small functions?",
+    "options": [
+      "It always makes code faster",
+      "It improves testability and clarity",
+      "It removes all exceptions",
+      "It avoids imports"
+    ],
+    "answer": 1,
+    "explanation": "Small focused functions are easier to test, understand and reuse."
+  },
+  {
+    "id": "py-q4",
+    "certificationId": "python-associate",
+    "domainId": "testing",
+    "type": "mcq",
+    "prompt": "What should a unit test ideally verify?",
+    "options": [
+      "One focused behaviour",
+      "The whole system at once",
+      "Only printed output",
+      "Only syntax"
+    ],
+    "answer": 0,
+    "explanation": "A unit test should verify a small, focused behaviour."
+  },
+  {
+    "id": "py-q5",
+    "certificationId": "python-associate",
+    "domainId": "application",
+    "type": "written",
+    "prompt": "Explain how you would validate and persist a new expense in the Expense Tracker capstone.",
+    "keywords": [
+      "validate",
+      "amount",
+      "json",
+      "save"
+    ],
+    "explanation": "A strong answer separates validation, domain update and persistence."
+  },
+  {
+    "id": "sql-q1",
+    "certificationId": "sql-associate",
+    "domainId": "querying",
+    "type": "mcq",
+    "prompt": "Which clause filters rows before aggregation?",
+    "options": [
+      "HAVING",
+      "WHERE",
+      "ORDER BY",
+      "WINDOW"
+    ],
+    "answer": 1,
+    "explanation": "WHERE filters input rows before GROUP BY."
+  },
+  {
+    "id": "sql-q2",
+    "certificationId": "sql-associate",
+    "domainId": "aggregation",
+    "type": "mcq",
+    "prompt": "Why is data grain important before aggregation?",
+    "options": [
+      "It determines row meaning and avoids double counting",
+      "It only affects formatting",
+      "It chooses database colour",
+      "It prevents indexes"
+    ],
+    "answer": 0,
+    "explanation": "Understanding row grain prevents invalid aggregation and duplication."
+  },
+  {
+    "id": "sql-q3",
+    "certificationId": "sql-associate",
+    "domainId": "joins",
+    "type": "mcq",
+    "prompt": "What can cause an unexpected increase in rows after a join?",
+    "options": [
+      "Many-to-many cardinality",
+      "An ORDER BY",
+      "A column alias",
+      "A comment"
+    ],
+    "answer": 0,
+    "explanation": "Many-to-many joins can multiply rows."
+  },
+  {
+    "id": "sql-q4",
+    "certificationId": "sql-associate",
+    "domainId": "windows",
+    "type": "mcq",
+    "prompt": "Which function compares a value with the previous row in an ordered partition?",
+    "options": [
+      "COUNT",
+      "LAG",
+      "ROUND",
+      "COALESCE"
+    ],
+    "answer": 1,
+    "explanation": "LAG returns a value from a preceding row."
+  },
+  {
+    "id": "sql-q5",
+    "certificationId": "sql-associate",
+    "domainId": "quality",
+    "type": "written",
+    "prompt": "Describe two controls you would run before publishing an executive revenue report.",
+    "keywords": [
+      "reconcile",
+      "row",
+      "total",
+      "grain"
+    ],
+    "explanation": "Strong controls include reconciliation, row-count checks and grain validation."
+  },
+  {
+    "id": "web-q1",
+    "certificationId": "web-associate",
+    "domainId": "html",
+    "type": "mcq",
+    "prompt": "Why use semantic HTML?",
+    "options": [
+      "It improves meaning and accessibility",
+      "It guarantees faster JavaScript",
+      "It hides CSS",
+      "It removes forms"
+    ],
+    "answer": 0,
+    "explanation": "Semantic elements convey structure to users, browsers and assistive technology."
+  },
+  {
+    "id": "web-q2",
+    "certificationId": "web-associate",
+    "domainId": "css",
+    "type": "mcq",
+    "prompt": "Which approach best supports responsive layout?",
+    "options": [
+      "Fixed pixel widths everywhere",
+      "Flexible grids and relative sizing",
+      "Only tables",
+      "Inline styles only"
+    ],
+    "answer": 1,
+    "explanation": "Flexible grids and relative units adapt across screen sizes."
+  },
+  {
+    "id": "web-q3",
+    "certificationId": "web-associate",
+    "domainId": "javascript",
+    "type": "mcq",
+    "prompt": "What is event delegation?",
+    "options": [
+      "Handling child interactions from a common ancestor",
+      "Running events on a server",
+      "Removing all listeners",
+      "Using only inline onclick"
+    ],
+    "answer": 0,
+    "explanation": "Delegation uses event bubbling to handle many child events efficiently."
+  },
+  {
+    "id": "web-q4",
+    "certificationId": "web-associate",
+    "domainId": "browser",
+    "type": "mcq",
+    "prompt": "What should a loading state communicate?",
+    "options": [
+      "That work is in progress",
+      "That the app failed",
+      "That data is permanent",
+      "That JavaScript is disabled"
+    ],
+    "answer": 0,
+    "explanation": "A loading state gives immediate feedback while asynchronous work is running."
+  },
+  {
+    "id": "web-q5",
+    "certificationId": "web-associate",
+    "domainId": "quality",
+    "type": "written",
+    "prompt": "Explain how you would make the Calculator capstone more accessible.",
+    "keywords": [
+      "keyboard",
+      "focus",
+      "label",
+      "aria"
+    ],
+    "explanation": "A strong answer covers keyboard access, focus visibility and meaningful labels."
+  },
+  {
+    "id": "java-q1",
+    "certificationId": "java-associate",
+    "domainId": "core",
+    "type": "mcq",
+    "prompt": "Which statement about Java fields is correct?",
+    "options": [
+      "They can be encapsulated with private access",
+      "They must all be public",
+      "They cannot hold objects",
+      "They are SQL columns"
+    ],
+    "answer": 0,
+    "explanation": "Private fields support encapsulation."
+  },
+  {
+    "id": "java-q2",
+    "certificationId": "java-associate",
+    "domainId": "oop",
+    "type": "mcq",
+    "prompt": "Which principle keeps task completion logic inside the Task class?",
+    "options": [
+      "Encapsulation",
+      "Recursion",
+      "SQL normalization",
+      "CSS inheritance"
+    ],
+    "answer": 0,
+    "explanation": "Encapsulation keeps state and related behaviour together."
+  },
+  {
+    "id": "java-q3",
+    "certificationId": "java-associate",
+    "domainId": "collections",
+    "type": "mcq",
+    "prompt": "Which type represents an ordered collection that allows duplicates?",
+    "options": [
+      "List",
+      "Set",
+      "Map key",
+      "Exception"
+    ],
+    "answer": 0,
+    "explanation": "List is ordered and allows duplicate elements."
+  },
+  {
+    "id": "java-q4",
+    "certificationId": "java-associate",
+    "domainId": "testing",
+    "type": "mcq",
+    "prompt": "When is IllegalArgumentException appropriate?",
+    "options": [
+      "When a method argument violates its contract",
+      "Whenever compilation fails",
+      "For database joins",
+      "For CSS errors"
+    ],
+    "answer": 0,
+    "explanation": "It signals an invalid argument supplied to a method."
+  },
+  {
+    "id": "java-q5",
+    "certificationId": "java-associate",
+    "domainId": "backend",
+    "type": "written",
+    "prompt": "Explain why TaskService should own the collection while Task owns completion state.",
+    "keywords": [
+      "responsibility",
+      "encapsulation",
+      "service",
+      "state"
+    ],
+    "explanation": "A strong answer separates domain-object responsibility from collection orchestration."
+  },
+  {
+    "id": "fs-q1",
+    "certificationId": "full-stack-professional",
+    "domainId": "frontend",
+    "type": "mcq",
+    "prompt": "Which frontend behaviour is essential when an API request is pending?",
+    "options": [
+      "Loading feedback",
+      "A database migration",
+      "A private browser secret",
+      "A JVM build"
+    ],
+    "answer": 0,
+    "explanation": "Users need visible feedback during asynchronous work."
+  },
+  {
+    "id": "fs-q2",
+    "certificationId": "full-stack-professional",
+    "domainId": "backend",
+    "type": "mcq",
+    "prompt": "Why should an API operation be idempotent where practical?",
+    "options": [
+      "Repeated requests should not create unintended duplicate effects",
+      "It makes CSS responsive",
+      "It removes authentication",
+      "It replaces testing"
+    ],
+    "answer": 0,
+    "explanation": "Idempotency protects against duplicate effects during retries."
+  },
+  {
+    "id": "fs-q3",
+    "certificationId": "full-stack-professional",
+    "domainId": "database",
+    "type": "mcq",
+    "prompt": "What is the safest first step before changing a production schema?",
+    "options": [
+      "Create a reviewed migration and controls",
+      "Edit it manually without recording",
+      "Delete old data",
+      "Disable logs"
+    ],
+    "answer": 0,
+    "explanation": "Versioned reviewed migrations provide traceability and repeatability."
+  },
+  {
+    "id": "fs-q4",
+    "certificationId": "full-stack-professional",
+    "domainId": "testing",
+    "type": "mcq",
+    "prompt": "What does an end-to-end test primarily validate?",
+    "options": [
+      "A complete user flow across components",
+      "One pure function only",
+      "CSS colour values only",
+      "A single SQL alias"
+    ],
+    "answer": 0,
+    "explanation": "End-to-end tests validate integrated user journeys."
+  },
+  {
+    "id": "fs-q5",
+    "certificationId": "full-stack-professional",
+    "domainId": "production",
+    "type": "written",
+    "prompt": "Describe the evidence required before releasing a full-stack application.",
+    "keywords": [
+      "test",
+      "verify",
+      "rollback",
+      "secret",
+      "health"
+    ],
+    "explanation": "A strong answer includes testing, verification, secret handling and recovery."
+  },
+  {
+    "id": "fs-q6",
+    "certificationId": "full-stack-professional",
+    "domainId": "judgement",
+    "type": "written",
+    "prompt": "A production checkout starts creating duplicate orders. Explain your immediate and longer-term response.",
+    "keywords": [
+      "contain",
+      "idempot",
+      "diagnose",
+      "monitor",
+      "incident"
+    ],
+    "explanation": "A strong answer covers containment, diagnosis, idempotency and monitoring."
+  }
+]

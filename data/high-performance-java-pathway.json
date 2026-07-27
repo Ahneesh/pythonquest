@@ -1,0 +1,52 @@
+{
+  "id": "high-performance-java-distributed-systems",
+  "title": "High-Performance Java & Distributed Systems Engineer",
+  "academyId": "java",
+  "level": "Intermediate to principal engineer",
+  "estimatedDuration": "8–14 months",
+  "summary": "Build, tune, test and operate high-load Java systems across JVM, Ignite, Oracle, MongoDB, messaging, Linux and cloud platforms.",
+  "roleOutcomes": [
+    "Core Java Engineer",
+    "JVM Performance Engineer",
+    "Apache Ignite Developer",
+    "Distributed Systems Engineer",
+    "MongoDB Performance Engineer",
+    "Oracle SQL Performance Engineer",
+    "Messaging Platform Engineer",
+    "Cloud Java Engineer",
+    "Principal Java Architect"
+  ],
+  "stages": [
+    {
+      "order": 1,
+      "moduleId": "core-java-concurrency",
+      "credential": "Concurrent Java Engineer"
+    },
+    {
+      "order": 2,
+      "moduleId": "jvm-performance",
+      "credential": "JVM Performance Engineer"
+    },
+    {
+      "order": 3,
+      "moduleId": "distributed-ignite",
+      "credential": "Apache Ignite & Distributed Systems Engineer"
+    },
+    {
+      "order": 4,
+      "moduleId": "mongodb-oracle",
+      "credential": "Data Performance Engineer"
+    },
+    {
+      "order": 5,
+      "moduleId": "messaging-linux-cloud",
+      "credential": "Cloud Messaging Platform Engineer"
+    },
+    {
+      "order": 6,
+      "moduleId": "java-tdd-capstone",
+      "credential": "Principal Java & Distributed Systems Architect"
+    }
+  ],
+  "finalCapstone": "Build and operate a high-throughput event-driven Java platform using Apache Ignite, Kafka or Solace, Oracle, MongoDB, Linux automation, cloud deployment and test-first delivery."
+}

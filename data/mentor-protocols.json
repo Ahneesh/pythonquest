@@ -1,0 +1,44 @@
+{
+  "socratic": [
+    "Ask what the learner expects",
+    "Ask for evidence",
+    "Offer one hint",
+    "Ask learner to revise",
+    "Reveal only after three hints"
+  ],
+  "debug": [
+    "State the symptom",
+    "Separate facts from assumptions",
+    "Generate hypotheses",
+    "Choose smallest experiment",
+    "Record result"
+  ],
+  "review": [
+    "Restate intended behaviour",
+    "Identify strongest aspect",
+    "List high-impact issues",
+    "Suggest one refactor",
+    "Ask learner to defend trade-off"
+  ],
+  "plan": [
+    "Define outcome",
+    "Identify users",
+    "Break into milestones",
+    "Define acceptance criteria",
+    "List risks and unknowns"
+  ],
+  "viva": [
+    "Ask decision rationale",
+    "Challenge with alternative",
+    "Ask about failure mode",
+    "Ask how it would be tested",
+    "Score explanation"
+  ],
+  "interview": [
+    "Ask one question",
+    "Probe the answer",
+    "Request example",
+    "Challenge an assumption",
+    "Give evidence-based feedback"
+  ]
+}

@@ -1,0 +1,399 @@
+[
+  {
+    "id": "web-calculator",
+    "title": "Responsive Calculator",
+    "academyId": "web",
+    "level": "Foundation capstone",
+    "duration": "2\u20133 hours",
+    "summary": "Build a polished calculator with keyboard support, validation and an accessible interface.",
+    "skills": [
+      "Semantic HTML",
+      "CSS Grid",
+      "JavaScript events",
+      "State management",
+      "Accessibility"
+    ],
+    "brief": "Create a calculator that supports addition, subtraction, multiplication, division, decimals, clear, backspace and keyboard input.",
+    "requirements": [
+      "Display the current expression and result",
+      "Support mouse and keyboard controls",
+      "Prevent invalid repeated operators",
+      "Handle division by zero gracefully",
+      "Provide visible focus states and accessible labels",
+      "Work on mobile and desktop"
+    ],
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Calculator</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n  <main class=\"calculator\" aria-label=\"Calculator\">\n    <!-- Build the display and keypad here -->\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "styles.css": "* { box-sizing: border-box; }\nbody {\n  min-height: 100vh;\n  margin: 0;\n  display: grid;\n  place-items: center;\n  font-family: system-ui, sans-serif;\n}\n/* Build your responsive calculator styles here */",
+      "app.js": "// Calculator state\nlet expression = \"\";\n\n// 1. Select the display and buttons\n// 2. Handle button clicks\n// 3. Add keyboard support\n// 4. Validate and calculate safely\n"
+    },
+    "hints": [
+      "Represent the current calculation as a string and render it after every input.",
+      "Use event delegation on the keypad rather than one listener per button.",
+      "Keep display logic, input validation and calculation in separate functions.",
+      "Avoid raw eval in production code. For this constrained exercise, parse two operands and one operator."
+    ],
+    "solution": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Accessible Calculator</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n  <main class=\"calculator\" aria-label=\"Calculator\">\n    <div class=\"display\" aria-live=\"polite\">\n      <span id=\"expression\">0</span>\n      <strong id=\"result\">0</strong>\n    </div>\n    <div class=\"keypad\" id=\"keypad\">\n      <button data-action=\"clear\">AC</button><button data-action=\"backspace\">\u232b</button><button data-value=\"/\">\u00f7</button><button data-value=\"*\">\u00d7</button>\n      <button data-value=\"7\">7</button><button data-value=\"8\">8</button><button data-value=\"9\">9</button><button data-value=\"-\">\u2212</button>\n      <button data-value=\"4\">4</button><button data-value=\"5\">5</button><button data-value=\"6\">6</button><button data-value=\"+\">+</button>\n      <button data-value=\"1\">1</button><button data-value=\"2\">2</button><button data-value=\"3\">3</button><button class=\"equals\" data-action=\"calculate\">=</button>\n      <button class=\"zero\" data-value=\"0\">0</button><button data-value=\".\">.</button>\n    </div>\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "styles.css": "*{box-sizing:border-box}body{min-height:100vh;margin:0;display:grid;place-items:center;background:#eef1f7;font-family:system-ui,sans-serif}.calculator{width:min(360px,92vw);padding:18px;background:#172033;border-radius:24px;box-shadow:0 24px 60px #1e293b33}.display{min-height:110px;padding:18px;display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-end;color:white;overflow-wrap:anywhere}.display span{opacity:.7}.display strong{font-size:38px}.keypad{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.keypad button{min-height:58px;border:0;border-radius:14px;font-size:18px;font-weight:800;cursor:pointer}.keypad button:focus-visible{outline:4px solid #a99aff}.equals{grid-row:span 2;background:#765fec;color:white}.zero{grid-column:span 2}",
+      "app.js": "let expression=\"\";\nconst expressionEl=document.querySelector(\"#expression\");\nconst resultEl=document.querySelector(\"#result\");\nconst operators=[\"+\",\"-\",\"*\",\"/\"];\nfunction render(message=\"\"){expressionEl.textContent=expression||\"0\";resultEl.textContent=message||expression||\"0\"}\nfunction append(value){const last=expression.at(-1);if(operators.includes(value)&&operators.includes(last)){expression=expression.slice(0,-1)+value}else if(value===\".\"&&expression.split(/[+\\-*/]/).at(-1).includes(\".\")){return}else{expression+=value}render()}\nfunction calculate(){const match=expression.match(/^(-?\\d+(?:\\.\\d+)?)\\s*([+\\-*/])\\s*(-?\\d+(?:\\.\\d+)?)$/);if(!match){render(\"Complete one calculation\");return}const a=Number(match[1]),op=match[2],b=Number(match[3]);if(op===\"/\"&&b===0){render(\"Cannot divide by zero\");return}const result=op===\"+\"?a+b:op===\"-\"?a-b:op===\"*\"?a*b:a/b;expression=String(Number(result.toFixed(10)));render()}\ndocument.querySelector(\"#keypad\").addEventListener(\"click\",event=>{const button=event.target.closest(\"button\");if(!button)return;if(button.dataset.value)append(button.dataset.value);if(button.dataset.action===\"clear\"){expression=\"\";render()}if(button.dataset.action===\"backspace\"){expression=expression.slice(0,-1);render()}if(button.dataset.action===\"calculate\")calculate()});\nwindow.addEventListener(\"keydown\",event=>{if(/[0-9.+\\-*/]/.test(event.key))append(event.key);if(event.key===\"Enter\")calculate();if(event.key===\"Backspace\"){expression=expression.slice(0,-1);render()}if(event.key===\"Escape\"){expression=\"\";render()}});render();"
+    },
+    "checks": [
+      {
+        "id": "html-display",
+        "label": "Has an accessible result display",
+        "tokens": [
+          "aria-live",
+          "result"
+        ]
+      },
+      {
+        "id": "keypad",
+        "label": "Uses a keypad container",
+        "tokens": [
+          "keypad",
+          "button"
+        ]
+      },
+      {
+        "id": "keyboard",
+        "label": "Supports keyboard input",
+        "tokens": [
+          "keydown"
+        ]
+      },
+      {
+        "id": "zero",
+        "label": "Handles division by zero",
+        "tokens": [
+          "divide by zero"
+        ]
+      },
+      {
+        "id": "responsive",
+        "label": "Includes responsive sizing",
+        "tokens": [
+          "vw"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "web-weather-dashboard",
+    "title": "Weather Dashboard",
+    "academyId": "web",
+    "level": "Intermediate capstone",
+    "duration": "4\u20136 hours",
+    "summary": "Build a city weather dashboard with loading, empty and error states plus a recent-search history.",
+    "skills": [
+      "Fetch API",
+      "Async JavaScript",
+      "DOM rendering",
+      "Error handling",
+      "Local storage"
+    ],
+    "brief": "Create a weather application where users search for a city and receive current conditions plus a short forecast.",
+    "requirements": [
+      "Accept a city search",
+      "Show explicit loading and error states",
+      "Render current temperature, conditions and wind",
+      "Render at least three forecast cards",
+      "Store recent successful searches",
+      "Use a mock-data fallback so the learning project still works without an API"
+    ],
+    "files": {
+      "index.html": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Weather Dashboard</title><link rel=\"stylesheet\" href=\"styles.css\"></head>\n<body>\n  <main class=\"weather-app\">\n    <h1>Weather Dashboard</h1>\n    <!-- Add search, status, current weather and forecast sections -->\n  </main>\n  <script src=\"app.js\"></script>\n</body>\n</html>",
+      "styles.css": "*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,sans-serif;background:#eef4fb;color:#172033}.weather-app{width:min(980px,92vw);margin:50px auto}/* Add dashboard styles */",
+      "app.js": "const MOCK_WEATHER={\n  London:{temperature:19,condition:\"Partly cloudy\",wind:14,forecast:[18,20,17]},\n  Mumbai:{temperature:29,condition:\"Rain showers\",wind:18,forecast:[29,28,30]}\n};\n\n// Build search, loading, error and rendering functions.\n// Optional extension: replace the mock lookup with a server-side weather endpoint.\n"
+    },
+    "hints": [
+      "Build the UI state machine first: idle, loading, success and error.",
+      "Create one renderWeather(data) function rather than editing the DOM in several places.",
+      "Start with MOCK_WEATHER. Add a real endpoint only after the complete user flow works.",
+      "Store only successful city names in localStorage and cap history at five entries."
+    ],
+    "solution": {
+      "index.html": "<!doctype html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Weather Dashboard</title><link rel=\"stylesheet\" href=\"styles.css\"></head><body><main class=\"weather-app\"><header><div><span>FORECAST STUDIO</span><h1>Weather Dashboard</h1></div><form id=\"searchForm\"><label class=\"sr-only\" for=\"city\">City</label><input id=\"city\" placeholder=\"Try London or Mumbai\" required><button>Search</button></form></header><section id=\"status\" aria-live=\"polite\"></section><section id=\"current\" class=\"current hidden\"></section><section><h2>Three-day outlook</h2><div id=\"forecast\" class=\"forecast\"></div></section><section><h2>Recent searches</h2><div id=\"history\" class=\"history\"></div></section></main><script src=\"app.js\"></script></body></html>",
+      "styles.css": "*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,sans-serif;background:linear-gradient(135deg,#e8f2ff,#f4efff);color:#172033}.weather-app{width:min(980px,92vw);margin:50px auto}header{display:flex;justify-content:space-between;gap:20px;align-items:end}header span{font-size:12px;font-weight:900;color:#5e50dc}form{display:flex;gap:8px}input,button{padding:13px;border-radius:11px;border:1px solid #cfd7e6}button{background:#6554e8;color:white;font-weight:800}.current{margin:25px 0;padding:28px;background:white;border-radius:22px;display:flex;justify-content:space-between}.current strong{font-size:52px}.forecast{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.forecast article,.history button{padding:18px;background:white;border-radius:15px;border:0}.history{display:flex;gap:8px;flex-wrap:wrap}.hidden{display:none}.sr-only{position:absolute;left:-9999px}@media(max-width:700px){header{align-items:stretch;flex-direction:column}form{flex-direction:column}.forecast{grid-template-columns:1fr}}",
+      "app.js": "const MOCK_WEATHER={London:{temperature:19,condition:\"Partly cloudy\",wind:14,forecast:[18,20,17]},Mumbai:{temperature:29,condition:\"Rain showers\",wind:18,forecast:[29,28,30]},Edinburgh:{temperature:15,condition:\"Light rain\",wind:21,forecast:[14,16,15]}};const form=document.querySelector(\"#searchForm\"),statusEl=document.querySelector(\"#status\"),currentEl=document.querySelector(\"#current\"),forecastEl=document.querySelector(\"#forecast\"),historyEl=document.querySelector(\"#history\");let history=JSON.parse(localStorage.getItem(\"weather-history\")||\"[]\");function renderHistory(){historyEl.innerHTML=history.map(city=>`<button data-city=\"${city}\">${city}</button>`).join(\"\")}function saveCity(city){history=[city,...history.filter(x=>x!==city)].slice(0,5);localStorage.setItem(\"weather-history\",JSON.stringify(history));renderHistory()}async function loadWeather(city){statusEl.textContent=\"Loading weather\u2026\";currentEl.classList.add(\"hidden\");forecastEl.innerHTML=\"\";await new Promise(r=>setTimeout(r,450));const key=Object.keys(MOCK_WEATHER).find(x=>x.toLowerCase()===city.toLowerCase());if(!key){statusEl.textContent=\"City not found in the learning dataset. Try London, Mumbai or Edinburgh.\";return}const data=MOCK_WEATHER[key];statusEl.textContent=\"\";currentEl.classList.remove(\"hidden\");currentEl.innerHTML=`<div><h2>${key}</h2><p>${data.condition}</p></div><div><strong>${data.temperature}\u00b0C</strong><p>Wind ${data.wind} km/h</p></div>`;forecastEl.innerHTML=data.forecast.map((temp,i)=>`<article><strong>Day ${i+1}</strong><p>${temp}\u00b0C</p></article>`).join(\"\");saveCity(key)}form.addEventListener(\"submit\",e=>{e.preventDefault();loadWeather(document.querySelector(\"#city\").value.trim())});historyEl.addEventListener(\"click\",e=>{const city=e.target.dataset.city;if(city)loadWeather(city)});renderHistory();"
+    },
+    "checks": [
+      {
+        "id": "search",
+        "label": "Contains a search form",
+        "tokens": [
+          "searchForm",
+          "city"
+        ]
+      },
+      {
+        "id": "loading",
+        "label": "Has a loading state",
+        "tokens": [
+          "Loading weather"
+        ]
+      },
+      {
+        "id": "errors",
+        "label": "Has an error state",
+        "tokens": [
+          "not found"
+        ]
+      },
+      {
+        "id": "forecast",
+        "label": "Renders forecast cards",
+        "tokens": [
+          "forecast"
+        ]
+      },
+      {
+        "id": "storage",
+        "label": "Stores recent searches",
+        "tokens": [
+          "localStorage"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "python-expense-tracker",
+    "title": "Personal Expense Tracker",
+    "academyId": "python",
+    "level": "Intermediate capstone",
+    "duration": "4\u20136 hours",
+    "summary": "Build a command-line expense tracker with validation, summaries and JSON persistence.",
+    "skills": [
+      "Functions",
+      "Data structures",
+      "Validation",
+      "File handling",
+      "Aggregation"
+    ],
+    "brief": "Create an expense tracker that records transactions, lists them, calculates totals by category and saves data to JSON.",
+    "requirements": [
+      "Add an expense with date, category, description and amount",
+      "Reject invalid or negative amounts",
+      "List all expenses",
+      "Calculate total spending",
+      "Summarise spending by category",
+      "Save and reload JSON data"
+    ],
+    "files": {
+      "expense_tracker.py": "from pathlib import Path\nimport json\n\nDATA_FILE = Path(\"expenses.json\")\n\n\ndef load_expenses():\n    # Return a list, even when the file does not exist.\n    pass\n\n\ndef save_expenses(expenses):\n    pass\n\n\ndef add_expense(expenses, date, category, description, amount):\n    pass\n\n\ndef category_totals(expenses):\n    pass\n\n\nif __name__ == \"__main__\":\n    expenses = load_expenses()\n    # Build a simple menu loop.\n",
+      "test_expense_tracker.py": "from expense_tracker import add_expense, category_totals\n\n\ndef test_add_expense():\n    expenses = []\n    add_expense(expenses, \"2026-07-17\", \"Food\", \"Lunch\", 12.5)\n    assert expenses[0][\"amount\"] == 12.5\n\n\ndef test_category_totals():\n    expenses = [\n        {\"category\":\"Food\",\"amount\":10},\n        {\"category\":\"Food\",\"amount\":5},\n        {\"category\":\"Travel\",\"amount\":20},\n    ]\n    assert category_totals(expenses) == {\"Food\":15,\"Travel\":20}\n"
+    },
+    "hints": [
+      "Keep input/output code separate from the core expense functions.",
+      "Convert amount to float inside add_expense and raise ValueError for zero or negative values.",
+      "Use json.loads only after checking that the file exists and contains text.",
+      "Build category totals with a dictionary and dict.get(category, 0)."
+    ],
+    "solution": {
+      "expense_tracker.py": "from pathlib import Path\nfrom datetime import date\nimport json\n\nDATA_FILE=Path(\"expenses.json\")\n\ndef load_expenses():\n    if not DATA_FILE.exists() or not DATA_FILE.read_text().strip():\n        return []\n    try:\n        data=json.loads(DATA_FILE.read_text())\n        return data if isinstance(data,list) else []\n    except json.JSONDecodeError:\n        return []\n\ndef save_expenses(expenses):\n    DATA_FILE.write_text(json.dumps(expenses,indent=2))\n\ndef add_expense(expenses,date_value,category,description,amount):\n    amount=float(amount)\n    if amount<=0:\n        raise ValueError(\"Amount must be greater than zero\")\n    expense={\"date\":date_value,\"category\":category.strip() or \"Other\",\"description\":description.strip(),\"amount\":amount}\n    expenses.append(expense)\n    return expense\n\ndef category_totals(expenses):\n    totals={}\n    for expense in expenses:\n        category=expense[\"category\"]\n        totals[category]=totals.get(category,0)+expense[\"amount\"]\n    return totals\n\ndef print_summary(expenses):\n    print(f\"Total: \u00a3{sum(x['amount'] for x in expenses):.2f}\")\n    for category,total in category_totals(expenses).items():\n        print(f\"{category}: \u00a3{total:.2f}\")\n\ndef main():\n    expenses=load_expenses()\n    while True:\n        choice=input(\"\\n[A]dd [L]ist [S]ummary [Q]uit: \").strip().lower()\n        if choice==\"q\": break\n        if choice==\"a\":\n            try:\n                add_expense(expenses,input(\"Date [YYYY-MM-DD]: \") or date.today().isoformat(),input(\"Category: \"),input(\"Description: \"),input(\"Amount: \"))\n                save_expenses(expenses)\n            except ValueError as error: print(error)\n        elif choice==\"l\":\n            for item in expenses: print(item)\n        elif choice==\"s\": print_summary(expenses)\n\nif __name__==\"__main__\": main()\n",
+      "test_expense_tracker.py": "from expense_tracker import add_expense, category_totals\n\ndef test_add_expense():\n    expenses=[]\n    add_expense(expenses,\"2026-07-17\",\"Food\",\"Lunch\",12.5)\n    assert expenses[0][\"amount\"]==12.5\n\ndef test_invalid_amount():\n    try:\n        add_expense([],\"2026-07-17\",\"Food\",\"Lunch\",0)\n        assert False\n    except ValueError:\n        assert True\n\ndef test_category_totals():\n    expenses=[{\"category\":\"Food\",\"amount\":10},{\"category\":\"Food\",\"amount\":5},{\"category\":\"Travel\",\"amount\":20}]\n    assert category_totals(expenses)=={\"Food\":15,\"Travel\":20}\n"
+    },
+    "checks": [
+      {
+        "id": "load",
+        "label": "Loads persisted data",
+        "tokens": [
+          "load_expenses",
+          "json.loads"
+        ]
+      },
+      {
+        "id": "save",
+        "label": "Saves JSON data",
+        "tokens": [
+          "save_expenses",
+          "json.dumps"
+        ]
+      },
+      {
+        "id": "validate",
+        "label": "Validates positive amounts",
+        "tokens": [
+          "ValueError",
+          "amount<=0"
+        ]
+      },
+      {
+        "id": "aggregate",
+        "label": "Calculates category totals",
+        "tokens": [
+          "category_totals",
+          "totals.get"
+        ]
+      },
+      {
+        "id": "tests",
+        "label": "Includes automated tests",
+        "tokens": [
+          "test_",
+          "assert"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "java-task-manager",
+    "title": "Java Task Manager",
+    "academyId": "java",
+    "level": "Intermediate capstone",
+    "duration": "4\u20136 hours",
+    "summary": "Build a layered Java task manager with domain objects, a service and a console interface.",
+    "skills": [
+      "Classes",
+      "Encapsulation",
+      "Collections",
+      "Service design",
+      "Validation"
+    ],
+    "brief": "Create a Java task manager where users can add, list and complete tasks.",
+    "requirements": [
+      "Represent tasks with a dedicated Task class",
+      "Keep task state private",
+      "Use a TaskService to manage the collection",
+      "Reject blank task titles",
+      "Support completing tasks by ID",
+      "Keep console input outside the domain class"
+    ],
+    "files": {
+      "Task.java": "public class Task {\n    // Add private fields, constructor, getters and complete().\n}\n",
+      "TaskService.java": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class TaskService {\n    private final List<Task> tasks = new ArrayList<>();\n    // Add create, list and complete methods.\n}\n",
+      "Main.java": "public class Main {\n    public static void main(String[] args) {\n        TaskService service = new TaskService();\n        // Build a small console demonstration.\n    }\n}\n"
+    },
+    "hints": [
+      "Task should own its completion state; TaskService should own the collection.",
+      "Use a generated integer ID so callers do not depend on list positions.",
+      "Return an unmodifiable copy or new list from listTasks.",
+      "Throw IllegalArgumentException for blank titles and missing IDs."
+    ],
+    "solution": {
+      "Task.java": "public class Task {\n    private final int id;\n    private final String title;\n    private boolean completed;\n\n    public Task(int id, String title) {\n        if (title == null || title.isBlank()) throw new IllegalArgumentException(\"Title is required\");\n        this.id = id;\n        this.title = title.trim();\n    }\n    public int getId(){ return id; }\n    public String getTitle(){ return title; }\n    public boolean isCompleted(){ return completed; }\n    public void complete(){ completed = true; }\n    @Override public String toString(){ return id + \". [\" + (completed ? \"x\" : \" \") + \"] \" + title; }\n}\n",
+      "TaskService.java": "import java.util.ArrayList;\nimport java.util.List;\n\npublic class TaskService {\n    private final List<Task> tasks = new ArrayList<>();\n    private int nextId = 1;\n    public Task create(String title){ Task task = new Task(nextId++, title); tasks.add(task); return task; }\n    public List<Task> listTasks(){ return new ArrayList<>(tasks); }\n    public Task complete(int id){ Task task = tasks.stream().filter(t -> t.getId()==id).findFirst().orElseThrow(() -> new IllegalArgumentException(\"Task not found\")); task.complete(); return task; }\n}\n",
+      "Main.java": "public class Main {\n    public static void main(String[] args) {\n        TaskService service = new TaskService();\n        service.create(\"Design task model\");\n        service.create(\"Add validation\");\n        service.complete(1);\n        service.listTasks().forEach(System.out::println);\n    }\n}\n"
+    },
+    "checks": [
+      {
+        "id": "private",
+        "label": "Encapsulates task fields",
+        "tokens": [
+          "private final",
+          "private boolean"
+        ]
+      },
+      {
+        "id": "service",
+        "label": "Uses a service layer",
+        "tokens": [
+          "class TaskService",
+          "List<Task>"
+        ]
+      },
+      {
+        "id": "validation",
+        "label": "Validates titles",
+        "tokens": [
+          "IllegalArgumentException",
+          "isBlank"
+        ]
+      },
+      {
+        "id": "complete",
+        "label": "Supports completion by ID",
+        "tokens": [
+          "complete(int id)",
+          "getId"
+        ]
+      },
+      {
+        "id": "copy",
+        "label": "Does not expose the mutable list directly",
+        "tokens": [
+          "new ArrayList<>(tasks)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sql-sales-insight",
+    "title": "Sales Insight Dashboard Dataset",
+    "academyId": "sql",
+    "level": "Advanced capstone",
+    "duration": "3\u20135 hours",
+    "summary": "Write a portfolio-grade SQL analysis answering executive sales questions.",
+    "skills": [
+      "Joins",
+      "Aggregation",
+      "CTEs",
+      "Window functions",
+      "Business reasoning"
+    ],
+    "brief": "Analyse customers, orders and products to identify revenue trends, top products and at-risk regions.",
+    "requirements": [
+      "Calculate monthly revenue",
+      "Rank products within category",
+      "Compare each region with the overall average",
+      "Identify customers with falling spend",
+      "Document assumptions and result grain",
+      "Provide one executive recommendation"
+    ],
+    "files": {
+      "analysis.sql": "-- Sales Insight Capstone\n-- 1. Document the grain of each source table.\n-- 2. Build monthly revenue.\n-- 3. Rank products within category.\n-- 4. Compare regions with the overall average.\n-- 5. Identify customers with falling spend.\n",
+      "README.md": "# Sales Insight Capstone\n\n## Business questions\n\n## Data assumptions\n\n## Findings\n\n## Recommendation\n"
+    },
+    "hints": [
+      "Start by defining the grain of customers, orders and order_items.",
+      "Aggregate order_items before joining to dimensions when you need one row per order.",
+      "Use DENSE_RANK() with PARTITION BY category for product ranking.",
+      "Use LAG() to compare a customer\u2019s current period with the previous period."
+    ],
+    "solution": {
+      "analysis.sql": "-- Monthly revenue\nWITH order_revenue AS (\n  SELECT o.order_id, o.customer_id, o.order_date,\n         SUM(oi.quantity * oi.unit_price) AS revenue\n  FROM orders o\n  JOIN order_items oi ON oi.order_id = o.order_id\n  GROUP BY o.order_id, o.customer_id, o.order_date\n), monthly AS (\n  SELECT DATE_TRUNC('month', order_date) AS month,\n         SUM(revenue) AS revenue\n  FROM order_revenue\n  GROUP BY 1\n), product_revenue AS (\n  SELECT p.category, p.product_name,\n         SUM(oi.quantity * oi.unit_price) AS revenue\n  FROM order_items oi\n  JOIN products p ON p.product_id = oi.product_id\n  GROUP BY p.category, p.product_name\n), ranked_products AS (\n  SELECT *, DENSE_RANK() OVER(PARTITION BY category ORDER BY revenue DESC) AS category_rank\n  FROM product_revenue\n), regional AS (\n  SELECT c.region, SUM(r.revenue) AS revenue\n  FROM order_revenue r\n  JOIN customers c ON c.customer_id = r.customer_id\n  GROUP BY c.region\n), customer_month AS (\n  SELECT customer_id, DATE_TRUNC('month', order_date) AS month, SUM(revenue) AS revenue\n  FROM order_revenue GROUP BY 1,2\n), customer_change AS (\n  SELECT *, LAG(revenue) OVER(PARTITION BY customer_id ORDER BY month) AS previous_revenue\n  FROM customer_month\n)\nSELECT * FROM monthly ORDER BY month;\n\n-- Top products by category\nSELECT * FROM ranked_products WHERE category_rank <= 3;\n\n-- Regions below average\nSELECT region, revenue, AVG(revenue) OVER() AS average_region_revenue\nFROM regional\nQUALIFY revenue < AVG(revenue) OVER();\n\n-- Customers with falling spend\nSELECT * FROM customer_change\nWHERE previous_revenue IS NOT NULL AND revenue < previous_revenue;\n",
+      "README.md": "# Sales Insight Capstone\n\n## Grain\n- customers: one row per customer\n- orders: one row per order\n- order_items: one row per order-product line\n\n## Main finding\nMonthly revenue should be analysed after order-line revenue is aggregated to avoid accidental multiplication.\n\n## Recommendation\nPrioritise declining high-value customer segments and validate regional results against the source-system control total before executive publication.\n"
+    },
+    "checks": [
+      {
+        "id": "cte",
+        "label": "Uses CTEs",
+        "tokens": [
+          "WITH",
+          "AS ("
+        ]
+      },
+      {
+        "id": "window",
+        "label": "Uses window functions",
+        "tokens": [
+          "OVER(",
+          "LAG"
+        ]
+      },
+      {
+        "id": "ranking",
+        "label": "Ranks products by category",
+        "tokens": [
+          "DENSE_RANK",
+          "PARTITION BY category"
+        ]
+      },
+      {
+        "id": "grain",
+        "label": "Documents data grain",
+        "tokens": [
+          "grain",
+          "one row"
+        ]
+      },
+      {
+        "id": "recommendation",
+        "label": "Includes an executive recommendation",
+        "tokens": [
+          "Recommendation"
+        ]
+      }
+    ]
+  }
+]

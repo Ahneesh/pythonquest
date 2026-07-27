@@ -1,0 +1,273 @@
+{
+  "sales": {
+    "title": "Retail Sales",
+    "tables": {
+      "data": {
+        "columns": [
+          "order_id INTEGER",
+          "order_date TEXT",
+          "customer TEXT",
+          "region TEXT",
+          "product TEXT",
+          "revenue REAL"
+        ],
+        "rows": [
+          [
+            1,
+            "2026-01-02",
+            "Asha",
+            "North",
+            "Laptop",
+            900
+          ],
+          [
+            2,
+            "2026-01-02",
+            "Ben",
+            "South",
+            "Monitor",
+            420
+          ],
+          [
+            3,
+            "2026-01-03",
+            "Carla",
+            "North",
+            "Keyboard",
+            180
+          ],
+          [
+            4,
+            "2026-01-03",
+            "Dev",
+            "West",
+            "Laptop",
+            850
+          ],
+          [
+            5,
+            "2026-01-04",
+            "Elena",
+            "South",
+            "Phone",
+            720
+          ],
+          [
+            6,
+            "2026-01-04",
+            "Farah",
+            "West",
+            "Monitor",
+            460
+          ],
+          [
+            7,
+            "2026-01-05",
+            "George",
+            "North",
+            "Phone",
+            680
+          ],
+          [
+            8,
+            "2026-01-05",
+            "Hana",
+            "East",
+            "Keyboard",
+            210
+          ],
+          [
+            9,
+            "2026-01-06",
+            "Ivan",
+            "East",
+            "Laptop",
+            940
+          ],
+          [
+            10,
+            "2026-01-06",
+            "Jaya",
+            "South",
+            "Monitor",
+            510
+          ]
+        ]
+      }
+    }
+  },
+  "customers": {
+    "title": "Customer Directory",
+    "tables": {
+      "data": {
+        "columns": [
+          "customer_id INTEGER",
+          "customer_name TEXT",
+          "region TEXT",
+          "segment TEXT"
+        ],
+        "rows": [
+          [
+            1,
+            "Asha",
+            "North",
+            "Enterprise"
+          ],
+          [
+            2,
+            "Ben",
+            "South",
+            "SME"
+          ],
+          [
+            3,
+            "Carla",
+            "North",
+            "Consumer"
+          ],
+          [
+            4,
+            "Dev",
+            null,
+            "Enterprise"
+          ],
+          [
+            5,
+            "Elena",
+            "South",
+            "Consumer"
+          ]
+        ]
+      }
+    }
+  },
+  "commerce": {
+    "title": "Commerce Relational Model",
+    "tables": {
+      "customers": {
+        "columns": [
+          "customer_id INTEGER PRIMARY KEY",
+          "customer_name TEXT",
+          "region TEXT"
+        ],
+        "rows": [
+          [
+            1,
+            "Asha",
+            "North"
+          ],
+          [
+            2,
+            "Ben",
+            "South"
+          ],
+          [
+            3,
+            "Carla",
+            "East"
+          ],
+          [
+            4,
+            "Dev",
+            "West"
+          ]
+        ]
+      },
+      "orders": {
+        "columns": [
+          "order_id INTEGER PRIMARY KEY",
+          "customer_id INTEGER",
+          "order_date TEXT",
+          "revenue REAL",
+          "FOREIGN KEY(customer_id) REFERENCES customers(customer_id)"
+        ],
+        "rows": [
+          [
+            101,
+            1,
+            "2026-02-01",
+            500
+          ],
+          [
+            102,
+            2,
+            "2026-02-01",
+            750
+          ],
+          [
+            103,
+            1,
+            "2026-02-02",
+            320
+          ],
+          [
+            104,
+            3,
+            "2026-02-03",
+            900
+          ]
+        ]
+      },
+      "products": {
+        "columns": [
+          "product_id INTEGER PRIMARY KEY",
+          "product_name TEXT",
+          "category TEXT"
+        ],
+        "rows": [
+          [
+            11,
+            "Laptop",
+            "Computing"
+          ],
+          [
+            12,
+            "Monitor",
+            "Computing"
+          ],
+          [
+            13,
+            "Desk",
+            "Furniture"
+          ]
+        ]
+      },
+      "order_items": {
+        "columns": [
+          "order_id INTEGER",
+          "product_id INTEGER",
+          "quantity INTEGER",
+          "FOREIGN KEY(order_id) REFERENCES orders(order_id)",
+          "FOREIGN KEY(product_id) REFERENCES products(product_id)"
+        ],
+        "rows": [
+          [
+            101,
+            11,
+            1
+          ],
+          [
+            101,
+            12,
+            2
+          ],
+          [
+            102,
+            13,
+            1
+          ],
+          [
+            103,
+            12,
+            1
+          ],
+          [
+            104,
+            11,
+            1
+          ]
+        ]
+      }
+    }
+  }
+}

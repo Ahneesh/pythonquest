@@ -1,0 +1,48 @@
+[
+  {
+    "id": "database-timeout",
+    "title": "Database timeout spike",
+    "severity": "High",
+    "symptoms": [
+      "API latency above 5 seconds",
+      "HTTP 503 responses",
+      "Database connection timeouts"
+    ],
+    "logs": [
+      "09:01 INFO endpoint=/orders status=200 duration_ms=240",
+      "09:02 WARN database_timeout=true duration_ms=5002",
+      "09:02 ERROR status=503 detail=database_unavailable",
+      "09:03 WARN pool_available=0 pool_size=5"
+    ],
+    "likelyCause": "Database connection pool exhaustion",
+    "recommendedActions": [
+      "Check active connections",
+      "Reduce slow queries",
+      "Review pool sizing",
+      "Monitor latency after recovery"
+    ]
+  },
+  {
+    "id": "bad-release",
+    "title": "Error rate after deployment",
+    "severity": "Critical",
+    "symptoms": [
+      "Error rate rose after release",
+      "Only new instances fail",
+      "Health endpoint remains green"
+    ],
+    "logs": [
+      "12:00 INFO release_version=2.4.0 deployment_started=true",
+      "12:02 ERROR version=2.4.0 exception=KeyError field=segment",
+      "12:02 ERROR version=2.4.0 status=500",
+      "12:03 INFO version=2.3.9 status=200"
+    ],
+    "likelyCause": "Backward-incompatible release 2.4.0",
+    "recommendedActions": [
+      "Stop rollout",
+      "Roll back to 2.3.9",
+      "Add compatibility tests",
+      "Improve health checks"
+    ]
+  }
+]

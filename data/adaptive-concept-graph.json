@@ -1,0 +1,248 @@
+{
+  "academies": {
+    "python": [
+      {
+        "id": "py-foundations",
+        "title": "Python foundations",
+        "prerequisites": []
+      },
+      {
+        "id": "py-structures",
+        "title": "Data structures",
+        "prerequisites": [
+          "py-foundations"
+        ]
+      },
+      {
+        "id": "py-functions",
+        "title": "Functions and decomposition",
+        "prerequisites": [
+          "py-foundations"
+        ]
+      },
+      {
+        "id": "py-oop",
+        "title": "Object-oriented design",
+        "prerequisites": [
+          "py-functions"
+        ]
+      },
+      {
+        "id": "py-data",
+        "title": "Data analytics",
+        "prerequisites": [
+          "py-structures",
+          "py-functions"
+        ]
+      },
+      {
+        "id": "py-api",
+        "title": "API engineering",
+        "prerequisites": [
+          "py-functions",
+          "py-oop"
+        ]
+      },
+      {
+        "id": "py-production",
+        "title": "Production delivery",
+        "prerequisites": [
+          "py-api",
+          "py-oop"
+        ]
+      }
+    ],
+    "sql": [
+      {
+        "id": "sql-select",
+        "title": "Filtering and projection",
+        "prerequisites": []
+      },
+      {
+        "id": "sql-aggregate",
+        "title": "Aggregation and grain",
+        "prerequisites": [
+          "sql-select"
+        ]
+      },
+      {
+        "id": "sql-joins",
+        "title": "Joins and cardinality",
+        "prerequisites": [
+          "sql-select"
+        ]
+      },
+      {
+        "id": "sql-window",
+        "title": "Window functions",
+        "prerequisites": [
+          "sql-aggregate",
+          "sql-joins"
+        ]
+      },
+      {
+        "id": "sql-design",
+        "title": "Database design",
+        "prerequisites": [
+          "sql-joins"
+        ]
+      },
+      {
+        "id": "sql-performance",
+        "title": "Query performance",
+        "prerequisites": [
+          "sql-window",
+          "sql-design"
+        ]
+      },
+      {
+        "id": "sql-governance",
+        "title": "Data quality and governance",
+        "prerequisites": [
+          "sql-aggregate",
+          "sql-design"
+        ]
+      }
+    ],
+    "web": [
+      {
+        "id": "web-html",
+        "title": "Semantic HTML",
+        "prerequisites": []
+      },
+      {
+        "id": "web-css",
+        "title": "Responsive CSS",
+        "prerequisites": [
+          "web-html"
+        ]
+      },
+      {
+        "id": "web-js",
+        "title": "JavaScript foundations",
+        "prerequisites": [
+          "web-html"
+        ]
+      },
+      {
+        "id": "web-dom",
+        "title": "DOM and browser events",
+        "prerequisites": [
+          "web-js"
+        ]
+      },
+      {
+        "id": "web-async",
+        "title": "Async data and APIs",
+        "prerequisites": [
+          "web-dom"
+        ]
+      },
+      {
+        "id": "web-quality",
+        "title": "Accessibility and testing",
+        "prerequisites": [
+          "web-css",
+          "web-dom"
+        ]
+      },
+      {
+        "id": "web-production",
+        "title": "Frontend production delivery",
+        "prerequisites": [
+          "web-async",
+          "web-quality"
+        ]
+      }
+    ],
+    "java": [
+      {
+        "id": "java-core",
+        "title": "Core Java",
+        "prerequisites": []
+      },
+      {
+        "id": "java-oop",
+        "title": "Object-oriented design",
+        "prerequisites": [
+          "java-core"
+        ]
+      },
+      {
+        "id": "java-collections",
+        "title": "Collections and generics",
+        "prerequisites": [
+          "java-core"
+        ]
+      },
+      {
+        "id": "java-testing",
+        "title": "Testing and exceptions",
+        "prerequisites": [
+          "java-oop"
+        ]
+      },
+      {
+        "id": "java-db",
+        "title": "Persistence and SQL",
+        "prerequisites": [
+          "java-collections",
+          "java-oop"
+        ]
+      },
+      {
+        "id": "java-spring",
+        "title": "Spring and REST services",
+        "prerequisites": [
+          "java-testing",
+          "java-db"
+        ]
+      },
+      {
+        "id": "java-production",
+        "title": "Production service delivery",
+        "prerequisites": [
+          "java-spring"
+        ]
+      }
+    ]
+  },
+  "crossAcademy": [
+    {
+      "id": "cross-testing",
+      "title": "Testing and quality",
+      "sources": [
+        "python",
+        "web",
+        "java"
+      ]
+    },
+    {
+      "id": "cross-data",
+      "title": "Data fluency",
+      "sources": [
+        "python",
+        "sql"
+      ]
+    },
+    {
+      "id": "cross-api",
+      "title": "API and integration",
+      "sources": [
+        "python",
+        "web",
+        "java"
+      ]
+    },
+    {
+      "id": "cross-production",
+      "title": "Production delivery",
+      "sources": [
+        "python",
+        "sql",
+        "web",
+        "java"
+      ]
+    }
+  ]
+}

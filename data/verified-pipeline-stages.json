@@ -1,0 +1,37 @@
+[
+  {
+    "id": "source-validation",
+    "label": "Source validation",
+    "description": "Validate file count, size, names and prohibited content."
+  },
+  {
+    "id": "dependency-resolution",
+    "label": "Dependency resolution",
+    "description": "Resolve approved runtime dependencies inside the isolated job."
+  },
+  {
+    "id": "compile-build",
+    "label": "Compilation / build",
+    "description": "Compile or prepare the project using the academy runtime."
+  },
+  {
+    "id": "visible-tests",
+    "label": "Visible tests",
+    "description": "Run learner-visible tests and controls."
+  },
+  {
+    "id": "hidden-tests",
+    "label": "Hidden tests",
+    "description": "Run server-only assessment tests without exposing test source."
+  },
+  {
+    "id": "static-analysis",
+    "label": "Static analysis",
+    "description": "Run academy-specific quality and security checks."
+  },
+  {
+    "id": "evidence",
+    "label": "Evidence generation",
+    "description": "Create immutable submission evidence and integrity hash."
+  }
+]

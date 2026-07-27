@@ -1,0 +1,252 @@
+[
+  {
+    "id": "programming-logic",
+    "title": "Programming Logic",
+    "description": "Control flow, decomposition and problem solving.",
+    "sources": [
+      [
+        "python",
+        "variables-data-types"
+      ],
+      [
+        "python",
+        "control-flow"
+      ],
+      [
+        "java",
+        "java-conditionals"
+      ],
+      [
+        "java",
+        "java-loops-methods"
+      ],
+      [
+        "web",
+        "web-js-variables"
+      ],
+      [
+        "web",
+        "web-js-functions"
+      ]
+    ]
+  },
+  {
+    "id": "data-querying",
+    "title": "Data Querying",
+    "description": "Retrieve, filter, aggregate and validate structured data.",
+    "sources": [
+      [
+        "sql",
+        "sql-select-basics"
+      ],
+      [
+        "sql",
+        "sql-filtering"
+      ],
+      [
+        "sql",
+        "sql-aggregate"
+      ],
+      [
+        "sql",
+        "sql-group-by"
+      ],
+      [
+        "python",
+        "dataframes"
+      ]
+    ]
+  },
+  {
+    "id": "object-oriented-design",
+    "title": "Object-Oriented Design",
+    "description": "Model state and behaviour using classes and abstractions.",
+    "sources": [
+      [
+        "java",
+        "java-classes"
+      ],
+      [
+        "java",
+        "java-encapsulation"
+      ],
+      [
+        "java",
+        "java-inheritance"
+      ],
+      [
+        "java",
+        "java-interfaces"
+      ],
+      [
+        "python",
+        "classes-oop"
+      ]
+    ]
+  },
+  {
+    "id": "web-fundamentals",
+    "title": "Web Fundamentals",
+    "description": "Semantic structure, responsive styling and browser behaviour.",
+    "sources": [
+      [
+        "web",
+        "web-html-structure"
+      ],
+      [
+        "web",
+        "web-css-responsive"
+      ],
+      [
+        "web",
+        "web-js-functions"
+      ],
+      [
+        "web",
+        "web-dom"
+      ]
+    ]
+  },
+  {
+    "id": "api-engineering",
+    "title": "API Engineering",
+    "description": "Design requests, responses, validation and service boundaries.",
+    "sources": [
+      [
+        "python",
+        "rest-fundamentals"
+      ],
+      [
+        "python",
+        "fastapi-routes"
+      ],
+      [
+        "web",
+        "web-fetch"
+      ],
+      [
+        "java",
+        "java-spring-rest"
+      ]
+    ]
+  },
+  {
+    "id": "database-engineering",
+    "title": "Database Engineering",
+    "description": "Relational design, joins, integrity and persistence.",
+    "sources": [
+      [
+        "sql",
+        "sql-inner-join"
+      ],
+      [
+        "sql",
+        "sql-schema-design"
+      ],
+      [
+        "sql",
+        "sql-constraints"
+      ],
+      [
+        "java",
+        "java-jdbc"
+      ],
+      [
+        "python",
+        "relational-design"
+      ]
+    ]
+  },
+  {
+    "id": "testing-quality",
+    "title": "Testing and Quality",
+    "description": "Validate behaviour, edge cases and production readiness.",
+    "sources": [
+      [
+        "python",
+        "testing-basics"
+      ],
+      [
+        "java",
+        "java-testing"
+      ],
+      [
+        "web",
+        "web-testing"
+      ],
+      [
+        "sql",
+        "sql-indexes"
+      ]
+    ]
+  },
+  {
+    "id": "automation",
+    "title": "Automation",
+    "description": "Turn repeatable work into reliable workflows.",
+    "sources": [
+      [
+        "python",
+        "file-automation"
+      ],
+      [
+        "python",
+        "workflow-reliability"
+      ],
+      [
+        "web",
+        "web-storage"
+      ],
+      [
+        "java",
+        "java-build"
+      ]
+    ]
+  },
+  {
+    "id": "data-engineering",
+    "title": "Data Engineering",
+    "description": "Build pipelines, quality controls and lineage.",
+    "sources": [
+      [
+        "python",
+        "data-pipelines"
+      ],
+      [
+        "python",
+        "data-quality"
+      ],
+      [
+        "python",
+        "data-lineage"
+      ],
+      [
+        "sql",
+        "sql-running-total"
+      ]
+    ]
+  },
+  {
+    "id": "production-delivery",
+    "title": "Production Delivery",
+    "description": "Package, deploy, monitor and operate applications.",
+    "sources": [
+      [
+        "python",
+        "deployment-environments"
+      ],
+      [
+        "python",
+        "docker-basics"
+      ],
+      [
+        "java",
+        "java-production"
+      ],
+      [
+        "web",
+        "web-performance"
+      ]
+    ]
+  }
+]

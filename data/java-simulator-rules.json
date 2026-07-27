@@ -1,0 +1,94 @@
+{
+  "java-program-structure": [
+    "class main",
+    "public static void main",
+    "system.out.println"
+  ],
+  "java-types": [
+    "int ",
+    "double ",
+    "boolean ",
+    "string "
+  ],
+  "java-conditionals": [
+    "if ",
+    "else",
+    "score"
+  ],
+  "java-loops-methods": [
+    "for ",
+    "static int",
+    "return "
+  ],
+  "java-classes": [
+    "class account",
+    "new account",
+    "deposit"
+  ],
+  "java-encapsulation": [
+    "private ",
+    "getbalance"
+  ],
+  "java-inheritance": [
+    "extends",
+    "@override"
+  ],
+  "java-interfaces": [
+    "interface ",
+    "implements "
+  ],
+  "java-collections": [
+    "list<",
+    "arraylist"
+  ],
+  "java-generics": [
+    "<t>",
+    "box<"
+  ],
+  "java-streams": [
+    "stream()",
+    "filter(",
+    "sum()"
+  ],
+  "java-exceptions": [
+    "try",
+    "catch",
+    "numberformatexception"
+  ],
+  "java-testing": [
+    "assertionerror",
+    "test passed"
+  ],
+  "java-solid": [
+    "interface messagesender",
+    "notificationservice"
+  ],
+  "java-build": [
+    "src/main/java",
+    "src/test/java",
+    "pom.xml"
+  ],
+  "java-concurrency": [
+    "thread ",
+    "start()",
+    "join()"
+  ],
+  "java-jdbc": [
+    "preparedstatement",
+    "?"
+  ],
+  "java-spring-core": [
+    "repository",
+    "customerservice"
+  ],
+  "java-spring-rest": [
+    "get /api",
+    "200 ok",
+    "404 not found"
+  ],
+  "java-production": [
+    "validation",
+    "logging",
+    "health"
+  ]
+}

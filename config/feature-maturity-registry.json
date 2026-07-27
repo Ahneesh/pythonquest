@@ -1,0 +1,113 @@
+{
+  "version": "64.2",
+  "features": [
+    {
+      "id": "today",
+      "label": "Today",
+      "status": "production",
+      "public": true
+    },
+    {
+      "id": "course",
+      "label": "Course map",
+      "status": "production",
+      "public": true
+    },
+    {
+      "id": "textbooklibrary",
+      "label": "Textbook library",
+      "status": "production",
+      "public": true
+    },
+    {
+      "id": "practice",
+      "label": "Practice arena",
+      "status": "production",
+      "public": true
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "status": "beta",
+      "public": true
+    },
+    {
+      "id": "engineeringlab",
+      "label": "Engineering Lab",
+      "status": "beta",
+      "public": true
+    },
+    {
+      "id": "mastery",
+      "label": "Mastery checks",
+      "status": "production",
+      "public": true
+    },
+    {
+      "id": "mistakenotebook",
+      "label": "Mistake notebook",
+      "status": "production",
+      "public": true
+    },
+    {
+      "id": "engineeringcoach",
+      "label": "AI Engineering Coach",
+      "status": "beta",
+      "public": true
+    },
+    {
+      "id": "verifiedassessments",
+      "label": "Verified assessments",
+      "status": "simulation",
+      "public": false
+    },
+    {
+      "id": "teamengineering",
+      "label": "Team Engineering",
+      "status": "simulation",
+      "public": false
+    },
+    {
+      "id": "cloudrunner",
+      "label": "Cloud runner",
+      "status": "simulation",
+      "public": false
+    },
+    {
+      "id": "instructorreviewqueue",
+      "label": "Instructor review",
+      "status": "beta",
+      "public": false
+    },
+    {
+      "id": "careersimulations",
+      "label": "Career simulations",
+      "status": "beta",
+      "public": false
+    },
+    {
+      "id": "pricing",
+      "label": "Pricing",
+      "status": "production",
+      "public": true
+    },
+    {
+      "id": "subscription",
+      "label": "Plan and usage",
+      "status": "beta",
+      "public": true
+    },
+    {
+      "id": "authenticatedqa",
+      "label": "Authenticated QA status",
+      "status": "beta",
+      "public": false
+    }
+  ],
+  "statusDefinitions": {
+    "production": "Core learner journey is intended for public beta.",
+    "beta": "Useful but still being validated with real users.",
+    "simulation": "Demonstrates the workflow but is not a production integration.",
+    "hidden": "Not shown in the default learner navigation."
+  }
+}

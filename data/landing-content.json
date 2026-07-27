@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "eyebrow": "LEARN \u00b7 BUILD \u00b7 PROVE",
+    "title": "Become job-ready across Python, SQL, Web and Java.",
+    "subtitle": "Interactive lessons, browser coding, real-world missions, AI mentoring, team projects and evidence-backed portfolios \u2014 in one learning platform."
+  },
+  "academyCards": [
+    {
+      "id": "python",
+      "title": "Python Academy",
+      "tagline": "Automation, data, APIs and production engineering",
+      "highlights": [
+        "Interactive Python",
+        "Data analytics",
+        "FastAPI and databases",
+        "DevOps and AI production"
+      ]
+    },
+    {
+      "id": "sql",
+      "title": "SQL & Database Academy",
+      "tagline": "Querying, modelling, performance and data quality",
+      "highlights": [
+        "Analytical SQL",
+        "Joins and windows",
+        "Database design",
+        "Performance and governance"
+      ]
+    },
+    {
+      "id": "web",
+      "title": "Web Development Academy",
+      "tagline": "HTML, CSS, JavaScript and frontend delivery",
+      "highlights": [
+        "Semantic HTML",
+        "Responsive CSS",
+        "Browser APIs",
+        "Testing and performance"
+      ]
+    },
+    {
+      "id": "java",
+      "title": "Java Academy",
+      "tagline": "Core Java, OOP, backend and Spring",
+      "highlights": [
+        "Core Java",
+        "Object-oriented design",
+        "Testing and SOLID",
+        "Spring and production"
+      ]
+    }
+  ],
+  "proof": [
+    {
+      "value": "4",
+      "label": "complete academies"
+    },
+    {
+      "value": "40+",
+      "label": "learning systems"
+    },
+    {
+      "value": "100%",
+      "label": "browser based"
+    },
+    {
+      "value": "1",
+      "label": "developer profile"
+    }
+  ],
+  "journey": [
+    {
+      "step": 1,
+      "title": "Choose your academy",
+      "body": "Start with one skill or build a cross-academy path."
+    },
+    {
+      "step": 2,
+      "title": "Learn actively",
+      "body": "Read, predict, code, debug and explain."
+    },
+    {
+      "step": 3,
+      "title": "Build evidence",
+      "body": "Complete projects, assessments, missions and team work."
+    },
+    {
+      "step": 4,
+      "title": "Prove readiness",
+      "body": "Export portfolios, credentials and evidence dossiers."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do I need to install anything?",
+      "a": "No. Core learning and supported coding experiences run in the browser."
+    },
+    {
+      "q": "Can I use more than one academy?",
+      "a": "Yes. One developer profile combines progress and evidence across all academies."
+    },
+    {
+      "q": "Does the AI mentor reveal answers?",
+      "a": "It is designed to ask questions and give graduated hints before revealing solutions."
+    },
+    {
+      "q": "Can instructors run cohorts?",
+      "a": "Yes. CodeQuest includes cohorts, assignments, gradebooks, reviews and analytics."
+    },
+    {
+      "q": "Is my learning data private?",
+      "a": "Private learning data is not made public by default. Portfolio exports are created only when requested."
+    }
+  ]
+}

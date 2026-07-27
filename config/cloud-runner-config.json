@@ -1,0 +1,50 @@
+{
+  "version": "57.0",
+  "endpoint": "/api/cloud-runner",
+  "statusEndpoint": "/api/cloud-runner-status",
+  "submissionEndpoint": "/api/verified-submission",
+  "reviewEndpoint": "/api/instructor-review",
+  "remoteEnabled": false,
+  "practiceFallbackEnabled": true,
+  "pollIntervalMs": 1500,
+  "maxPollAttempts": 40,
+  "limits": {
+    "cpuSeconds": 10,
+    "memoryMb": 512,
+    "diskMb": 256,
+    "outputCharacters": 20000,
+    "files": 30,
+    "totalSourceCharacters": 120000
+  },
+  "network": {
+    "outboundEnabled": false,
+    "allowlist": []
+  },
+  "runtimes": {
+    "python": {
+      "image": "python:3.12-slim",
+      "command": "pytest -q",
+      "verified": true
+    },
+    "sql": {
+      "image": "postgres:16-alpine",
+      "command": "psql",
+      "verified": true
+    },
+    "web": {
+      "image": "mcr.microsoft.com/playwright:v1.47.0-jammy",
+      "command": "npx playwright test",
+      "verified": true
+    },
+    "java": {
+      "image": "maven:3.9-eclipse-temurin-21",
+      "command": "mvn -q test",
+      "verified": true
+    }
+  },
+  "integrity": {
+    "hashAlgorithm": "SHA-256",
+    "hiddenTestsServerOnly": true,
+    "immutableSubmission": true
+  }
+}

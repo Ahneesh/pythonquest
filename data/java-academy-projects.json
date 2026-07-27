@@ -1,0 +1,38 @@
+[
+  {
+    "id": "java-banking-console",
+    "title": "Object-Oriented Banking Console",
+    "level": "Foundation",
+    "brief": "Model accounts, deposits, withdrawals and transaction history using encapsulated classes.",
+    "deliverables": [
+      "Account model",
+      "Validated transactions",
+      "Console workflow",
+      "Unit-test evidence"
+    ]
+  },
+  {
+    "id": "java-order-service",
+    "title": "Order Processing Service",
+    "level": "Intermediate",
+    "brief": "Design a layered Java application with service, repository and domain boundaries.",
+    "deliverables": [
+      "Domain model",
+      "Repository abstraction",
+      "Service rules",
+      "Exception strategy"
+    ]
+  },
+  {
+    "id": "java-spring-api",
+    "title": "Spring Boot Customer API",
+    "level": "Advanced",
+    "brief": "Design a production-ready CRUD API with validation, persistence and operational controls.",
+    "deliverables": [
+      "REST contract",
+      "Validation rules",
+      "Persistence model",
+      "Health and logging plan"
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "41.0",
+  "mode": "offline-first",
+  "tables": {
+    "profile": "profiles",
+    "organisations": "organisations",
+    "memberships": "organisation_memberships",
+    "cohorts": "cohorts",
+    "cohortMemberships": "cohort_memberships",
+    "curriculum": "curriculum_items",
+    "assignments": "assignments",
+    "submissions": "submissions",
+    "progress": "learner_progress",
+    "events": "learning_events",
+    "interventions": "intervention_notes",
+    "credentials": "credentials",
+    "audit": "audit_log"
+  },
+  "conflictStrategy": "latest-updated-at-with-local-review",
+  "batchSize": 100,
+  "retry": {
+    "maxAttempts": 5,
+    "baseDelayMs": 800
+  },
+  "realtimeChannels": [
+    "assignments",
+    "submissions",
+    "announcements"
+  ]
+}

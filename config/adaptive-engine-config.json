@@ -1,0 +1,47 @@
+{
+  "version": "49.0",
+  "masteryWeights": {
+    "courseProgress": 0.35,
+    "assessmentEvidence": 0.2,
+    "projectEvidence": 0.2,
+    "retrievalPractice": 0.15,
+    "confidenceCalibration": 0.1
+  },
+  "priorityWeights": {
+    "weakness": 0.3,
+    "careerRelevance": 0.2,
+    "recency": 0.15,
+    "prerequisite": 0.15,
+    "evidenceGap": 0.15,
+    "learnerPreference": 0.05
+  },
+  "reviewIntervalsDays": [
+    1,
+    3,
+    7,
+    14,
+    30
+  ],
+  "dailyActionLimit": 5,
+  "focusDurations": [
+    15,
+    25,
+    40,
+    60
+  ],
+  "intensityModes": {
+    "gentle": {
+      "actions": 3,
+      "minutes": 25
+    },
+    "balanced": {
+      "actions": 5,
+      "minutes": 45
+    },
+    "accelerated": {
+      "actions": 7,
+      "minutes": 75
+    }
+  },
+  "explanationRequired": true
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "rubric-coding-standard",
+    "title": "Professional Coding Submission",
+    "dimensions": [
+      {
+        "id": "correctness",
+        "title": "Correctness",
+        "weight": 40
+      },
+      {
+        "id": "quality",
+        "title": "Code quality",
+        "weight": 20
+      },
+      {
+        "id": "testing",
+        "title": "Testing and edge cases",
+        "weight": 20
+      },
+      {
+        "id": "explanation",
+        "title": "Explanation and reasoning",
+        "weight": 20
+      }
+    ]
+  }
+]

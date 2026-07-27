@@ -1,0 +1,35 @@
+{
+  "version": "58.0",
+  "defaultSprintDays": 7,
+  "roles": [
+    "Tech Lead",
+    "Developer",
+    "Reviewer",
+    "Test Engineer",
+    "Product Owner"
+  ],
+  "pullRequestStates": [
+    "draft",
+    "ready-for-review",
+    "changes-requested",
+    "approved",
+    "merged"
+  ],
+  "reviewTypes": [
+    "correctness",
+    "readability",
+    "testing",
+    "security",
+    "accessibility",
+    "data-quality"
+  ],
+  "evidence": [
+    "assigned role",
+    "commits",
+    "pull requests",
+    "review comments",
+    "approvals",
+    "merged contribution",
+    "sprint reflection"
+  ]
+}

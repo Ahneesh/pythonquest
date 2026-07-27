@@ -1,0 +1,34 @@
+{
+  "dimensions": [
+    {
+      "id": "delivery",
+      "title": "Delivery",
+      "description": "Completes agreed outcomes and manages scope.",
+      "weight": 25
+    },
+    {
+      "id": "technical",
+      "title": "Technical quality",
+      "description": "Produces clear, reliable and maintainable work.",
+      "weight": 25
+    },
+    {
+      "id": "problem_solving",
+      "title": "Problem solving",
+      "description": "Makes sound assumptions and handles ambiguity.",
+      "weight": 20
+    },
+    {
+      "id": "communication",
+      "title": "Communication",
+      "description": "Explains progress, decisions and risks clearly.",
+      "weight": 15
+    },
+    {
+      "id": "professionalism",
+      "title": "Professionalism",
+      "description": "Uses evidence, responds to feedback and documents work.",
+      "weight": 15
+    }
+  ]
+}

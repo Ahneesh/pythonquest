@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "allowedAcademies": [
+    "python",
+    "java",
+    "sql",
+    "web"
+  ],
+  "fallbackPolicy": "Unassigned modules do not render",
+  "moduleOwnership": {
+    "foundations": "python",
+    "analytics": "python",
+    "scraping": "python",
+    "sql-python": "sql",
+    "automation-apis": "python",
+    "advanced-python": "python",
+    "testing-debugging": "python",
+    "data-engineering": "python",
+    "machine-learning": "python",
+    "software-engineering": "python",
+    "web-apis": "python",
+    "databases-orm": "sql",
+    "deployment-devops": "python",
+    "professional-python": "python",
+    "enterprise-fastapi": "python",
+    "cicd-containers": "python",
+    "kubernetes-platform": "python",
+    "llm-rag-engineering": "python",
+    "mcp-enterprise-ai": "python",
+    "core-java-concurrency": "java",
+    "jvm-performance": "java",
+    "distributed-ignite": "java",
+    "mongodb-oracle": "java",
+    "messaging-linux-cloud": "java",
+    "java-tdd-capstone": "java"
+  }
+}

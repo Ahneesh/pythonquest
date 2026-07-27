@@ -1,0 +1,66 @@
+[
+  {
+    "id": "lesson",
+    "title": "Continue structured learning",
+    "description": "Progress through the next academy lesson.",
+    "icon": "\u2192",
+    "route": "course",
+    "evidenceType": "course-progress"
+  },
+  {
+    "id": "review",
+    "title": "Retrieve a weak concept",
+    "description": "Answer from memory before revisiting notes.",
+    "icon": "\u21bb",
+    "route": "academyreview",
+    "evidenceType": "retrieval"
+  },
+  {
+    "id": "diagnostic",
+    "title": "Recalibrate mastery",
+    "description": "Use a diagnostic to update the learning model.",
+    "icon": "\u25ce",
+    "route": "academydiagnostic",
+    "evidenceType": "assessment"
+  },
+  {
+    "id": "project",
+    "title": "Apply the skill",
+    "description": "Create practical evidence through a project.",
+    "icon": "\u25c6",
+    "route": "projects",
+    "evidenceType": "project"
+  },
+  {
+    "id": "capstone",
+    "title": "Build an application",
+    "description": "Work on an end-of-path guided capstone.",
+    "icon": "\ud83c\udfd7",
+    "route": "capstonestudio",
+    "evidenceType": "capstone"
+  },
+  {
+    "id": "viva",
+    "title": "Defend your understanding",
+    "description": "Explain concepts and trade-offs under challenge.",
+    "icon": "\u25c9",
+    "route": "technicalviva",
+    "evidenceType": "explanation"
+  },
+  {
+    "id": "mission",
+    "title": "Practise workplace judgement",
+    "description": "Complete a realistic engineering mission.",
+    "icon": "\ud83d\ude80",
+    "route": "missioncontrol",
+    "evidenceType": "mission"
+  },
+  {
+    "id": "career",
+    "title": "Close a career evidence gap",
+    "description": "Strengthen readiness for the selected role.",
+    "icon": "\u2605",
+    "route": "careerlaunch",
+    "evidenceType": "career"
+  }
+]

@@ -1,0 +1,513 @@
+{
+  "sql": {
+    "title": "SQL & Database Academy",
+    "diagnostic": [
+      {
+        "id": "sql-d1",
+        "question": "Which clause filters grouped results?",
+        "options": [
+          "WHERE",
+          "HAVING",
+          "ORDER BY",
+          "DISTINCT"
+        ],
+        "answer": 1,
+        "concept": "aggregation"
+      },
+      {
+        "id": "sql-d2",
+        "question": "Which join keeps every row from the left table?",
+        "options": [
+          "INNER JOIN",
+          "CROSS JOIN",
+          "LEFT JOIN",
+          "SELF JOIN"
+        ],
+        "answer": 2,
+        "concept": "joins"
+      },
+      {
+        "id": "sql-d3",
+        "question": "What does ROW_NUMBER() OVER (PARTITION BY region ORDER BY revenue DESC) do?",
+        "options": [
+          "Deletes duplicates",
+          "Ranks rows within each region",
+          "Groups rows permanently",
+          "Creates an index"
+        ],
+        "answer": 1,
+        "concept": "windows"
+      },
+      {
+        "id": "sql-d4",
+        "question": "What is the main purpose of a primary key?",
+        "options": [
+          "Sort results",
+          "Uniquely identify rows",
+          "Encrypt values",
+          "Replace joins"
+        ],
+        "answer": 1,
+        "concept": "database-design"
+      },
+      {
+        "id": "sql-d5",
+        "question": "Why inspect a query plan?",
+        "options": [
+          "To understand how the database executes the query",
+          "To rename columns",
+          "To remove constraints",
+          "To create data"
+        ],
+        "answer": 0,
+        "concept": "performance"
+      }
+    ],
+    "concepts": [
+      {
+        "id": "filtering",
+        "title": "Filtering and selection",
+        "lessonIds": [
+          "sql-select-basics",
+          "sql-filtering",
+          "sql-order-limit",
+          "sql-null-distinct"
+        ]
+      },
+      {
+        "id": "aggregation",
+        "title": "Aggregation and grouping",
+        "lessonIds": [
+          "sql-aggregate",
+          "sql-group-by",
+          "sql-having",
+          "sql-case"
+        ]
+      },
+      {
+        "id": "joins",
+        "title": "Relational joins",
+        "lessonIds": [
+          "sql-inner-join",
+          "sql-left-join",
+          "sql-multi-join",
+          "sql-subquery"
+        ]
+      },
+      {
+        "id": "windows",
+        "title": "CTEs and window functions",
+        "lessonIds": [
+          "sql-cte",
+          "sql-ranking",
+          "sql-running-total",
+          "sql-lag"
+        ]
+      },
+      {
+        "id": "database-design",
+        "title": "Database design and integrity",
+        "lessonIds": [
+          "sql-schema-design",
+          "sql-constraints",
+          "sql-transactions"
+        ]
+      },
+      {
+        "id": "performance",
+        "title": "Indexes and performance",
+        "lessonIds": [
+          "sql-indexes"
+        ]
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "where-vs-having",
+        "title": "WHERE versus HAVING",
+        "trigger": "having",
+        "feedback": "WHERE filters rows before aggregation; HAVING filters groups after aggregation."
+      },
+      {
+        "id": "inner-left",
+        "title": "INNER versus LEFT JOIN",
+        "trigger": "join",
+        "feedback": "Use LEFT JOIN when unmatched left-side rows must remain."
+      },
+      {
+        "id": "group-grain",
+        "title": "Incorrect grouping grain",
+        "trigger": "group",
+        "feedback": "Every selected non-aggregated column changes the grouping grain."
+      },
+      {
+        "id": "window-group",
+        "title": "Window functions versus GROUP BY",
+        "trigger": "over",
+        "feedback": "Window functions preserve row detail; GROUP BY collapses rows."
+      }
+    ],
+    "visualizer": "query-plan",
+    "careerSimulations": [
+      {
+        "id": "sql-sim-analyst",
+        "title": "Investigate falling regional revenue",
+        "role": "Data Analyst",
+        "brief": "Use SQL to identify the regions and products driving a revenue decline.",
+        "deliverables": [
+          "Diagnostic query",
+          "Segment comparison",
+          "Executive finding"
+        ]
+      },
+      {
+        "id": "sql-sim-engineer",
+        "title": "Repair a slow reporting query",
+        "role": "Database Engineer",
+        "brief": "Inspect query structure and propose indexing and schema improvements.",
+        "deliverables": [
+          "Query-plan interpretation",
+          "Index recommendation",
+          "Risk note"
+        ]
+      }
+    ]
+  },
+  "web": {
+    "title": "Web Development Academy",
+    "diagnostic": [
+      {
+        "id": "web-d1",
+        "question": "Which HTML element should contain the primary page content?",
+        "options": [
+          "div",
+          "main",
+          "span",
+          "style"
+        ],
+        "answer": 1,
+        "concept": "html"
+      },
+      {
+        "id": "web-d2",
+        "question": "What does box-sizing: border-box change?",
+        "options": [
+          "It hides overflow",
+          "Padding and border are included in declared dimensions",
+          "It creates flex layout",
+          "It centres text"
+        ],
+        "answer": 1,
+        "concept": "css"
+      },
+      {
+        "id": "web-d3",
+        "question": "What is event.preventDefault() commonly used for?",
+        "options": [
+          "Delete the event",
+          "Stop default browser behaviour",
+          "Remove listeners",
+          "Refresh the page"
+        ],
+        "answer": 1,
+        "concept": "javascript"
+      },
+      {
+        "id": "web-d4",
+        "question": "Why should fetch error handling check response.ok?",
+        "options": [
+          "fetch only rejects on network failure",
+          "It makes JSON faster",
+          "It enables CSS",
+          "It prevents CORS"
+        ],
+        "answer": 0,
+        "concept": "browser"
+      },
+      {
+        "id": "web-d5",
+        "question": "What should a production frontend verify?",
+        "options": [
+          "Only desktop layout",
+          "Accessibility, performance, errors and responsive behaviour",
+          "Only colours",
+          "Only file size"
+        ],
+        "answer": 1,
+        "concept": "professional"
+      }
+    ],
+    "concepts": [
+      {
+        "id": "html",
+        "title": "Semantic HTML and accessibility",
+        "lessonIds": [
+          "web-html-structure",
+          "web-html-links-images",
+          "web-html-forms",
+          "web-html-accessibility"
+        ]
+      },
+      {
+        "id": "css",
+        "title": "CSS layout and responsiveness",
+        "lessonIds": [
+          "web-css-selectors",
+          "web-css-box",
+          "web-css-flex-grid",
+          "web-css-responsive"
+        ]
+      },
+      {
+        "id": "javascript",
+        "title": "JavaScript foundations",
+        "lessonIds": [
+          "web-js-variables",
+          "web-js-functions",
+          "web-js-arrays",
+          "web-js-errors"
+        ]
+      },
+      {
+        "id": "browser",
+        "title": "Browser APIs and DOM",
+        "lessonIds": [
+          "web-dom",
+          "web-events",
+          "web-fetch",
+          "web-storage"
+        ]
+      },
+      {
+        "id": "professional",
+        "title": "Professional frontend delivery",
+        "lessonIds": [
+          "web-modules",
+          "web-components",
+          "web-testing",
+          "web-performance"
+        ]
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "div-everything",
+        "title": "Non-semantic markup",
+        "trigger": "div",
+        "feedback": "Prefer semantic elements when they describe the content\u2019s role."
+      },
+      {
+        "id": "fixed-layout",
+        "title": "Fixed-width thinking",
+        "trigger": "width",
+        "feedback": "Test layouts across widths and prefer flexible sizing where appropriate."
+      },
+      {
+        "id": "dom-before-ready",
+        "title": "DOM selection timing",
+        "trigger": "queryselector",
+        "feedback": "Ensure the element exists before selecting or execute after document load."
+      },
+      {
+        "id": "async-errors",
+        "title": "Incomplete async error handling",
+        "trigger": "fetch",
+        "feedback": "Handle network failure and non-success HTTP responses separately."
+      }
+    ],
+    "visualizer": "dom-tree",
+    "careerSimulations": [
+      {
+        "id": "web-sim-accessibility",
+        "title": "Repair an inaccessible checkout",
+        "role": "Frontend Developer",
+        "brief": "Audit and repair a checkout page with semantic and keyboard-accessibility defects.",
+        "deliverables": [
+          "Issue list",
+          "Corrected markup",
+          "Test evidence"
+        ]
+      },
+      {
+        "id": "web-sim-performance",
+        "title": "Improve a slow dashboard",
+        "role": "Frontend Engineer",
+        "brief": "Identify layout, asset and JavaScript performance problems.",
+        "deliverables": [
+          "Performance diagnosis",
+          "Prioritised changes",
+          "Verification checklist"
+        ]
+      }
+    ]
+  },
+  "java": {
+    "title": "Java Academy",
+    "diagnostic": [
+      {
+        "id": "java-d1",
+        "question": "What is the entry point of a standard Java application?",
+        "options": [
+          "start()",
+          "public static void main",
+          "runApp()",
+          "constructor"
+        ],
+        "answer": 1,
+        "concept": "core"
+      },
+      {
+        "id": "java-d2",
+        "question": "Why make fields private?",
+        "options": [
+          "To prevent compilation",
+          "To encapsulate state",
+          "To remove objects",
+          "To enable static methods"
+        ],
+        "answer": 1,
+        "concept": "oop"
+      },
+      {
+        "id": "java-d3",
+        "question": "What does List<String> provide?",
+        "options": [
+          "Runtime reflection",
+          "Type-safe collection elements",
+          "Multiple inheritance",
+          "Database access"
+        ],
+        "answer": 1,
+        "concept": "advanced"
+      },
+      {
+        "id": "java-d4",
+        "question": "Why inject dependencies through constructors?",
+        "options": [
+          "To couple classes tightly",
+          "To improve substitution and testing",
+          "To avoid interfaces",
+          "To disable objects"
+        ],
+        "answer": 1,
+        "concept": "engineering"
+      },
+      {
+        "id": "java-d5",
+        "question": "What should a REST controller return for a missing resource?",
+        "options": [
+          "Always 200",
+          "404 Not Found",
+          "500 only",
+          "No response"
+        ],
+        "answer": 1,
+        "concept": "enterprise"
+      }
+    ],
+    "concepts": [
+      {
+        "id": "core",
+        "title": "Core Java",
+        "lessonIds": [
+          "java-program-structure",
+          "java-types",
+          "java-conditionals",
+          "java-loops-methods"
+        ]
+      },
+      {
+        "id": "oop",
+        "title": "Object-oriented design",
+        "lessonIds": [
+          "java-classes",
+          "java-encapsulation",
+          "java-inheritance",
+          "java-interfaces"
+        ]
+      },
+      {
+        "id": "advanced",
+        "title": "Advanced Java",
+        "lessonIds": [
+          "java-collections",
+          "java-generics",
+          "java-streams",
+          "java-exceptions"
+        ]
+      },
+      {
+        "id": "engineering",
+        "title": "Java engineering",
+        "lessonIds": [
+          "java-testing",
+          "java-solid",
+          "java-build",
+          "java-concurrency"
+        ]
+      },
+      {
+        "id": "enterprise",
+        "title": "Enterprise Java and Spring",
+        "lessonIds": [
+          "java-jdbc",
+          "java-spring-core",
+          "java-spring-rest",
+          "java-production"
+        ]
+      }
+    ],
+    "misconceptions": [
+      {
+        "id": "static-instance",
+        "title": "Static versus instance context",
+        "trigger": "static",
+        "feedback": "Static members belong to the class; instance members require an object."
+      },
+      {
+        "id": "inheritance-composition",
+        "title": "Overusing inheritance",
+        "trigger": "extends",
+        "feedback": "Use composition when the relationship is not genuinely \u201cis-a\u201d."
+      },
+      {
+        "id": "catch-all",
+        "title": "Catching overly broad exceptions",
+        "trigger": "catch",
+        "feedback": "Catch specific exceptions and preserve meaningful failure information."
+      },
+      {
+        "id": "service-construction",
+        "title": "Hard-coded dependencies",
+        "trigger": "new",
+        "feedback": "Inject collaborators into services to improve testing and substitution."
+      }
+    ],
+    "visualizer": "object-memory",
+    "careerSimulations": [
+      {
+        "id": "java-sim-service",
+        "title": "Diagnose a failing order service",
+        "role": "Java Engineer",
+        "brief": "Trace a service failure across validation, domain logic and persistence.",
+        "deliverables": [
+          "Root-cause analysis",
+          "Code correction",
+          "Regression-test plan"
+        ]
+      },
+      {
+        "id": "java-sim-api",
+        "title": "Design a resilient customer API",
+        "role": "Backend Engineer",
+        "brief": "Design endpoints, validation, persistence and operational controls.",
+        "deliverables": [
+          "API contract",
+          "Error model",
+          "Testing strategy",
+          "Health plan"
+        ]
+      }
+    ]
+  }
+}
